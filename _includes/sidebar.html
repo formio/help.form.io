@@ -1,14 +1,8 @@
-<h3>Documentation</h3>
-{% for post in site.posts %}
-  {{ post.title }}
-{% endfor %}
-<ul>
-  {% for category in site.categories %}
-  <li><a href="/{{ category | first }}/">{{ category | first }}</a></li>
-  {% endfor %}
-</ul>
-<ul>
-  {% for tag in site.tags %}
-  <li><a href="/tags/{{ tag | first }}/">{{ tag | first }}</a></li>
+<ul class="nav bs-docs-sidenav">
+  {% assign snippets = (site.snippets | where: "section" , page.section | sort: "weight") %}
+  {% for snippet in snippets %}
+    <li>
+      <a href="#{{ snippet.title }}">{{ snippet.title }}</a>
+    </li>
   {% endfor %}
 </ul>

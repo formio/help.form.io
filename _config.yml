@@ -7,3 +7,6 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+collections:
+  snippets:
+    output: false

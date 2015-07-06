@@ -17,6 +17,8 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
+  {% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
 </head>
 
 <body>
@@ -29,14 +31,17 @@
       </a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/">Home</a></li>
+      <li><a href="/intro">Getting Started</a></li>
+      <li><a href="/userguide">User Guide</a></li>
+      <li><a href="/embedding">Application Embedding</a></li>
+      <li><a href="/api">Developer API</a></li>
     </ul>
   </div>
 </div>
 
 {{ content }}
 
-{% include footer.md %}
+{% include footer.html %}
 
 {% include analytics.html %}
 </body>
