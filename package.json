@@ -1,0 +1,22 @@
+{
+  "name": "help.form.io",
+  "version": "1.0.0",
+  "description": "Help documentation for form.io",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/formio/help.form.io.git"
+  },
+  "author": "randall@form.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/formio/help.form.io/issues"
+  },
+  "homepage": "https://github.com/formio/help.form.io#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.5"
+  }
+}

@@ -9,6 +9,7 @@ You will need jekyll installed and running to generate a local copy for testing.
   - ```ruby --version``` Ensure that you have at least version 2.0.0
   - ```gem install bundler``` Install bundler if you don't already have it.
   - ```bundle install``` Install this project's dependencies.
+  - ```npm install``` Install node dependencies.
   
 Running Jekyll
 --------------
