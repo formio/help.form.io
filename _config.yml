@@ -1,1 +1,9 @@
 title : Form.io Help
+kramdown:
+  input: GFM
+permalink: pretty
+exclude:
+  - CNAME
+  - README.md
+  - Gemfile
+  - Gemfile.lock

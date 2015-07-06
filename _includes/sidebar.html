@@ -1,0 +1,14 @@
+<h3>Documentation</h3>
+{% for post in site.posts %}
+  {{ post.title }}
+{% endfor %}
+<ul>
+  {% for category in site.categories %}
+  <li><a href="/{{ category | first }}/">{{ category | first }}</a></li>
+  {% endfor %}
+</ul>
+<ul>
+  {% for tag in site.tags %}
+  <li><a href="/tags/{{ tag | first }}/">{{ tag | first }}</a></li>
+  {% endfor %}
+</ul>
