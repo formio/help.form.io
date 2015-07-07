@@ -9,6 +9,7 @@
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/docs.css">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,25 +27,28 @@
 
 <body>
 
-<div class="navbar navbar-inverse">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        <img height="25px;" alt="Form.io" src="/assets/formio-logo.png">
-      </a>
+<header class="navbar docs-nav">
+  <div class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img height="25px;" alt="Form.io" src="/assets/formio-logo.png">
+        </a>
+      </div>
+      <ul class="nav navbar-nav">
+        {% assign books = (site.books | sort: "weight" reversed) %}
+        {% for book in books %}
+        <li><a href="/{{ book.book }}">{{ book.title }}</a></li>
+        {% endfor %}
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      {% assign books = (site.books | sort: "weight" reversed) %}
-      {% for book in books %}
-      <li><a href="/{{ book.book }}">{{ book.title }}</a></li>
-      {% endfor %}
-    </ul>
   </div>
-</div>
+</header>
 
 {{ content }}
 
 <script src="/assets/js/docs.js"></script>
 {% include analytics.html %}
+{% include footer.html %}
 </body>
 </html>
