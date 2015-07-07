@@ -8,5 +8,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
 collections:
-  snippets:
+  books:
+    output: true
+    permalink: /:path/
+  chapters:
+    output: false
+  paragraphs:
     output: false

@@ -1,9 +1,0 @@
----
-layout: default
----
-{{ content }}
-{% assign snippets = (site.snippets | where: "section" , page.section | sort: "weight") %}
-{% for snippet in snippets %}
-  <h4>{{ snippet.title }}</h4>
-  {{ snippet.output }}
-{% endfor %}

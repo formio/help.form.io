@@ -4,6 +4,6 @@ title: Form.io Help
 ---
 This is the help.form.io site.
 
-{% for page in site.pages %}
+{% for book in site.books | sort: 'weight' %}
   <p><a href="{{ page.title }}">{{ page.title }}</a></p>
 {% endfor %}

@@ -1,8 +1,21 @@
-<ul class="nav bs-docs-sidenav">
-  {% assign snippets = (site.snippets | where: "section" , page.section | sort: "weight") %}
-  {% for snippet in snippets %}
+<nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix">
+  <ul class="nav bs-docs-sidenav">
+    {% assign chapters = (site.chapters | where: "book" , page.book | sort: "weight") %}
+    {% for chapter in chapters %}
     <li>
-      <a href="#{{ snippet.title }}">{{ snippet.title }}</a>
+      <a href="#{{ chapter.chapter }}">{{ chapter.title }}</a>
+      {% assign paragraphs = (site.paragraphs | where: "chapter" , chapter.chapter | sort: "weight) %}
+      <ul class="nav">
+        {% for paragraph in paragraphs %}
+        <li>
+          <a href="#{{ paragraph.slug }}">{{ paragraph.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
     </li>
-  {% endfor %}
-</ul>
+    {% endfor %}
+  </ul>
+  <a class="back-to-top" href="#top">
+    Back to top
+  </a>
+</nav>
