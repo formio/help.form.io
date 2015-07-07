@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-{{ content }}
-
 {% assign chapters = (site.chapters | where: "book" , page.book | sort: "weight") %}
 {% for chapter in chapters %}
 <div class="docs-section">

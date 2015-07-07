@@ -1,4 +1,62 @@
 /*
+ * Page headers
+ *
+ * Jumbotron-esque headers at the top of every page that's not the homepage.
+ */
+
+a {
+    color: #0e5c8f;
+}
+h2[id] {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+h3[id] {
+    color: #0e5c8f;
+}
+/* Page headers */
+.docs-header {
+    background-color: #0e5c8f;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.docs-header h1 {
+    margin-top: 0;
+    color: #fff;
+}
+.docs-header p {
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fff;
+}
+.docs-header .container {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .docs-header {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 24px;
+        text-align: left;
+    }
+    .docs-header h1 {
+        font-size: 60px;
+        line-height: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .docs-header h1,
+    .docs-header p {
+        margin-right: 380px;
+    }
+}
+
+/*
  * Side navigation
  *
  * Scrollspy and affixed enhanced navigation to highlight sections and secondary
@@ -32,19 +90,19 @@
 .docs-sidebar .nav > li > a:hover,
 .docs-sidebar .nav > li > a:focus {
     padding-left: 19px;
-    color: #563d7c;
+    color: #5cb85c;
     text-decoration: none;
     background-color: transparent;
-    border-left: 1px solid #563d7c;
+    border-left: 1px solid #5cb85c;
 }
 .docs-sidebar .nav > .active > a,
 .docs-sidebar .nav > .active:hover > a,
 .docs-sidebar .nav > .active:focus > a {
     padding-left: 18px;
     font-weight: bold;
-    color: #563d7c;
+    color: #5cb85c;
     background-color: transparent;
-    border-left: 2px solid #563d7c;
+    border-left: 2px solid #5cb85c;
 }
 
 /* Nav: second level (shown on .active) */
@@ -82,13 +140,6 @@
     color: #999;
 }
 .back-to-top:hover,
-.docs-theme-toggle:hover {
-    color: #563d7c;
-    text-decoration: none;
-}
-.docs-theme-toggle {
-    margin-top: 0;
-}
 
 @media (min-width: 768px) {
     .back-to-top,
@@ -128,6 +179,11 @@
     }
 }
 
+.docs-nav {
+    margin-bottom: 0;
+    border-bottom: 0;
+    background-color: #fff;
+}
 
 /*
  * Docs sections
@@ -141,9 +197,4 @@
 }
 .docs-section:last-child {
     margin-bottom: 0;
-}
-
-h2[id] {
-    padding-top: 20px;
-    margin-top: 0;
 }
