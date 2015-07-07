@@ -31,10 +31,10 @@
       </a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/intro">Getting Started</a></li>
-      <li><a href="/userguide">User Guide</a></li>
-      <li><a href="/embedding">Application Embedding</a></li>
-      <li><a href="/api">Developer API</a></li>
+      {% assign books = (site.books | sort: "weight" reversed) %}
+      {% for book in books %}
+      <li><a href="/{{ book.book }}">{{ book.title }}</a></li>
+      {% endfor %}
     </ul>
   </div>
 </div>
