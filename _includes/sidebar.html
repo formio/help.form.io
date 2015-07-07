@@ -4,7 +4,7 @@
     {% for chapter in chapters %}
     <li>
       <a href="#{{ chapter.chapter }}">{{ chapter.title }}</a>
-      {% assign paragraphs = (site.paragraphs | where: "chapter" , chapter.chapter | sort: "weight) %}
+      {% assign paragraphs = (site.paragraphs | where: "chapter" , chapter.chapter | sort: "weight") %}
       <ul class="nav">
         {% for paragraph in paragraphs %}
         <li>

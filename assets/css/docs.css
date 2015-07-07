@@ -11,10 +11,15 @@ h2[id] {
     padding-bottom: 9px;
     margin: 40px 0 20px;
     border-bottom: 1px solid #eee;
+    color: #093e61;
 }
 
 h3[id] {
-    color: #0e5c8f;
+    color: #0c5280;
+}
+
+#content img {
+    width: 100%;
 }
 /* Page headers */
 .docs-header {
@@ -197,4 +202,16 @@ h3[id] {
 }
 .docs-section:last-child {
     margin-bottom: 0;
+}
+
+.note {
+    background-color: #fcf8e3;
+    padding: 15px;
+    border: 1px solid #f2e187;
+}
+
+.warning {
+    background-color: #f2dede;
+    padding: 15px;
+    border: 1px solid #dfadad;
 }
