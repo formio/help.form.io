@@ -7,6 +7,9 @@
 a {
     color: #0e5c8f;
 }
+a:hover {
+    text-decoration: none;
+}
 h2[id] {
     padding-bottom: 9px;
     margin: 40px 0 20px;
