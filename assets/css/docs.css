@@ -136,21 +136,12 @@ h3[id] {
 /* Back to top (hidden on mobile) */
 .back-to-top,
 .docs-theme-toggle {
-    display: none;
     padding: 4px 10px;
     margin-top: 10px;
     margin-left: 10px;
     font-size: 12px;
     font-weight: 500;
     color: #999;
-}
-.back-to-top:hover,
-
-@media (min-width: 768px) {
-    .back-to-top,
-    .docs-theme-toggle {
-        display: block;
-    }
 }
 
 /* Show and affix the side nav when space allows it */
