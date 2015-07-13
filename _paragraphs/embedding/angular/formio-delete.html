@@ -1,0 +1,16 @@
+---
+title: formioDelete Directive
+book: userguide
+chapter: angular
+slug: formio-delete
+weight: 30
+---
+<h4>Attributes</h4>
+<p><strong>src</strong> - The src attribute is used to pass in the path to the form or form and submission to be displayed.</p>
+<p><strong>form</strong> - Alternatively, you can pass in the form definition as an attribute on the formio directive.</p>
+<p><strong>submission</strong> - If a submission has already been loaded, it can be passed in as an attribute.</p>
+<p><strong>formAction</strong> - To use a custom form action you can specify it as an attribute. This will change where the submit event goes to.</p>
+<p><strong>resourceName</strong> - The resource name is used in the delete dialogue for confirmation. It can be used to change the default.</p>
+<p>The delete directive will show a delete confirmation dialogue and will either cancel or delete based on the selection by the user. Events are triggered for either a <strong>cancel</strong> or a <strong>delete</strong>.</p>
+<pre><code>&lt;formio-delete src="{formName}/submission/{submission_id}"&gt;&lt;/formio-delete&gt;</code></pre>
+
