@@ -38,7 +38,7 @@ Once ROLES are created, there are a few ways to configure ROLES & permissions
 This will give you a list of all FORMS or RESOURCES connected to that        PROJECT.  Simply hit EDIT next to the form you want to configure and apply    your changes:
 ![](https://cloud.githubusercontent.com/assets/13321142/9176969/5e2c57d2-3f5c-11e5-8aff-0a125d75a3fc.png)
 
-Now you can select the ROLES you want associate with each PERMISSION and save the changes:
+    Now you can select the ROLES you want associate with each PERMISSION and save the changes:
 
 ![](https://cloud.githubusercontent.com/assets/13321142/9176970/641b293e-3f5c-11e5-997d-186deead874e.png)
 
