@@ -4,4 +4,4 @@ chapter: permissions
 slug: read-all-permissions
 weight: 40
 <ul>
-  <li>The Read All permission will allow a user, within a given Role, to view every Submission made within the Application, regardless of who owns that Submission.</li></ul>
+        <li>The Read All permission will allow a user, within a given Role, to view every Submission made within the Application, regardless of who owns that Submission.</li></ul>
