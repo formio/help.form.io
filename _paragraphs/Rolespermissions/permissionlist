@@ -1,0 +1,7 @@
+title: <ul><li>Readl All Permission</ul></li>
+book: rolesandpermissions
+chapter: roles
+slug: creating-roles
+weight: 35
+<ul>
+  <li>The Read All permission will allow a user, within a given Role, to view every Submission made within the Application, regardless of who owns that Submission.</li></ul>
