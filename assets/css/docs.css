@@ -18,7 +18,15 @@ h2[id] {
 }
 
 h3[id] {
-    color: #0c5280;
+    color: #222;
+}
+
+footer {
+    padding: 40px 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
 }
 
 #content img {
