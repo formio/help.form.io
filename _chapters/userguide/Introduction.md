@@ -15,4 +15,4 @@ chapter: introduction
 - **ACTIONS**
 - **APIs**
 - **SUBMISSIONS**
-<p>These major components are described below with additional information about how to use them.</p>
+These major components are described below with additional information about how to use them.</p>
