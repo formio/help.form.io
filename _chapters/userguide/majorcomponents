@@ -4,3 +4,4 @@ book: userguide
 weight: 10
 chapter: majorcomponents
 ---
+To best understand the <form.io> platform, and how you can use it to build your own applications, it is helpful to understand the major components of the <form.io> system.   While there are many detailed elementsand features of the system, the major components of the system  of the <form.io> system are: 
