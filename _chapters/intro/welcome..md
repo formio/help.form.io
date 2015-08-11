@@ -20,7 +20,7 @@ But the **WOW** moment comes with our powerful embedded technology which provide
   - Docker
   - Mongo DB
 
-    We take care of the rest.
+ *We take care of the rest.*
 
 
 **Now you are ready to build your first project:**
