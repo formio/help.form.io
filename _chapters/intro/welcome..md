@@ -4,7 +4,7 @@ book: intro
 weight: 10
 chapter: welcome
 ---
-![]( https://cloud.githubusercontent.com/assets/13321142/9202122/e1eff218-4015-11e5-92f4-52205a66940a.png) is a revolutionary FORM & API service that enables web application developers to easily create next generation Web 3.0 applications. Think of  as a form builder for developers that also provides them the corresponding APIs. *&lt;form.io&gt;*  finally bridges the ever increasing gap between the application interface and the backend API server.  Developers use our simple drag & drop interface to create RESOURCES  and FORMS for their front end applications which automatically configures the RESTful API to support them, all in one easy step.
+<p style="font-size: 1.4em;">&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt; is a revolutionary FORM & API service that enables web application developers to easily create next generation Web 3.0 applications. Think of  as a form builder for developers that also provides them the corresponding APIs. *&lt;form.io&gt;*  finally bridges the ever increasing gap between the application interface and the backend API server.  Developers use our simple drag & drop interface to create RESOURCES  and FORMS for their front end applications which automatically configures the RESTful API to support them, all in one easy step.
 
 Each field dragged on to the FORM creates its own definition, behavior, and validation criteria which is executed on both the front and back end simultaneously to create a seamless application experience. RESOURCE fields can also be reused within multiple FORM interfaces, and allow for nested resource relationships which are necessary to create complex applications.
 
