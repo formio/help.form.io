@@ -12,7 +12,7 @@ Our platform also provides a number of configurable ACTIONS that allow for custo
 
 But the **WOW** moment comes with our powerful embedded technology which provides a single HTML element called *&lt;form.io&gt;*  which enables a dynamic embedding of that form within your application.  With this technology, the same schema is used to not only render the form dynamically but also connects that form with the auto generated REST API automatically.  And it’s as easy as embedding an image!
 
-##### You build the app – *we handle the FORM I/O*
+##### You build the app – ***we handle the FORM I/O***
 
 #### Deployment Options:
 - Take advantage of the *&lt;form.io&gt;* Hosting services.  With this option, all you need to do is create your project and embed the tag.
@@ -20,7 +20,7 @@ But the **WOW** moment comes with our powerful embedded technology which provide
   - Docker
   - Mongo DB
 
-       We take care of the rest.
+    We take care of the rest.
 
 
 **Now you are ready to build your first project:**
