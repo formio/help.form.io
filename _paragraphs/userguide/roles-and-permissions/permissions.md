@@ -7,7 +7,7 @@ weight: 35
 ---
 
 <p>There are seven (7) PERMISSIONS that are assignable to any ROLES within a PROJECT: </p>
-  Read All aslfkaslkfjalsf
+  **Read All**
   **Update All**
   **Delete All**
   **Create Own**
