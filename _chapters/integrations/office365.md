@@ -45,7 +45,7 @@ mechanism. To get your project working with Microsoft Office 365, please walk th
 
       ![](/assets/img/office365/application-add-app-perms.png)
 
-    - Click on ***Office 365 unified API*** permissions and then click the ***Save*** icon.
+    - Click on ***Office 365 Exchange Online*** and ***Office 365 unified API*** permissions and then click the ***Save*** icon.
 
       ![](/assets/img/office365/application-permissions.png)
 
