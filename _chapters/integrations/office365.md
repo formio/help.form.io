@@ -214,7 +214,13 @@ mechanism. To get your project working with Microsoft Office 365, please walk th
 
       ![](/assets/img/office365/formio-o365-settings.png)
 
-    - Next, you will need to specify your Tenant ID, Client ID, which can be found on your Azure project page as follows.
+    - Next, you will need to specify your Tenant ID, which can be found by clicking on **View Endpoints** and then look at the ID provided in the urls.
+
+      ![](/assets/img/office365/formio-o365-view-endpoints.png)
+
+      ![](/assets/img/office365/formio-o365-tennant-id.png)
+
+    - Next, you will need to specify your Client ID, which can be found on your Azure project page as follows.
 
       ![](/assets/img/office365/formio-o365-tennant-client.png)
 
