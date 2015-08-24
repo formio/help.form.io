@@ -25,6 +25,8 @@ weight: 31
 <p>The Anonymous ROLE is a special ROLE that defines access within an Application for a USER that is not authenticated. For example, a user that visits your application that has not yet registered or is not logged in.  <b>The Anonymous ROLE can be renamed, but not removed.</b></p>
 <h4>Creating and Configuring ROLES</h4>
 To create and configure a ROLE, navigate to the <b>Settings</b> tab located within a PROJECT at the top right corner of the page and then click the <b>ROLES</b> button on the left side. Select the <b>+New ROLE</b> button to add a new ROLE, delete a ROLE by selecting the <b>Trash Icon</b>, and edit a ROLE name and description by selecting the <b>Edit</b> button.
+
+**Note:** When naming Roles, capital letters will be listed before lowercase letters. Staying consistent when naming your Roles will keep the Role list organized. 
 <img src="https://cloud.githubusercontent.com/assets/13321142/9176933/12134950-3f5c-11e5-8f0e-04604bb82281.png">
 <p>Additional ROLES can be defined and added to a project at any time.  Next, we will set up Permissions associated with that role to define access to the submissions within your application.</p>
 <p>NOTE:  When a RESOURCE is accessed by a USER, and the USER has a ROLE assigned to them with PERMISSIONS to complete an operation they are attempting, the operation will be granted. If no ROLES are defined to have permissions on an RESOURCE, only the owner of the RESOURCE or the APPLICATION itself will have access to the RESOURCE.</p>
