@@ -1,0 +1,73 @@
+---
+layout: basic
+app: formioForm
+controller: FormController
+---
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div ng-if="!!form"><h3>You are viewing <span id="form-url"></span></h3></div>
+                <div ng-if="!form">Enter the form API url into the box below and press <strong>Show Form</strong> to viewe the form.</div>
+            </div>
+            <div class="panel-body">
+                <div ng-if="!form">
+                    <form action="/form/" method="get">
+                        <div class="input-group">
+                            <input type="text" name="form" class="form-control" placeholder="Enter your form URL">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Show Form!</button>
+                </span>
+                        </div>
+                    </form>
+                </div>
+                <div id="formio-form"></div>
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-default" href="/form/"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Reset</a>
+            </div>
+        </div>
+    </div>
+</div><br/>
+<script type="text/javascript">
+    var QueryString = function () {
+        // This function is anonymous, is executed immediately and
+        // the return value is assigned to QueryString!
+        var query_string = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            // If first entry with this name
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = decodeURIComponent(pair[1]);
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+                var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+                query_string[pair[0]] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[pair[0]].push(decodeURIComponent(pair[1]));
+            }
+        }
+        return query_string;
+    }();
+
+    $('#form-url').text(QueryString.form);
+
+    angular.module('formioForm', ['formio'])
+        .controller('FormController', [
+            '$scope',
+            '$compile',
+        function(
+            $scope,
+            $compile
+        ) {
+            $scope.form = QueryString.form;
+            if ($scope.form) {
+                var formio = angular.element(document.createElement('formio'));
+                var attributes = {src: "'" + $scope.form + "'"};
+                angular.element('#formio-form').html($compile(formio.attr(attributes))($scope));
+            }
+        }]);
+</script>

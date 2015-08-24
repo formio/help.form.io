@@ -1,0 +1,46 @@
+{
+  "name": "formio",
+  "authors": [
+    "Travis Tidwell <travis@form.io>"
+  ],
+  "main": [
+    "dist/formio.js",
+    "css/formio.css"
+  ],
+  "description": "The Form.IO form renderer.",
+  "keywords": [
+    "angularjs",
+    "ionic",
+    "form"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery.maskedinput": "~1.4.1",
+    "angular-ui-select": "~0.11.2",
+    "angular-paginate-anything": "~4.1.1",
+    "angular": "~1.3.15",
+    "angular-moment": "~0.10.1",
+    "signature_pad": "~1.3.6",
+    "bootstrap": "~3.3.4",
+    "angular-sanitize": "~1.3.15",
+    "bootstrap-ui-datetime-picker": "~1.1.5",
+    "angular-bootstrap": "~0.13.0"
+  },
+  "homepage": "https://github.com/formio/ngFormio",
+  "_release": "d15bd1b48c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "develop",
+    "commit": "d15bd1b48c06557c995f4e670fc53aaa9764cc80"
+  },
+  "_source": "git://github.com/formio/ngFormio.git",
+  "_target": "develop",
+  "_originalSource": "formio"
+}

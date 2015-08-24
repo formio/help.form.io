@@ -1,0 +1,23 @@
+{
+  "name": "help.form.io",
+  "version": "0.0.1",
+  "homepage": "https://github.com/formio/help.form.io",
+  "authors": [
+    "Form.io"
+  ],
+  "description": "The Form.io documentation site.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "URIjs": "uri.js#~1.16.0",
+    "anchor-js": "~1.2.1",
+    "bootstrap": "3.3.4",
+    "formio": "develop"
+  }
+}
