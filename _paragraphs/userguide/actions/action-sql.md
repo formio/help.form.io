@@ -9,7 +9,7 @@ weight: 50
 <img src="/assets/img/action-sql.png">
 <img src="/assets/img/action-sql2.png">
 <h4>Handler</h4>
-<p>The handler determines when the email will be sent. Currently there are two options. Before and After are the two options. If you select both, it will run twice, once before and once after the methods selected.</p>
+<p>The handler determines when the query will be sent. Currently there are two options. Before and After are the two options. If you select both, it will run twice, once before and once after the methods selected.</p>
 <h4>Method</h4>
 <p>When to run this action. Select which system events will trigger this action.</p>
 <h4>SQL Server Type</h4>
