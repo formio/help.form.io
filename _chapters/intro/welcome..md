@@ -4,7 +4,6 @@ book: intro
 weight: 10
 chapter: welcome
 ---
-<img height="25px;" alt="Form.io" src="/assets/formio-logo.png">
 
 **&lt;form.io&gt;** offers the first development platform that builds Form's and API's in one simple step.</p> **&lt;form.io&gt;** is a revolutionary FORM & API service that enables web application developers to easily create next generation Web 3.0 applications. Think of  as a form builder for developers that also provides them the corresponding APIs. **&lt;form.io&gt;**  finally bridges the ever increasing gap between the application interface and the backend API server.  Developers use our simple drag & drop interface to create RESOURCES  and FORMS for their front end applications which automatically configures the RESTful API to support them, all in one easy step.
 
