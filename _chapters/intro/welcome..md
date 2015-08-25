@@ -25,4 +25,4 @@ But the **WOW** moment comes with our powerful embedded technology which provide
 
 **Now let's build an app together and show you how everything works:**
 
-#### [**Build An Application**](help.form.io/start)
+#### [**Build An Application**](http://help.form.io/start)
