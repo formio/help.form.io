@@ -23,6 +23,6 @@ But the **WOW** moment comes with our powerful embedded technology which provide
     We take care of the rest.
 
 
-**Now you are ready to build your first project:**
+**Now let's build an app together and show you how everything works:**
 
-#### [**See Users Guide**](http://help.form.io/userguide/)
+#### [**Build An Application**](help.form.io/start)
