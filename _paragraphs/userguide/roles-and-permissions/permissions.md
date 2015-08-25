@@ -42,5 +42,5 @@ Now you can select the ROLES you want associate with each PERMISSION and save th
 2. Assign PERMISSIONS by clicking the **Permissions** button located at the top right of the page within a FORM or RESOURCE. Each PERMISSION may be assigned a ROLE or more than one ROLE, by clicking in the ROLE field. After assigning ROLE to your Permissions, click the **Save** button at the bottom. Remember, you can always add, delete, and edit ROLE at anytime.
 ***Note** The PROJECT owner will have Real All, Update All, and Delete All PERMISSIONS by default to all FORM and RESOURCE submissions made.
 
-![](https://cloud.githubusercontent.com/assets/13321142/9473022/2e768d64-4b1e-11e5-9e4d-781fc1878e05.png)
+![](https://cloud.githubusercontent.com/assets/13321142/9473365/0259cf8c-4b20-11e5-85ed-316fc8b2b904.png)
     
