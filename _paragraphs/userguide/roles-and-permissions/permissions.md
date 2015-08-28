@@ -34,13 +34,13 @@ weight: 35
 Once ROLES are created, there are a few ways to configure ROLES & permissions
 
 1. Select Edit next to any ROLE on your ROLE Settings page:
-![](https://cloud.githubusercontent.com/assets/13321142/9176965/5741d0e6-3f5c-11e5-9635-4156c7c2e59f.png)
+![](https://cloud.githubusercontent.com/assets/13321142/9473019/2e74b912-4b1e-11e5-9c9b-8ae976a0172e.png)
 This will give you a list of all FORMS or RESOURCES connected to that        PROJECT.  Simply hit EDIT next to the form you want to configure and apply    your changes:
-![](https://cloud.githubusercontent.com/assets/13321142/9176969/5e2c57d2-3f5c-11e5-8aff-0a125d75a3fc.png)
+![](https://cloud.githubusercontent.com/assets/13321142/9473020/2e758284-4b1e-11e5-9651-748f814ea2bd.png)
 Now you can select the ROLES you want associate with each PERMISSION and save the changes:
-![](https://cloud.githubusercontent.com/assets/13321142/9176970/641b293e-3f5c-11e5-997d-186deead874e.png)
+![](https://cloud.githubusercontent.com/assets/13321142/9473023/2e78dfc4-4b1e-11e5-9955-70ae0ab48e36.png)
 2. Assign PERMISSIONS by clicking the **Permissions** button located at the top right of the page within a FORM or RESOURCE. Each PERMISSION may be assigned a ROLE or more than one ROLE, by clicking in the ROLE field. After assigning ROLE to your Permissions, click the **Save** button at the bottom. Remember, you can always add, delete, and edit ROLE at anytime.
 ***Note** The PROJECT owner will have Real All, Update All, and Delete All PERMISSIONS by default to all FORM and RESOURCE submissions made.
 
-![](https://cloud.githubusercontent.com/assets/13321142/9182996/ad4245fc-3f7a-11e5-9cb2-507c742e8037.png)
+![](https://cloud.githubusercontent.com/assets/13321142/9473365/0259cf8c-4b20-11e5-85ed-316fc8b2b904.png)
     

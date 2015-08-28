@@ -17,7 +17,7 @@ The address form component is a special component that does lookups for addresse
 <p>If checked, this field will be enforced as unique for this form. Submissions will be checked to see if an existing value matches. This validation is currently server side only.</p>
 <h4>Protected</h4>
 <p>If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by going to the submissions for a form.</p>
-<h4>Persistant</h4>
+<h4>Persistent</h4>
 <p>If checked, the field will be stored in the database. If you want a field to not save, uncheck this box. This is useful for fields like password validation that shouldn't save.</p>
 <h4>Table View</h4>
 <p>If checked, this value will show up in the table view of the submissions list.</p>
