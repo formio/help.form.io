@@ -13,12 +13,16 @@ controller: FormController
             <div class="panel-body">
                 <div ng-if="!form">
                     <form action="/form/" method="get">
-                        <div class="input-group">
-                            <input type="text" name="form" class="form-control" placeholder="Enter your form URL">
-                <span class="input-group-btn">
-                    <button class="btn btn-primary" type="submit">Show Form!</button>
-                </span>
+                        <div class="form-group">
+                            <label for="form">Form API URL</label>
+                            <input type="text" name="form" id="form" class="form-control" placeholder="Enter your form URL">
                         </div>
+                        <div class="form-group">
+                            <label for="form">Form CSS Styles</label>
+                            <input type="text" name="css" id="css" class="form-control" placeholder="Enter the URL for the style sheet.">
+                            <p>We recommend using <a href="https://gist.github.com/">Github Gists</a> and then paste the <strong>Raw URL</strong> here.</p>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Show Form!</button>
                     </form>
                 </div>
                 <div id="formio-form"></div>
@@ -52,6 +56,25 @@ controller: FormController
         }
         return query_string;
     }();
+
+    // Inject the styles.
+    if (QueryString.css) {
+
+        // Replace with rawgit so that
+        if (QueryString.css.indexOf('https://gist.githubusercontent.com') !== -1) {
+            QueryString.css = QueryString.css.replace('https://gist.githubusercontent.com', 'https://cdn.rawgit.com');
+        }
+
+        var $head = $("head");
+        var $headlinklast = $head.find("link[rel='stylesheet']:last");
+        var linkElement = "<link rel='stylesheet' href='" + QueryString.css + "' type='text/css' media='screen'>";
+        if ($headlinklast.length){
+            $headlinklast.after(linkElement);
+        }
+        else {
+            $head.append(linkElement);
+        }
+    }
 
     $('#form-url').text(QueryString.form);
 
