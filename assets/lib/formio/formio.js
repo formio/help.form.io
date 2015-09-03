@@ -125,8 +125,6 @@ app.provider('Formio', function() {
             subs.shift();
           }
 
-          // Remove the submissions and actions from the path.
-          path = path.replace(/\/(submission|action).*/, '');
           var paths = [];
 
           // See if this url has a subdomain.
@@ -138,6 +136,9 @@ app.provider('Formio', function() {
             }
           }
           else {
+            // Remove the submissions and actions from the path.
+            path = path.replace(/\/(submission|action).*/, '');
+
             var formpaths = path.match(/^http.*\/.*\/form\/?([^?]*)/);
             if (formpaths && formpaths.length > 1) {
               paths[1] = formpaths[1] ? 'form/' + formpaths[1] : '';
@@ -350,6 +351,10 @@ app.provider('Formio', function() {
                 setValue = false;
                 return;
               }
+              // Convert old single field data in submissions to multiple
+              if(key === parts[parts.length - 1] && component.multiple && !Array.isArray(value[key])) {
+                value[key] = [value[key]];
+              }
               value = value[key];
               setValue = true;
               if (onId) {
@@ -366,6 +371,10 @@ app.provider('Formio', function() {
             return '';
           }
           else {
+            // Convert old single field data in submissions to multiple
+            if(component.multiple && !Array.isArray(data[component.key])) {
+              data[component.key] = [data[component.key]];
+            }
             return data[component.key];
           }
         };
@@ -534,6 +543,24 @@ app.factory('FormioUtils', function() {
         }
       });
       return flattened;
+    },
+    eachComponent: function eachComponent(components, fn) {
+      if(!components) {
+        return;
+      }
+      angular.forEach(components, function(component) {
+        if (component.columns) {
+          angular.forEach(component.columns, function(column) {
+            eachComponent(column.components, fn);
+          });
+        }
+        else if (component.components) {
+          eachComponent(component.components, fn);
+        }
+        else {
+          fn(component);
+        }
+      });
     },
     fieldWrap: function(input) {
       input = input + '<formio-errors></formio-errors>';
@@ -893,8 +920,7 @@ app.directive('formioComponent', [
           // value by navigating through the object.
           if (
             $scope.component &&
-            $scope.component.key &&
-            $scope.component.key.indexOf('.') !== -1
+            $scope.component.key
           ) {
             $scope.$watch('data', function(data) {
               if (!data || angular.equals({}, data)) { return; }
@@ -903,6 +929,7 @@ app.directive('formioComponent', [
                   $scope.$emit('addFormComponent', {
                     type: 'hidden',
                     settings: {
+                      tableView: false,
                       key: idPath + '_id'
                     }
                   });
@@ -1097,7 +1124,7 @@ app.run([
     // The template for the formio forms.
     $templateCache.put('formio.html',
       '<form role="form" name="formioForm" ng-submit="onSubmit(formioForm)" novalidate>' +
-        '<i id="formio-loading" style="font-size: 2em;" class="fa fa-spinner fa-pulse"></i>' +
+        '<i id="formio-loading" style="font-size: 2em;" class="glyphicon glyphicon-repeat glyphicon-spin"></i>' +
         '<div ng-repeat="alert in formioAlerts" class="alert alert-{{ alert.type }}" role="alert">' +
           '{{ alert.message }}' +
         '</div>' +

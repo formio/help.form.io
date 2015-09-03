@@ -127,8 +127,6 @@ app.provider('Formio', function() {
             subs.shift();
           }
 
-          // Remove the submissions and actions from the path.
-          path = path.replace(/\/(submission|action).*/, '');
           var paths = [];
 
           // See if this url has a subdomain.
@@ -140,6 +138,9 @@ app.provider('Formio', function() {
             }
           }
           else {
+            // Remove the submissions and actions from the path.
+            path = path.replace(/\/(submission|action).*/, '');
+
             var formpaths = path.match(/^http.*\/.*\/form\/?([^?]*)/);
             if (formpaths && formpaths.length > 1) {
               paths[1] = formpaths[1] ? 'form/' + formpaths[1] : '';
@@ -352,6 +353,10 @@ app.provider('Formio', function() {
                 setValue = false;
                 return;
               }
+              // Convert old single field data in submissions to multiple
+              if(key === parts[parts.length - 1] && component.multiple && !Array.isArray(value[key])) {
+                value[key] = [value[key]];
+              }
               value = value[key];
               setValue = true;
               if (onId) {
@@ -368,6 +373,10 @@ app.provider('Formio', function() {
             return '';
           }
           else {
+            // Convert old single field data in submissions to multiple
+            if(component.multiple && !Array.isArray(data[component.key])) {
+              data[component.key] = [data[component.key]];
+            }
             return data[component.key];
           }
         };
@@ -536,6 +545,24 @@ app.factory('FormioUtils', function() {
         }
       });
       return flattened;
+    },
+    eachComponent: function eachComponent(components, fn) {
+      if(!components) {
+        return;
+      }
+      angular.forEach(components, function(component) {
+        if (component.columns) {
+          angular.forEach(component.columns, function(column) {
+            eachComponent(column.components, fn);
+          });
+        }
+        else if (component.components) {
+          eachComponent(component.components, fn);
+        }
+        else {
+          fn(component);
+        }
+      });
     },
     fieldWrap: function(input) {
       input = input + '<formio-errors></formio-errors>';
@@ -895,8 +922,7 @@ app.directive('formioComponent', [
           // value by navigating through the object.
           if (
             $scope.component &&
-            $scope.component.key &&
-            $scope.component.key.indexOf('.') !== -1
+            $scope.component.key
           ) {
             $scope.$watch('data', function(data) {
               if (!data || angular.equals({}, data)) { return; }
@@ -905,6 +931,7 @@ app.directive('formioComponent', [
                   $scope.$emit('addFormComponent', {
                     type: 'hidden',
                     settings: {
+                      tableView: false,
                       key: idPath + '_id'
                     }
                   });
@@ -1099,7 +1126,7 @@ app.run([
     // The template for the formio forms.
     $templateCache.put('formio.html',
       '<form role="form" name="formioForm" ng-submit="onSubmit(formioForm)" novalidate>' +
-        '<i id="formio-loading" style="font-size: 2em;" class="fa fa-spinner fa-pulse"></i>' +
+        '<i id="formio-loading" style="font-size: 2em;" class="glyphicon glyphicon-repeat glyphicon-spin"></i>' +
         '<div ng-repeat="alert in formioAlerts" class="alert alert-{{ alert.type }}" role="alert">' +
           '{{ alert.message }}' +
         '</div>' +
@@ -1225,6 +1252,22 @@ app.provider('formioComponents', function() {
   };
 });
 
+app.directive('safeMultipleToSingle', [function(){
+  return {
+    require: 'ngModel',
+    restrict: 'A',
+    link: function($scope, el, attrs, ngModel) {
+      ngModel.$formatters.push(function(modelValue) {
+        if(!$scope.component.multiple && Array.isArray(modelValue)) {
+          return modelValue[0] || '';
+        }
+
+        return modelValue;
+      });
+    }
+  };
+}]);
+
 app.config([
   'formioComponentsProvider',
   function(formioComponentsProvider) {
@@ -1237,7 +1280,7 @@ app.config([
         inputType: 'text',
         inputMask: '',
         label: '',
-        key: '',
+        key: 'textField',
         placeholder: '',
         prefix: '',
         suffix: '',
@@ -1273,6 +1316,7 @@ app.run([
         'ng-disabled="readOnly" ' +
         'ng-model="data[component.key]" ' +
         'ng-model-options="{ debounce: 500 }" ' +
+        'safe-multiple-to-single ' +
         'ng-required="component.validate.required" ' +
         'ng-minlength="component.validate.minLength" ' +
         'ng-maxlength="component.validate.maxLength" ' +
@@ -1320,7 +1364,7 @@ app.config([
         input: true,
         tableView: true,
         label: '',
-        key: '',
+        key: 'addressField',
         placeholder: '',
         multiple: false,
         protected: false,
@@ -1339,7 +1383,7 @@ app.run([
     $templateCache.put('formio/components/address.html',
       '<label ng-if="component.label" for="{{ component.key }}" ng-class="{\'field-required\': component.validate.required}">{{ component.label }}</label>' +
       '<span ng-if="!component.label && component.validate.required" class="glyphicon glyphicon-asterisk form-control-feedback field-required-inline" aria-hidden="true"></span>' +
-      '<ui-select ng-model="data[component.key]" ng-disabled="readOnly" ng-required="component.validate.required" id="{{ component.key }}" theme="bootstrap">' +
+      '<ui-select ng-model="data[component.key]" safe-multiple-to-single ng-disabled="readOnly" ng-required="component.validate.required" id="{{ component.key }}" theme="bootstrap">' +
         '<ui-select-match placeholder="{{ component.placeholder }}">{{$item.formatted_address || $select.selected.formatted_address}}</ui-select-match>' +
         '<ui-select-choices repeat="address in addresses track by $index" refresh="refreshAddress($select.search)" refresh-delay="500">' +
           '<div ng-bind-html="address.formatted_address | highlight: $select.search"></div>' +
@@ -1403,7 +1447,7 @@ app.run([
           '{{ component.label }}' +
           '<span ng-if="component.rightIcon && component.label">&nbsp;</span>' +
           '<span ng-if="component.rightIcon" class="{{ component.rightIcon }}" aria-hidden="true"></span>' +
-          ' <i ng-if="component.action == \'submit\' && form.submitting" class="fa fa-spinner fa-pulse"></i>' +
+          ' <i ng-if="component.action == \'submit\' && form.submitting" class="glyphicon glyphicon-repeat glyphicon-spin"></i>' +
       '</button>'
     );
   }
@@ -1423,7 +1467,7 @@ app.config([
         // This hides the default label layout so we can use a special inline label
         hideLabel: true,
         label: '',
-        key: '',
+        key: 'checkboxField',
         prefix: '',
         suffix: '',
         defaultValue: false,
@@ -1519,7 +1563,7 @@ app.config([
         input: true,
         tableView: true,
         label: '',
-        key: '',
+        key: 'datetimeField',
         placeholder: '',
         format: 'yyyy-MM-dd HH:mm',
         enableDate: true,
@@ -1578,8 +1622,8 @@ app.run([
           'timepicker-options="component.timePicker" />' +
         '<span class="input-group-btn">' +
           '<button type="button" class="btn btn-default" ng-click="calendarOpen = true">' +
-            '<i ng-if="component.enableDate" class="fa fa-calendar"></i>' +
-            '<i ng-if="!component.enableDate" class="fa fa-clock-o"></i>' +
+            '<i ng-if="component.enableDate" class="glyphicon glyphicon-calendar"></i>' +
+            '<i ng-if="!component.enableDate" class="glyphicon glyphicon-time"></i>' +
           '</button>' +
         '</span>' +
       '</div>'
@@ -1598,7 +1642,7 @@ app.config([
         tableView: true,
         inputType: 'email',
         label: '',
-        key: '',
+        key: 'emailField',
         placeholder: '',
         prefix: '',
         suffix: '',
@@ -1648,7 +1692,7 @@ app.config([
       settings: {
         input: true,
         tableView: true,
-        key: '',
+        key: 'hiddenField',
         label: '',
         protected: false,
         unique: false,
@@ -1677,7 +1721,7 @@ app.config([
         tableView: true,
         inputType: 'number',
         label: '',
-        key: '',
+        key: 'numberField',
         placeholder: '',
         prefix: '',
         suffix: '',
@@ -1710,6 +1754,7 @@ app.run([
         'ng-model="data[component.key]" ' +
         'ng-required="component.validate.required" ' +
         'ng-disabled="readOnly" ' +
+        'safe-multiple-to-single ' +
         'min="{{ component.validate.min }}" ' +
         'max="{{ component.validate.max }}" ' +
         'step="{{ component.validate.step }}" ' +
@@ -1786,7 +1831,7 @@ app.config([
         tableView: false,
         inputType: 'password',
         label: '',
-        key: '',
+        key: 'passwordField',
         placeholder: '',
         prefix: '',
         suffix: '',
@@ -1808,7 +1853,7 @@ app.config([
         tableView: true,
         inputMask: '(999) 999-9999',
         label: '',
-        key: '',
+        key: 'phonenumberField',
         placeholder: '',
         prefix: '',
         suffix: '',
@@ -1835,17 +1880,8 @@ app.config([
         tableView: true,
         inputType: 'radio',
         label: '',
-        key: '',
-        values: [
-          {
-            value: 'value1',
-            label: 'Value 1'
-          },
-          {
-            value: 'value2',
-            label: 'Value 2'
-          }
-        ],
+        key: 'radioField',
+        values: [],
         defaultValue: '',
         protected: false,
         persistent: true,
@@ -1942,7 +1978,7 @@ app.config([
         input: true,
         tableView: true,
         label: '',
-        key: '',
+        key: 'resourceField',
         placeholder: '',
         resource: '',
         defaultValue: '',
@@ -1960,20 +1996,23 @@ app.config([
     });
   }
 ]);
+
 app.run([
   '$templateCache',
-  'FormioUtils',
-  function($templateCache, FormioUtils) {
-    $templateCache.put('formio/components/resource.html', FormioUtils.fieldWrap(
-      '<ui-select ng-model="data[component.key]" ng-disabled="readOnly" ng-required="component.validate.required" id="{{ component.key }}" name="{{ component.key }}" theme="bootstrap">' +
+  function($templateCache) {
+    $templateCache.put('formio/components/resource.html',
+      '<label ng-if="component.label" for="{{ component.key }}" class="control-label" ng-class="{\'field-required\': component.validate.required}">{{ component.label }}</label>' +
+      '<span ng-if="!component.label && component.validate.required" class="glyphicon glyphicon-asterisk form-control-feedback field-required-inline" aria-hidden="true"></span>' +
+      '<ui-select ui-select-required safe-multiple-to-single ui-select-open-on-focus ng-model="data[component.key]" ng-disabled="readOnly" ng-required="component.validate.required" id="{{ component.key }}" name="{{ component.key }}" theme="bootstrap">' +
         '<ui-select-match placeholder="{{ component.placeholder }}">' +
           '<formio-select-item template="component.template" item="$item || $select.selected" select="$select"></formio-select-item>' +
         '</ui-select-match>' +
         '<ui-select-choices repeat="item in selectItems | filter: $select.search" refresh="refreshSubmissions($select.search)" refresh-delay="1000">' +
           '<formio-select-item template="component.template" item="item" select="$select"></formio-select-item>' +
         '</ui-select-choices>' +
-      '</ui-select>'
-    ));
+      '</ui-select>' +
+      '<formio-errors></formio-errors>'
+    );
 
     // Change the ui-select to ui-select multiple.
     $templateCache.put('formio/components/resource-multiple.html',
@@ -2007,15 +2046,39 @@ app.directive('uiSelectRequired', function () {
   return {
     require: 'ngModel',
     link: function (scope, element, attrs, ngModel) {
-      if (!attrs.ngRequired) { return; }
-      scope.$watch(function () {
-        return ngModel.$modelValue;
-      }, function () {
-        ngModel.$setValidity('required', !!(ngModel.$modelValue && ngModel.$modelValue.length));
-      });
+      var oldIsEmpty = ngModel.$isEmpty;
+      ngModel.$isEmpty = function (value) {
+        return (Array.isArray(value) && value.length === 0) || oldIsEmpty(value);
+      };
     }
   };
 });
+
+// A hack to have ui-select open on focus
+app.directive('uiSelectOpenOnFocus', ['$timeout', function($timeout){
+  return {
+    require: 'uiSelect',
+    restrict: 'A',
+    link: function($scope, el, attrs, uiSelect) {
+      var closing = false;
+
+      angular.element(uiSelect.focusser).on('focus', function() {
+        if(!closing) {
+          uiSelect.activate();
+        }
+      });
+
+      // Because ui-select immediately focuses the focusser after closing
+      // we need to not re-activate after closing
+      $scope.$on('uis:close', function() {
+        closing = true;
+        $timeout(function() { // I'm so sorry
+          closing = false;
+        });
+      });
+    }
+  };
+}]);
 
 // Configure the Select component.
 app.config([
@@ -2081,7 +2144,7 @@ app.config([
         input: true,
         tableView: true,
         label: '',
-        key: '',
+        key: 'selectField',
         placeholder: '',
         data: {
           values: [{
@@ -2118,7 +2181,7 @@ app.run([
     $templateCache.put('formio/components/select.html',
       '<label ng-if="component.label" for="{{ component.key }}" class="control-label" ng-class="{\'field-required\': component.validate.required}">{{ component.label }}</label>' +
       '<span ng-if="!component.label && component.validate.required" class="glyphicon glyphicon-asterisk form-control-feedback field-required-inline" aria-hidden="true"></span>' +
-      '<ui-select ui-select-required ng-model="data[component.key]" name="{{ component.key }}" ng-disabled="readOnly" ng-required="component.validate.required" id="{{ component.key }}" theme="bootstrap">' +
+      '<ui-select ui-select-required ui-select-open-on-focus ng-model="data[component.key]" safe-multiple-to-single name="{{ component.key }}" ng-disabled="readOnly" ng-required="component.validate.required" id="{{ component.key }}" theme="bootstrap">' +
         '<ui-select-match placeholder="{{ component.placeholder }}">' +
           '<formio-select-item template="component.template" item="$item || $select.selected" select="$select"></formio-select-item>' +
         '</ui-select-match>' +
@@ -2276,7 +2339,7 @@ app.config([
         input: true,
         tableView: true,
         label: '',
-        key: '',
+        key: 'textareaField',
         placeholder: '',
         prefix: '',
         suffix: '',
@@ -2307,6 +2370,7 @@ app.run([
         'ng-model="data[component.key]" ' +
         'ng-disabled="readOnly" ' +
         'ng-required="component.validate.required" ' +
+        'safe-multiple-to-single ' +
         'id="{{ component.key }}" ' +
         'placeholder="{{ component.placeholder }}" ' +
         'custom-validator="component.validate.custom" ' +
