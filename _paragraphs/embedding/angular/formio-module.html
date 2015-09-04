@@ -9,54 +9,47 @@ weight: 10
 <h4>Bower</h4>
 <p>To add with bower, add formio to the bower dependencies and run <strong>bower install</strong></p>
 <h4>Adding the dependencies</h4>
-Form.io requires some dependencies on your HTML page to work properly. All of these dependencies can be found by looking at the <a href="https://github.com/formio/ngFormio/blob/develop/bower.json#L25"></a><strong>formio</strong> bower.json</a> file. The easiest way to include all of these dependencies within your webpage is to use a tool called <a href="https://github.com/taptapship/wiredep">Wiredep</a>.
+<p>Form.io requires some dependencies on your HTML page to work properly. All of these dependencies can be found by looking at the <a href="https://github.com/formio/ngFormio/blob/develop/bower.json#L25"><strong>formio</strong> bower.json</a> file. The easiest way to include all of these dependencies within your webpage is to use a tool called <a href="https://github.com/taptapship/wiredep">Wiredep</a>.</p>
 <h4>Wiredep</h4>
-First you need to install wiredep.
+<p>First you need to install wiredep.</p>
+   npm install --save wiredep
+
+<p>Next, add the following to your HTML page.</p>
 ```
-npm install --save wiredep
+  <html>
+    <head>
+      <!-- bower:css -->
+      <!-- endbower -->
+    </head>
+    <body>
+      <!-- bower:js -->
+      <!-- endbower -->
+    </body>
+  </html>
 ```
 
-Next, add the following to your HTML page.
-```
-<html>
-<head>
-  <!-- bower:css -->
-  <!-- endbower -->
-</head>
-<body>
-  <!-- bower:js -->
-  <!-- endbower -->
-</body>
-</html>
-```
-
-Next, type the following in terminal to wire up all the dependencies.
+<p>Next, type the following in terminal to wire up all the dependencies.</p>
 
 ```
-$ node
+  $ node
 ```
-(press enter)
+<p>(press enter)</p>
 ```
-> require('wiredep')({ src: 'index.html' });
+  > require('wiredep')({ src: 'index.html' });
 ```
-(press enter)
-
-This should then wire all the dependencies into your page. 
+<p>(press enter)</p>
+<p>This should then wire all the dependencies into your page.</p>
 <h4>Example Page</h4>
-To see this in action, here is a page with all the dependencies already wired up for reference.
+<p>To see this in action, here is a page with all the dependencies already wired up for reference.</p>
 <a href="https://github.com/formio/examples.form.io/blob/master/simpleform/index.html">https://github.com/formio/examples.form.io/blob/master/simpleform/index.html</a>
-
 <h4>Initialize Angular</h4>
-The next step is to initialize <strong>formio</strong> within your Angular application.  This requires you to add the following to your angular.js declaration.
-
+<p>The next step is to initialize <strong>formio</strong> within your Angular application.  This requires you to add the following to your angular.js declaration.</p>
 ```
-angular.module('myApp', ['formio']);
+  angular.module('myApp', ['formio']);
 ```
-
-And of course, if you are not using Angular for your full application, you will need to make sure that the application name is provided on the ```<body>``` tag.
-
+<p>And of course, if you are not using Angular for your full application, you will need to make sure that the application name is provided on the ```<body>``` tag.</p>
 ```
-<body ng-app="myApp">
+  <body ng-app="myApp">
   
-</body>
+  </body>
 ```
