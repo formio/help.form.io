@@ -127,7 +127,9 @@ app.provider('Formio', function() {
             subs.shift();
           }
 
+          // Remove the submissions and actions from the path.
           var paths = [];
+          path = path.replace(/\/(submission|action)$|\/(submission|action)\/.*/, '');
 
           // See if this url has a subdomain.
           if (subdomain && subdomain !== 'api') {
@@ -138,9 +140,6 @@ app.provider('Formio', function() {
             }
           }
           else {
-            // Remove the submissions and actions from the path.
-            path = path.replace(/\/(submission|action).*/, '');
-
             var formpaths = path.match(/^http.*\/.*\/form\/?([^?]*)/);
             if (formpaths && formpaths.length > 1) {
               paths[1] = formpaths[1] ? 'form/' + formpaths[1] : '';
@@ -338,39 +337,34 @@ app.provider('Formio', function() {
             this.setUser(null);
           }.bind(this));
         };
-        Formio.submissionData = function(data, component, onId) {
+        Formio.fieldData = function(data, component) {
           if (!data) { return ''; }
           if (component.key.indexOf('.') !== -1) {
             var value = data;
             var parts = component.key.split('.');
-            var currentKey = '';
-            var setValue = false;
-            angular.forEach(parts, function(key) {
-              if ((key !== '_id') && value.hasOwnProperty('_id')) {
+            var key = '';
+            for (var i = 0; i < parts.length; i++) {
+              key = parts[i];
+
+              // Handle nested resources
+              if (value.hasOwnProperty('_id')) {
                 value = value.data;
               }
+
+              // Return if the key is not found on the value.
               if (!value.hasOwnProperty(key)) {
-                setValue = false;
                 return;
               }
+
               // Convert old single field data in submissions to multiple
               if(key === parts[parts.length - 1] && component.multiple && !Array.isArray(value[key])) {
                 value[key] = [value[key]];
               }
+
+              // Set the value of this key.
               value = value[key];
-              setValue = true;
-              if (onId) {
-                currentKey += key + '.';
-                onId(currentKey, value);
-              }
-            });
-
-            if (setValue) {
-              data[component.key] = value;
-              return value;
             }
-
-            return '';
+            return value;
           }
           else {
             // Convert old single field data in submissions to multiple
@@ -457,8 +451,8 @@ app.factory('FormioScope', [
         });
 
         // Return the value and set the scope for the model input.
-        $scope.submissionData = function(data, component) {
-          var value = Formio.submissionData(data, component);
+        $scope.fieldData = function(data, component) {
+          var value = Formio.fieldData(data, component);
           var componentInfo = formioComponents.components[component.type];
           if (!componentInfo.tableView) { return value; }
           if (component.multiple && (value.length > 0)) {
@@ -487,6 +481,9 @@ app.factory('FormioScope', [
             spinner.show();
             loader.loadSubmission().then(function(submission) {
               $scope._submission = submission;
+              if (!$scope._submission.data) {
+                $scope._submission.data = {};
+              }
               spinner.hide();
               $scope.$emit('submissionLoad', submission);
             }, this.onError($scope));
@@ -663,7 +660,7 @@ app.directive('formio', function() {
             }
           });
           angular.forEach($scope._submission.data, function(value, key) {
-            if (value && submissionData.data.hasOwnProperty(key) && !value.hasOwnProperty('_id')) {
+            if (value && !value.hasOwnProperty('_id')) {
               submissionData.data[key] = value;
             }
           });
@@ -910,7 +907,11 @@ app.directive('formioComponent', [
         ) {
 
           $scope.resetForm = function() {
-            $scope.data = {};
+            // Manually remove each key so we don't lose a reference to original
+            // data in child scopes.
+            for(var key in $scope.data) {
+              delete $scope.data[key];
+            }
           };
 
           // Initialize the data.
@@ -924,19 +925,20 @@ app.directive('formioComponent', [
             $scope.component &&
             $scope.component.key
           ) {
+            var root = '';
+            if ($scope.component.key.indexOf('.') !== -1) {
+              root = $scope.component.key.split('.').shift();
+            }
             $scope.$watch('data', function(data) {
               if (!data || angular.equals({}, data)) { return; }
-              Formio.submissionData($scope.data, $scope.component, function(idPath, value) {
-                if (value.hasOwnProperty('_id')) {
-                  $scope.$emit('addFormComponent', {
-                    type: 'hidden',
-                    settings: {
-                      tableView: false,
-                      key: idPath + '_id'
-                    }
-                  });
-                }
-              });
+              if (root && (!data.hasOwnProperty(root) || angular.equals({}, data[root]))) { return; }
+              if (root && data[root].hasOwnProperty('_id')) {
+                $scope.data[root + '._id'] = data[root]._id;
+              }
+              var value = Formio.fieldData(data, $scope.component);
+              if (value !== undefined) {
+                $scope.data[$scope.component.key] = value;
+              }
             });
           }
 
@@ -1126,7 +1128,7 @@ app.run([
     // The template for the formio forms.
     $templateCache.put('formio.html',
       '<form role="form" name="formioForm" ng-submit="onSubmit(formioForm)" novalidate>' +
-        '<i id="formio-loading" style="font-size: 2em;" class="glyphicon glyphicon-repeat glyphicon-spin"></i>' +
+        '<i id="formio-loading" style="font-size: 2em;" class="glyphicon glyphicon-refresh glyphicon-spin"></i>' +
         '<div ng-repeat="alert in formioAlerts" class="alert alert-{{ alert.type }}" role="alert">' +
           '{{ alert.message }}' +
         '</div>' +
@@ -1174,7 +1176,7 @@ app.run([
           '</thead>' +
           '<tbody>' +
             '<tr ng-repeat="submission in _submissions">' +
-              '<td ng-repeat="component in _form.components | flattenComponents" ng-if="tableView(component)">{{ submissionData(submission.data, component) }}</td>' +
+              '<td ng-repeat="component in _form.components | flattenComponents" ng-if="tableView(component)">{{ fieldData(submission.data, component) }}</td>' +
               '<td>{{ submission.created | amDateFormat:\'l, h:mm:ss a\' }}</td>' +
               '<td>{{ submission.modified | amDateFormat:\'l, h:mm:ss a\' }}</td>' +
               '<td>' +
@@ -1447,7 +1449,7 @@ app.run([
           '{{ component.label }}' +
           '<span ng-if="component.rightIcon && component.label">&nbsp;</span>' +
           '<span ng-if="component.rightIcon" class="{{ component.rightIcon }}" aria-hidden="true"></span>' +
-          ' <i ng-if="component.action == \'submit\' && form.submitting" class="glyphicon glyphicon-repeat glyphicon-spin"></i>' +
+          ' <i ng-if="component.action == \'submit\' && form.submitting" class="glyphicon glyphicon-refresh glyphicon-spin"></i>' +
       '</button>'
     );
   }
@@ -2321,7 +2323,7 @@ app.run([
     $templateCache.put('formio/components/signature.html', FormioUtils.fieldWrap(
       '<img ng-if="readOnly" ng-attr-src="{{data[component.key]}}" src="" />' +
       '<div ng-if="!readOnly" style="width: {{ component.width }}; height: {{ component.height }};">' +
-        '<a class="btn btn-xs btn-default" style="position:absolute; left: 0; top: 0; z-index: 1000" ng-click="component.clearSignature()"><span class="glyphicon glyphicon-repeat"></span></a>' +
+        '<a class="btn btn-xs btn-default" style="position:absolute; left: 0; top: 0; z-index: 1000" ng-click="component.clearSignature()"><span class="glyphicon glyphicon-refresh"></span></a>' +
         '<canvas signature component="component" name="{{ component.key }}" ng-model="data[component.key]" ng-required="component.validate.required"></canvas>' +
         '<div class="formio-signature-footer" style="text-align: center;color:#C3C3C3;" ng-class="{\'field-required\': component.validate.required}">{{ component.footer }}</div>' +
       '</div>'

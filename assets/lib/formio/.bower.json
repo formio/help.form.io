@@ -34,11 +34,11 @@
     "angular-bootstrap": "~0.13.0"
   },
   "homepage": "https://github.com/formio/ngFormio",
-  "_release": "9c844f3dcf",
+  "_release": "a48499c7b6",
   "_resolution": {
     "type": "branch",
     "branch": "develop",
-    "commit": "9c844f3dcfdccf71d1cb54139288a44c57961216"
+    "commit": "a48499c7b6ff5163378d6dd845773322e79a5e8f"
   },
   "_source": "git://github.com/formio/ngFormio.git",
   "_target": "develop",
