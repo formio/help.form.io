@@ -1,10 +1,10 @@
 [
   {
     "title": "Default",
-    "template": "https://cdn.rawgit.com/formio/project-templates/master/templates/default.json"
+    "template": "http://help.form.io/templates/default.json"
   },
   {
     "title": "Empty",
-    "template": "https://cdn.rawgit.com/formio/project-templates/master/templates/empty.json"
+    "template": "http://help.form.io/templates/empty.json"
   }
 ]
