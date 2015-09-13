@@ -418,6 +418,7 @@
       "priority": 0,
       "settings": {
         "association": "new",
+        "role": "authenticated",
         "username": "user.email",
         "password": "user.password"
       }
