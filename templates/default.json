@@ -114,7 +114,7 @@
       ]
     },
     "admin": {
-      "title": "Administrator",
+      "title": "Admin",
       "type": "resource",
       "name": "admin",
       "path": "admin",
