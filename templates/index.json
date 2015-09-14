@@ -8,5 +8,10 @@
     "title": "Empty",
     "name": "empty",
     "template": "http://help.form.io/templates/empty.json"
+  },
+  {
+    "title": "MovieApp",
+    "name": "movieapp",
+    "template": "http://help.form.io/templates/movieapp.json"
   }
 ]
