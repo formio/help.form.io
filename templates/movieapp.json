@@ -519,7 +519,7 @@
         },
         "refreshDelay": 0,
         "refresh": false,
-        "multiple": false,
+        "multiple": true,
         "searchFields": "",
         "searchExpression": "",
         "selectFields": "",
