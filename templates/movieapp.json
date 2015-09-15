@@ -525,7 +525,7 @@
         "selectFields": "",
         "template": "<span>{{ item.data.name }}</span>",
         "defaultValue": "",
-        "resource": "55f7448d81d033b96176ee0e",
+        "resource": "director",
         "placeholder": "Select the directors",
         "key": "director",
         "label": "Director",
