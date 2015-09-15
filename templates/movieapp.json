@@ -438,7 +438,7 @@
         "roles": []
       }, {
         "type": "read_all",
-        "roles": ["administrator"]
+        "roles": ["administrator", "authenticated"]
       }, {
         "type": "update_all",
         "roles": ["administrator"]
