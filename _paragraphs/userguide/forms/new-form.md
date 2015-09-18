@@ -17,4 +17,5 @@ weight: 10
 <h4>Form Components</h4>
 <p>Drag and Drop form components on to your form. See <a href="#form-components">Form Components</a> for more information on types of components and how to configure them.</p>
 <h4>Advanced Settings</h4>
-<p>Enter any advanced settings in the advanced settings section. Currently there is only one setting and that is a custom submission URL. If you want to handle the form submissions with your own service, you can set the url here. This will set the form's action to this value. Use this only if you know what you are doing as it will stop forms from submitting their data back to form.io.</p>
+
+Enter any advanced settings in the advanced settings section. Currently there is only one setting and that is **custom submission URL**. Saving a URL in this setting will **send submissions to that URL** instead of **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**. This is helpful if you want to handle the form submissions with your own service or if you wish to pre-process the data before sending it to **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**. Use this only if you know what you are doing.

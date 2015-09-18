@@ -16,9 +16,9 @@ A select field will display a list of values in a drop down list to users. Users
 <h5>Values</h5>
 <p>These are the values that will be selected on this field. The Value column is what will be stored in the database and the Label is what is shown to the users.</p>
 <h5>Raw Json</h5>
-<p>Enter a json array to use. It should be formatted as an array of objects with named properties.</p>
+<p>Enter a JSON Array to use. It should be formatted as an array of objects with named properties.</p>
 <h5>URL</h5>
-<p>Enter a url with a data source in json format.</p>
+<p>Enter a url with a data source in JSON Array format.</p>
 <h4>Value Property</h4>
 <p>If Raw JSON or URL is selected, enter the name of the property on the objects that will contain the value that will be stored in the database.</p>
 <h4>Item Template</h4>
