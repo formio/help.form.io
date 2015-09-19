@@ -19,7 +19,7 @@ You can also render out a form for a previous submission with the values already
 ```
 
 ### Read-only Submissions in Form
-You can provide a ***read-only*** flat to the ```formio``` directive which will tell the form to render as a Read only form where the data is populated but cannot be edited. This is good for Printable form submissions as well as viewing a form submission.
+You can provide a ***read-only*** flag to the ```formio``` directive which will tell the form to render as a Read only form where the data is populated but cannot be edited. This is good for Printable form submissions as well as viewing a form submission.
 
 ```html
 <formio src="'https://yourproject.form.io/yourform/submission/[submissionId]'" read-only=true></formio>
