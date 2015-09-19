@@ -8,13 +8,13 @@ weight: 20
 Form.io forms can be embedded direction into your angular application with one line of code. Simply pass in the name of the form to the directive and the formio module will render out the form for you. If you only pass in the form name, a form with default values will be rendered. This is useful for **Creating** new submissions.
 
 ```html
-<formio src="[formName]"></formio>;
+<formio src="'https://yourproject.form.io/yourform'"></formio>;
 ```
 
 You can also render out a form for a previous submission with the values already set in it. This is useful for **Editing** functionality to allow users to edit previous submissions.
 
 ```html
-<formio src="[formName]/submission/[submissionId]"></formio>
+<formio src="'https://yourproject.form.io/yourform/submission/[submissionId]'"></formio>
 ```
 
 #### Attributes
