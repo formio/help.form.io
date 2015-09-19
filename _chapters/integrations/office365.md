@@ -4,9 +4,7 @@ book: integrations
 weight: 1
 chapter: office365
 ---
-Microsoft Office 365 allows for external applications to integrate through the use of its Azure platform. Currently
-Form.io provides a mechanism where it can act on behalf of your account through its Server-to-Server authentication
-mechanism. To get your project working with Microsoft Office 365, please walk through the following steps.
+Microsoft Office 365 allows for external applications to integrate through the use of its Azure platform. Currently **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** provides a mechanism where it can act on behalf of your account through its Server-to-Server authentication mechanism. To get your project working with Microsoft Office 365, please walk through the following steps:
 
   - ### Step 1: [Create your Office 365 Business Account](https://products.office.com/en-us/business/compare-office-365-for-business-plans){:target="_blank"}
   - ### Step 2: [Associate your Office 365 account with Azure](https://msdn.microsoft.com/office/office365/HowTo/setup-development-environment#bk_CreateAzureSubscription){:target="_blank"}
@@ -37,7 +35,7 @@ mechanism. To get your project working with Microsoft Office 365, please walk th
 
       ![](/assets/img/office365/application-app-name.png)
 
-    - Provide an application URL. It can be **localhost** if you are just using it for Form.io integration.
+    - Provide an application URL. It can be **localhost** if you are just using it for **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** integration.
 
       ![](/assets/img/office365/application-app-uri.png)
 
@@ -202,11 +200,11 @@ mechanism. To get your project working with Microsoft Office 365, please walk th
 
       ![](/assets/img/office365/application-manifest-upload-select.png)
 
-    - You are now ready to configure Form.io for **Office 365 Integration!**
+    - You are now ready to configure **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** for **Office 365 Integration!**
 
   - ### Step 4: Configure Form.io for Office 365 Integration
 
-    - Once you create an account on Form.io, and then create a Project, you will need to click on the **Settings** within your project.
+    - Once you create an account on **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**, and then create a Project, you will need to click on the **Settings** within your project.
 
       ![](/assets/img/office365/formio-project-settings.png)
 
@@ -236,7 +234,7 @@ mechanism. To get your project working with Microsoft Office 365, please walk th
 
       ![](/assets/img/office365/formio-o365-fingerprint.png)
 
-    - Congratulations, you are now ready for Office 365 integration within Form.io!
+    - Congratulations, you are now ready for Office 365 integration within **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**!
 
   - ## Step 5: Test out the integration
 
@@ -248,7 +246,7 @@ mechanism. To get your project working with Microsoft Office 365, please walk th
 
       ![](/assets/img/office365/formio-o365-add-action.png)
 
-    - On the next page, we simply need to map the **First Name**, **Last Name**, and **Email** Form.io fields to the Office 365 **First Name Field**, **Last Name Field**, and **Email Address Field** select drop-downs respectively...
+    - On the next page, we simply need to map the **First Name**, **Last Name**, and **Email** **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** fields to the Office 365 **First Name Field**, **Last Name Field**, and **Email Address Field** select drop-downs respectively...
 
       ![](/assets/img/office365/formio-o365-select-fields.png)
 
@@ -257,15 +255,15 @@ mechanism. To get your project working with Microsoft Office 365, please walk th
       ![](/assets/img/office365/formio-o365-contacts.png)
 
   - ## What did we just do?
-    This just created a mapping to the Form.io forms to your Office 365 Contacts section. You should now be able to **Create**, **Update**, and **Delete** Office 365 Contacts from within the Form.io application interface.
+    This just created a mapping to the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** forms to your Office 365 Contacts section. You should now be able to **Create**, **Update**, and **Delete** Office 365 Contacts from within the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** application interface.
 
       ![](/assets/img/office365/formio-o365-outlook-contacts.png)
 
-    Now, go to your Form.io form, and then submit a new contact using the Form.io form.
+    Now, go to your **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** form, and then submit a new contact using the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** form.
 
       ![](/assets/img/office365/formio-o365-submit-form.png)
 
-    Once you press **Submit** on the form, you should now be able to see the data within Form.io
+    Once you press **Submit** on the form, you should now be able to see the data within **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**
 
       ![](/assets/img/office365/formio-o365-submission.png)
       ![](/assets/img/office365/formio-o365-outlook-sync.png)

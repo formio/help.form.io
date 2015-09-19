@@ -5,8 +5,8 @@ chapter: introduction
 slug: cutomer-applications
 weight: 7
 ---
-Whenever you see the word APPLICATION used within this User Guide, it is referring to the APPLICATION that developers are building outside of &lt;**form.io**&gt;.
+Whenever you see the word **Application** used within this User Guide, it is referring to the Application that developers are building outside of **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**.
 
-&lt;**form.io**&gt; MAJOR COMPONENTS are built within the &lt;**form.io**&gt; system, and are ultimately implemented within CUSTOMER APPLICATIONS.  It is important to distinguish a CUSTOMER APPLICATION from the work being completing within &lt;**form.io**&gt;.
+**&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** major components are created within the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** system, and are ultimately used in customer Application implementations. It is important to distinguish a customer Application from the work being completing within **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**.
 
-When developers are working within &lt;**form.io**&gt; to create the &lt;**form.io**&gt; MAJOR COMPONENTS for their CUSTOMER APPLICATIONs, we refer to that work as PROJECTS.
+When developers are working within **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** to create major components for their customer Applications, we refer to that work as **Projects**.

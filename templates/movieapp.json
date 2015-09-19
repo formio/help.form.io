@@ -265,6 +265,7 @@
       "form": "userRegistrationForm",
       "settings": {
         "password": "user.password",
+        "role": "authenticated",
         "username": "user.email",
         "association": "new"
       },
