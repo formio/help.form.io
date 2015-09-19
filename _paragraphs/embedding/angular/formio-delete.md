@@ -26,6 +26,6 @@ This directive will show a delete confirmation dialogue and will, on confirmatio
     <dt><code>formAction</code></dt>
     <dd>The URL of the custom form action to handle delete requests. If this attribute is provided, HTTP DELETE requests will be sent to that URL instead of Form.io. This is helpful if you need to pre-process data before deleting it from Form.io.</dd>
 
-    <dt><code>resourceName</code></dt>
+    <dt><code>resource-name</code></dt>
     <dd>The resource name used in the delete dialogue for confirmation. If not provided, it will default to "form" or "submission", depending on the <code>src</code> attribute passed in.</dd>
 </dl>
