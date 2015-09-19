@@ -20,7 +20,7 @@ Formio requires some dependencies on your HTML page to work properly. All of the
 First you need to install wiredep.
 
 ```
-  npm install --save wiredep
+  npm install -g wiredep
 ```
 
 Next, add the following to your HTML page:
@@ -41,7 +41,7 @@ Next, add the following to your HTML page:
 Next, run the following command to wire up all the dependencies.
 
 ```
-  ./node_modules/.bin/wiredep -s index.html
+  wiredep -s index.html
 ```
 
 This should then wire all the dependencies into your page.
