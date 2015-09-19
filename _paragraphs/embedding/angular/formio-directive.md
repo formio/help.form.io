@@ -30,7 +30,7 @@ You can provide a ***read-only*** flag to the ```formio``` directive which will 
 <dl class="dl-horizontal">
     <dt><code>src</code></dt>
     <dd>The URL of the form or form submission to display.</dd>
-    <dt><code>formAction</code></dt>
+    <dt><code>form-action</code></dt>
     <dd>The URL of the custom form action to handle submissions. If this attribute is provided, form submissions will be sent to that URL instead of Form.io. This is helpful if you need to pre-process data before sending it to Form.io.</dd>
     <dt><code>form</code></dt>
     <dd>An Object definition of the form to display. This can be used as an alternative to loading form definitions from the <code>src</code> attribute.</dd>
