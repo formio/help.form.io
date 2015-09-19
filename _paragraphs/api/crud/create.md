@@ -5,5 +5,6 @@ chapter: crud
 slug: create
 weight: 10
 ---
-<p>In order to <strong>create</strong> a submission, perform a <strong>POST</strong> request to the form URL.</p>
+In order to **create** a submission, perform a **POST** request to the form URL.
+
 <script src="https://gist.github.com/rahatarmanahmed/140c7177784f428388f0.js"></script>

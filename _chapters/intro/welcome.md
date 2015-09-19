@@ -21,9 +21,8 @@ But the **WOW** moment comes with our powerful embedded technology which provide
   - Docker
   - Mongo DB
 
-    We take care of the rest.
-
+We take care of the rest.
 
 **Now let's build an app together and show you how everything works:**
 
-#### [**Build An Application**](http://help.form.io/start)
+#### [**Build An Application**](/start)

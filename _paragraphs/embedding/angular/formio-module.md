@@ -5,15 +5,15 @@ chapter: angular
 slug: formio-module
 weight: 10
 ---
-In order to embed your Form.io project in your angular application, you will need to add the formio module. The formio module will create all scopes, providers and directives needed to embed Form.io components within your app.
+In order to embed your **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** project in your angular application, you will need to add the formio module. The formio module will create all scopes, providers and directives needed to embed **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** components within your app.
 
 #### Bower
 
-To add <code>formio</code> to your bower dependencies, run <code>bower install --save formio</code>.
+To add `formio` to your bower dependencies, run `bower install --save formio`.
 
 #### Adding the dependencies
 
-Form.io requires some dependencies on your HTML page to work properly. All of these dependencies can be found by looking at the [**formio** bower.json](https://github.com/formio/ngFormio/blob/develop/bower.json#L25) file. The easiest way to include all of these dependencies within your webpage is to use a tool called [Wiredep](https://github.com/taptapship/wiredep).
+Formio requires some dependencies on your HTML page to work properly. All of these dependencies can be found by looking at the [**formio** bower.json](https://github.com/formio/ngFormio/blob/develop/bower.json#L25) file. The easiest way to include all of these dependencies within your webpage is to use a tool called [Wiredep](https://github.com/taptapship/wiredep).
 
 #### Wiredep
 
@@ -58,7 +58,7 @@ The next step is to initialize **formio** within your Angular application. This 
 angular.module('myApp', ['formio']);
 ```
 
-And of course, if you are not using Angular for your full application, you will need to make sure that the application name is provided on the <code>&lt;body&gt;</code> tag.
+And of course, if you are not using Angular for your full application, you will need to make sure that the application name is provided on the `<body>` tag.
 
 ```html
 <body ng-app="myApp">

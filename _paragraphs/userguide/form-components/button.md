@@ -5,25 +5,47 @@ chapter: form-components
 slug: button
 weight: 20
 ---
-<p>Buttons can be added to forms to do various actions on the form.</p>
-<img src="/assets/img/button-display.png">
-<h4>Label</h4>
-<p>This is the label that will appear on the button.</p>
-<h4>Action</h4>
-<p>This is the action that will be performed. Currently there are two actions that can be performed.</p>
-<h5>Submit</h5>
-<p>A submit action submits the form to either the form.io server or a custom callback url if it was set on the form.</p>
-<h5>Reset</h5>
-<p>Reset the form back to its original state.</p>
-<h4>Theme</h4>
-<p>Set a theme for the button. These options currently map to <a href="http://getbootstrap.com/css/#buttons-options">bootstrap</a> classes that will be added to the button.</p>
-<h4>Size</h4>
-<p>Set the size of the button. These options currently map to <a href="http://getbootstrap.com/css/#buttons-sizes">bootstrap</a> classes that will be added to the button.</p>
-<h4>Left Icon</h4>
-<p>If you have an icon library and would like to include an icon to the left of the button label, you can do so by adding the icon class here.</p>
-<h4>Right Icon</h4>
-<p>If you have an icon library and would like to include an icon to the right of the button label, you can do so by adding the icon class here.</p>
-<h4>Block</h4>
-<p>If checked, the display of the button will be set to "block" which will cause it to span the full width of the container.</p>
-<h4>Disable on Form Invalid</h4>
-<p>If checked, this button will be disabled if any of the client side validation fails. This is useful for preventing the submission of a form that has invalid data entered.</p>
+Buttons can be added to forms to do various actions on the form.
+
+![](/assets/img/button-display.png)
+
+#### Label
+
+This is the label that will appear on the button.
+
+#### Action
+
+This is the action that will be performed. Currently there are two actions that can be performed.
+
+##### Submit
+
+A submit action submits the form to either the form.io server or a custom callback url if it was set on the form.
+
+##### Reset
+
+Reset the form back to its original state.
+
+#### Theme
+
+Set a theme for the button. These options currently map to [bootstrap](http://getbootstrap.com/css/#buttons-options) classes that will be added to the button.
+
+#### Size
+
+Set the size of the button. These options currently map to [bootstrap](http://getbootstrap.com/css/#buttons-sizes) classes that will be added to the button.
+
+#### Left Icon
+
+If you have an icon library and would like to include an icon to the left of the button label, you can do so by adding the icon class here.
+
+#### Right Icon
+
+If you have an icon library and would like to include an icon to the right of the button label, you can do so by adding the icon class here.
+
+#### Block
+
+If checked, the display of the button will be set to "block" which will cause it to span the full width of the container.
+
+#### Disable on Form Invalid
+
+If checked, this button will be disabled if any of the client side validation fails. This is useful for preventing the submission of a form that has invalid data entered.
+

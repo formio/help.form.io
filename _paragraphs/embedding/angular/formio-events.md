@@ -5,9 +5,15 @@ chapter: angular
 slug: formio-events
 weight: 50
 ---
-<p>The formio module emits events at various times. These events are designed to allow developers to respond to events that occur within the formio generated forms. For example, after a user creates a new submission, you may want to change the view to display that submission or send them to a thank you page. You can do this by responding to the <code>formSubmission</code> event:</p>
-<pre><code>$scope.$on('formSubmission', function(err, submission) { /* ... */ })</code></pre>
-<p>The following are all the events emitted by the above directives:</p>
+The formio module emits events at various times. These events are designed to allow developers to respond to events that occur within the formio generated forms. For example, after a user creates a new submission, you may want to change the view to display that submission or send them to a thank you page. You can do this by responding to the `formSubmission` event:
+
+```html
+$scope.$on('formSubmission', function(err, submission) { /* ... */ })
+```
+
+
+The following are all the events emitted by the above directives:
+
 <dl class="dl-horizontal">
     <dt><code>formSubmission</code></dt>
     <dd>

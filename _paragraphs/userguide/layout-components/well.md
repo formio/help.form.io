@@ -5,5 +5,6 @@ chapter: layout-components
 slug: well
 weight: 30
 ---
-<p>Wells are wrapped in a div with a class. These currently map to <a href="http://getbootstrap.com/components/#wells" target="_blank">Bootstrap Wells</a>.</p>
-<img src="/assets/img/well.png">
+Wells are wrapped in a div with a class. These currently map to [Bootstrap Wells](http://getbootstrap.com/components/#wells).
+
+![](/assets/img/well.png)
