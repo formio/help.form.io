@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Form.io Help
+title: The <img src="assets/img/formio-logo-white.png" style="margin-bottom:10px" /> help guide.
+summary: These five sections are designed to get you from new user, to form.io expert. Let us know if you have any questions not answered on this site.
 ---
-<p>Welcome to the Form.io help site. These five sections are designed to get you from new user, to form.io expert. Let us know if you have any questions not answered on this site.</p>
-
 {% assign books = (site.books | sort: "weight" reversed) %}
 <div class="row">
 {% for book in books %}

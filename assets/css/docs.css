@@ -34,7 +34,7 @@ footer {
 }
 /* Page headers */
 .docs-header {
-    background-color: #0e5c8f;
+    background-color: #56b047;
     margin-bottom: 40px;
     font-size: 20px;
 }
@@ -46,7 +46,7 @@ footer {
     margin-bottom: 0;
     font-weight: 300;
     line-height: 1.4;
-    color: #d4ebfb;
+    color: #ddd;
 }
 .docs-header .container {
     position: relative;
