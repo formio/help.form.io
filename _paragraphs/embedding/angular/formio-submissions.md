@@ -8,7 +8,7 @@ weight: 30
 In addition to forms that create submissions, the `formioSubmissions` directive can embed lists of previous submissions within your application. This is useful for creating lists of items to display within your applications.
 
 ```html
-<formio-submissions src="[formName]"></formio-submissions>
+<formio-submissions src="'https://yourproject.form.io/yourform'"></formio-submissions>
 ```
 
 #### Attributes
