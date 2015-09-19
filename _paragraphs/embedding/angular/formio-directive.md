@@ -36,6 +36,6 @@ You can provide a ***read-only*** flag to the ```formio``` directive which will 
     <dd>An Object definition of the form to display. This can be used as an alternative to loading form definitions from the <code>src</code> attribute.</dd>
     <dt><code>submission</code></dt>
     <dd>An Object containing submission data to display. This is useful if you have already loaded submission data you wish to display on this form.</dd>
-    <dt><code>readOnly</code></dt>
+    <dt><code>read-only</code></dt>
     <dd>Makes form fields read only, which can be useful for <strong>Viewing</strong> submission results.</dd>
 </dl>
