@@ -11,10 +11,18 @@ Form.io forms can be embedded direction into your angular application with one l
 <formio src="'https://yourproject.form.io/yourform'"></formio>;
 ```
 
+### Rendering Submission in Form
 You can also render out a form for a previous submission with the values already set in it. This is useful for **Editing** functionality to allow users to edit previous submissions.
 
 ```html
 <formio src="'https://yourproject.form.io/yourform/submission/[submissionId]'"></formio>
+```
+
+### Read-only Submissions in Form
+You can provide a ***read-only*** flat to the ```formio``` directive which will tell the form to render as a Read only form where the data is populated but cannot be edited. This is good for Printable form submissions as well as viewing a form submission.
+
+```html
+<formio src="'https://yourproject.form.io/yourform/submission/[submissionId]'" read-only=true></formio>
 ```
 
 #### Attributes
