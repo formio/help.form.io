@@ -8,7 +8,7 @@ weight: 40
 This directive will show a delete confirmation dialogue and will, on confirmation, delete a form or submission. This directive triggers the `cancel` or a `delete` events depending on user input.
 
 ```html
-<formio-delete src="[formName]/submission/[submission_id]"></formio-delete>
+<formio-delete src="'[formName]/submission/[submission_id]'"></formio-delete>
 ```
 
 #### Attributes
