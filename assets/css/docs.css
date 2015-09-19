@@ -225,3 +225,11 @@ footer {
 .text-secondary {
     color: #6eb246;
 }
+
+dd, dt {
+    padding: 5px 0 5px 0;
+}
+
+dd {
+    border-bottom: 1px solid #DDD;
+}

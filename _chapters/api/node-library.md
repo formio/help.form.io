@@ -4,4 +4,4 @@ book: api
 weight: 40
 chapter: node-library
 ---
-<p>We have created a nodejs library to make it easier to interface directly with Form.io. You can find it at <a href="https://github.com/formio/formio-service" target="_blank">https://github.com/formio/formio-service</a>. You can use it to perform administrative functionality on the form.io service.</p>
+We have created a nodejs library called [formio-service](https://github.com/formio/formio-service) to make it easier to interface directly with **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**. You can use it to perform administrative functionality on the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** service.
