@@ -50,7 +50,7 @@
         <section>
           <p style="margin-bottom: 0;"><img class="trans-image" style="height: 2em; margin: 0;" src="assets/images/formio-logo-lg.png" /></p>
           <p style="margin-top: 0;">creates both the interface and the API in one step</p>
-            <img class="trans-image" style="height:12em" src="assets/images/formio-resource-view.png" />
+            <img class="trans-image" style="height:11em" src="assets/images/formio-resource-view.png" />
         </section>
         <section>
             <p style="margin-bottom: 0;"><img class="trans-image" style="height: 2em; margin: 0;" src="assets/images/formio-logo-lg.png" /></p>
@@ -121,7 +121,7 @@
         <section>
             <p>Here we can configure the <strong>Property Name</strong> used for this field in API calls.</p>
             <p><small>This is usually automatically generated for you, so no need to worry about it.</small></p>
-            <img style="height:10em;" src="assets/images/build/formio-user-email-api.png" />
+            <img style="height:8em;" src="assets/images/build/formio-user-email-api.png" />
         </section>
         <section>
             <p>Feel free to check out the settings of the other fields!</p>
@@ -284,6 +284,22 @@ var movieAppAPI = 'https://movieapp.form.io';
             - delete.html
             - view.html
             - director.html</code></pre></small>
+        </section>
+        <section>
+            <p>See our <a href="http://help.form.io/embedding/#formio-module">Application Embedding</a> guide on setting up formio's dependencies.</p>
+            <p>Then add formio to your angular module.</p>
+            <pre class="fragment fullwidth">app/scripts/app.js<code>angular.module('movieappApp', [
+    'formio', // <-- Dependency added here
+    'ngAnimate',
+    'ngSanitize',
+    'ui.select',
+    'ui.router',
+    'angularMoment',
+    'ngMap'
+  ])</code></pre>
+            <pre class="fragment fullwidth">app/scripts/app.js<code>&lt;body ng-app="movieappApp"&gt;
+...
+&lt;/body&gt;</code></pre>
         </section>
         <section>
             <p>Hook up <strong style="font-family: 'Comfortaa', cursive;"><span style="color:#3071a9">form</span><span style="color:#eee;">.</span><span style="color:#449d44">io</span></strong></p>
