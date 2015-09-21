@@ -11,7 +11,7 @@ Each field dragged on to the Form creates its own definition, behavior, and vali
 
 Our platform also provides a number of configurable Actions that allow for customized behaviors for each form submission such as authentication, email or SMS text communications, Integration to back-end systems or external data sources with ease.
 
-But the **WOW** moment comes with our powerful embedded technology which provides a single HTML element called **&lt;formio&gt;** which enables a dynamic embedding of that form within your application. With this technology, the same schema is used to not only render the form dynamically but also connects that form with the auto generated REST API automatically. And it’s as easy as embedding an image!
+But the **WOW** moment comes with our powerful embedded technology which provides a single HTML element called **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** which enables a dynamic embedding of that form within your application. With this technology, the same schema is used to not only render the form dynamically but also connects that form with the auto generated REST API automatically. And it’s as easy as embedding an image!
 
 ##### You build the app – ***we handle the FORM I/O***
 
