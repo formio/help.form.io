@@ -47,7 +47,7 @@ If checked, this field will be enforced as unique for this form. Submissions wil
 
 #### Protected
 
-If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by viewing the form submissions.
+If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** by viewing the form submissions.
 
 #### Persistent
 
