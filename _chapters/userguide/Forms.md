@@ -4,4 +4,4 @@ book: userguide
 weight: 50
 chapter: forms
 ---
-Forms are the primary interface with the system in form.io. Design a Form by dragging and dropping Form components onto the Form. Which Form components are placed onto a Form determines what the Form object looks like. You do not need to create an API before creating the Form. A compatible API will automatically be built out for you as you design your Form.
+Forms are the primary interface within the <form.io> system. Design a Form by dragging and dropping Form components onto the Form component area. Form components that are placed onto a Form will determines what that Form object looks like. You do not need to create an API before creating the Form. A compatible API will automatically be mapped out for you as you design your Form.
