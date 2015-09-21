@@ -51,4 +51,4 @@ Once Roles have been created, there are a few different ways to configure and ma
 
 2.  Assign permissions by clicking the **Permissions** button located at the top right of the page within a form or resource. Each permission may be assigned a role or more than one role, by clicking in the Roles field. After assigning roles to your Permissions, click the **Save** button at the bottom. Remember, you can always add, delete, and edit role at anytime.
 
-<p class="note"> **Reminder** The Project owner will have all permissions to any Form and Resource submissions by default.</p>
+<p class="note"> Reminder: The Project owner will have all permissions to any Form and Resource submissions by default.</p>
