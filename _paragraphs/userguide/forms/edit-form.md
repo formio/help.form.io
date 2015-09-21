@@ -6,7 +6,7 @@ slug: edit-form
 weight: 20
 ---
 
-Forms can be edited from the Project View page. Get to this page by clicking on the Project name on the My Projects page.
+Forms can be edited from the Project home page. Get to this page by clicking on the Project name from the User Portal.
 
 In the list of forms, click the **Edit** button to start editing a form.
 
