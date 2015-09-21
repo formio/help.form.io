@@ -34,7 +34,7 @@ To create and configure a Role, navigate to the **Settings** tab located within 
 
 ![](https://cloud.githubusercontent.com/assets/13321142/9473021/2e75b59c-4b1e-11e5-8d89-201e63c562a2.png)
 
-Additional Roles can be defined and added to a project at any time. In the following section, we will discuss Permissions associated with Roles to define access to the submissions within your application.
+Additional Roles can be defined and added to a project at any time. In the next section, we will discuss Permissions associated with Roles to define access to the submissions within your application.
 
 <div class="note" markdown="1">
 When a Resource is accessed by a User, and the User has a Role assigned to them with permissions to complete an operation they are attempting, the operation will be granted. If no Roles are defined to permissions on a given Resource, only the owner of the Resource or the Application itself will have access to that Resource.
