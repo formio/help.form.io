@@ -19,7 +19,7 @@ This is the action that will be performed. Currently there are two actions that 
 
 ##### Submit
 
-A submit action submits the form to either the form.io server or a custom callback url that has been priorly set up.
+A submit action submits the form to either the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** server or a custom callback url that has been priorly set up.
 
 ##### Reset
 
