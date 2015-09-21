@@ -34,11 +34,11 @@ To create and configure a Role, navigate to the **Settings** tab located within 
 
 ![](https://cloud.githubusercontent.com/assets/13321142/9473021/2e75b59c-4b1e-11e5-8d89-201e63c562a2.png)
 
-Additional Roles can be defined and added to a project at any time. Next, we will set up Permissions associated with that Role to define access to the submissions within your application.
+Additional Roles can be defined and added to a project at any time. In the following section, we will discuss Permissions associated with Roles to define access to the submissions within your application.
 
 <div class="note" markdown="1">
-When a Resource is accessed by a User, and the User has a Role assigned to them with permissions to complete an operation they are attempting, the operation will be granted. If no Roles are defined to have permissions on an Resource, only the owner of the Resource or the Application itself will have access to the Resource.
+When a Resource is accessed by a User, and the User has a Role assigned to them with permissions to complete an operation they are attempting, the operation will be granted. If no Roles are defined to permissions on a given Resource, only the owner of the Resource or the Application itself will have access to that Resource.
 
-By default, the creator of a Project will have access to every Resource associated with the Application. To get ownership of a Resource, the Resource must be created with the “Create Own” Permission, which will assign the User initiating the request to be its owner, or a user can be defined as the owner of a Resource if they are specified as such during a Create All operation.
+By default, the creator of a Project will have access to every Resource associated within the Application. To receive ownership of a Resource, that Resource must be created with the “Create Own” Permission, which will assign the User initiating the request to become its owner. Additionally, a user can be defined as the owner of a Resource if they are specified as such during a Create All operation.
 </div>
 
