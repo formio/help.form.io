@@ -5,13 +5,13 @@ chapter: form-components
 slug: textfield
 weight: 10
 ---
-A textfield can be used for general text input that is shorter than a sentence. There are options to define input masks and validations so information can be molded into desired formats.
+A textfield can be used for short and general text input. There are options to define input masks and validations, allowing users to mold information into desired formats.
 
 ![](/assets/img/textfield-display.png)
 
 #### Label
 
-The label for this field that will appear next to it.
+The name or title for this component.
 
 #### Placeholder
 
@@ -39,7 +39,7 @@ The text to show after a field. An example would be 'lbs' for weight.
 
 #### Multiple Values
 
-If checked, multiple values can be added in this field. The values will appear as an array in the API and an "Add Another" button will be visible on the field.
+If checked, multiple values can be added in this field. The values will appear as an array in the API and an "Add Another" button will be visible on the field allowing the creation of additional fields for this component. 
 
 #### Unique
 
@@ -47,7 +47,7 @@ If checked, this field will be enforced as unique for this form. Submissions wil
 
 #### Protected
 
-If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by going to the submissions for a form.
+If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by viewing the form submissions.
 
 #### Persistent
 
@@ -61,7 +61,7 @@ If checked, this value will show up in the table view of the submissions list.
 
 #### Required
 
-If checked, the field will be required to have a value.
+If checked, the field will be required to have a value upon submission.
 
 #### Minimum length
 
