@@ -5,29 +5,29 @@ chapter: form-components
 slug: button
 weight: 20
 ---
-Buttons can be added to forms to do various actions on the form.
+Buttons can be added to perform various actions within the form.
 
 ![](/assets/img/button-display.png)
 
 #### Label
 
-This is the label that will appear on the button.
+This is the label or title that will appear on the button.
 
 #### Action
 
-This is the action that will be performed. Currently there are two actions that can be performed.
+This is the action that will be performed. Currently there are two actions that can be performed, submit and reset.
 
 ##### Submit
 
-A submit action submits the form to either the form.io server or a custom callback url if it was set on the form.
+A submit action submits the form to either the form.io server or a custom callback url that has been priorly set up.
 
 ##### Reset
 
-Reset the form back to its original state.
+Reset the form fields back to their original state.
 
 #### Theme
 
-Set a theme for the button. These options currently map to [bootstrap](http://getbootstrap.com/css/#buttons-options) classes that will be added to the button.
+Set a theme (color) for the button. These options currently map to [bootstrap](http://getbootstrap.com/css/#buttons-options) classes that will be added to the button.
 
 #### Size
 
