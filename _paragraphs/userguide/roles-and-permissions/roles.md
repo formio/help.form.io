@@ -10,11 +10,11 @@ A **Role** is a group of users that have a shared set of defined permissions wit
 Some common example names of Roles used in enterprise applications include Administrator, Sales Agent, Registered User, Authenticated User, Anonymous User, and many, many more.
 
  - A Project may have an unlimited number of Roles defined within it.
- - Users within a Role all have the same permissions.
+ - Users within a Role share the same permissions.
  - Users within a Role inherit the permissions associated with that Role.
  - A User may be assigned to more than one Role.
 
-**&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** allows developers the ability to easily define Roles to control how a group of users access submissions within their Project. A site owner can manage the user access to such tasks as creating, updating or deleting submissions by assigning a user to a specific Role. These Role have full access to the forms within the project, but are easily edited. This process will be discussed in more detail in the [Permissions](http://help.form.io/userguide/#permissions) section of this User Guide.
+**&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** allows developers the ability to easily define Roles to control how a group of users access submissions within their Project. A site owner can manage the user access to such tasks as creating, updating or deleting submissions by assigning a user to a specific Role. These Roles have full access to the forms within the project, but are easily edited if needed in the future. This process will be discussed with more detail in the [Permissions](http://help.form.io/userguide/#permissions) section of this User Guide.
 
 #### Default Roles
 
