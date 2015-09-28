@@ -16,7 +16,7 @@ The Project Title is the name that will be used to identify and access a specifi
 #### Subdomain
 
 Here is where the namespace of the APIs for a given Project is claimed.
-Domain names must be unique for each Project. There is a maximum of 24 characters per name, and special characters and spaces may not be used.
+Domain names must be unique for each Project. There is a maximum of 63 characters per name, and special characters and spaces may not be used.
 
 <p class="note">Changing domain names after a Project has gone live within an application will cause serious performance issues.</p>
 
