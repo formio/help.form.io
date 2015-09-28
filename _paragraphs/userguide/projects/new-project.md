@@ -22,6 +22,6 @@ Domain names must be unique for each Project. There is a maximum of 63 character
 
 #### Description
 
-The Project Description can be up to 125 characters and may be comprised of any letters, numbers, spaces, or other special characters. This description is simply used for reference within the Project, and is not utilized elsewhere.
+The Project Description can be up to 512 characters and may be comprised of any letters, numbers, spaces, or other special characters. This description is simply used for reference within the Project, and is not utilized elsewhere.
 
 When done, click **Create Project** and your new project will be created.
