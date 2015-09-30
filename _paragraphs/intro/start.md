@@ -19,7 +19,7 @@ Follow these steps to bootstrap your first application.
       ```
       npm install -g formio-cli
       ```
-  - ### Step 4: Boostrap an application.
+  - ### Step 4: Bootstrap an application.
     - Now we can easily bootstrap the [ToDo Application](https://github.com/formio/formio-app-todo){:target="_blank"} by typing the following.
 
       ```
