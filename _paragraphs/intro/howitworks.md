@@ -40,3 +40,5 @@ To better illustrate how this works, let's modify our application to include a c
   - You should now be able to refresh your application and see the following.
 
     ![](/assets/img/intro/embed-contact.png)
+
+Hopefully, this illustrates how an entire working application can be created using the API's and Forms provided by Form.io. If you have any questions, please feel free to use our Feedback widget within the Form.io application.
