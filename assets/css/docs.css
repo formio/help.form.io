@@ -12,7 +12,7 @@ a:hover {
 }
 h2[id] {
     padding-bottom: 9px;
-    margin: 40px 0 20px;
+    margin: 20px 0;
     border-bottom: 1px solid #eee;
     color: #093e61;
 }
@@ -35,7 +35,7 @@ footer {
 /* Page headers */
 .docs-header {
     background-color: #56b047;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-size: 20px;
 }
 .docs-header h1 {
