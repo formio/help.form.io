@@ -10,7 +10,7 @@
 
     <style type="text/css">
         .container { margin-top: 20px; }
-        #formio-component-model, #formio-component-year { display: none; }
+        .formio-component-model, .formio-component-year { display: none; }
     </style>
 </head>
 <body ng-app="formioForm">
@@ -101,7 +101,7 @@
                             selected[key] = newValue;
                             if (key === 'make') {
                                 selected.model = '';
-                                jQuery('#formio-component-model').show();
+                                jQuery('.formio-component-model').show();
                                 if (model) {
                                     model.scope.data.model = '';
                                 }
@@ -111,7 +111,7 @@
                                 }
                             }
                             if (key === 'model') {
-                                jQuery('#formio-component-year').show();
+                                jQuery('.formio-component-year').show();
                                 selected.year = '';
                             }
 
