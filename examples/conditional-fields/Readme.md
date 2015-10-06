@@ -6,8 +6,9 @@ After you download this repository, you need to run the following command.
 bower install;
 ```
 
-Once you do this, you should then be able to change the form that is rendered
-by changing the URL within the index.html page.
+You will then need to create the project in Form.io.  You can use the project.json as the
+template for a new project.  Then change the Form URL within the index.html to the one within
+your project.
 
 Dependencies
 ----------------
