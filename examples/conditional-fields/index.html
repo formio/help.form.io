@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Formio Base Form</title>
+    <meta name="description" content="A raw form to use with https://form.io">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css css/app.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="assets/lib/angular-ui-select/dist/select.css" />
+    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/lib/formio/css/formio.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <script src="https://maps.google.com/maps/api/js"></script>
+
+    <style type="text/css">
+        .container { margin-top: 20px; }
+        #formio-component-model, #formio-component-year { display: none; }
+    </style>
+</head>
+<body ng-app="formioForm">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add the form.io form. -->
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <formio src="'http://conditional.localhost:3000/auto'"></formio>
+        </div>
+    </div>
+</div>
+
+
+<!-- build:js js/app.js -->
+<!-- bower:js -->
+<script src="assets/lib/jquery/dist/jquery.js"></script>
+<script src="assets/lib/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+<script src="assets/lib/angular/angular.js"></script>
+<script src="assets/lib/angular-ui-select/dist/select.js"></script>
+<script src="assets/lib/angular-paginate-anything/dist/paginate-anything-tpls.js"></script>
+<script src="assets/lib/moment/moment.js"></script>
+<script src="assets/lib/angular-moment/angular-moment.js"></script>
+<script src="assets/lib/signature_pad/signature_pad.js"></script>
+<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+<script src="assets/lib/angular-sanitize/angular-sanitize.js"></script>
+<script src="assets/lib/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+<script src="assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="assets/lib/formio/dist/formio.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<script type="text/javascript">
+    angular
+        .module('formioForm', ['formio'])
+        .run([
+            '$rootScope',
+            '$http',
+            function(
+                $rootScope,
+                $http
+            ) {
+
+                // Get the make, model, and years.
+                var autos = {};
+                var autoUrl = 'https://cdn.rawgit.com/arthurkao/vehicle-make-model-data/master/json_data.json';
+                $http.get(autoUrl, {
+                    disableJWT: true,
+                    headers: {
+                        Authorization: undefined,
+                        Pragma: undefined,
+                        'Cache-Control': undefined
+                    }
+                }).success(function (data) {
+                    autos = data;
+                    if (make) {
+                        make.scope.selectItems = getOptions('make');
+                    }
+                });
+
+                // Return the appropriate options based on what is selected.
+                var getOptions = function(property, selected) {
+                    var options = [];
+                    var values = {};
+                    angular.forEach(autos, function(auto) {
+                        var value = auto[property];
+                        if (
+                            !values.hasOwnProperty(value) &&
+                            (
+                                !selected ||
+                                (
+                                    (!selected.make || (auto.make === selected.make)) &&
+                                    (!selected.model || (auto.model === selected.model)) &&
+                                    (!selected.year || (auto.year === selected.year))
+                                )
+                            )
+                        ) {
+                            values[value] = true;
+                            options.push({
+                                label: auto[property],
+                                value: auto[property]
+                            });
+
+                        }
+                    });
+                    return options;
+                };
+
+                // Trigger when the form is done rendering.
+                var make = null;
+                var model = null;
+                var year = null;
+                var selected = {};
+                $rootScope.$on('formElementRender', function(event, element) {
+                    var key = event.targetScope.component.key;
+
+                    // Watch for changes.
+                    event.targetScope.$watch('data.' + key, (function(scope, key) {
+                        return function(newValue, oldValue) {
+                            selected[key] = newValue;
+                            if (key === 'make') {
+                                selected.model = '';
+                                jQuery('#formio-component-model').show();
+                                if (model) {
+                                    model.scope.data.model = '';
+                                }
+                                selected.year = '';
+                                if (year) {
+                                    year.scope.data.year = '';
+                                }
+                            }
+                            if (key === 'model') {
+                                jQuery('#formio-component-year').show();
+                                selected.year = '';
+                            }
+
+                            if (model && !selected.model) {
+                                model.scope.selectItems = getOptions('model', selected);
+                            }
+                            if (year && !selected.year) {
+                                year.scope.selectItems = getOptions('year', selected);
+                            }
+                        };
+                    })(event.targetScope, key));
+
+                    // Store the elements.
+                    switch (key) {
+                        case 'make':
+                            make = {element: element, scope: event.targetScope};
+                            break;
+                        case 'model':
+                            model = {element: element, scope: event.targetScope};
+                            break;
+                        case 'year':
+                            year = {element: element, scope: event.targetScope};
+                            break;
+                    }
+                });
+            }
+        ]);
+</script>
+</body>
+</html>
