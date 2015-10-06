@@ -17,7 +17,8 @@
     "tests"
   ],
   "dependencies": {
-    "formio": "develop"
+    "formio": "develop",
+    "bootstrap": "~3.3.5"
   },
   "overrides": {
     "bootstrap": {

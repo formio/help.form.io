@@ -28,7 +28,7 @@ gulp.task('useref', ['clean'], function() {
 
 // Copy the fonts.
 gulp.task('html', ['useref'], function() {
-    return gulp.src('./bower_components/bootstrap/fonts/*.*').pipe(gulp.dest('dist/fonts'));
+    return gulp.src('./assets/lib/bootstrap/fonts/*.*').pipe(gulp.dest('dist/fonts'));
 });
 
 // Define the buildnn task.

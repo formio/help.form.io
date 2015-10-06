@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- build:css css/app.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="assets/lib/angular-ui-select/dist/select.css" />
-    <link rel="stylesheet" href="assets/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/lib/formio/css/formio.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/formio/css/formio.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <script src="https://maps.google.com/maps/api/js"></script>
@@ -36,19 +36,19 @@
 
 <!-- build:js js/app.js -->
 <!-- bower:js -->
-<script src="assets/lib/jquery/dist/jquery.js"></script>
-<script src="assets/lib/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
-<script src="assets/lib/angular/angular.js"></script>
-<script src="assets/lib/angular-ui-select/dist/select.js"></script>
-<script src="assets/lib/angular-paginate-anything/dist/paginate-anything-tpls.js"></script>
-<script src="assets/lib/moment/moment.js"></script>
-<script src="assets/lib/angular-moment/angular-moment.js"></script>
-<script src="assets/lib/signature_pad/signature_pad.js"></script>
-<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
-<script src="assets/lib/angular-sanitize/angular-sanitize.js"></script>
-<script src="assets/lib/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
-<script src="assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="assets/lib/formio/dist/formio.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery.maskedinput/dist/jquery.maskedinput.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-select/dist/select.js"></script>
+<script src="bower_components/angular-paginate-anything/dist/paginate-anything-tpls.js"></script>
+<script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/angular-moment/angular-moment.js"></script>
+<script src="bower_components/signature_pad/signature_pad.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/formio/dist/formio.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -64,7 +64,7 @@
             ) {
 
                 // Get the make, model, and years.
-                var autos = {};
+                var autos = null;
                 var autoUrl = 'https://cdn.rawgit.com/arthurkao/vehicle-make-model-data/master/json_data.json';
                 $http.get(autoUrl, {
                     disableJWT: true,
@@ -84,6 +84,7 @@
                 var getOptions = function(property, selected) {
                     var options = [];
                     var values = {};
+                    if (!autos) { return []; }
                     angular.forEach(autos, function(auto) {
                         var value = auto[property];
                         if (
@@ -136,10 +137,10 @@
                                 selected.year = '';
                             }
 
-                            if (model && !selected.model) {
+                            if (model && selected.make && !selected.model) {
                                 model.scope.selectItems = getOptions('model', selected);
                             }
-                            if (year && !selected.year) {
+                            if (year && selected.model && !selected.year) {
                                 year.scope.selectItems = getOptions('year', selected);
                             }
                         };
@@ -149,6 +150,7 @@
                     switch (key) {
                         case 'make':
                             make = {element: element, scope: event.targetScope};
+                            make.scope.selectItems = getOptions('make');
                             break;
                         case 'model':
                             model = {element: element, scope: event.targetScope};
