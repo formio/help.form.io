@@ -1,6 +1,6 @@
 ---
 title: Using the React Module
-book: userguide
+book: embedding
 chapter: react
 slug: react-usage
 weight: 20
@@ -26,9 +26,9 @@ ReactDOM.render(
 );
 ```
 
-## Props
+### Props
 
-### `src` : `string`
+#### `src` : `string`
 
 The form API source from [form.io](https://www.form.io) or your custom formio server.
 
@@ -37,34 +37,34 @@ for where to set the API Path for your form.
 
 You can also pass in the submission url as the `src` and the form will render with the data populated from the submission.
 
-### `form` : `object`
+#### `form` : `object`
 
 An object representing the form. Use this instead of src for custom forms. 
 
 **Note:** `src` will override this property if used.
 
-### `submission`: `Object`
+#### `submission`: `Object`
 
 An object representing the default data for the form.
 
 **Note:** `src` ill override this if a submission url is entered.
 
-### `onFormSubmit` : `(submission: object)`
+#### `onFormSubmit` : `(submission: object)`
 
 A function callback that will be called when a submission is successful.
 
-### `onFormError` : `(response: object)`
+#### `onFormError` : `(response: object)`
 
 A function callback that will be called when a submisison is unsuccessful.
 
-### `onFormLoad` : `(form: object)`
+#### `onFormLoad` : `(form: object)`
 
 A function callback that will be called with a form is finished loading.
 
-### `onSubmissionLoad` : `(submission: object)`
+#### `onSubmissionLoad` : `(submission: object)`
 
 A function callback that will be called after a submission is loaded.
 
-### `onElementRender` : `(element: object)`
+#### `onElementRender` : `(element: object)`
 
 A function callback that will be called each time a component is rendered.

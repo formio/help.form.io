@@ -1,6 +1,6 @@
 ---
 title: Adding the React Module
-book: userguide
+book: embedding
 chapter: react
 slug: react-module
 weight: 10

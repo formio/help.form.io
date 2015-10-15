@@ -1,5 +1,5 @@
 ---
-title: Reac.js
+title: React.js
 book: embedding
 weight: 200
 chapter: react
