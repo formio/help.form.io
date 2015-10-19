@@ -14,7 +14,7 @@ Some common example names of Roles used in enterprise applications include Admin
  - Users within a Role inherit the permissions associated with that Role.
  - A User may be assigned to more than one Role.
 
-**&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** allows developers the ability to easily define Roles to control how a group of users access submissions within their Project. A site owner can manage the user access to such tasks as creating, updating or deleting submissions by assigning a user to a specific Role. These Roles have full access to the forms within the project, but are easily edited if needed in the future. This process will be discussed with more detail in the [Permissions](http://help.form.io/userguide/#permissions) section of this User Guide.
+**&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** allows developers the ability to easily define Roles to control how a group of users access submissions within their Project. A site owner can manage the user access to such tasks as creating, updating or deleting submissions by assigning a user to a specific Role. These Roles have full access to the forms within the project, but are easily edited if needed in the future. This process will be discussed with more detail in the [Permissions](#permissions) section of this User Guide.
 
 #### Default Roles
 
