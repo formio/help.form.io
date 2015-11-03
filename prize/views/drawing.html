@@ -1,0 +1,7 @@
+<div class="jumbotron">
+    <h2>And the winner is...
+        <div ng-if="!winner && !loading" class="btn btn-lg btn-primary" ng-click="draw()">CLICK TO REVEAL</div>
+        <i ng-if="loading" id="formio-loading" class="glyphicon glyphicon-refresh glyphicon-spin"></i>
+        <span ng-if="winner">{{ winner.data.fullName }}!!</span>
+    </h2>
+</div>
