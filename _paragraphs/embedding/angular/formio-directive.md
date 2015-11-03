@@ -1,6 +1,6 @@
 ---
 title: formio Directive
-book: userguide
+book: embedding
 chapter: angular
 slug: formio-directive
 weight: 20
