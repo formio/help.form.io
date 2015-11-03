@@ -15,6 +15,7 @@ The OAuth Provider to authenticate against. This is the service that users will 
 
  - [GitHub](https://github.com/)
  - [Facebook](https://facebook.com/)
+ - [Office 365](https://products.office.com/en-us/business/compare-office-365-for-business-plans)
  - More providers coming soon...
 
 #### Action
@@ -45,4 +46,4 @@ In order to use the OAuth Action in a form, you must choose a [Button component]
 
 Depending on which OAuth provider you select, and if you select the *Register New Resource* action, a number of Autofill Field options may appear. These settings allow you to automatically retrieve data from the OAuth provider account that is used to authenticate and fill in fields in your form before the new resource is created. For example, a GitHub OAuth Registration form may use the Autofill Email Field to assign the email of the GitHub account that was used to authenticate into a field of the new Resource that is created.
 
-<p class="note">Autofill Fields will not always guarantee that they will always find a value to fill, as the OAuth provider account may not have any information. For example, a Facebook account may not always fill the Autofill Email Field because some Facebook accounts are created with phone numbers.</p>
+<p class="note">Autofill Fields will not always guarantee that they will find a value to fill, as the OAuth provider account may not have any information. For example, a Facebook account may not always fill the Autofill Email Field because some Facebook accounts are created with phone numbers.</p>
