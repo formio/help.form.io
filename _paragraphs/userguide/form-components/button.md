@@ -25,13 +25,17 @@ A submit action submits the form to either the form.io server or a custom callba
 
 Reset the form fields back to their original state.
 
+##### OAuth
+
+Opens an OAuth authentication popup. This will only work after it has been assigned to an [OAuth Action](#action-oauth). See the [OAuth guide]() for more information on how to set up OAuth in your project.
+
 #### Theme
 
-Set a theme (color) for the button. These options currently map to [bootstrap](http://getbootstrap.com/css/#buttons-options) classes that will be added to the button.
+Set a theme (color) for the button. These options currently map to [Bootstrap](http://getbootstrap.com/css/#buttons-options) classes that will be added to the button.
 
 #### Size
 
-Set the size of the button. These options currently map to [bootstrap](http://getbootstrap.com/css/#buttons-sizes) classes that will be added to the button.
+Set the size of the button. These options currently map to [Bootstrap](http://getbootstrap.com/css/#buttons-sizes) classes that will be added to the button.
 
 #### Left Icon
 
