@@ -10,11 +10,11 @@ Docker installations can occur in many different ways depending on your hosting 
 #### Accessing the docker image
 Once on the commercial plan, you will have access to the docker repository. Our docker images are located on docker’s hub.
 
-[](https://hub.docker.com/r/formio/formio-server/)
+(https://hub.docker.com/r/formio/formio-server/)
 
 #### Installing docker
 
-You will first need to have docker installed. See [](http://docs.docker.com/v1.8/installation/) for more information.
+You will first need to have docker installed. See (http://docs.docker.com/v1.8/installation/) for more information.
 
 #### Pulling the docker image
 
