@@ -28,8 +28,8 @@ Examples:
 ```docker run -d -e “MONGO_PORT_27017_TCP_ADDR=localhost” -e “MONGO_PORT_27017_TCP_PORT=27017” formio/formio-server```
 
 // Use docker’s link command to link to a docker mongodb server.
-```docker run -d --name formio-mongo mongo
-docker run -d --link mongo:formio-mongo formio/formio-server```
+```docker run -d --name formio-mongo mongo```
+```docker run -d --link mongo:formio-mongo formio/formio-server```
 
 #### Server URL settings.
 You will need to set up information about what host name and protocol your server is running on. These are done with the following environment variables
