@@ -23,6 +23,11 @@ noribbon: true
         border-top: 1px solid lightgray;
     }
 
+    .col-vertical-center {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+    }
 </style>
 <div class="container" >
     <div class="row">
@@ -52,11 +57,16 @@ noribbon: true
             </div>
         </div>
         <div ng-if="showPreview">
-            <p>
-                You are viewing a preview of <strong ng-bind="decodeURIComponent(getAppUrl())"></strong>
-                <a href="/project" class="btn btn-default pull-right">Reset</a>
-            </p>
-            <p ng-if="data.repo">Want to modify or host this app yourself? Check out the <a {% raw %}ng-href="{{data.repo}}"{% endraw %}>source code</a>.</p>
+            <div class="col-sm-10 col-xs-9 col-vertical-center">
+                <p>
+                    You are viewing a preview of <strong ng-bind="decodeURIComponent(getAppUrl())"></strong>
+                </p>
+                <p ng-if="data.repo">Want to modify or host this app yourself? Check out the <a {% raw %}ng-href="{{data.repo}}"{% endraw %}>source code</a>.</p>
+            </div><!-- fix space causing column wrap
+            --><div class="col-sm-2 col-xs-3 col-vertical-center">
+                <p><a href="/project" class="btn btn-default">Reset</a></p>
+            </div>
+
         </div>
     </div>
 </div>
