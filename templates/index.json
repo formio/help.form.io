@@ -2,16 +2,37 @@
   {
     "title": "Default",
     "name": "default",
+    "description": "A default project with User and Admin resources and their respective authentication forms.",
     "template": "http://help.form.io/templates/default.json"
+  },
+  {
+    "title": "Todo App",
+    "name": "todoapp",
+    "description": "An example to-do project that lets users register, login, and keep track of their to-do list.",
+    "template": "http://formio.github.io/formio-app-todo/src/project.json"
+  },
+  {
+    "title": "Movie App",
+    "name": "movieapp",
+    "description": "An example movie project that lets users register, login, and manage a database of directors and movies.",
+    "template": "http://formio.github.io/formio-app-movie/app/project.json"
+  },
+  {
+    "title": "Sales Quoting App",
+    "name": "salesquoteapp",
+    "description": "A sales quoting project that lets agents login and manage their opportunities, customers, and contracts. Also includes integration with Office 365 to sync contacts and calendar events.",
+    "template": "http://formio.github.io/formio-app-salesquote/src/project.json"
+  },
+  {
+    "title": "Prize Drawing App",
+    "name": "prizedrawingapp",
+    "description": "A raffle entry project that lets participants register for a chance to win a prize! Also includes admin interface for prize drawing selection.",
+    "template": "http://formio.github.io/formio-app-prizedrawing/src/project.json"
   },
   {
     "title": "Empty",
     "name": "empty",
+    "description": "An empty project with no forms or resources. Create a project with a fresh start!",
     "template": "http://help.form.io/templates/empty.json"
-  },
-  {
-    "title": "MovieApp",
-    "name": "movieapp",
-    "template": "http://help.form.io/templates/movieapp.json"
   }
 ]

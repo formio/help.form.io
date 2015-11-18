@@ -20,5 +20,9 @@ Users can configure the settings for their Projects by clicking the **Settings**
 - OAuth
     - Here you can enter your Client ID and Client Secret for the OAuth provider of your choice. These will be used in the [OAuth Action](#action-oauth)
 - Office 365 (Settings to integrate with Outlook and other 365 applications, see [Office 365 Integration Guide](/integrations/#office365))
+- Hubspot
+    - Here you can enter your Hubspot API Key to use [Hubspot Actions](#action-hubspot)
+- Export
+    - Here you can export and download your project as a project template. Templates can be used to [create](#project-template) a new project. See the [Project Templates](#project-templates) section for more info.
 
 <img src="/assets/img/settings-project.png">
