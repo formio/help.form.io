@@ -1,0 +1,153 @@
+---
+layout: basic
+app: formioProject
+controller: ProjectController
+nofooter: true
+noribbon: true
+---
+<style>
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+    body {
+        display: table;
+    }
+    #preview-container {
+        display: table-row;
+        height: 100%;
+    }
+    iframe {
+        height: 100%;
+        width: 100%;
+        border-top: 1px solid lightgray;
+    }
+
+    .col-vertical-center {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+    }
+</style>
+<div class="container" >
+    <div class="row">
+        <div class="panel panel-default" ng-if="!showPreview">
+            <div class="panel-heading">
+                <div>Enter the project name and preview url into the box below and press <strong>Preview</strong> to preview the project.</div>
+            </div>
+            <div class="panel-body">
+                <form name="form" ng-submit="onSubmit()">
+                    <div class="form-group" ng-class="{'has-error': form.project.$invalid && form.project.$dirty}">
+                        <label class="control-label" for="project">Project Name</label>
+                        <div class="input-group" style="width: 300px;">
+                            <span class="input-group-addon">https://</span>
+                            <input type="text" name="project" id="project" class="form-control" placeholder="myproject" ng-model="data.project" ng-required="true">
+                            <span class="input-group-addon">.form.io</span>
+                        </div>
+                        <p class="help-block" ng-show="form.project.$error.required && form.project.$dirty">Project Name is required.</p>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error': form.previewUrl.$invalid && form.previewUrl.$dirty}">
+                        <label class="control-label" for="previewUrl">Preview App URL</label>
+                        <input type="url" name="previewUrl" id="previewUrl" class="form-control" placeholder="http://formio.github.io/formio-app-todo" ng-model="data.previewUrl" ng-required="true">
+                        <p class="help-block" ng-show="form.previewUrl.$error.required && form.previewUrl.$dirty">Preview URL is required.</p>
+                        <p class="help-block" ng-show="form.previewUrl.$error.url && form.previewUrl.$dirty">Must be a valid URL (<code class="text-muted">http://www.example.com</code>).</p>
+                    </div>
+                    <button class="btn btn-primary" type="submit" ng-disabled="form.$invalid">Preview</button>
+                </form>
+            </div>
+        </div>
+        <div ng-if="showPreview">
+            <div class="col-sm-10 col-xs-9 col-vertical-center">
+                <p>
+                    You are viewing a preview of <strong ng-bind="decodeURIComponent(getAppUrl())"></strong>
+                </p>
+                <p ng-if="data.repo">Want to modify or host this app yourself? Check out the <a {% raw %}ng-href="{{data.repo}}"{% endraw %}>source code</a>.</p>
+            </div><!-- fix space causing column wrap
+            --><div class="col-sm-2 col-xs-3 col-vertical-center">
+                <p><a href="/project" class="btn btn-default">Reset</a></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="preview-container" ng-if="showPreview">
+    <iframe {% raw %}ng-src="{{ getPreviewUrl() }}"{% endraw $} frameborder="0"></iframe>
+</div>
+<script type="text/javascript">
+    var QueryString = function () {
+        // This function is anonymous, is executed immediately and
+        // the return value is assigned to QueryString!
+        var query_string = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            // If first entry with this name
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = decodeURIComponent(pair[1]);
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+                var arr = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+                query_string[pair[0]] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[pair[0]].push(decodeURIComponent(pair[1]));
+            }
+        }
+        return query_string;
+    }();
+
+    angular.module('formioProject', ['formio'])
+        .controller('ProjectController', ['$scope', '$sce', function($scope, $sce) {
+            if(QueryString.project && QueryString.previewUrl) {
+                $scope.showPreview = true;
+            }
+
+            $scope.data = {
+                project: QueryString.project || '',
+                previewUrl: QueryString.previewUrl || '',
+                repo: QueryString.repo
+            };
+
+            $scope.onSubmit = function() {
+                // $scope.showPreview = true;
+                QueryString.project = $scope.data.project;
+                QueryString.previewUrl = $scope.data.previewUrl;
+                window.location.search = '?' +
+                    Object.keys(QueryString)
+                    .filter(function(key) {
+                        return key; // filter undefined keys
+                    })
+                    .map(function(key) {
+                        return key + '=' + encodeURIComponent(QueryString[key]);
+                    })
+                    .join('&');
+            };
+
+            $scope.getAppUrl = function() {
+                var host = QueryString.host || 'form.io';
+                var protocol = QueryString.protocol || 'https';
+                return encodeURIComponent(protocol + '://' + $scope.data.project + '.' + host);
+            }
+
+            $scope.getApiUrl = function() {
+                var host = QueryString.host || 'form.io';
+                var protocol = QueryString.protocol || 'https';
+                return encodeURIComponent(protocol + '://api.' + host);
+            }
+
+            $scope.decodeURIComponent = decodeURIComponent;
+
+            $scope.getPreviewUrl = function() {
+                // Optional settings not shown in form
+                var host = QueryString.host || 'form.io';
+                var protocol = QueryString.protocol || 'https';
+
+                // Build the url
+                var url = $scope.data.previewUrl;
+                url += '?appUrl=' + $scope.getAppUrl() + '&apiUrl=' + $scope.getApiUrl();
+
+                return $sce.trustAsResourceUrl(url);
+            };
+        }]);
+</script>

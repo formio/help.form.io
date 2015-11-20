@@ -65,6 +65,8 @@
 
 <script src="/assets/js/docs.js"></script>
 {% include analytics.html %}
-{% include footer.html %}
+{% if page.nofooter == nil %}
+    {% include footer.html %}
+{% endif %}    
 </body>
 </html>
