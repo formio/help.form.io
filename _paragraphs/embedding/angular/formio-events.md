@@ -15,9 +15,16 @@ $scope.$on('formSubmission', function(err, submission) { /* ... */ })
 The following are all the events emitted by the above directives:
 
 <dl class="dl-horizontal">
+    <dt><code>formSubmit</code></dt>
+    <dd>
+        Called after a form is submitted, but before it has been sent to the server. This submission can be cancelled by calling `event.preventDefault()`.
+        <h5>Parameters:</h5>
+        <code>submission</code>: The submission that was submitted.
+    </dd>
+
     <dt><code>formSubmission</code></dt>
     <dd>
-        Called whenever a form is submitted. This can be either a create or an edit.
+        Called after a form is successfully submitted to the server. This can be either a create or an edit.
         <h5>Parameters:</h5>
         <code>submission</code>: The submission that was submitted.
     </dd>

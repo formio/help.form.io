@@ -38,4 +38,6 @@ You can provide a ***read-only*** flag to the ```formio``` directive which will 
     <dd>An Object containing submission data to display. This is useful if you have already loaded submission data you wish to display on this form.</dd>
     <dt><code>read-only</code></dt>
     <dd>Makes form fields read only, which can be useful for <strong>Viewing</strong> submission results.</dd>
+    <dt><code>formio-options</code></dt>
+    <dd>An Object containing options to pass to Formio.js, often used with Formio.js plugins.</dd>
 </dl>
