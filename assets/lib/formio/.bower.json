@@ -34,11 +34,11 @@
     "tests"
   ],
   "homepage": "https://github.com/formio/ngFormio",
-  "_release": "2c128d4b53",
+  "_release": "fb1d07a9fb",
   "_resolution": {
     "type": "branch",
     "branch": "develop",
-    "commit": "2c128d4b538a886c08073ced929e2c6a3c1d3edd"
+    "commit": "fb1d07a9fb4034f3e21b04248a4cd332a189bd5d"
   },
   "_source": "git://github.com/formio/ngFormio.git",
   "_target": "develop",
