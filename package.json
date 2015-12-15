@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "The help site for Form.io.",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "^3.9.0"
-  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "wiredep": "^2.2.2"
