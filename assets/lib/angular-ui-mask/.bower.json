@@ -1,0 +1,21 @@
+{
+  "author": "AngularUI Team",
+  "name": "angular-ui-mask",
+  "homepage": "https://github.com/angular-ui/ui-mask",
+  "main": "./dist/mask.js",
+  "license": "MIT",
+  "dependencies": {
+    "angular": ">= 1.3.6"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.3.6"
+  },
+  "_release": "6f331114cd",
+  "_resolution": {
+    "type": "commit",
+    "commit": "6f331114cdb0e12f5501dcda6f65cb79b55d4fe2"
+  },
+  "_source": "git://github.com/formio/ui-mask.git",
+  "_target": "6f331114cdb0e12f5501dcda6f65cb79b55d4fe2",
+  "_originalSource": "formio/ui-mask"
+}

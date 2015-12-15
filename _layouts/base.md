@@ -49,6 +49,7 @@
   <script src="../assets/lib/angular-sanitize/angular-sanitize.js"></script>
   <script src="../assets/lib/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
   <script src="../assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="../assets/lib/angular-ui-mask/dist/mask.min.js"></script>
   <script src="../assets/lib/formio/dist/formio.js"></script>
   <!-- endbower -->
 </head>
