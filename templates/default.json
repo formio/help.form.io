@@ -2,6 +2,10 @@
   "title": "Default",
   "name": "default",
   "description": "Provides a simple User authentication system.",
+  "preview": {
+    "url": "http://formio.github.io/formio-app-basic",
+    "repo": "https://github.com/formio/formio-app-basic"
+  },
   "roles": {
     "administrator": {
       "title": "Administrator",
