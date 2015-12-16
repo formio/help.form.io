@@ -2,6 +2,10 @@
   "title": "Empty",
   "name": "empty",
   "description": "Provides an empty project with no forms or resources.",
+  "preview": {
+    "url": "http://formio.github.io/formio-app-template",
+    "repo": "https://github.com/formio/formio-app-template"
+  },
   "roles": {
     "administrator": {
       "title": "Administrator",
