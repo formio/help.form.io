@@ -15,7 +15,8 @@
     "title": "Movie App",
     "name": "movieapp",
     "description": "An example movie project that lets users register, login, and manage a database of directors and movies.",
-    "template": "http://formio.github.io/formio-app-movie/app/project.json"
+    "template": "http://formio.github.io/formio-app-movie/app/project.json",
+    "thumbnail": "http://formio.github.io/formio-app-movie/app/images/movieapp-preview.png"
   },
   {
     "title": "Sales Quoting App",
