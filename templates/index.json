@@ -30,7 +30,8 @@
     "title": "Prize Drawing",
     "name": "prizedrawingapp",
     "description": "A raffle entry project that lets participants register for a chance to win a prize! Also includes admin interface for prize drawing selection.",
-    "template": "http://formio.github.io/formio-app-prizedrawing/project.json"
+    "template": "http://formio.github.io/formio-app-prizedrawing/project.json",
+    "thumbnail": "http://formio.github.io/formio-app-prizedrawing/assets/images/prizedrawing-thumb.png"
   },
   {
     "title": "Empty",
