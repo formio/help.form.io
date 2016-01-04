@@ -9,7 +9,8 @@
     "title": "ToDo List",
     "name": "todoapp",
     "description": "An example to-do project that lets users register, login, and keep track of their to-do list.",
-    "template": "http://formio.github.io/formio-app-todo/src/project.json"
+    "template": "http://formio.github.io/formio-app-todo/src/project.json",
+    "thumbnail": "http://formio.github.io/formio-app-todo/src/assets/images/todo-thumbnail.png"
   },
   {
     "title": "Movie Manager",
