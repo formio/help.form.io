@@ -3,7 +3,8 @@
     "title": "Default",
     "name": "default",
     "description": "A default project with User and Admin resources and their respective authentication forms.",
-    "template": "http://help.form.io/templates/default.json"
+    "template": "http://help.form.io/templates/default.json",
+    "thumbnail": "http://formio.github.io/formio-app-basic/assets/images/default-thumb.png"
   },
   {
     "title": "Form Manager",
