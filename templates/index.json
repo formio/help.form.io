@@ -6,6 +6,13 @@
     "template": "http://help.form.io/templates/default.json"
   },
   {
+    "title": "Form Manager",
+    "name": "form-manager",
+    "description": "A form management application that includes Form Building capabilities as well as Data management.",
+    "template": "http://formio.github.io/formio-app-formio/src/project.json",
+    "thumbnail": "http://formio.github.io/formio-app-formio/src/assets/images/form-manager-thumb.png"
+  },
+  {
     "title": "ToDo List",
     "name": "todoapp",
     "description": "An example to-do project that lets users register, login, and keep track of their to-do list.",
