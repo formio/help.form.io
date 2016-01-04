@@ -39,11 +39,5 @@
     "description": "A raffle entry project that lets participants register for a chance to win a prize! Also includes admin interface for prize drawing selection.",
     "template": "http://formio.github.io/formio-app-prizedrawing/project.json",
     "thumbnail": "http://formio.github.io/formio-app-prizedrawing/assets/images/prizedrawing-thumb.png"
-  },
-  {
-    "title": "Empty",
-    "name": "empty",
-    "description": "An empty project with no forms or resources. Create a project with a fresh start!",
-    "template": "http://help.form.io/templates/empty.json"
   }
 ]
