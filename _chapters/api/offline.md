@@ -1,7 +1,7 @@
 ---
 title: Offline Mode
-book: embedding
-weight: 300
+book: api
+weight: 27
 chapter: offline
 ---
 We provide a plugin to users with Team Pro or Enterprise projects that enables their applications to request and submit forms offline.
