@@ -1,9 +1,8 @@
 ---
 title: Next Steps
 book: intro
-weight: 12
-chapter: welcome
-slug: formio-next
+weight: 60
+chapter: next
 ---
 So now that you have a good idea on how Form.io works, here is a good place to go next to fully experience Form.io!
 

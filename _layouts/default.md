@@ -12,11 +12,11 @@ layout: wrapper
 <div class="container" id="content" >
   <div class="row">
     {% if page.book %}
-    <div class="col-md-9">
-      {{ content }}
-    </div>
     <div class="col-md-3">
       {% include sidebar.html %}
+    </div>
+    <div class="col-md-9">
+      {{ content }}
     </div>
     {% else %}
     <div class="col-md-12">
