@@ -14,6 +14,10 @@ A hidden field can be added to a form to create a resource property that can be 
 
 The name for a hidden field is not displayed on the client side and is used for administration purposes only. The name is used to generate the automatic property name but this can be changed on the API tab on the component settings modal.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Unique
 
 If checked, this field will be enforced as unique for this form. Submissions will be checked to see if an existing value matches. This validation is currently server side only.

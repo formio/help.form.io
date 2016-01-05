@@ -17,6 +17,10 @@ The label for this field that will appear next to it.
 
 The placeholder text that will appear when this field is empty.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Allow Multiple Addresses
 
 Allow multiple addresses to be entered into the field.

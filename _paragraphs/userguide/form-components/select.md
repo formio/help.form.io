@@ -41,6 +41,10 @@ If Raw JSON or URL is selected, enter the name of the property on the objects th
 
 If Raw JSON or URL is selected, use the template field to determine how the values will be displayed in the select box. You can use the **item** variable to access the current object in the array. For example, you can embed the value by using {{ item.value }} in a template.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 ![](/assets/img/select-validation.png)
 
 #### Required

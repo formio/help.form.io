@@ -30,6 +30,10 @@ The Background color of the signature area. This can be an RGB value in `RGB(255
 
 The pen color in the signature area. This can be an RGB value in `RGB(255,255,255)` format, a hex value like `#000000` or the name of a color.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Table View
 
 If checked, this value will show up in the table view of the submissions list.

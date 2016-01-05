@@ -37,6 +37,10 @@ A list of search filters based on the fields of the resource. See the [Resource.
 
 How an item should appear in the list. Use `{{}}` brackets to reference variables to display. Be sure to use "Select Fields" above to select the fields to display.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Allow Multiple Resources
 
 If checked, more than one value will be allowed to be entered.
