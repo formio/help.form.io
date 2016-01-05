@@ -1,6 +1,6 @@
 ---
 title: formioDelete Directive
-book: embedding
+book: api
 chapter: angular
 slug: formio-delete
 weight: 40

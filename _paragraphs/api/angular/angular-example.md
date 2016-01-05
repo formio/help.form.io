@@ -1,6 +1,6 @@
 ---
 title: Example application
-book: embedding
+book: api
 chapter: angular
 slug: angular-example
 weight: 60

@@ -1,6 +1,6 @@
 ---
 title: formioSubmissions Directive
-book: embedding
+book: api
 chapter: angular
 slug: formio-submissions
 weight: 30

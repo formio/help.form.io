@@ -1,6 +1,6 @@
 ---
 title: Formio Events
-book: embedding
+book: api
 chapter: angular
 slug: formio-events
 weight: 50

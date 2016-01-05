@@ -1,6 +1,6 @@
 ---
 title: Using the React Module
-book: embedding
+book: api
 chapter: react
 slug: react-usage
 weight: 20

@@ -1,6 +1,6 @@
 ---
 title: Adding the Formio Module
-book: embedding
+book: api
 chapter: angular
 slug: formio-module
 weight: 10
