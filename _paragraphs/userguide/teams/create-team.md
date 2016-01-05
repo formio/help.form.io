@@ -5,4 +5,8 @@ chapter: teams
 slug: create-team
 weight: 10
 ---
-Coming soon.
+To create a new Team, from the portal home page, click the ```Create Team``` button.
+
+![](/assets/img/userguide/userguide-team-create.png)
+
+Give the team a name and assign user accounts to the team. Currently teams are limited to existing members of the site. You can add more team members later.
