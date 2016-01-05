@@ -18,3 +18,5 @@ Some of the types of actions that can happen are:
   - Webhook - Calling a custom URL in your system to do something with the form data.
   
 This allows the complete circle of using form.io. The forms are created, embedded, rendered, sent to form.io for validation and then sent to wherever you need the data to be.
+
+Find out more about actions in the [Actions Section](/userguide/#actions) of the User's Guide .
