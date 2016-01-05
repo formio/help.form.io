@@ -37,6 +37,10 @@ Enter a url with a data source in JSON Array format.
 
 If Raw JSON or URL is selected, enter the name of the property on the objects that will contain the value that will be stored in the database.
 
+#### Search Query Name
+
+If URL is selected, enter the name of the search query parameter to filter requests with. Example, if your url is `http://api.dogs.com/dogs`, and this option is set to `type`, and the user types `nice` in the select field, then this component will send a request to `http://api.dogs.com/dogs?type=nice` and update the select items with the results. If this option is omitted, no new requests will be made when user enters text in the select field.
+
 #### Item Template
 
 If Raw JSON or URL is selected, use the template field to determine how the values will be displayed in the select box. You can use the **item** variable to access the current object in the array. For example, you can embed the value by using {{ item.value }} in a template.
