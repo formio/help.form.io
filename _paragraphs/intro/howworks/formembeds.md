@@ -26,4 +26,4 @@ Notice how there is a double quote with a single quote inside it for the src. Th
 
 ```<formio src="userRegisterForm"></formio>```
 
-For more information on how to embed forms in an application or directly into a website go to [Application Embedding](/embedding/).
+For more information on how to embed forms in an application or directly into a website go to [Angular Embedding](/api/#angular/).
