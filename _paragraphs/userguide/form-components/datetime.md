@@ -21,6 +21,10 @@ The placeholder text that will appear when this field is empty.
 
 The format for displaying this field's date. The format must be specified like the [AngularJS date](https://docs.angularjs.org/api/ng/filter/date) filter.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Protected
 
 If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by going to the submissions for a form.

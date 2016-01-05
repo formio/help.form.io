@@ -14,6 +14,10 @@ A check box is a boolean value input field. It will either be on or off.
 
 The label for this field that will appear next to it.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Protected
 
 If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by going to the submissions for a form.

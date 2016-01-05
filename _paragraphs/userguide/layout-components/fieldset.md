@@ -12,3 +12,7 @@ A fieldset can be used to create a title of an area of the form. This is useful 
 #### Fieldset Legend
 
 Enter the legend that will appear for the fieldset.
+
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.

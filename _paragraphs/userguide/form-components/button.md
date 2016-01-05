@@ -45,6 +45,10 @@ If you have an icon library and would like to include an icon to the left of the
 
 If you have an icon library and would like to include an icon to the right of the button label, you can do so by adding the icon class here.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Block
 
 If checked, the display of the button will be set to "block" which will cause it to span the full width of the container.

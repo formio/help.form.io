@@ -30,6 +30,10 @@ The text to show before a field. An example is '$' for money
 
 The text to show after a field. An example would be 'lbs' for weight.
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
 #### Multiple Values
 
 If checked, multiple values can be added in this field. The values will appear as an array in the API and an "Add Another" button will be visible on the field.
