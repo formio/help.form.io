@@ -1,13 +1,14 @@
 ---
-title: Radio
+title: Check Boxes
 book: userguide
 chapter: form-components
-slug: radio
-weight: 70
+slug: checkboxes
+weight: 115
 ---
-Radio form components should be used when presenting a list of options from which one should be chosen.
 
-![](/assets/img/radio-display.png)
+The Check Boxes form component works like the [Radio](#radio) component, but allows the user to check multiple values.
+
+![](/assets/img/checkboxes-display.png)
 
 #### Label
 
@@ -37,11 +38,11 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![](/assets/img/radio-validation.png)
+![](/assets/img/checkboxes-validation.png)
 
 #### Required
 
-If checked, the field will be required to have a value.
+If checked, the field will be required to be checked. If it is required, you may not need to persist the value as it can be assumed to be checked when a form was submitted or it will not submit.
 
 #### Custom Validation
 
