@@ -1,7 +1,7 @@
 ---
 title: OAuth
 book: integrations
-weight: 1
+weight: 4
 chapter: oauth
 ---
 
