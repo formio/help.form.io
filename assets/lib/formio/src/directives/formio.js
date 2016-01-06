@@ -7,7 +7,8 @@ module.exports = function() {
       formAction: '=',
       form: '=',
       submission: '=',
-      readOnly: '='
+      readOnly: '=',
+      formioOptions: '='
     },
     controller: [
       '$scope',
@@ -52,7 +53,7 @@ module.exports = function() {
 
         // Called when the form is submitted.
         $scope.onSubmit = function(form) {
-          if (!$scope.formioForm.$valid || form.submitting) { return; }
+          if (!$scope.formioForm.$valid || form.submitting) return;
           form.submitting = true;
 
           // Create a sanitized submission object.
@@ -87,6 +88,12 @@ module.exports = function() {
             $scope.$emit('formSubmission', submission);
           };
 
+          var submitEvent = $scope.$emit('formSubmit', submissionData);
+          if (submitEvent.defaultPrevented) {
+            // Listener wants to cancel the form submission
+            return;
+          }
+
           // Allow custom action urls.
           if ($scope.action) {
             var method = submissionData._id ? 'put' : 'post';
@@ -101,7 +108,7 @@ module.exports = function() {
 
           // If they wish to submit to the default location.
           else if ($scope.formio) {
-            $scope.formio.saveSubmission(angular.copy(submissionData)) // copy to remove angular $$hashKey
+            $scope.formio.saveSubmission(angular.copy(submissionData), $scope.formioOptions) // copy to remove angular $$hashKey
               .then(function(submission) {
               onSubmitDone(submission.method, submission);
             }, FormioScope.onError($scope, $element))

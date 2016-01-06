@@ -17,10 +17,10 @@ module.exports = [
             });
           }
           else {
-            if(error instanceof Error) {
+            if (error instanceof Error) {
               error = error.toString();
             }
-            else if(typeof error === 'object') {
+            else if (typeof error === 'object') {
               error = JSON.stringify(error);
             }
             $scope.showAlerts({
@@ -32,6 +32,7 @@ module.exports = [
         };
       },
       register: function($scope, $element, options) {
+        var self = this;
         var loader = null;
         $scope._src = $scope._src || $scope.src || '';
         $scope._form = $scope.form || {};
@@ -51,10 +52,10 @@ module.exports = [
 
         // Used to set the form action.
         var getAction = function(action) {
-          if (!action) { return ''; }
-          if ($scope.action) { return ''; }
+          if (!action) return '';
+          if ($scope.action) return '';
           if (action.substr(0, 1) === '/') {
-            action = Formio.baseUrl + action;
+            action = Formio.getBaseUrl() + action;
           }
           return action;
         };
@@ -74,7 +75,7 @@ module.exports = [
 
         // Set the action if they provided it in the form.
         $scope.$watch('form.action', function(value) {
-          if (!value) { return; }
+          if (!value) return;
           var action = getAction(value);
           if (action) {
             $scope.action = action;
@@ -85,7 +86,7 @@ module.exports = [
         $scope.fieldData = function(data, component) {
           var value = Formio.fieldData(data, component);
           var componentInfo = formioComponents.components[component.type];
-          if (!componentInfo.tableView) { return value; }
+          if (!componentInfo.tableView) return value;
           if (component.multiple && (value.length > 0)) {
             var values = [];
             angular.forEach(value, function(arrayValue) {
@@ -97,6 +98,18 @@ module.exports = [
         };
 
         var spinner = $element.find('#formio-loading');
+
+        $scope.updateSubmissions = function() {
+          spinner.show();
+          var params = {};
+          if ($scope.perPage) params.limit = $scope.perPage;
+          if ($scope.skip) params.skip = $scope.skip;
+          loader.loadSubmissions({params: params}).then(function(submissions) {
+            $scope._submissions = submissions;
+            spinner.hide();
+            $scope.$emit('submissionsLoad', submissions);
+          }, self.onError($scope));
+        };
 
         if ($scope._src) {
           loader = new Formio($scope._src);
@@ -120,12 +133,7 @@ module.exports = [
             }, this.onError($scope));
           }
           if (options.submissions) {
-            spinner.show();
-            loader.loadSubmissions().then(function(submissions) {
-              $scope._submissions = submissions;
-              spinner.hide();
-              $scope.$emit('submissionsLoad', submissions);
-            }, this.onError($scope));
+            $scope.updateSubmissions();
           }
         }
         else {
