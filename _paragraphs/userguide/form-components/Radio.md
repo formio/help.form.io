@@ -23,7 +23,7 @@ A custom CSS class to add to this component. You may add multiple class names se
 
 #### Inline Layout
 
-If checked, this field will layout the checkboxes horizontally instead of vertically.
+If checked, this field will layout the radio buttons horizontally instead of vertically.
 
 #### Protected
 
