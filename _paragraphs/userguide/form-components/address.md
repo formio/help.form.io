@@ -3,7 +3,7 @@ title: Address
 book: userguide
 chapter: form-components
 slug: address
-weight: 100
+weight: 110
 ---
 The address form component is a special component that does lookups for addresses entered. It can be entered in free form and will save the address as well as geolocation and other information.
 

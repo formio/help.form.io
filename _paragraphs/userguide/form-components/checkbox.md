@@ -3,7 +3,7 @@ title: Check Box
 book: userguide
 chapter: form-components
 slug: checkbox
-weight: 110
+weight: 120
 ---
 
 A check box is a boolean value input field. It will either be on or off.

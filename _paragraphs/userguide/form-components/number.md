@@ -3,7 +3,7 @@ title: Number
 book: userguide
 chapter: form-components
 slug: number
-weight: 140
+weight: 150
 ---
 
 Number fields should be used whenever a field should be limited to a type of number.

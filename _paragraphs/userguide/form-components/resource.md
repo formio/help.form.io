@@ -3,7 +3,7 @@ title: Resource
 book: userguide
 chapter: form-components
 slug: resource
-weight: 160
+weight: 170
 ---
 A resource field allows users to reference other resources in your project. For example, if you have a Director resource and a Movie resource, you can add a resource field on the Movie to reference the Director.
 

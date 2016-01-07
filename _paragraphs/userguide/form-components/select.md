@@ -3,7 +3,7 @@ title: Select
 book: userguide
 chapter: form-components
 slug: select
-weight: 80
+weight: 90
 ---
 A select field will display a list of values in a drop down list to users. Users can select one of the values.
 
