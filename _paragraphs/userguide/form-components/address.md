@@ -21,6 +21,10 @@ The placeholder text that will appear when this field is empty.
 
 A custom CSS class to add to this component. You may add multiple class names separated by a space.
 
+#### Tab Index
+
+Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
+
 #### Allow Multiple Addresses
 
 Allow multiple addresses to be entered into the field.

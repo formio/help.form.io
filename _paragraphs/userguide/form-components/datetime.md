@@ -25,6 +25,10 @@ The format for displaying this field's date. The format must be specified like t
 
 A custom CSS class to add to this component. You may add multiple class names separated by a space.
 
+#### Tab Index
+
+Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
+
 #### Protected
 
 If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by going to the submissions for a form.
