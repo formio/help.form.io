@@ -54,6 +54,6 @@ app.config([
 
 The template will then be used to render the component. In addition, a controller may be added to the template to create more interactive form elements.
 
-This is a working example of a custom component. It is a Matrix checkbox that changes the number of columsn and rows based on two other form fields.
+This is a working example of a custom component. It is a Matrix checkbox that changes the number of columns and rows based on two other form fields.
  
 <iframe width="100%" height="500" src="//jsfiddle.net/randallknutson/zLxhqarh/embedded/result,js,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
