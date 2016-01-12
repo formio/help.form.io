@@ -3,7 +3,7 @@ title: Phone Number
 book: userguide
 chapter: form-components
 slug: phonenumber
-weight: 150
+weight: 160
 ---
 The phone number form component can be used to enter phone numbers in a form.
 
@@ -44,6 +44,10 @@ The text to show after a field. An example would be 'lbs' for weight.
 #### Custom CSS Class
 
 A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
+#### Tab Index
+
+Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
 
 #### Multiple Values
 

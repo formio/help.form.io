@@ -27,6 +27,14 @@ If **Url** is selected in Storage, enter the Url of the service. It must be comp
 
 This field will append all files with the string so that they are in a directory on the storage provider. Must end in "/".
 
+#### Custom CSS Class
+
+A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
+#### Tab Index
+
+Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
+
 #### Multiple Values
 
 If unchecked, only one file per field is allowed. If checked, multiple are allowed.

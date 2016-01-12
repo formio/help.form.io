@@ -3,7 +3,7 @@ title: Signature
 book: userguide
 chapter: form-components
 slug: signature
-weight: 170
+weight: 180
 ---
 
 A signature field is a special field that allows someone to sign the field with either their finger on a touch enabled device or with the mouse pointer. This signature will be converted into an image and stored with the form submission.

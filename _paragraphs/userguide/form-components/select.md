@@ -3,7 +3,7 @@ title: Select
 book: userguide
 chapter: form-components
 slug: select
-weight: 80
+weight: 90
 ---
 A select field will display a list of values in a drop down list to users. Users can select one of the values.
 
@@ -48,6 +48,10 @@ If Raw JSON or URL is selected, use the template field to determine how the valu
 #### Custom CSS Class
 
 A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
+#### Tab Index
+
+Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
 
 ![](/assets/img/select-validation.png)
 
