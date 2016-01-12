@@ -3,7 +3,7 @@ title: Check Box
 book: userguide
 chapter: form-components
 slug: checkbox
-weight: 110
+weight: 120
 ---
 
 A check box is a boolean value input field. It will either be on or off.
@@ -17,6 +17,10 @@ The label for this field that will appear next to it.
 #### Custom CSS Class
 
 A custom CSS class to add to this component. You may add multiple class names separated by a space.
+
+#### Tab Index
+
+Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
 
 #### Protected
 

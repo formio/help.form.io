@@ -3,7 +3,7 @@ title: Radio
 book: userguide
 chapter: form-components
 slug: radio
-weight: 70
+weight: 80
 ---
 Radio form components should be used when presenting a list of options from which one should be chosen.
 
@@ -21,9 +21,13 @@ These are the values that will be selected on this field. The Value column is wh
 
 A custom CSS class to add to this component. You may add multiple class names separated by a space.
 
+#### Tab Index
+
+Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
+
 #### Inline Layout
 
-If checked, this field will layout the checkboxes horizontally instead of vertically.
+If checked, this field will layout the radio buttons horizontally instead of vertically.
 
 #### Protected
 
