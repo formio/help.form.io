@@ -21,3 +21,4 @@ Take note of the Client ID and Client Secret. Enter them in the Project Settings
 
 ![](/assets/img/oauth/github-app-settings-view.png)
 
+Github OAuth should now be set up. Continue with adding [Login, Register and Link buttons](#button) to your forms.

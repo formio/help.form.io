@@ -37,3 +37,4 @@ Take note of the App ID and App Secret (in this guide we will refer to them as C
 
 <p class="note" markdown="1">Note that your Facebook app is now in development mode and can only be logged into by you. When you are ready to open up OAuth logins to the public, go to the *Status & Review* page and click the toggle button to make your app public.</p>
 
+Facebook OAuth should now be set up. Continue with adding [Login, Register and Link buttons](#button) to your forms.
