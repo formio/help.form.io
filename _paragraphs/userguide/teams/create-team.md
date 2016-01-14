@@ -9,4 +9,4 @@ To create a new Team, from the portal home page, click the ```Create Team``` but
 
 ![](/assets/img/userguide/userguide-team-create.png)
 
-Give the team a name and assign user accounts to the team. Currently teams are limited to existing members of the site. You can add more team members later.
+Give the team a name and assign user accounts to the team. Currently teams are limited to registered users of the site. You can add more team members later.
