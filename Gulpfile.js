@@ -3,7 +3,15 @@ var wiredep = require('wiredep').stream;
 gulp.task('wiredep', function() {
     gulp.src('./_layouts/base.md')
         .pipe(wiredep({
-            ignorePath: '..'
+            ignorePath: '../',
+            fileTypes: {
+                html: {
+                    replace: {
+                        js: '<script src="https://help.form.io/{{filePath}}"></script>',
+                        css: '<link rel="stylesheet" href="https://help.form.io/{{filePath}}" />'
+                    }
+                }
+            }
         }))
         .pipe(gulp.dest('./_layouts'));
 });
