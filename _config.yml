@@ -2,6 +2,7 @@ title : Form.io Help
 kramdown:
   input: GFM
 permalink: pretty
+baseUrl: https://help.form.io
 exclude:
   - CNAME
   - README.md

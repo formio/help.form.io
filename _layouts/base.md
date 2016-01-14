@@ -8,48 +8,48 @@
   <title>{{ site.title }} | {{ page.title | strip_html }}</title>
 
   <!-- bower:css -->
-  <link rel="stylesheet" href="https://help.form.io/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://help.form.io/assets/lib/angular-ui-select/dist/select.css" />
-  <link rel="stylesheet" href="https://help.form.io/assets/lib/formio/css/formio.css" />
+  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/angular-ui-select/dist/select.css" />
+  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/formio/css/formio.css" />
   <!-- endbower -->
 
-  <link rel="stylesheet" href="https://help.form.io/assets/css/docs.css">
+  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/css/docs.css">
 
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="57x57" href="https://help.form.io/assets/favicons/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="https://help.form.io/assets/favicons/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="https://help.form.io/assets/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="https://help.form.io/assets/favicons/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="https://help.form.io/assets/favicons/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="https://help.form.io/assets/favicons/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="https://help.form.io/assets/favicons/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="https://help.form.io/assets/favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://help.form.io/assets/favicons/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="https://help.form.io/assets/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="https://help.form.io/assets/favicons/android-chrome-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="https://help.form.io/assets/favicons/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="https://help.form.io/assets/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="https://help.form.io/assets/favicons/manifest.json">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="{{ site.baseUrl }}/assets/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseUrl }}/assets/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="{{ site.baseUrl }}/assets/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="{{ site.baseUrl }}/assets/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="{{ site.baseUrl }}/assets/favicons/manifest.json">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content="https://help.form.io/assets/favicons/mstile-144x144.png">
+  <meta name="msapplication-TileImage" content="{{ site.baseUrl }}/assets/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
   <!-- bower:js -->
-  <script src="https://help.form.io/assets/lib/jquery/dist/jquery.js"></script>
-  <script src="https://help.form.io/assets/lib/anchor-js/anchor.js"></script>
-  <script src="https://help.form.io/assets/lib/angular/angular.js"></script>
-  <script src="https://help.form.io/assets/lib/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="https://help.form.io/assets/lib/ng-file-upload/dist/ng-file-upload.js"></script>
-  <script src="https://help.form.io/assets/lib/angular-sanitize/angular-sanitize.js"></script>
-  <script src="https://help.form.io/assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="https://help.form.io/assets/lib/moment/moment.js"></script>
-  <script src="https://help.form.io/assets/lib/angular-moment/angular-moment.js"></script>
-  <script src="https://help.form.io/assets/lib/angular-ui-select/dist/select.js"></script>
-  <script src="https://help.form.io/assets/lib/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
-  <script src="https://help.form.io/assets/lib/signature_pad/signature_pad.js"></script>
-  <script src="https://help.form.io/assets/lib/angular-ui-mask/dist/mask.js"></script>
-  <script src="https://help.form.io/assets/lib/formio/dist/formio.js"></script>
-  <script src="https://help.form.io/assets/lib/urijs/src/URI.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/jquery/dist/jquery.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/anchor-js/anchor.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/angular/angular.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/ng-file-upload/dist/ng-file-upload.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/angular-sanitize/angular-sanitize.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/moment/moment.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/angular-moment/angular-moment.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/angular-ui-select/dist/select.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/signature_pad/signature_pad.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/angular-ui-mask/dist/mask.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/formio/dist/formio.js"></script>
+  <script src="{{ site.baseUrl }}/assets/lib/urijs/src/URI.js"></script>
   <!-- endbower -->
 </head>
 
@@ -63,7 +63,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<script src="https://help.form.io/assets/js/docs.js"></script>
+<script src="{{ site.baseUrl }}/assets/js/docs.js"></script>
 {% include analytics.html %}
 {% if page.nofooter == nil %}
     {% include footer.html %}

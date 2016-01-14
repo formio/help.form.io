@@ -7,8 +7,8 @@ gulp.task('wiredep', function() {
             fileTypes: {
                 html: {
                     replace: {
-                        js: '<script src="https://help.form.io/{{filePath}}"></script>',
-                        css: '<link rel="stylesheet" href="https://help.form.io/{{filePath}}" />'
+                        js: '<script src="{{ site.baseUrl }}/{{filePath}}"></script>',
+                        css: '<link rel="stylesheet" href="{{ site.baseUrl }}/{{filePath}}" />'
                     }
                 }
             }
