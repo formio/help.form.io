@@ -4,12 +4,15 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base id="basetag" href="/">
   <script type='text/javascript'>
     (function() {
       var tag = document.getElementById('basetag');
+      var domain = location.protocol + '//' + location.host;
       if (location.host === 'formio.github.io') {
-        tag.href = location.protocol + '//' + location.host + '/help.form.io/';
+        document.write("<base href='" + domain + "/help.form.io/' />");
+      }
+      else {
+        document.write("<base href='" + domain + "/' />");
       }
     }());
   </script>
