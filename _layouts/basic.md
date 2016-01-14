@@ -9,7 +9,7 @@ layout: base
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <img height="25px;" alt="Form.io" src="/assets/formio-logo.png">
+        <img height="25px;" alt="Form.io" src="assets/formio-logo.png">
       </a>
     </div>
   </div>

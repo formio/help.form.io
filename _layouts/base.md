@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="assets/lib/formio/css/formio.css" />
   <!-- endbower -->
 
-  <link rel="stylesheet" href="/assets/css/docs.css">
+  <link rel="stylesheet" href="assets/css/docs.css">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-touch-icon-57x57.png">
@@ -76,7 +76,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
-<script src="/assets/js/docs.js"></script>
+<script src="assets/js/docs.js"></script>
 {% include analytics.html %}
 {% if page.nofooter == nil %}
     {% include footer.html %}
