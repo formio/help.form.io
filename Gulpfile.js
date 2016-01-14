@@ -3,7 +3,7 @@ var wiredep = require('wiredep').stream;
 gulp.task('wiredep', function() {
     gulp.src('./_layouts/base.md')
         .pipe(wiredep({
-            ignorePath: '../'
+            ignorePath: '..'
         }))
         .pipe(gulp.dest('./_layouts'));
 });
