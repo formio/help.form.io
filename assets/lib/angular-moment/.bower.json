@@ -18,14 +18,14 @@
     "type": "git",
     "url": "git://github.com/urish/angular-moment.git"
   },
-  "version": "0.10.2",
-  "_release": "0.10.2",
+  "version": "0.10.3",
+  "_release": "0.10.3",
   "_resolution": {
     "type": "version",
-    "tag": "0.10.2",
-    "commit": "5880a34e1dc6f1413201e4c5759292aea31e14d4"
+    "tag": "0.10.3",
+    "commit": "07d373b7a2fd17ff25ab927ff7fcb0b53b2d13fd"
   },
   "_source": "git://github.com/urish/angular-moment.git",
-  "_target": "~0.10.1",
+  "_target": "~0.10.3",
   "_originalSource": "angular-moment"
 }

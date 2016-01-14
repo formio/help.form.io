@@ -37,6 +37,7 @@ You have the following properties available to use with the directive.  All are 
 * dateDisabled
 * datepickerOptions (object)
 * timepickerOptions (object)
+* defaultTime (string)
  
 ##### isOpen
 Whether the popup/dropdown is visible or not. Defaults to false
@@ -64,6 +65,8 @@ From angularUI site -> An optional expression to disable visible options based o
 Object to configure settings for the datepicker (can be found on angularUI site)
 ##### timepickerOptions
 Object to configure settings for the timepicker (can be found on angularUI site)
+##### defaultTime
+Initial time when a new date is selected (e.g. "14:00:00" or "2:00 pm")
 
 ## uiDatetimePickerConfig
 Now datetimePicker options are globally set by default.  If you do not state the values within the declaration, the config options are used instead.  Here are the default options
@@ -81,7 +84,8 @@ Now datetimePicker options are globally set by default.  If you do not state the
     timeText: 'Time',
     closeOnDateSelection: true,
     appendToBody: false,
-    showButtonBar: true
+    showButtonBar: true,
+    defaultTime: '00:00 PM'
 })
 ```
 
@@ -148,4 +152,4 @@ app.controller('MyController', function() {
 ```
 
 ## Support
-This was developed using angular-ui bootstrap Version: 0.13.0 - 2015-05-02.  If you have a bug, please check what version of angular-ui you are using.  If you are using a version prior to this, then please upgrade if you can and try it. If the problem persists, please let me know.  I do have a day job but will try to get back to you asap.  If you can fix the bug, then let me know how, or even better, submit a pull request.
+This was developed using angular-ui bootstrap Version: 0.13.2 - 2015-08-02.  If you have a bug, please check what version of angular-ui you are using.  If you are using a version prior to this, then please upgrade if you can and try it. If the problem persists, please let me know.  I do have a day job but will try to get back to you asap.  If you can fix the bug, then let me know how, or even better, submit a pull request.

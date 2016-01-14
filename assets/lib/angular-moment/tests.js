@@ -28,6 +28,7 @@ describe('module angularMoment', function () {
 		(moment.locale || moment.lang)('en');
 		// Add a sample timezones for tests
 		moment.tz.add('UTC|UTC|0|0|');
+		moment.tz.add('Europe/Zurich|CET CEST|-10 -20|01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010|-19Lc0 11A0 1o00 11A0 1xG10 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1fA0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1fA0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1cM0 1fA0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00 11A0 1qM0 WM0 1qM0 WM0 1qM0 WM0 1qM0 11A0 1o00 11A0 1o00');
 		moment.tz.add('Pacific/Tahiti|LMT TAHT|9W.g a0|01|-2joe1.I');
 	}));
 
@@ -277,7 +278,7 @@ describe('module angularMoment', function () {
 					var element = angular.element('<span am-time-ago="testDate"></span>');
 					element = $compile(element)($rootScope);
 					$rootScope.$digest();
-					expect(element.text()).toMatch(/^2012-06-05T00:00:00\+\d\d:\d\d$/);
+					expect(element.text()).toMatch(/^2012-06-05T00:00:00[\+\-]\d\d:\d\d$/);
 				});
 
 				it('should display full time using the given format', function () {
@@ -305,7 +306,7 @@ describe('module angularMoment', function () {
 
 				it('should support setting the full date format through attribute', function () {
 					amTimeAgoConfig.fullDateThreshold = 7;
-					$rootScope.testDate =  new Date(2013, 11, 15);
+					$rootScope.testDate = new Date(2013, 11, 15);
 					var element = angular.element('<span am-time-ago="testDate" am-full-date-format="YYYY-MM-DD"></span>');
 					element = $compile(element)($rootScope);
 					$rootScope.$digest();
@@ -313,8 +314,8 @@ describe('module angularMoment', function () {
 				});
 			});
 
-			describe('am-from attribute', function() {
-				it('should make the calculations from the am-from given', function() {
+			describe('am-from attribute', function () {
+				it('should make the calculations from the am-from given', function () {
 					$rootScope.from = new Date(2015, 6, 11);
 					$rootScope.testDate = new Date(2015, 6, 12);
 					var element = angular.element('<span am-time-ago="testDate" am-from="from"></span>');
@@ -368,7 +369,8 @@ describe('module angularMoment', function () {
 		describe('am-format attribute', function () {
 			it('should support custom date format', function () {
 				var today = new Date();
-				$rootScope.testDate = today.getFullYear() + '#' + today.getDate() + '#' + today.getMonth();
+				var date = Math.min(today.getDate(), 28);
+				$rootScope.testDate = today.getFullYear() + '#' + date + '#' + today.getMonth();
 				var element = angular.element('<span am-time-ago="testDate" am-format="YYYY#DD#MM"></span>');
 				element = $compile(element)($rootScope);
 				$rootScope.$digest();
@@ -377,7 +379,8 @@ describe('module angularMoment', function () {
 
 			it('should support angular expressions in date format', function () {
 				var today = new Date();
-				$rootScope.testDate = today.getMonth() + '@' + today.getFullYear() + '@' + today.getDate();
+				var date = Math.min(today.getDate(), 28);
+				$rootScope.testDate = today.getMonth() + '@' + today.getFullYear() + '@' + date;
 				var element = angular.element('<span am-time-ago="testDate" am-format="{{dateFormat}}"></span>');
 				element = $compile(element)($rootScope);
 				$rootScope.$digest();
@@ -391,7 +394,8 @@ describe('module angularMoment', function () {
 			it('should be used when no `am-format` attribute is found', function () {
 				angularMomentConfig.format = 'MM@YYYY@DD';
 				var today = new Date();
-				$rootScope.testDate = today.getMonth() + '@' + today.getFullYear() + '@' + today.getDate();
+				var date = Math.min(today.getDate(), 28);
+				$rootScope.testDate = today.getMonth() + '@' + today.getFullYear() + '@' + date;
 				var element = angular.element('<span am-time-ago="testDate"></span>');
 				element = $compile(element)($rootScope);
 				$rootScope.$digest();
@@ -401,7 +405,8 @@ describe('module angularMoment', function () {
 			it('should be overridable by `am-format` attribute', function () {
 				angularMomentConfig.format = 'YYYY@MM@@DD';
 				var today = new Date();
-				$rootScope.testDate = today.getMonth() + '@' + today.getFullYear() + '@' + today.getDate();
+				var date = Math.min(today.getDate(), 28);
+				$rootScope.testDate = today.getMonth() + '@' + today.getFullYear() + '@' + date;
 				var element = angular.element('<span am-format="MM@YYYY@DD" am-time-ago="testDate"></span>');
 				element = $compile(element)($rootScope);
 				$rootScope.$digest();
@@ -456,6 +461,11 @@ describe('module angularMoment', function () {
 			amMoment.changeLocale('en', {calendar: {sameElse: '(HH,mm,ss);MM.DD.YYYY'}});
 			expect(amCalendar(timestamp, 'utc', 'Pacific/Tahiti')).toBe('(02,46,54);01.22.2012');
 			amMoment.changeLocale('en', {calendar: {sameElse: 'L'}});
+		});
+
+		it('should parse timezones containing Z correctly (issue #168)', function () {
+			angularMomentConfig.timezone = 'Europe/Zurich';
+			expect(amCalendar(Date.UTC(2015, 8, 3, 23, 55, 55))).toBe('2015-09-04T01:55:55+02:00');
 		});
 
 		it('should accept UTC offset as a timezone parameter', function () {
@@ -604,6 +614,25 @@ describe('module angularMoment', function () {
 		it('should return an empty string for invalid input', function () {
 			expect(amDateFormat('blah blah', '(HH,mm,ss);MM.DD.YYYY')).toBe('');
 		});
+
+		it('should accept a string format to parse input date', function () {
+			var timestamp = '20120122124654';
+			expect(amDateFormat(timestamp, '(HH,mm,ss);MM.DD.YYYY', 'utc', '-10:00', 'YYYYMMDDHHmmss')).toBe('(02,46,54);01.22.2012');
+		});
+
+		describe('format config property', function () {
+			it('should be used when no inputFormat parameter is set', function () {
+				var timestamp = '20120122124654';
+				angularMomentConfig.format = 'YYYYMMDDHHmmss';
+				expect(amDateFormat(timestamp, '(HH,mm,ss);MM.DD.YYYY', 'utc', '-10:00')).toBe('(02,46,54);01.22.2012');
+			});
+
+			it('should be overrideable by inputFormat parameter', function () {
+				var timestamp = '20120122124654';
+				angularMomentConfig.format = 'ssmmHHDDMMYYYY';
+				expect(amDateFormat(timestamp, '(HH,mm,ss);MM.DD.YYYY', 'utc', '-10:00', 'YYYYMMDDHHmmss')).toBe('(02,46,54);01.22.2012');
+			});
+		});
 	});
 
 	describe('amDurationFormat filter', function () {
@@ -654,7 +683,7 @@ describe('module angularMoment', function () {
 
 		it('should support started date as fourth parameter', function () {
 			var date = new Date(2015, 7, 14),
-			  from = new Date(2015, 7, 15);
+				from = new Date(2015, 7, 15);
 			expect(amTimeAgo(date, null, null, from)).toBe('a day ago');
 			expect(amTimeAgo(date, null, true, from)).toBe('a day');
 		});
@@ -668,6 +697,49 @@ describe('module angularMoment', function () {
 		});
 
 	});
+
+
+	describe('amSubtract filter', function () {
+
+		var amSubtract;
+
+		beforeEach(function () {
+			amSubtract = $filter('amSubtract');
+		});
+
+		it('should subtract 1 hour from date', function () {
+			var date = new Date(2000, 1, 1, 0, 0, 0);
+			expect(amSubtract(date, 1, 'hours').toString()).toMatch(/^Mon Jan 31 2000 23:00:00/);
+		});
+
+		it('should subtract 1 minute from date', function () {
+			var date = new Date(2000, 1, 1, 0, 0, 0);
+			expect(amSubtract(date, 1, 'minutes').toString()).toMatch(/^Mon Jan 31 2000 23:59:00/);
+		});
+
+	});
+
+
+	describe('amAdd filter', function () {
+
+		var amAdd;
+
+		beforeEach(function () {
+			amAdd = $filter('amAdd');
+		});
+
+		it('should add 1 hour to date', function () {
+			var date = new Date(2000, 1, 1, 0, 0, 0);
+			expect(amAdd(date, 1, 'hours').toString()).toMatch(/^Tue Feb 01 2000 01:00:00/);
+		});
+
+		it('should add 1 minute to date', function () {
+			var date = new Date(2000, 1, 1, 0, 0, 0);
+			expect(amAdd(date, 1, 'minutes').toString()).toMatch(/^Tue Feb 01 2000 00:01:00/);
+		});
+
+	});
+
 
 	describe('amMoment service', function () {
 		describe('#changeLocale', function () {
