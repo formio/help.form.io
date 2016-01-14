@@ -4,12 +4,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript">
-    if (location.host === 'formio.github.io') {
-        document.write("<base href='" + location.protocol + "//" + location.host + "/help.form.io' />");
-    }
-  </script>
-
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>{{ site.title }} | {{ page.title | strip_html }}</title>
 
