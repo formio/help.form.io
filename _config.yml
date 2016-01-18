@@ -2,11 +2,13 @@ title : Form.io Help
 kramdown:
   input: GFM
 permalink: pretty
+baseUrl: https://help.form.io
 exclude:
   - CNAME
   - README.md
   - Gemfile
   - Gemfile.lock
+  - node_modules
 collections:
   books:
     output: true

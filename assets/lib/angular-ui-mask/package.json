@@ -1,6 +1,6 @@
 {
   "name": "angular-ui-mask",
-  "version": "1.4.7",
+  "version": "1.6.7",
   "author": "https://github.com/angular-ui/ui-mask/graphs/contributors",
   "license": "MIT",
   "homepage": "https://github.com/angular-ui/ui-mask",
@@ -33,7 +33,7 @@
     "run-sequence": "^1.1.2"
   },
   "scripts": {},
-  "main": "./dist/mask.js",
+  "main": "./index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/angular-ui/ui-mask.git"

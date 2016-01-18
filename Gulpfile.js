@@ -2,7 +2,17 @@ var gulp = require('gulp');
 var wiredep = require('wiredep').stream;
 gulp.task('wiredep', function() {
     gulp.src('./_layouts/base.md')
-        .pipe(wiredep())
+        .pipe(wiredep({
+            ignorePath: '../',
+            fileTypes: {
+                html: {
+                    replace: {
+                        js: '<script src="{{ site.baseUrl }}/{{filePath}}"></script>',
+                        css: '<link rel="stylesheet" href="{{ site.baseUrl }}/{{filePath}}" />'
+                    }
+                }
+            }
+        }))
         .pipe(gulp.dest('./_layouts'));
 });
 

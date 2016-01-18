@@ -1,4 +1,4 @@
-http://help.form.io documentation for form.io.
+https://help.form.io documentation for form.io.
 ==============================================
 This repository is used to generate the documentation section of the form.io website. It is generated using jekyll. Feel free to update and change it using pull requests.
 

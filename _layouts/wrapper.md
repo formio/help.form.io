@@ -6,13 +6,13 @@ layout: base
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <img height="25px;" alt="Form.io" src="/assets/formio-logo.png">
+        <img height="25px;" alt="Form.io" src="{{ site.baseUrl }}/assets/formio-logo.png">
       </a>
     </div>
     <ul class="nav navbar-nav">
       {% assign books = (site.books | sort: "weight" reversed) %}
       {% for book in books %}
-      <li><a href="/{{ book.book }}">{{ book.title }}</a></li>
+      <li><a href="{{ site.baseUrl }}/{{ book.book }}/">{{ book.title }}</a></li>
       {% endfor %}
     </ul>
   </div>

@@ -4,10 +4,12 @@
   "description": "The help site for Form.io.",
   "main": "gulpfile.js",
   "devDependencies": {
+    "browserify": "^13.0.0",
     "gulp": "^3.9.0",
-    "wiredep": "^2.2.2",
+    "gulp-filter": "^3.0.1",
     "gulp-s3": "^0.3.0",
-    "gulp-filter": "^3.0.1"
+    "vinyl-transform": "^1.0.0",
+    "wiredep": "^2.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

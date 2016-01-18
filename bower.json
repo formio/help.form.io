@@ -15,9 +15,23 @@
     "tests"
   ],
   "dependencies": {
-    "URIjs": "uri.js#~1.16.0",
-    "anchor-js": "~1.2.1",
-    "bootstrap": "3.3.4",
-    "formio": "develop"
+    "anchor-js": "~2.0.0",
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "formio": "develop",
+    "urijs": "URIjs#~1.17.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.min.css",
+        "dist/js/bootstrap.js"
+      ]
+    },
+    "ng-file-upload": {
+      "main": [
+        "dist/ng-file-upload.js"
+      ]
+    }
   }
 }

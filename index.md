@@ -1,6 +1,6 @@
 ---
 layout: default
-title: The <img src="assets/img/formio-logo-white.png" style="margin-bottom:10px" /> help guide.
+title: The <img src="/assets/img/formio-logo-white.png" style="margin-bottom:10px" /> help guide.
 summary: These four sections are designed to get you from new user, to form.io expert. Let us know if you have any questions not answered on this site.
 ---
 {% assign books = (site.books | sort: "weight" reversed) %}
