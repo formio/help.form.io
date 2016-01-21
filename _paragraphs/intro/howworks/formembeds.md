@@ -24,6 +24,7 @@ Either download this file and include it locally or use a CDN by adding this som
 ```
 
 Next, you will need to create an angular application and add ```formio``` as an included module. Add this below the include tag.
+
 ```
 <script type="text/javascript">
   var app = angular.module('formApp', ['formio']);
