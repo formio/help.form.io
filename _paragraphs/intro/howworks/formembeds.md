@@ -97,4 +97,7 @@ Notice how there is a double quote with a single quote inside it for the src. Th
 
 ```<formio src="userRegisterForm"></formio>```
 
+Here is a working jsfiddle of the simplest way to do an embed.
+<iframe width="100%" height="400" src="//jsfiddle.net/randallknutson/nk6nuw6z/embedded/result,js,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
 For more information on how to embed forms in an application or directly into a website go to [Angular Embedding](/api/#angular/).
