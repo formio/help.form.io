@@ -11,7 +11,7 @@ After building a form with the drag and drop form builder, forms are embedded in
 
 Before forms can be embedded, the ```ngFormio``` library and all of its dependencies need to be included on the page and an angular application needs to be created.
 
-There are typically two cases where form embeds occur. The first is in a non-angular website or application and the second is in an existing angular application. Let's take a look at how to set each up to be ready to embed <form.io> forms. 
+There are typically two cases where form embeds occur. The first is in a non existing angular website or application and the second is in an existing angular application. Let's take a look at how to set each up to be ready to embed form.io forms. 
 
 #### Website or New Angular Application Setup
 
@@ -96,8 +96,5 @@ This does a couple of things...
 Notice how there is a double quote with a single quote inside it for the src. This is so that angular.js knows the value is a string. It is also possible to set it to a scope variable like this where ```$scope.userRegisterForm = 'https://myapp.form.io/user/register';``` is set in a controller.
 
 ```<formio src="userRegisterForm"></formio>```
-
-Here is a working jsfiddle of the simplest way to do an embed.
-<iframe width="100%" height="400" src="//jsfiddle.net/randallknutson/nk6nuw6z/embedded/result,js,html/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 For more information on how to embed forms in an application or directly into a website go to [Angular Embedding](/api/#angular/).
