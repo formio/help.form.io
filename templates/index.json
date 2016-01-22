@@ -30,7 +30,7 @@
   {
     "title": "Sales Quote",
     "name": "salesquoteapp",
-    "description": "A sales quoting project that lets agents login and manage their opportunities, customers, and contracts. Also includes integration with Office 365 to sync contacts and calendar events.",
+    "description": "A sales quoting project that lets agents login and manage their opportunities, customers, and contracts.",
     "template": "https://app.form.io/formio-app-salesquote/src/project.json",
     "thumbnail": "https://app.form.io/formio-app-salesquote/src/assets/images/salesquote-thumb.png"
   },
