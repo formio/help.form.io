@@ -102,9 +102,21 @@ input[type="password"][draggable="true"] {
   margin-right: 5px;
 }
 
-.component-type-checkboxes .checkbox-inline input[type="checkbox"],
-.form-field-type-checkboxes .checkbox-inline input[type="checkbox"],
+.component-type-selectboxes .checkbox-inline input[type="checkbox"],
+.form-field-type-selectboxes .checkbox-inline input[type="checkbox"],
 .form-field-type-radio .radio-inline input[type="radio"]
 .component-type-radio .radio-inline input[type="radio"] {
   margin-top: 4px;
+}
+
+.form-field-type-datagrid .form-group {
+  margin-bottom: 0;
+}
+
+.form-field-type-datagrid .datagrid-table {
+  margin-bottom: 0px;
+}
+
+.form-field-type-datagrid .datagrid-add {
+  margin-bottom: 20px;
 }

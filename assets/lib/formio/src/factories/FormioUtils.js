@@ -1,52 +1,10 @@
+var formioUtils = require('formio-utils');
+
 module.exports = function() {
   return {
-    flattenComponents: function flatten(components, flattened) {
-      flattened = flattened || {};
-      angular.forEach(components, function(component) {
-        if (component.tree) {
-          flattened[component.key] = component;
-        }
-        else if (component.columns && (component.columns.length > 0)) {
-          angular.forEach(component.columns, function(column) {
-            flatten(column.components, flattened);
-          });
-        }
-        else if (component.components && (component.components.length > 0)) {
-          flatten(component.components, flattened);
-        }
-        else if (component.input) {
-          flattened[component.key] = component;
-        }
-      });
-      return flattened;
-    },
-    eachComponent: function eachComponent(components, fn) {
-      if (!components) {
-        return;
-      }
-      angular.forEach(components, function(component) {
-        if (component.columns) {
-          angular.forEach(component.columns, function(column) {
-            eachComponent(column.components, fn);
-          });
-        }
-        else if (component.components) {
-          eachComponent(component.components, fn);
-        }
-        else {
-          fn(component);
-        }
-      });
-    },
-    getComponent: function getComponent(components, key) {
-      var result;
-      this.eachComponent(components, function(component) {
-        if (component.key === key) {
-          result = component;
-        }
-      });
-      return result;
-    },
+    flattenComponents: formioUtils.flattenComponents,
+    eachComponent: formioUtils.eachComponent,
+    getComponent: formioUtils.getComponent,
     fieldWrap: function(input) {
       input = input + '<formio-errors></formio-errors>';
       var multiInput = input.replace('data[component.key]', 'data[component.key][$index]');
@@ -73,10 +31,10 @@ module.exports = function() {
         '</div>' +
         '<div ng-if="!component.prefix && !component.suffix">' + multiInput + '</div>' +
         '</td>' +
-        '<td><a ng-click="removeFieldValue($index)" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a></td>' +
+        '<td><a ng-click="removeFieldValue($index)" class="btn btn-default"><span class="glyphicon glyphicon-remove-circle"></span></a></td>' +
         '</tr>' +
         '<tr>' +
-        '<td colspan="2"><a ng-click="addFieldValue()" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add another</a></td>' +
+        '<td colspan="2"><a ng-click="addFieldValue()" class="btn btn-primary"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{ component.addAnother || "Add Another" }}</a></td>' +
         '</tr>' +
         '</table></div>';
       return template;
