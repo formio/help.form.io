@@ -3,7 +3,7 @@
   "name": "default",
   "description": "Provides a simple User authentication system.",
   "preview": {
-    "url": "https://app.form.io/formio-app-basic",
+    "url": "http://formio.github.io/formio-app-basic",
     "repo": "https://github.com/formio/formio-app-basic"
   },
   "roles": {
