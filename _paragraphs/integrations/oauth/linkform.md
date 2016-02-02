@@ -12,12 +12,12 @@ If you want to let users authenticate with both a traditional username-password 
 Create an OAuth Link form in your project.
 Edit the default Submit button to be an OAuth button with the settings below:
 
-    ![](/assets/img/oauth/project-oauth-link-button.png)
+![](/assets/img/oauth/project-oauth-link-button.png)
 
 Click *Create Form*
 Click on the *Actions* tab and add a new OAuth Action with the settings below:
 
-    ![](/assets/img/oauth/project-link-oauth-action-edit.png)
+![](/assets/img/oauth/project-link-oauth-action-edit.png)
 
 Click *Submit*
 Next embed this form somewhere in your application where only authenticated users can access it, like a user settings page. 
