@@ -1,9 +1,9 @@
 ---
-title: Googlesheet Spreadsheet
+title: Google Spreadsheet
 book: integrations
 chapter: googlesheet
 slug: googlesheet-spreadsheet
-weight: 3
+weight: 25
 ---
 
 ![](/assets/img/googlesheet/googlesheet-spreadsheetdata.png)

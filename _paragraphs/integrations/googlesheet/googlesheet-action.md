@@ -3,7 +3,7 @@ title: Googlesheet Action
 book: integrations
 chapter: googlesheet
 slug: googlesheet-action
-weight: 2
+weight: 20
 ---
 
 - Next step is to create new form or select an existing form and add Google Sheet action to it.
