@@ -6,9 +6,10 @@ slug: container
 weight: 35
 ---
 
-A container is a set of the different type of fields. Container are used to wrap groups of fields with a title. This form component is saved to the api.
+A container is a wrapper around a set of fields similar to a fieldset. The major way they are different is the way that the data is stored. For most layout components field values are stored directly in the ```data``` of the submission.
 
-Normally fields submit like this:
+For example, a fieldset with the following fields
+
 firstName = First Name field
 lastName = Last Name field
 Would submit as
@@ -19,7 +20,9 @@ Would submit as
   }
 }```
 
-With a container with the key “user" it would look like:
+However, with a container, the fields are put into an object with the container key. This is useful for creating more complex objects within your form.
+
+For example, a container with the key ```user``` and the same fields above would submit as
 ```{
  data: {
     user {  
