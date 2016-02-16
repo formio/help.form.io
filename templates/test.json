@@ -40,12 +40,5 @@
     "description": "An example to-do project that lets users register, login, and keep track of their to-do list.",
     "template": "https://app.form.io/formio-app-todo/src/project.json",
     "thumbnail": "https://app.form.io/formio-app-todo/src/assets/images/todo-thumbnail.png"
-  },
-  {
-    "title": "Movie Manager",
-    "name": "movieapp",
-    "description": "An example movie project that lets users register, login, and manage a database of directors and movies.",
-    "template": "https://app.form.io/formio-app-movie/app/project.json",
-    "thumbnail": "https://app.form.io/formio-app-movie/app/images/movieapp-preview.png"
   }
 ]
