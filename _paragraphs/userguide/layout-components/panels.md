@@ -7,7 +7,7 @@ weight: 20
 ---
 Panels are used to wrap groups of fields with a title and styling. These currently map to [Bootstrap Panels](http://getbootstrap.com/components/#panels).
 
-![](/assets/img/panel-display.png)
+![33 panels](https://cloud.githubusercontent.com/assets/13321142/13097240/30517710-d4e5-11e5-9688-07a26275c520.png)
 
 #### Panel Title
 
