@@ -65,7 +65,7 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![](/assets/img/textfield-validation.png)
+![10 validation](https://cloud.githubusercontent.com/assets/13321142/13097264/3099b7c8-d4e5-11e5-9f53-29ae43b61806.png)
 
 #### Required
 
