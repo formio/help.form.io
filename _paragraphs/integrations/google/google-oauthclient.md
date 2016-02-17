@@ -1,7 +1,7 @@
 ---
 title: OAuth Client
 book: integrations
-chapter: google
+chapter: google-drive
 slug: google-oauthclient
 weight: 5
 ---
