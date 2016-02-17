@@ -26,3 +26,4 @@ Users can configure the settings for their Projects by clicking the **Settings**
 - Hubspot
     - Here you can enter your Hubspot API Key to use [Hubspot Actions](#action-hubspot)
     
+![1 project settings](https://cloud.githubusercontent.com/assets/13321142/13097233/2927edc0-d4e5-11e5-8ff7-6876e1388030.png)
