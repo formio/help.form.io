@@ -39,15 +39,15 @@ Once Roles have been created, there are a few different ways to configure and ma
 
 1.  Select Edit next to any role on your role Settings page:
 
-    ![](https://cloud.githubusercontent.com/assets/13321142/9473019/2e74b912-4b1e-11e5-9c9b-8ae976a0172e.png)
+    ![4 edit role](https://cloud.githubusercontent.com/assets/13321142/13097272/30b2946e-d4e5-11e5-9104-a45a4245acc7.png)
 
     This will give you a list of all forms or resources that hold the selected Role, along with their Permissions, within the entire project. Simply hit edit next to the form you want to configure and apply your changes:
 
-    ![](https://cloud.githubusercontent.com/assets/13321142/9473020/2e758284-4b1e-11e5-9651-748f814ea2bd.png)
+    ![5 edit permission](https://cloud.githubusercontent.com/assets/13321142/13097270/30b03340-d4e5-11e5-9d38-bc8e408b6447.png)
 
     Now you can select the Roles you want to associate with each Permission.Remember to save any changes made:
 
-    ![](https://cloud.githubusercontent.com/assets/13321142/9473023/2e78dfc4-4b1e-11e5-9955-70ae0ab48e36.png)
+    ![6 permission](https://cloud.githubusercontent.com/assets/13321142/13097269/30af0c04-d4e5-11e5-8a2c-747b069bfcf1.png)
 
 2.  Assign permissions by clicking the **Permissions** button located at the top right of the page within a form or resource. Each permission may be assigned a role or more than one role, by clicking in the Roles field. After assigning roles to your Permissions, click the **Save** button at the bottom. Remember, you can always add, delete, and edit a role at anytime.
 
