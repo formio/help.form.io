@@ -2,7 +2,7 @@
 title: Project Dashboard
 book: userguide
 chapter: projects
-slug: new-project
+slug: project-dashboard
 weight: 20
 ---
 The **Project Dashboard** page shows users  an overview of the Projects core  elements, analytics, and information. 
