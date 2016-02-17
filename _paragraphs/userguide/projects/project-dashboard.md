@@ -1,5 +1,5 @@
 ---
-title: Creating New Projects
+title: Project Dashboard
 book: userguide
 chapter: projects
 slug: new-project
