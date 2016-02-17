@@ -7,7 +7,7 @@ weight: 10
 ---
 A textfield can be used for short and general text input. There are options to define input masks and validations, allowing users to mold information into desired formats.
 
-![](/assets/img/textfield-display.png)
+![9 textfield edit settings](https://cloud.githubusercontent.com/assets/13321142/13097265/309cbebe-d4e5-11e5-9c8a-963c24da40ef.png)
 
 #### Label
 
