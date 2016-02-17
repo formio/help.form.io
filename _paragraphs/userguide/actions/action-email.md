@@ -7,7 +7,7 @@ weight: 30
 ---
 The email action allows sending an email when an event occurs on a form.
 
-![](/assets/img/action-email.png)
+![36 email settings pt 1](https://cloud.githubusercontent.com/assets/13321142/13097235/303076be-d4e5-11e5-8ebc-3ad18f190eed.png)
 
 #### Handler
 
