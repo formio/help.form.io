@@ -7,7 +7,7 @@ weight: 90
 ---
 A select field will display a list of values in a drop down list to users. Users can select one of the values.
 
-![](/assets/img/select-display.png)
+![16 select](https://cloud.githubusercontent.com/assets/13321142/13097258/3083d2fa-d4e5-11e5-96e9-28759d9a045b.png)
 
 #### Label
 
