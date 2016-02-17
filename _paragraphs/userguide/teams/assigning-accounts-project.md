@@ -11,7 +11,7 @@ To add a team to a project, make sure the project is upgraded to **Team Pro** or
 
 You will then be presented with a form to add a team to a project and assign a permission.
 
-![](/assets/img/userguide/userguide-team-perm.png)
+![2 team project setting](https://cloud.githubusercontent.com/assets/13321142/13097273/30b4e93a-d4e5-11e5-9517-83168143587d.png)
 
 Select which team you want to add and which permission. There are three options for permissions
 
