@@ -32,7 +32,7 @@ To create and configure a Role, navigate to the **Settings** tab located within 
 
 <p class="note">When naming Roles, they are organized alphabetically and capital letters will be listed before lowercase letters. Staying consistent when naming your Roles will keep the Role list organized.</p>
 
-![](https://cloud.githubusercontent.com/assets/13321142/9473021/2e75b59c-4b1e-11e5-8d89-201e63c562a2.png)
+![3 roles](https://cloud.githubusercontent.com/assets/13321142/13097271/30b19550-d4e5-11e5-95ed-4eef84caa0de.png)
 
 Additional Roles can be defined and added to a project at any time. In the next section, we will discuss Permissions associated with Roles to define access to the submissions within your application.
 
