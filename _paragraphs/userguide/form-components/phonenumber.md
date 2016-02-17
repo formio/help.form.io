@@ -7,11 +7,11 @@ weight: 160
 ---
 The phone number form component can be used to enter phone numbers in a form.
 
-![](/assets/img/phonenumber-display.png)
+![28 phone number](https://cloud.githubusercontent.com/assets/13321142/13097245/30618c40-d4e5-11e5-883b-da00aac8c6f3.png)
 
 A textfield can be used for general text input that is shorter than a sentence. There are options to define input masks and validations so information can be molded into desired formats.
 
-![](/assets/img/textfield-display.png)
+![9 textfield edit settings](https://cloud.githubusercontent.com/assets/13321142/13097265/309cbebe-d4e5-11e5-9c8a-963c24da40ef.png)
 
 #### Label
 
@@ -69,7 +69,7 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![](/assets/img/phonenumber-validator.png)
+![29 phone vali](https://cloud.githubusercontent.com/assets/13321142/13097243/305f29a0-d4e5-11e5-8522-56c99f91b425.png)
 
 #### Required
 
