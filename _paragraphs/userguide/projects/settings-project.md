@@ -26,4 +26,3 @@ Users can configure the settings for their Projects by clicking the **Settings**
 - Hubspot
     - Here you can enter your Hubspot API Key to use [Hubspot Actions](#action-hubspot)
     
-<img src="/assets/img/settings-project.png">
