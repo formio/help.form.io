@@ -7,7 +7,7 @@ weight: 140
 ---
 Date/Time form components can be used to input dates, times or both dates and times.
 
-![](/assets/img/datetime-display.png)
+![22 date time](https://cloud.githubusercontent.com/assets/13321142/13097251/3071c75e-d4e5-11e5-87eb-ead6cecce9de.png)
 
 #### Label
 
@@ -41,7 +41,7 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![](/assets/img/datetime-date.png)
+![23 date](https://cloud.githubusercontent.com/assets/13321142/13097253/30722118-d4e5-11e5-9a59-4363e16abbed.png)
 
 #### Enable Date Input
 
@@ -79,7 +79,7 @@ The maximum number of years to display in the datepicker.
 
 If this is checked, when in Day mode, the datepicker will display the week number on the left hand side of the datepicker.
 
-![](/assets/img/datetime-time.png)
+![24 time](https://cloud.githubusercontent.com/assets/13321142/13097250/306ccb82-d4e5-11e5-898c-9573b3debd35.png)
 
 #### Enable Time Input
 
@@ -101,7 +101,7 @@ If checked, time will be displayed in 12 hour (am/pm) time. If not checked, it w
 
 If checked, users cannot directly enter a time. They can only use the increment/decrement controls to change the time. If unchecked, users can directly enter time values.
 
-![](/assets/img/datetime-validation.png)
+![26 date time vali](https://cloud.githubusercontent.com/assets/13321142/13097248/3065c90e-d4e5-11e5-8eb3-ec4853e41dd9.png)
 
 #### Required
 
