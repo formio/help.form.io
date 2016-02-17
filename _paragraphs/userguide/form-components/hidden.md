@@ -8,7 +8,7 @@ weight: 50
 
 A hidden field can be added to a form to create a resource property that can be custom set in the form. You can use javascript to set the value on the client side and when the form is submitted the value will be set on the resource. There is no front end widget for hidden fields.
 
-![](/assets/img/hidden.png)
+![13 hidden](https://cloud.githubusercontent.com/assets/13321142/13097260/308a3622-d4e5-11e5-914d-446d4e567898.png)
 
 #### Name
 
