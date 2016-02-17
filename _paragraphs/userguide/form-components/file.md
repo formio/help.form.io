@@ -9,7 +9,7 @@ A file field allows users to upload and download files to a form. In order to us
 
 Form.io does not host any files itself. Files are stored on the storage provider which allows uploading and downloading files to and from it. Form.io only stores a reference to the files which allows seamless integration into your app.
 
-![](/assets/img/file.png)
+![12 s3](https://cloud.githubusercontent.com/assets/13321142/13097262/3091c464-d4e5-11e5-976e-7449834b82fc.png)
 
 #### Label
 
