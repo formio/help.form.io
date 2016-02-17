@@ -8,7 +8,7 @@ weight: 130
 
 The Check Boxes form component works like the [Radio](#radio) component, but allows the user to check multiple values.
 
-![](/assets/img/selectboxes-display.png)
+![20 select box](https://cloud.githubusercontent.com/assets/13321142/13097254/3076b7d2-d4e5-11e5-976f-4dbf1863b8ef.png)
 
 #### Label
 
@@ -42,7 +42,7 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![](/assets/img/selectboxes-validation.png)
+![21 select box vali](https://cloud.githubusercontent.com/assets/13321142/13097252/3071f706-d4e5-11e5-9079-c1946d56c45c.png)
 
 #### Required
 
