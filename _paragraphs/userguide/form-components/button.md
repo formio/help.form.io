@@ -7,7 +7,7 @@ weight: 20
 ---
 Buttons can be added to perform various actions within the form.
 
-![](/assets/img/button-display.png)
+![11 button](https://cloud.githubusercontent.com/assets/13321142/13097263/30987db8-d4e5-11e5-8957-7eb08ebb7a26.png)
 
 #### Label
 
