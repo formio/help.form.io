@@ -8,7 +8,7 @@ weight: 150
 
 Number fields should be used whenever a field should be limited to a type of number.
 
-![](/assets/img/number-display.png)
+![26 number](https://cloud.githubusercontent.com/assets/13321142/13097246/30633df6-d4e5-11e5-8278-bbbbd80717a7.png)
 
 #### Label
 
@@ -46,7 +46,7 @@ If checked, multiple values can be added in this field. The values will appear a
 
 If checked, this value will show up in the table view of the submissions list.
 
-![](/assets/img/number-validation.png)
+![27 number vali](https://cloud.githubusercontent.com/assets/13321142/13097247/30638e0a-d4e5-11e5-8bc3-f332019bbbc1.png)
 
 #### Required
 
