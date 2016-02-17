@@ -7,7 +7,7 @@ weight: 110
 ---
 The address form component is a special component that does lookups for addresses entered. It can be entered in free form and will save the address as well as geolocation and other information.
 
-![](/assets/img/address-display.png)
+![17 address](https://cloud.githubusercontent.com/assets/13321142/13097257/3082f0d8-d4e5-11e5-9931-78cf62137fb0.png)
 
 #### Label
 
