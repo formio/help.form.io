@@ -9,7 +9,7 @@ In order to embed your **&lt;<span class="text-primary">form</span>.<span class=
 
 #### Bower
 
-To add `formio` to your bower dependencies, run `bower install --save formio`.
+To add `formio` to your bower dependencies, run `bower install --save ng-formio`.
 
 #### Adding the dependencies
 
