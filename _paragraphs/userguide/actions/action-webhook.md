@@ -5,7 +5,9 @@ chapter: actions
 slug: action-webhook
 weight: 40
 ---
-The Webhook action allows you to integrate form submissions into your custom application, by providing a means to call your external API with the form submission data in real time.
+The Webhook action allows you to integrate form submissions into your custom application, by providing a means to call your external API with the form submission data in real time. In order for the Webhook action to function properly, make sure the API endpoint can be accessed publicly.
+
+Webhooks can not be performed within the "Form Editor". However, you can see the action take place within the Preview section of your Project.
 
 ![](/assets/img/action-webhook.png)
 
