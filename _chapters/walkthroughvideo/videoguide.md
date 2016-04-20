@@ -1,6 +1,6 @@
 ---
 title: Video Guide
-book: walkthroughvideos
+book: videos
 weight: 10
 chapter: videoguide
 ---
