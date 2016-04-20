@@ -1,6 +1,6 @@
 ---
 title: What is Form.io?
-book: walkthroughvideos
+book: videos
 weight: 20
 chapter: intro
 ---
