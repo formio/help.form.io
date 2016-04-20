@@ -2,7 +2,7 @@
 title: Walkthrough Videos
 layout: book
 book: videos
-summary: Watch tutorial videos covering the basic fundamentals to more advanced features in Form.io
+summary: Tutorial videos covering the basic fundamentals of Form.io to more advanced features
 image:
 weight: 6
 ---
