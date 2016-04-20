@@ -1,9 +1,9 @@
 ---
-title: Establishing Nested Resource Relationships
+title: Nested Resources
 book: videos
 chapter: basic
 slug: nested-resource
-weight: 10
+weight: 20
 ---
 
 Learn how to establish a nested resource relationship between two data objects
