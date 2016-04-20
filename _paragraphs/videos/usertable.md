@@ -1,7 +1,7 @@
 ---
 title: Setting up a User Table with Authentication
 book: videos
-chapter: basic
+chapter: basictutorial
 slug: user-table
 weight: 10
 ---
