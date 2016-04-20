@@ -1,5 +1,5 @@
 ---
-title: Setting up a User Table with Authentication
+title: User Table & Authentication
 book: videos
 chapter: basictutorial
 slug: user-table
