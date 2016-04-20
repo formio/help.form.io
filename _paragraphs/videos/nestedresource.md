@@ -1,7 +1,7 @@
 ---
 title: Nested Resources
 book: videos
-chapter: basic
+chapter: basictutorial
 slug: nested-resource
 weight: 20
 ---
