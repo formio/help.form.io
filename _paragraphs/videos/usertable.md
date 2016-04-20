@@ -1,0 +1,13 @@
+---
+title: Setting up a User Table with Authentication
+book: videos
+chapter: basic
+slug: user-table
+weight: 10
+---
+
+This video will explain how to set up a user table with authenticating login and registration forms.
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eLw9RGQPrJY?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
