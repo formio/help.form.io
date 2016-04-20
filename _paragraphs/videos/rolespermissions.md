@@ -2,7 +2,7 @@
 title: Roles & Permissions
 book: videos
 chapter: basic
-slug: roles-permissions
+slug: rolespermissions
 weight: 30
 ---
 
