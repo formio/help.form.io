@@ -4,4 +4,4 @@ book: videos
 weight: 40
 chapter: advancedtutorial
 ---
-Coming soon...
+Here you will find videos on the more advanced features within the Form.io platform. 
