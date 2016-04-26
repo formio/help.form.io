@@ -1,4 +1,3 @@
-
 ---
 title: Yeoman Scaffolding
 book: videos
@@ -6,6 +5,7 @@ chapter: developertutorial
 slug: part2
 weight: 10
 ---
+
 This is the second video to  multi-part developer series. In this lesson, we are going to put together a Yeoman app that will give us the scaffolding to get going. 
 
 <div class="embed-responsive embed-responsive-16by9">
