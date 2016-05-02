@@ -1,5 +1,5 @@
 ---
-title: Authenticating Forms and Utilizing ngFormio
+title: Authenticating Forms and ngFormio
 book: videos
 chapter: developertutorial
 slug: part3
