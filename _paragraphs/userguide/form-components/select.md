@@ -31,7 +31,17 @@ Enter a JSON Array to use. It should be formatted as an array of objects with na
 
 ##### URL
 
-Enter a url with a data source in JSON Array format.
+Enter a url with a data source in JSON Array format. This can be used to populate a Select list with external JSON values. For example, suppose you wish to populate your select drop down with a list of all States within the U.S. You can use an external JSON array like the following.
+
+```
+https://cdn.rawgit.com/mshafrir/2646763/raw/states_titlecase.json
+```
+
+And place that within the URL of the select drop down <strong>Data Source URL</strong>. You will then need to provide the <strong>Value Property</strong> as well as change the <strong>Item Template</strong> so that it will pull the right value as well as display correctly within the dropdown. The following image shows how the configuration would look for this particular setup.
+
+![Select URL JSON Source](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/userguide-select-url.png)
+
+This will now turn your select dropdown into a list of available States within the US.
 
 #### Value Property
 
