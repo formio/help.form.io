@@ -20,6 +20,6 @@ $translateProvider.translation('en', {
 
 This will register a new language to the translation provider. The Original String is the string within the form that you want to translate. It could be the field label, placeholder or dropdown value. You can include multiple strings in the language definition.
 
-2. You can also include the translations in external files with https://www.npmjs.com/package/angular-translate-loader-static-files or other loaders.
+2. You can include the translations in external files with https://www.npmjs.com/package/angular-translate-loader-static-files or other loaders.
 
 From then on, use angular-translates language switching capability and the form will translate itself.
