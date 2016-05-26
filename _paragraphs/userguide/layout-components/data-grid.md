@@ -7,15 +7,15 @@ weight: 40
 ---
 Data Grids allow you to create multiple components on to a line item grid. Once components are in place, users can add multiple sets of these grids as they see fit. This is especially useful when needing the ability to add multiple sets of the same fields within a form.
 
-![data grid](https://cloud.githubusercontent.com/assets/13321142/15561075/e7d1c140-22b7-11e6-8a12-d541b057e48a.png)
+![data grid view](https://cloud.githubusercontent.com/assets/13321142/15561223/0614bbd4-22b9-11e6-9f6b-e14fbfbf4780.png)
 
-#### Number of Rows
+#### Label
 
-The number of rows on the table. This can be adjusted at any time.
+The name or title for this data grid.
 
-#### Number of Columns
+#### Add Another Text
 
-The number of columns on the table. This can be adjusted at any time.
+Text that will display for the Add Another 
 
 #### Custom CSS Class
 
