@@ -17,3 +17,6 @@ collections:
     output: false
   paragraphs:
     output: false
+  sections:
+    output: true
+    permalink: /:path/

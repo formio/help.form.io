@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" data-destination="/developer/info/">
+<head>
+    <noscript><meta http-equiv="refresh" content="0; URL='/developer/info/'" /></noscript>
+    <script>
+        var destination = document.documentElement.getAttribute('data-destination');
+        if (window.location.hash.indexOf('#crud') !== -1) {
+            destination = '/developer/api/';
+        }
+        if (window.location.hash.indexOf('#authenticating') !== -1) {
+            destination = '/developer/api/';
+        }
+        window.location.href = destination + (window.location.search || '') + (window.location.hash || '');
+    </script>
+</head>
+</html>
