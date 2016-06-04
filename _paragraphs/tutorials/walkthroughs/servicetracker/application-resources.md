@@ -11,7 +11,8 @@ One of the most powerful concepts of Form.io, is that it allows you to use a For
 Within the ```AppConfig``` found @ ```/src/config.js``` we have already defined a number of resources with the Forms and then the resource Class that is associated with that form. Each of these classes should be defined in separate files within the ```/src/app/resources``` folder. To do this, we can take the Resource class pattern shown within the [Basic Application](https://github.com/formio/formio-app-basic/blob/master/src/app/resources/User.js) at the following url [https://github.com/formio/formio-app-basic](https://github.com/formio/formio-app-basic/blob/master/src/app/resources/User.js). I recommend reading all of the comments within this file, since it illustrates how you can create highly customized behaviors within your resources. We can take what we know here, and copy the User.js to establish all of our Resource classes as follows.
 
 ### Dealer Resource
-```/src/app/resources/Dealer.js```
+
+***/src/app/resources/Dealer.js***
 
 ```
   angular.module('servicetracker')
@@ -26,7 +27,7 @@ Within the ```AppConfig``` found @ ```/src/config.js``` we have already defined 
   });
 ```
 
-```/src/views/dealer/dealer.html```
+***/src/views/dealer/dealer.html***
 
 ```
   <ul class="nav nav-tabs" ng-if="isDealer">
@@ -39,7 +40,7 @@ Within the ```AppConfig``` found @ ```/src/config.js``` we have already defined 
   <div ui-view></div>
 ```
 
-```/src/views/dealer/view.html```
+***/src/views/dealer/view.html***
 
 ```
   <div class="panel panel-default">
@@ -53,7 +54,8 @@ Within the ```AppConfig``` found @ ```/src/config.js``` we have already defined 
 ```
 
 ### Customer Resource
-```/src/app/resources/Customer.js```
+
+***/src/app/resources/Customer.js***
 
 ```
   angular.module('servicetracker')
@@ -86,7 +88,7 @@ Within the ```AppConfig``` found @ ```/src/config.js``` we have already defined 
 ```
 Notice here we provided the parent and base, but also a view controller that will allow us to populate the GPS position within a map on the Customer view page.
 
-```/src/views/customer/customer.html```
+***/src/views/customer/customer.html***
 
 ```
   <ul class="nav nav-tabs">
@@ -99,7 +101,7 @@ Notice here we provided the parent and base, but also a view controller that wil
   <div ui-view></div>
 ```
 
-```/src/views/customer/view.html```
+***/src/views/customer/view.html***
 
 ```
   <h2>{{ currentResource.resource.data.name }}</h2>
@@ -123,7 +125,7 @@ Notice here we provided the parent and base, but also a view controller that wil
 
 We also need to make sure that we add the Google Maps API to the ```index.html``` page.
 
-```/src/index.html```
+***/src/index.html***
 
 ```
   <head>
@@ -149,7 +151,8 @@ We also need to make sure that we add the Google Maps API to the ```index.html``
 ```
 
 ## Contractor Resource
-```/src/app/resources/Contractor.js```
+
+***/src/app/resources/Contractor.js***
 
 ```
   angular.module('servicetracker')
@@ -164,7 +167,8 @@ We also need to make sure that we add the Google Maps API to the ```index.html``
 In some cases, we just need to tell the application how this resource is nested within the application. For this case, this is a very easy resource to add.
 
 ## Equipment Resource
-```/src/app/resources/Equipment.js```
+
+***/src/app/resources/Equipment.js***
 
 ```
   angular.module('servicetracker')
@@ -180,7 +184,7 @@ In some cases, we just need to tell the application how this resource is nested 
   });
 ```
 
-```/src/views/equipment/view.html```
+***/src/views/equipment/view.html***
 
 ```
   <div class="panel panel-success">
@@ -207,7 +211,8 @@ In some cases, we just need to tell the application how this resource is nested 
 ```
 
 ## Appointment Resource
-```/src/app/resource/Appointment.js```
+
+***/src/app/resource/Appointment.js***
 
 ```
   angular.module('servicetracker')
@@ -224,7 +229,7 @@ In some cases, we just need to tell the application how this resource is nested 
   });
 ```
 
-```/src/views/appointment/appointment.html```
+***/src/views/appointment/appointment.html***
 
 ```
 <ul class="nav nav-tabs">
@@ -237,7 +242,7 @@ In some cases, we just need to tell the application how this resource is nested 
 <div ui-view></div>
 ```
 
-```/src/views/appointment/view.html```
+***/src/views/appointment/view.html***
 
 ```
   <div class="panel panel-success">
@@ -266,7 +271,8 @@ In some cases, we just need to tell the application how this resource is nested 
 ```
 
 ## Service Resource
-```/src/app/resource/Service.js```
+
+***/src/app/resource/Service.js***
 
 ```
   angular.module('servicetracker')
@@ -282,7 +288,7 @@ In some cases, we just need to tell the application how this resource is nested 
   });
 ```
 
-```/src/views/service/view.html```
+***/src/views/service/view.html***
 
 ```
   <div class="panel panel-success">
@@ -298,7 +304,8 @@ In some cases, we just need to tell the application how this resource is nested 
 ```
 
 ## TimeClock Resource
-```/src/app/resources/TimeClock.js```
+
+***/src/app/resources/TimeClock.js***
 
 ```
   angular.module('servicetracker')
@@ -327,7 +334,7 @@ In some cases, we just need to tell the application how this resource is nested 
 ```
 There is a really cool feature exposed with the Time Clock resource, where it captures the GPS coordinates of the contractor at the time that they submit the time clock. This utilizes a ```Geolocation``` factory that we provided within the ```index.module.js``` file as follows.
 
-```/src/app/index.module.js```
+***/src/app/index.module.js***
 
 ```
   angular
@@ -366,7 +373,7 @@ There is a really cool feature exposed with the Time Clock resource, where it ca
 
 And the view that shows this map is as follows.
 
-```/src/views/timeclock/view.html```
+***/src/views/timeclock/view.html***
 
 ```
   <div class="panel panel-success">
@@ -402,7 +409,7 @@ And the view that shows this map is as follows.
 ## Add the navigation to home page.
 We now need to register all of the navigation into the home page so that they can get to the main resources.
 
-```/src/views/home.html```
+***/src/views/home.html***
 
 ```
   <ul class="nav nav-tabs" ng-if="authenticated">

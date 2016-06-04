@@ -12,13 +12,13 @@ While the Angular-Gulp generator is a fantastic start, there are a number of thi
 
 Your bower.json file should look like the following when you are done.
 
-```/bower.json```
+***/bower.json***
 
 ![](/assets/img/tutorials/walkthroughs/servicetracker/restructure-delete-overrides.png)
 
 ### Don't exclude bootstrap.js in Gulp task
 
-```/gulp/conf.js```
+***/gulp/conf.js***
 
 ```
   /**
@@ -34,7 +34,7 @@ Your bower.json file should look like the following when you are done.
 
 ### Allow [Bootswatch](https://bootswatch.com/) by changing your /app/index.scss to the following
 
-```/src/app/index.scss```
+***/src/app/index.scss***
 
 ```
   @import "bower_components/bootswatch/yeti/_variables.scss";
@@ -66,7 +66,7 @@ Doing this allows you to add your own variables to your application like the fol
 
 ### Allow Font-awesome and UI Grid by modifying the Gulp fonts task
 
-```/gulp/build.js```
+***/gulp/build.js***
 
 ```
   // Only applies for fonts from bower dependencies
@@ -100,7 +100,7 @@ Doing this allows you to add your own variables to your application like the fol
 
 ### Allow the following routes in /gulp/server.js
 
-```/gulp/server.js```
+***/gulp/server.js***
 
 ```
   if(baseDir === conf.paths.src || (util.isArray(baseDir) && baseDir.indexOf(conf.paths.src) !== -1)) {
@@ -114,7 +114,7 @@ Doing this allows you to add your own variables to your application like the fol
 
 ### Add the navbar to index.html
 
-```/src/index.html```
+***/src/index.html***
 
 ```
   <nav class="navbar navbar-static-top navbar-inverse">
@@ -144,7 +144,7 @@ Doing this allows you to add your own variables to your application like the fol
 
 ![](/assets/img/tutorials/walkthroughs/servicetracker/restructure-views.png)
 
-```/gulp/build.js```
+***/gulp/build.js***
 
 ```
   gulp.task('views', function() {

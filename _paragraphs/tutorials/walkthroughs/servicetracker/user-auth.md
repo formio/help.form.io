@@ -8,7 +8,7 @@ weight: 13
 ---
 Now that we have our application intializing, the next step is to establish the User Authentication which will allow our **Dealers**, **Contractors**, and **Admins** to log into the application. To start, you will first need to create the following auth pages.
 
-```/src/views/user/auth.html```
+***/src/views/user/auth.html***
 
 ```
   <div class="col-md-8 col-md-offset-2">
@@ -29,7 +29,7 @@ Now that we have our application intializing, the next step is to establish the 
   </div>
 ```
 
-```/src/views/user/login.html```
+***/src/views/user/login.html***
 
 ```
   <formio src="userLoginForm"></formio>
@@ -45,7 +45,7 @@ The code above is one magical piece of Form.io, which allows you to use a single
 
 Once we have our Login form in place, we need to register them with another special provider within the ```ngFormioHelper``` called ```FormioAuthProvider```. It is very much recommended to look at the source code of this provider, which can be found @ [https://github.com/formio/ngFormioHelper/blob/master/src/ng-formio-helper.js#L631](https://github.com/formio/ngFormioHelper/blob/master/src/ng-formio-helper.js#L631). To take advantage of this library, you add the following code to your index.config.js.
 
-```/src/app/index.config.js```
+***/src/app/index.config.js***
 
 ```
   /** @ngInject */
@@ -74,7 +74,7 @@ Once we have our Login form in place, we need to register them with another spec
 
 The last thing we need to do is initialize the FormioAuth system, which fortunately, is very simple.
 
-```/src/app/index.run.js```
+***/src/app/index.run.js***
 
 ```
   /** @ngInject */
@@ -99,7 +99,7 @@ The last thing we need to do is initialize the FormioAuth system, which fortunat
 
 To finish this up, we now just need to create a home page for them to land on when they log in. We can just have a simple landing page for now.
 
-```/src/views/home.html```
+***/src/views/home.html***
 
 ```
   <div class="jumbotron bg-info">
@@ -110,7 +110,7 @@ To finish this up, we now just need to create a home page for them to land on wh
 
 And then we need to just change the UI Router declaration in the ```index.route.js``` file.
 
-```/src/app/index.route.js```
+***/src/app/index.route.js***
 
 ```
   /** @ngInject */

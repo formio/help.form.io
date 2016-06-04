@@ -8,7 +8,7 @@ weight: 12
 ---
 Now that we have our configuration in place, our next task is to initialize Form.io within the **index.config.js** as well as the **index.run.js** files.
 
-```/src/app/index.config.js```
+***/src/app/index.config.js***
 
 ```
   /** @ngInject */
@@ -32,7 +32,7 @@ Now that we have our configuration in place, our next task is to initialize Form
 
 And then finally we need to register all the forms to the **$rootScope** of the application by registering them from the config.js file.
 
-```/src/app/index.run.js```
+***/src/app/index.run.js***
 
 ```
   /** @ngInject */

@@ -8,7 +8,7 @@ weight: 15
 ---
 Now that we have defined our resources, we now need to register them with the ```FormioResourceProvider``` so that it can register all of the ui router paths that support the structure of the application. All of the classes that we just got through building are what we pass into the ```FormioResourceProvider``` and we can then iterate over all the resources provided from the AppConfig to initialize these resources. We can do this with the following code.
 
-```/src/app/index.route.js```
+***/src/app/index.route.js***
 
 ```
   /** @ngInject */

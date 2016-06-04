@@ -29,7 +29,7 @@ First we will upgrade **Angular.js** to the latest 1.5 version. Make sure that w
 
 Once we have the dependencies installed, we now need to open the following file within the application, and add the following dependencies to the ```angular.module``` declaration.
 
-```/src/app/index.module.js```
+***/src/app/index.module.js***
 
 ```
     angular
