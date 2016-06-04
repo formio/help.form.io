@@ -6,8 +6,4 @@ chapter: ng-formio-builder
 slug: actions
 weight: 0
 ---
-This is the documentation for our Open Source Form Builder Library found @ [https://github.com/formio/ngFormBuilder](https://github.com/formio/ngFormBuilder)
-
-We need your help!
-
-Please fork this repo and contribute to this page!
+Add content here [https://github.com/formio/help.form.io/blob/gh-pages/_paragraphs/developer/libraries/ng-formio-builder/intro.md](https://github.com/formio/help.form.io/blob/gh-pages/_paragraphs/developer/libraries/ng-formio-builder/intro.md)

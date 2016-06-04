@@ -6,8 +6,4 @@ chapter: ng-formio-helper
 slug: actions
 weight: 0
 ---
-This is the documentation for our Open Source Form Application Helper Library found @ [https://github.com/formio/ngFormioHelper](https://github.com/formio/ngFormioHelper)
-
-We need your help!
-
-Please fork this repo and contribute to this page!
+Add content here [https://github.com/formio/help.form.io/blob/gh-pages/_paragraphs/developer/libraries/ng-formio-helper/intro.md](https://github.com/formio/help.form.io/blob/gh-pages/_paragraphs/developer/libraries/ng-formio-helper/intro.md)

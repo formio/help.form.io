@@ -9,4 +9,4 @@ This is the documentation for our Open Source Form Data Grid Library found @ [ht
 
 We need your help!
 
-Please fork this repo and contribute to this page!
+Please fork this repo and contribute to this page found here [https://github.com/formio/help.form.io/blob/gh-pages/_chapters/developer/libraries/ng-formio-grid.md](https://github.com/formio/help.form.io/blob/gh-pages/_chapters/developer/libraries/ng-formio-grid.md)!
