@@ -7,7 +7,7 @@ summary: These four sections are designed to get you from new user, to form.io e
 <div class="row">
 {% for book in books %}
   <div class="col-md-6">
-    <h2><a href="{{ book.url }}{% if book.default-section %}/{{ book.default-section }}{% endif %}">{{ book.title }}</a></h2>
+    <h2><a href="{{ book.url }}{% if book.default-section %}{{ book.default-section }}{% endif %}">{{ book.title }}</a></h2>
     <p>{{ book.summary }}</p>
   </div>
 {% endfor %}
