@@ -12,7 +12,7 @@ layout: base
     <ul class="nav navbar-nav">
       {% assign books = (site.books | sort: "weight" reversed) %}
       {% for book in books %}
-      <li><a href="{{ site.baseUrl }}/{{ book.book }}/">{{ book.title }}</a></li>
+      <li><a href="{{ site.baseUrl }}/{{ book.book }}/{% if book.default-section %}{{ book.default-section }}/{% endif %}">{{ book.title }}</a></li>
       {% endfor %}
     </ul>
   </div>

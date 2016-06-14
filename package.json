@@ -12,6 +12,7 @@
     "wiredep": "^2.2.2"
   },
   "scripts": {
+    "serve": "jekyll serve --config _config.yml,_config.dev.yml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

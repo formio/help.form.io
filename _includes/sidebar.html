@@ -2,6 +2,7 @@
   <ul class="nav docs-sidenav">
     {% assign chapters = (site.chapters | where: "book" , page.book | sort: "weight") %}
     {% for chapter in chapters %}
+    {% if chapter.section == page.section %}
     <li>
       <a href="#{{ chapter.chapter }}">{{ chapter.title }}</a>
       {% assign paragraphs = (site.paragraphs | where: "chapter" , chapter.chapter | sort: "weight") %}
@@ -13,6 +14,7 @@
         {% endfor %}
       </ul>
     </li>
+    {% endif %}
     {% endfor %}
   </ul>
   <a class="back-to-top" href="#top">
