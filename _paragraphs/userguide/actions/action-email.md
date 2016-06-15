@@ -42,6 +42,18 @@ All of the email fields are sent through a templating engine called [Nunjucks](h
 
 <table class="table table-bordered table-striped">
   <tr>
+    <th>data</th>
+    <td>The submission data which maps to the data object of the submission. Example: {{ data.firstName }} would map to the data provided in the "First Name" field if one is provided in your form.</td>
+  </tr>
+  <tr>
+    <th>id</th>
+    <td>The ID of the submission being submitted.</td>
+  </tr>
+  <tr>
+    <th>{{ data.[RESOURCE]Obj }}</th>
+    <td>Because all of the nested resources will only show their "template" data, every nested resource also has an object property assigned to the data to give you access to the full resource object assigned to that submission. For example, if you have a **Customer** resource field assigned to an **Order** resource, and you sent an email from the order. {{ data.customer }} would only show the templated customer, however {{ data.customerObj }} would contain the full customer object. In this case, you could type {{ data.customerObj.data.email }} to get the customers email address within the template.</td>
+  </tr>
+  <tr>
     <th>req</th>
     <td>This is a stripped down request object that contains the following parameters.
       <table class="table table-bordered">
@@ -63,6 +75,9 @@ All of the email fields are sent through a templating engine called [Nunjucks](h
   <tr>
     <th>mail</th>
     <td>The current mail object being sent. Example {{ mail.to }} would contain the email address who the message is being sent to.</td>
+  </tr>
+  <tr>
+    <th></th>
   </tr>
 </table>
 
