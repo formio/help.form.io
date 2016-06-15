@@ -37,3 +37,32 @@ The subject of the email. You may use fields from the form using `{{ data.fieldn
 
 The message in the email. You may use fields from the form using `{{ data.fieldname }}`
 
+### Nunjucks Templating
+All of the email fields are sent through a templating engine called [Nunjucks](https://mozilla.github.io/nunjucks/). It is recommended that you read through the documentation of this templating language to understand how it can be utilized to produce very complex templates for your emails using form data. This documentation can be found @ [https://mozilla.github.io/nunjucks/templating.html](https://mozilla.github.io/nunjucks/templating.html). You can use the following variables which are provided to each template.
+
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>req</th>
+    <td>This is a stripped down request object that contains the following parameters.
+      <table class="table table-bordered">
+        <tr>
+          <th>user</th>
+          <td>The currently logged in user object. Example:  {{ req.user.data.email }} would print out the users email address.</td>
+        </tr>
+        <tr>
+          <th>params</th>
+          <td>The request parameters. For example, for url https://myproject.form.io/myform, {{ req.params.formId }} would be the Id of that form</td>
+        </tr>
+        <tr>
+          <th>query</th>
+          <td>The request query. For example, for url https://myproject.form.io/myform?testparam=1, {{ req.query.testparam }} would be 1</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <th>mail</th>
+    <td>The current mail object being sent. Example {{ mail.to }} would contain the email address who the message is being sent to.</td>
+  </tr>
+</table>
+
