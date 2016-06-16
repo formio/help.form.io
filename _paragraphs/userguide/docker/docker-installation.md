@@ -20,9 +20,13 @@ You will first need to have docker installed. See [http://docs.docker.com/v1.8/i
 
 Once you have installed docker and have access to the command line, run the following to get the latest docker image.
 
-```docker login```
-```docker pull formio/formio-server```
+```
+docker login
+docker pull formio/formio-server:[VERSION]
+```
 
-You can also pull a specific version of the formio-server by specifying the tag.
+Where ```[VERSION]``` should be the version you would like to deploy. For example, you could run the following to deploy version ```2.7.14```
 
-```docker pull formio/formio-server:1.4.5```
+```
+docker pull formio/formio-server:2.7.14
+```

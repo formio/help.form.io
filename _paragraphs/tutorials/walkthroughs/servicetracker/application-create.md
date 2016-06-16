@@ -11,7 +11,7 @@ Now that we have our resources structured the way we need them to be, the next s
 In this section, however, we will be focused on building this application from scratch so that all of the development pieces are fully documented as well as provide you a good base for creating your own applications on the Form.io platform. To get started, we will be using the [Angular-Gulp Yeoman Generator](https://github.com/Swiip/generator-gulp-angular) to create our base application. To do this, we will create a new folder and then create the scaffolding using Yeoman as follows. Execute the following in your Command Prompt.
 
 ```
-  mdir servicetracker
+  mkdir servicetracker
   cd servicetracker
   yo gulp-angular
 ```
