@@ -69,7 +69,7 @@ Sets the `tabindex` attribute of this component to override the tab order of the
 
 If checked, the field will be required to have a value.
 
-Dynamic Select Filtering
+#### Dynamic Select Filtering
 
 A very common use case that many people have in forms is to dynamically filter a Select dropdown based on the selection of another select dropdown. The typicaly usecase is a form that provides the Make, Model, and Year of automobiles where when you select the Make dropdown, it filters the Model dropdown for those that are within that Make. This functionality can be achieved using the following method. We will use the Make, Model, Year as an example use case for this docs.
 
