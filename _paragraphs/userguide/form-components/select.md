@@ -69,3 +69,28 @@ Sets the `tabindex` attribute of this component to override the tab order of the
 
 If checked, the field will be required to have a value.
 
+Dynamic Select Filtering
+
+A very common use case that many people have in forms is to dynamically filter a Select dropdown based on the selection of another select dropdown. The typicaly usecase is a form that provides the Make, Model, and Year of automobiles where when you select the Make dropdown, it filters the Model dropdown for those that are within that Make. This functionality can be achieved using the following method. We will use the Make, Model, Year as an example use case for this docs.
+
+ - Step 1: Create a Resource to hold the records.
+  ![Create Vehicle Resource](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-dealer-1.png)
+
+ - Step 2: Create a bunch of records within Vehicle resource.
+  ![Create Vehicle Records](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-dealer-2.png)
+  ![Vehicle Records](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-dealer-3.png)
+
+ - Step 3: Create a new form called Select Vehicle
+  ![Make Form](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-dealer-4a.png)
+
+ - Step 4: Add the Make dropdown.
+  ![Make Dropdown](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-dealer-5.png)
+
+ - Step 5: Add the Model dropdown
+  ![Model Dropdown](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-dealer-6.png)
+
+ - Step 6: Add the Year dropdown
+  ![Year Dropdown](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-dealer-7.png)
+
+ - You are done! Your form now will dyanamically filter based on what is selected.
+
