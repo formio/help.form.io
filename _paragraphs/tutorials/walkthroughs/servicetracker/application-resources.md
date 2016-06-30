@@ -146,7 +146,7 @@ We also need to make sure that we add the Google Maps API to the ```index.html``
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
-    <script src="https://maps.google.com/maps/api/js"></script>
+    <script src="https://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>
   </head>
 ```
 
