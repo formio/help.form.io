@@ -27,20 +27,22 @@ bower install --save ng-formio-helper
 Once you do this, you can then include the Offline mode into your application by including the [ngFormioHelper](https://github.com/formio/ngFormioHelper) library.
 
 ***/src/app/index.module.js***
+
 ```
 (function() {
-      'use strict';
-      angular
-        .module('myApp', [
-          'ngFormioHelper'
-        ]);
-    })();
+  'use strict';
+  angular
+    .module('myApp', [
+      'ngFormioHelper'
+    ]);
+  })();
 ```
 
 ### Create the application manifest
 Now that the Offline mode has been added to your project, you will now need to create the applicatoin manifest for the application cache capability. We can use Gulp to help out with this, by including the following Gulp tasks within our build routines.
 
 ***/gulp/build.js***
+
 ```
 gulp.task('offline', ['html', 'config', 'fonts', 'other'], function() {
   return gulp.src([path.join(conf.paths.dist, '/**/*')], { base: './dist/' })
@@ -64,6 +66,7 @@ gulp.task('build', ['html', 'fonts', 'other', 'views', 'config', 'offline']);
 We now need to add the manifest to our **index.html** file.
 
 ***/src/index.html***
+
 ```
 <html manifest="app.manifest" ng-app="myApp">
 ```
@@ -72,6 +75,7 @@ We now need to add the manifest to our **index.html** file.
 To get offline mode working in your application, we will use the Formio helper library to register our application with offline mode support. We start this within the ***config*** method of our Angular.js app which defines our routes.
 
 ***/src/app/index.route.js***
+
 ```
 /** @ngInject */
 function routeConfig(
@@ -87,6 +91,7 @@ function routeConfig(
 We now need to initialize this within the application using the following.
 
 ***/src/app/index.run.js***
+
 ```
 angular
   .module('myApp')
