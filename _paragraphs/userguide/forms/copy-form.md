@@ -2,8 +2,8 @@
 title: Copy a form
 book: userguide
 chapter: forms
-slug: edit-form
-weight: 30
+slug: copy-form
+weight: 40
 ---
 There are many situations where you would like to copy an existing form into a new form within your project, or between projects. Because of the cross project nature of this operation, the best way to accomplish this is to use the [Form.io Command Line](https://github.com/formio/formio-cli) tool. First install the command line using the following command in your command prompt.
 
