@@ -10,7 +10,7 @@ We provide a plugin to users with Team Pro or Enterprise projects that enables t
 The plugin provides offline mode support for a single project. Offline requests will automatically kick in when a request fails due to a network error and serve data cached offline, if available. You may also create/edit/delete submissions while offline, and the requests will be queued to be sent when the app goes back online.
 
 ### Example Application
-To help with the implementation of Offline Mode, we have contributed an Open Source application that incorportes our offline mode capabilities. This application is called the [GPS Tracker](https://github.com/formio/formio-app-gpstracker). To quickly boostrap this project to test locally you can run the following Form.io CLI command.
+To help with the implementation of Offline Mode, we have contributed an Open Source application that incorportes our offline mode capabilities. This application is called the [GPS Tracker](https://github.com/formio/formio-app-gpstracker). To quickly bootstrap this project to test locally you can run the following Form.io CLI command.
 
 ```
 npm install -g formio-cli
