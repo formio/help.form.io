@@ -115,7 +115,7 @@ angular
 ```
 
 ### Add the offline button to the header
-The next thing you need to do is add the Offline mode button to your header of your application. This will allow you to syncronize the submissions that have been captured within offline mode. You can do that with the following ```<offline-mode>``` directive code in your applications navbar.
+The next thing you need to do is add the Offline mode button to your header of your application. This will allow you to syncronize the submissions that have been captured within offline mode. You can do that with the following ```<offline-button>``` directive code in your applications navbar.
 
 ```
 <div id="navbar" class="navbar-collapse collapse">
