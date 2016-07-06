@@ -14,7 +14,7 @@ Once on the commercial plan, you will have access to the docker repository. Our 
 
 #### Installing docker
 
-You will first need to have docker installed. See [http://docs.docker.com/v1.8/installation/](http://docs.docker.com/v1.8/installation/) for more information.
+You will first need to have the Docker Engine installed. See [Docker Installation](https://docs.docker.com/engine/installation/) for more information.
 
 #### Pulling the docker image
 
