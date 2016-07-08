@@ -45,9 +45,8 @@ docker run -itd \
   formio/formio-server:2.8.0;
 ```
 
-###### The Fleet
-Now we can see all of our containers running with
-
+###### The Stack
+We now have the Form.io API Server running locally on port 3000. We can see all of our containers running:
 ```bash
 docker ps
 ```
