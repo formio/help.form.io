@@ -8,19 +8,14 @@ weight: 20
 
 A typical Form.io installation includes a Redis, MongoDB, and a Node.js API Server. If your environment is fully dockerized, you can spin up the stack using the following example commands.
 
-###### Create the formio network.
-```bash
-docker network create formio
-```
-
 ###### Create the Mongo instance.
 ```bash
-docker run -itd --name formio-mongo --net=formio -p 27017:27017 mongo
+docker run -itd --name formio-mongo -p 27017:27017 mongo
 ```
 
 ###### Create the Redis instance.
 ```bash
-docker run -itd --name formio-redis --net=formio -p 6379:6379 redis
+docker run -itd --name formio-redis -p 6379:6379 redis
 ```
 
 ###### Start the formio-server instance.
@@ -37,12 +32,11 @@ docker run -itd \
   -e "DB_SECRET=CHANGEME" \
   -e "ADMIN_EMAIL=admin@example.com" \
   -e "ADMIN_PASS=CHANGEME" \
-  --net=formio \
   --name formio-server \
   --link formio-mongo:mongo \
   --link formio-redis:redis \
   -p 127.0.0.1:3000:3000 \
-  formio/formio-server:2.8.0;
+  formio/formio-server:2.8.2;
 ```
 
 ###### The Stack

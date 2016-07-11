@@ -25,8 +25,8 @@ docker login
 docker pull formio/formio-server:[VERSION]
 ```
 
-Where ```[VERSION]``` should be the version you would like to deploy. For example, you could run the following to deploy version ```2.7.14```
+Where ```[VERSION]``` should be the version you would like to deploy. For example, you could run the following to deploy version ```2.8.2```
 
 ```
-docker pull formio/formio-server:2.7.14
+docker pull formio/formio-server:2.8.2
 ```

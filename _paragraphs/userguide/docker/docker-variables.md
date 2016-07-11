@@ -1,9 +1,9 @@
 ---
-title: Configuring 
+title: Configuring
 book: userguide
 chapter: docker
 slug: docker-variables
-weight: 30
+weight: 40
 ---
 The formio server is configured with environment variables. When using docker, you can set these by using the -e flag. Many docker hosting platforms have easier ways of setting environment variables for your docker containers.
 
@@ -14,7 +14,7 @@ If your mongodb connection is to an empty database, you will need to set these t
 - ```ADMIN_PASS```: The password for the root account.
 
 #### MongoDB Connection
-There are two options for how to connect to a mongodb server. You can connect directly using a mongodb connection string using the MONGO1 environment variable or use MONGO_PORT_27017_TCP_ADDR and MONGO_PORT_27017_TCP_PORT which facilitates docker’s linking capabilities. There is also MONGO_COLLECTION which specifies which DB to use. 
+There are two options for how to connect to a mongodb server. You can connect directly using a mongodb connection string using the MONGO1 environment variable or use MONGO_PORT_27017_TCP_ADDR and MONGO_PORT_27017_TCP_PORT which facilitates docker’s linking capabilities. There is also MONGO_COLLECTION which specifies which DB to use.
 
 - ```MONGO1```: Directly connect to a mongo connection string. Example: “mongodb://localhost:27017”
 - ```MONGO_PORT_27017_TCP_ADDR```: The address of the mongodb server. Defaults to “localhost”

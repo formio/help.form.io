@@ -3,7 +3,7 @@ title: Exploring
 book: userguide
 chapter: docker
 slug: docker-explore
-weight: 50
+weight: 60
 ---
 Once the server is setup, running and has the DNS configured for it, you can start exploring the server.
 
