@@ -87,9 +87,13 @@ A very common use case that many people have in forms is to dynamically filter a
 
  - Step 5: Create the Vehicle Resource to hold all of the vehicles.
   ![Create Vehicle Resource](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy4.png)
+  
   with the following settings for Make
+  
   ![Vehicle Make Settings](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy5.png)
+  
   and the following settings for Model
+  
   ![Vehicle Model Settings](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy6.png)
 
  - Step 6: Create a bunch of records within Vehicle resource.
@@ -97,6 +101,7 @@ A very common use case that many people have in forms is to dynamically filter a
 
  - Step 3: Create a new form called Vehicle Select
   ![Vehicle Select Form](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy8.png)
+   
    with the following field settings.
 
  - Step 4: Add the Make dropdown.
