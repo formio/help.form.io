@@ -2,7 +2,7 @@
 title: Basic Questions
 book: faq
 section: 
-weight: 1
+weight: 5
 chapter: basic
 ---
 ####_How are Passwords stored?_
