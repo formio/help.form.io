@@ -18,7 +18,22 @@ For the following scenarios, assume the following project was created on the doc
 ```
 
 #### Localhost
-For local testing, the simplest way to set it up is to use localhost and then in /etc/hosts on your computer (or the Microsoft Windows equivalent), set up a subdomain for formio.localhost, api.localhost and any other projects installed on it. etc/hosts should have the following:
+For local testing, localhost would seem like a logical solution, however, since formio server relies on subdomains to manage projects and localhost does NOT support subdomains, it becomes a lot of work to constantly add additional lines to the /etc/hosts file each time a project is created.  
+
+Instead, we recommend using a domain name with wildcard subdomain support already set up that points to 127.0.0.1. This will allow using a real domain name but will point at your localhost.
+
+**http://lvh.me** is the domain we recommend. If you run the server and use this domain to point to it, the server with subdomains will work correctly.
+
+To access a project, use the project name and lvh.me
+
+```
+GET http://lvh.me:3000/project/55882653b213f00a2641585d
+GET http://myproject.lvh.me:3000/
+```
+
+If you do not want to use lvh.me or a similar domain, you may use the /etc/hosts file (or the Microsoft Windows equivalent).
+
+To use localhost, add the following items and any other project subdomains created on the server.
 
 ```
 127.0.0.1   localhost
