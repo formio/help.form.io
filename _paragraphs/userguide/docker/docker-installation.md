@@ -1,32 +1,61 @@
 ---
-title: Installation
+title: Docker Engine
 book: userguide
 chapter: docker
 slug: docker-installation
 weight: 10
 ---
-Docker installations can occur in many different ways depending on your hosting environment. This section will outline how to get it running on a local environment which can be used to learn how to run the formio server in a production docker environment.
+Docker instances are run inside a Docker Engine. There are many options for where and how to run a docker instance. Depending on which Docker Engine you are using, the formio server configuration will be different.
 
-#### Accessing the docker image
-Once on the commercial plan, you will have access to the docker repository. Our docker images are located on docker’s hub.
+#### Using Cloud Hosted Docker
 
-[https://hub.docker.com/r/formio/formio-server/](https://hub.docker.com/r/formio/formio-server/)
+If you are using a cloud hosted Docker Engine, please follow the appropriate steps to set up the formio server Docker container.
 
-#### Installing docker
+ * [https://cloud.docker.com/](Docker Cloud)
+ * [https://www.joyent.com/triton](Joyent Triton)
+ * [https://aws.amazon.com/ecs/](Amazon Web Services)
+ * [https://cloud.google.com/container-engine/docs/](Google Cloud Platform)
+ * Many others
+ 
+#### Using a Linux Server
 
-You will first need to have the Docker Engine installed. See [Docker Installation](https://docs.docker.com/engine/installation/) for more information.
+Docker Engine runs natively on the Linux architecture. Docker requires a 64-bit installation regardless of your Distrubution version. Additionally, your kernel must be 3.10 at minimum. The latest 3.10 minor version or a newer maintained version are also acceptable.
 
-#### Pulling the docker image
+[https://docs.docker.com/engine/installation/linux/ubuntulinux/](Official Docker Linux Installation Documentation)
 
-Once you have installed docker and have access to the command line, run the following to get the latest docker image.
+##### Quick install
+To do a quick install, run the following command. It will download, configure and install the Docker Engine on Linux hosts.
 
+```bash
+sudo curl -sSL https://get.docker.com/ | sh
 ```
-docker login
-docker pull formio/formio-server:[VERSION]
+
+Any distrubutions running ```systemd```, which includes Ubuntu 15.04 and later, should run this command to ensure that the Docker Engine is started on reboot.
+
+```bash
+systemctl enable docker
 ```
 
-Where ```[VERSION]``` should be the version you would like to deploy. For example, you could run the following to deploy version ```2.8.2```
+Optionally, If you would like to run docker commands without sudo, add your user to the docker group.
 
+```bash
+sudo usermod -aG docker myusername
 ```
-docker pull formio/formio-server:2.8.2
-```
+
+#### Using a Mac OS X computer
+
+Running Docker Engine on a Mac has two options. We highly recommend using Docker for Mac instead of Docker Toolbox. Docker for Mac will run Docker natively on a Mac instead of through a Virtualbox which greatly simplifies setting up and running containers.
+
+Download and install Docker for Mac from [https://docs.docker.com/docker-for-mac/](https://docs.docker.com/docker-for-mac/)
+
+See **Using a Virtualbox Docker Engine** below if you want to use Docker Toolbox.
+
+#### Other Operating Systems
+
+Docker Engine can be run on many different systems. See Docker's Official Documentation for more information on running Docker.
+
+[https://docs.docker.com/engine/understanding-docker/](https://docs.docker.com/engine/understanding-docker/)
+
+#### Using a Virtualbox Docker Engine
+
+While it is possible to run the formio server in a Docker Engine inside of Virtualbox, this configuration adds an additional level of abstraction and networking that complicates getting things running correctly. You can use the information below to run formio server in a Virtualbox but our ability to support the server will be reduced.
