@@ -1,7 +1,6 @@
 ---
 title: Advanced Questions
 book: faq
-section: 
 weight: 10
 chapter: advanced
 ---
