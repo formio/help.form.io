@@ -95,7 +95,7 @@ Orders have _Companies_
 
 In this example, create following resources: Order(s), Products, and Company. To reference a resource, simply utilize the form builder. You can add the Resource Form component (Listed under special components), which allows you to associate forms and resources as you please, on a per submission basis.
 
-####_Submitting Form Data To External URL:_
+#### Submitting Form Data To External URL:
 The easiest way to set this up is to go to the "Advanced Settings" at the bottom of the form when editing it on portal.form.io. From there you can set the "Custom Action URL" which is where the form will submit to. This works well when there is one location a form will submit to.
 
 If you need more flexibility in where the form submits, you can also implement the "formSubmit" event and submit the form wherever you'd like. This would be in the controller that contains the form.
