@@ -4,18 +4,18 @@ book: faq
 weight: 5
 chapter: basic
 ---
-####How are Passwords stored?
+#### _How are Passwords stored?_
 Password data is stored as a hash once submitted, which is a one way cryptographic function for security purposes. Once it's hashed, there is no way to know what the original data was. 
 
-####_Do you offer encryption?_
+#### _Do you offer encryption?_
 Yes, we do have comprehensive encryption capabilities that can be configured to your specific needs.  As a starting point, user passwords are automatically encrypted using BCrypt, which is  the standard algorithm process for password encryption.
  
 On a related note, we also utilize JSON Web Tokens (JWT) for our user authentication processes.
 
-####_Does Form.io support controllable authorization_
+#### _Does Form.io support controllable authorization_
 Yes, Form.io utilizes a robust Roles and Permissions systems that leverages JWT for authentication. 
 
-####_Are there any restrictions on the distributions of IPs_
+#### _Are there any restrictions on the distributions of IPs_
 No.  Our platform software is very liberally licensed in order for you to be able to build and integrate our forms and APIs into your business applications without significant restriction from Form.io. You can read more about our [Privacy Policy](http://blog.form.io/form.io-privacy-policy), [Terms of Use](http://blog.form.io/form-terms-of-use), [Software Agreement](http://blog.form.io/form.io-software-licensing-agreement), and [Open Source License](http://blog.form.io/form.io-open-source-license-agreement) by following the links.
 
 ####_Can data within the forms be easily reported off of?_
