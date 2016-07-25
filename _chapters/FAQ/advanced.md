@@ -20,7 +20,7 @@ Here is some code examples where we are doing this in an application.
 
 https://github.com/formio/formio-app-expensereport/blob/ec2bed69cc2f43d890d768f72ed4c591b4050cdc/src/app/factories/reloadFormioGrid.js#L18
 
-####_Internalizing Form.io using resource bundle files_
+#### Internalizing Form.io using resource bundle files
 For translations we are wrapping https://github.com/angular-translate/angular-translate so the process of setting it up is the same for us.
 
 Here are a couple ways of doing that:
@@ -50,7 +50,7 @@ https://gist.github.com/travist/09c11ac0593f88cd3e9189d7c357c81c
 You can then generate a user token that will authenticate them as the user within the User resource (only giving them that role within your project) and then hand that to their browser. That token will then give them only the permissions of the user account you authenticated against.
 
 
-####_Creating a manual form submission via API_
+#### Creating a manual form submission via API
 If you want to create submissions manually via API, you can use the following documentation: https://help.form.io/api/#crud
 As for updating, we use PUT rather than PATCH; during an update, only the present fields in the payload will modify the underlying submission
 
@@ -84,7 +84,7 @@ There are some additional fields that can be part of the payload, but this is th
 .
 
 
-####_Nested Data - Multiple Parents_
+#### Nested Data - Multiple Parents
 Form.io allows for nested data that can be utilized from a single or multiple parent data source. Where you would traditionally use a data object, like a SQL Table, you would create a resource within Form.io.
 
  Example: You have an application that pulls from multiple data sources and is nested within one another.
@@ -148,7 +148,7 @@ controller(['Formio', '$scope', function(Formio, $scope) {
 
 
 
-####_Dynamic Field Mappings Within Form-Builder_
+#### Dynamic Field Mappings Within Form-Builder
 
 You can accomplish this with a separate form that has a file upload component along with a DataGrid component that is the Form Key to XML mapping that each user can use to not only load the XML file, but perform the mappings dynamically.
  
@@ -158,18 +158,18 @@ https://github.com/formio/ngFormBuilder/blob/master/src/components/checkbox.js#L
  
 This allows you to register new components, but also to modify properties of existing components.
 
-####_How are forms rendered using  formio directives? And the View/Edit/Delete tabs?_
+#### How are forms rendered using  formio directives? And the View/Edit/Delete tabs? 
 When using the formio directives, the forms are rendered on the frontend based on the JSON schema generated on the backend. This allows for you to embed the html directive once into the page, and any modifications to the form on Form.io will have the changes reflected, without your intervention. As for the different CRUD operations, you will need to add the tabs yourself (if that’s what you want) but there are two main directives for singular submission work. The formio directive will allow you to create/read/update a submission depending on whether or not a submission object is present, and the formio-delete submission will allow you to delete an individual submission with a confirmation dialogue. For more information on our embed directives, see: https://help.form.io/api/#angular
 
-####_Manipulating DOM After Form Has Rendered_
+#### Manipulating DOM After Form Has Rendered 
 1) Make sure you’re using the correct form load event, its “formLoad” not “formload”. The formLoad event is triggered after the api request has been made, but before the renderer turns the response into the interactive form. If you want to add something to the form, you can manually inject JSON during this event, and the renderer will add it to the form.
 
 2) If you want to add something manually (like permissions, without the user's interaction) you can inject additional submission data using the “formSubmit” event, which is called after the form has been submitted, but before the request is sent to the API server.
 
-####_Binding to XML Document/Populating Data_
+#### Binding to XML Document/Populating Data
 Load the XML file within jQuery and use its capabilities to map the XML nodes to the form submission data within the form. This allows for auto-population of the form based on XML data entry.
 
-####_Populating Data To a Form_
+#### Populating Data To a Form
 Since we use Angular.js for our forms, populating data within the form is pretty simple. There are two different ways this is done.
 
 Send the complete "submission" url to the form renderer like so.
@@ -190,8 +190,8 @@ $scope.submission = {data: {
 
 This will auto-populate the form fields with the submission data.
 
-####_Pre-populated data and hiding certain fields in a form when using the formio directive_
+#### Pre-populated data and hiding certain fields in a form when using the formio directive
 Using the Form.io form editor, you can set default values, placeholders and do conditional logic on a per form component basis. If you want to pre-populate submission data, you can do that using the submission property on the formio directive (https://help.form.io/api/#formio-directive). You can create an angular controller to modify some object with your desired pre-populated data, and pass that data to the directive.
 
-####_Pre-populated data to a Resource_
+#### Pre-populated data to a Resource
 That is basically how our REST API works, where you can provide a JSON schema to the form endpoint to create the form. Basically, all the Form builder does is generate that JSON schema for you. If you inspect the web network traffic when you save the resource, you should see the payload of what the JSON representation of a form looks like as well as get an idea how you can construct your tool to do it.
