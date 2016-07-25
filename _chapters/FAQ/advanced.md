@@ -5,7 +5,7 @@ weight: 10
 chapter: advanced
 ---
 
-####_Can I query resource data using my custom fields as parameters?_
+#### Can I query resource data using my custom fields as parameters?
 Form.io offers flexible query capabilities which can be configured to query based on  variables like date parameters. All of the index endpoints use the Resource.js definitions that you can use to get the queries you want. You can look at that here.
 
 https://github.com/travist/resourcejs#filtering-the-results
