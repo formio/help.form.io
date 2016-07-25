@@ -1,7 +1,6 @@
 ---
 title: Basic Questions
 book: faq
-section: 
 weight: 5
 chapter: basic
 ---
