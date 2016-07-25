@@ -1,7 +1,7 @@
 ---
 title: FAQ
 summary: Current issues and answers to common questions about the Form.io platform
-layout: section
+layout: book
 book: faq
 image:
 weight: 12
