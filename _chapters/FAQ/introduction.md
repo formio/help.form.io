@@ -1,7 +1,6 @@
 ---
 title: Introduction
 book: faq
-section: 
 weight: 1
 chapter: introdcution
 ---
