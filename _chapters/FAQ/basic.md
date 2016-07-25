@@ -4,7 +4,7 @@ book: faq
 weight: 5
 chapter: basic
 ---
-####_How are Passwords stored?_
+####How are Passwords stored?
 Password data is stored as a hash once submitted, which is a one way cryptographic function for security purposes. Once it's hashed, there is no way to know what the original data was. 
 
 ####_Do you offer encryption?_
