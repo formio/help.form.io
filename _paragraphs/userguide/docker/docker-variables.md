@@ -3,7 +3,7 @@ title: Configuring
 book: userguide
 chapter: docker
 slug: docker-variables
-weight: 20
+weight: 30
 ---
 The formio server is configured with environment variables. When using Docker, you can set these by using the -e flag. Many Docker hosting platforms have easier ways of setting environment variables for your docker containers.
 

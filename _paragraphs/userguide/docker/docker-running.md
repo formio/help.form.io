@@ -3,7 +3,7 @@ title: Running Containers
 book: userguide
 chapter: docker
 slug: docker-server
-weight: 30
+weight: 20
 ---
 
 #### Accessing the docker image
