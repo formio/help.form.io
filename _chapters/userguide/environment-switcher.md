@@ -14,15 +14,15 @@ Please use **http://lvh.me** instead of **localhost**.
 
 **Correct URLS**
 
- - http://lvh.me:3000
- - https://example.com
- - https://test.me
+ * http://lvh.me:3000
+ * https://example.com
+ * https://test.me
  
  **Incorrect URLS**
  
-  - lvh.me
-  - http://test.co.uk
-  - http://localhost
+  * lvh.me
+  * http://test.co.uk
+  * http://localhost
   
 Once an environment is set up, simply select it to switch to the Server. You will be logged out of the old server before being switched to the new server since the new server contains different user accounts.
 
