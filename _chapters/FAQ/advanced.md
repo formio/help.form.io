@@ -195,3 +195,27 @@ Using the Form.io form editor, you can set default values, placeholders and do c
 
 #### Pre-populated data to a Resource
 That is basically how our REST API works, where you can provide a JSON schema to the form endpoint to create the form. Basically, all the Form builder does is generate that JSON schema for you. If you inspect the web network traffic when you save the resource, you should see the payload of what the JSON representation of a form looks like as well as get an idea how you can construct your tool to do it.
+
+#### How to dynamically save the state of a form in a hidden formState field per submission
+
+Add a Hidden field to your form named "form". This will create the form property that we can save the form to.
+
+Then your angular code would look something like this:
+
+<formio form="form" submission="submission">
+
+Inside the controller for your state inject Formio and put:
+
+var formUrl = 'http://myproject.form.io/myform' // Replace the project and form with the correct names.
+$scope.submission = {
+  data: {
+    form: {}
+  }
+}
+var formio = new Formio(formUrl);
+formio.loadForm().then(function(form) {
+  $scope.form = form;
+  $scope.submission.data.form = form;
+});
+
+This will load the form definition into a variable that can be used to render the formio tag and places the form definition into the submission data object so it will save with the submission.
