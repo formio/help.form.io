@@ -64,7 +64,7 @@ ADMIN_EMAIL and ADMIN_PASS may be removed after the initial install.
 docker run -itd \
   -e "PROTOCOL=http" \
   -e "DOMAIN=localhost" \
-  -e "PORT=3000" \
+  -e "PORT=80" \
   -e "JWT_SECRET=CHANGEME" \
   -e "JWT_EXPIRE_TIME=240" \
   -e "DB_SECRET=CHANGEME" \
@@ -74,7 +74,7 @@ docker run -itd \
   --network formio \
   --link formio-mongo:mongo \
   --link formio-redis:redis \
-  -p 3000:3000 \
+  -p 3000:80 \
   formio/formio-server;
 ```
 
