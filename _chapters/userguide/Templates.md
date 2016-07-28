@@ -1,7 +1,7 @@
 ---
 title: Project Templates
 book: userguide
-weight: 130
+weight: 140
 chapter: project-templates
 ---
 
