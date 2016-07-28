@@ -32,3 +32,5 @@ cordova emulate ios
 ```bash
 cordova emulate android
 ```
+
+For complete documentation on compiling cordova applications, see [Cordova Build](https://cordova.apache.org/docs/en/latest/reference/cordova-cli/index.html#cordova-build-command)
