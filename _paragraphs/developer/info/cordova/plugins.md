@@ -23,4 +23,10 @@ If your application uses gps to track the current location, you'll want this plu
 cordova plugin add cordova-plugin-geolocation --save
 ```
 
+If your application is using the offline mode plugin, you'll want to add support for indexedDB to iOS and older devices with this plugin.
+
+```bash
+cordova plugin add cordova-plugin-indexeddb-async --save
+```
+
 There are many more plugins available at [Cordova Plugins](https://cordova.apache.org/plugins/).
