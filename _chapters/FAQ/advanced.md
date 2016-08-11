@@ -190,8 +190,11 @@ $scope.submission = {data: {
 
 This will auto-populate the form fields with the submission data.
 
-#### Pre-populated data and hiding certain fields in a form when using the formio directive
-Using the Form.io form editor, you can set default values, placeholders and do conditional logic on a per form component basis. If you want to pre-populate submission data, you can do that using the submission property on the formio directive (https://help.form.io/api/#formio-directive). You can create an angular controller to modify some object with your desired pre-populated data, and pass that data to the directive.
+#### How to populate Submission data and map to a field (Populating a submitted user email in a field)
+
+<i>For examples purposes, the ToDo application is being used here:</i>
+
+You can do this by setting the submission property of the form. Pass in a controller into the ResourceProvider for the todo resource within your application. For the todo application, the registration for this is within the index.route.js file within the src folder. You will see a line that says FormioResourceProvider.register('todo', AppConfig.forms.todoForm, {. Within here you can add a create controller for the todo resource (when a new todo is being created) and then set the user email on the submission there. Here is a gist. [https://gist.github.com/travist/293063135cf0c58eb78354c95f7a8378]
 
 #### Pre-populated data to a Resource
 That is basically how our REST API works, where you can provide a JSON schema to the form endpoint to create the form. Basically, all the Form builder does is generate that JSON schema for you. If you inspect the web network traffic when you save the resource, you should see the payload of what the JSON representation of a form looks like as well as get an idea how you can construct your tool to do it.
