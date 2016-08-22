@@ -2,7 +2,7 @@
 title: Remote Middleware
 book: developer
 section: info
-weight: 50
+weight: 60
 chapter: middleware
 ---
 Remote middleware allows binding to the project API and modifying requests from the user in an asynchronous fashion. In this way it is possible to act as express middleware over websockets in real time and reject the request, modify it or move the request to a third party service.

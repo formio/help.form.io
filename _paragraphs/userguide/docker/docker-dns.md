@@ -3,9 +3,9 @@ title: DNS
 book: userguide
 chapter: docker
 slug: docker-dns
-weight: 40
+weight: 50
 ---
-In order to run a docker version of the form.io server, a domain name needs to be set up for it. For testing purposes this may simply be localhost. However, one of the features of our server is that it allows having multiple projects on the same server. These can be accessed by subdomains or by the project path. To access a project by its path, use the format /project/{projectId}. You can get the project id by querying the /project endpoint after logging in to the server. (See Exploring Docker below). 
+In order to run a docker version of the form.io server, a domain name needs to be set up for it. For testing purposes this may simply be localhost. However, one of the features of our server is that it allows having multiple projects on the same server. These can be accessed by subdomains or by the project path. To access a project by its path, use the format /project/{projectId}. You can get the project id by querying the /project endpoint after logging in to the server. (See Exploring Docker below).
 
 For the following scenarios, assume the following project was created on the docker instance.
 
@@ -18,10 +18,25 @@ For the following scenarios, assume the following project was created on the doc
 ```
 
 #### Localhost
-For local testing, the simplest way to set it up is to use localhost and then in /etc/hosts on your computer (or the Microsoft Windows equivalent), set up a subdomain for formio.localhost, api.localhost and any other projects installed on it. etc/hosts should have the following:
+For local testing, localhost would seem like a logical solution, however, since formio server relies on subdomains to manage projects and localhost does NOT support subdomains, it becomes a lot of work to constantly add additional lines to the /etc/hosts file each time a project is created.  
+
+Instead, we recommend using a domain name with wildcard subdomain support already set up that points to 127.0.0.1. This will allow using a real domain name but will point at your localhost.
+
+**http://lvh.me** is the domain we recommend. If you run the server and use this domain to point to it, the server with subdomains will work correctly.
+
+To access a project, use the project name and lvh.me
 
 ```
-127.0.0.1   localhost 
+GET http://lvh.me:3000/project/55882653b213f00a2641585d
+GET http://myproject.lvh.me:3000/
+```
+
+If you do not want to use lvh.me or a similar domain, you may use the /etc/hosts file (or the Microsoft Windows equivalent).
+
+To use localhost, add the following items and any other project subdomains created on the server.
+
+```
+127.0.0.1   localhost
 127.0.0.1   formio.localhost
 127.0.0.1   api.localhost
 127.0.0.1   myproject.localhost
@@ -38,7 +53,7 @@ Each time a new project is added to the server for testing, be sure to add anoth
 
 #### Public Domains
 For publically available servers such as testing and production, set up a wildcard subdomain to point to the server. This will allow subdomains to route correctly to your server. For example, you should have something like this in your DNS settings:
- 
+
 ```
 *.example.com.   3600 IN  MX 10 host1.example.com.
 ```
