@@ -29,5 +29,7 @@ Users can configure the settings for their Projects by clicking the **Settings**
           - Here you can enter your Hubspot API Key to use [Hubspot Actions](#action-hubspot)
       - Atlassian
           - Here you can enter your credentials for [Atlassian Jira](#action-jira)
+      - SQL Connector
+          - Here you can enter the credentials for your [formio-sql](https://github.com/formio/formio-sql) instance.
 
 ![](/assets/img/project-settings.png)
