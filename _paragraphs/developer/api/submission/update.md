@@ -2,7 +2,7 @@
 title: Update
 book: developer
 section: api
-chapter: crud
+chapter: submission
 slug: update
 weight: 30
 ---

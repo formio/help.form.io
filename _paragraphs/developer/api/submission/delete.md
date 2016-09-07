@@ -2,7 +2,7 @@
 title: Delete
 book: developer
 section: api
-chapter: crud
+chapter: submission
 slug: delete
 weight: 40
 ---

@@ -2,7 +2,7 @@
 title: Read
 book: developer
 section: api
-chapter: crud
+chapter: submission
 slug: read
 weight: 20
 ---
