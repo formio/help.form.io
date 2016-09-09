@@ -71,7 +71,7 @@ docker tag formio/formio-server registry.ng.bluemix.net/[YOUR NAMESPACE]/formio-
 docker push registry.ng.bluemix.net/[YOUR NAMESPACE]/formio-server
 ```
 
-Your docker image is ready to deploy, but we will now need to setup some ***MongoDB*** and ***Redis*** databases first.
+Your docker image is ready to deploy, but we will now need to setup the ***MongoDB*** database first.
 
 ### Adding MongoDB
 
