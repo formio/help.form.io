@@ -3,7 +3,7 @@ title: Application Deployment
 book: developer
 section: deployments
 chapter: bluemix
-slug: application
+slug: bluemix-app
 weight: 10
 ---
 In order to deploy your application within BlueMix, you will be utilizing the Node.js integrations available within that platform. This tutorial also assumes that you already have an application running locally either using one of our [predefined templates](https://github.com/formio?utf8=%E2%9C%93&query=formio-app-) or an application that already has a build routine to create a serverless application.
