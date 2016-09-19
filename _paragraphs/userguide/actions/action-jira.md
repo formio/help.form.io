@@ -35,6 +35,7 @@ Display the private key
 `cat key.pem`
 
 Copy the contents of the private key, to the project settings for Atlassian. While editing the atlassian settings, add your host name and a random string of letters for your consumer key.
+![](/assets/img/jira-formio.png)
 
 Now login to Jira to create an Application link:
 ![](/assets/img/action-jira-oauth1.png)
