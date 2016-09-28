@@ -9,14 +9,14 @@ You will need jekyll installed and running to generate a local copy for testing.
   - ```ruby --version``` Ensure that you have at least version 2.0.0
   - ```gem install bundler``` Install bundler if you don't already have it.
   - ```bundle install``` Install this project's dependencies.
-  
+
 Running Jekyll
 --------------
 To run jekyll server locally, use the following commands.
 
-  - ```bundle exec jekyll serve``` to run the server.
+  - ```bundle exec jekyll serve --config _config.dev.yml,_config.yml``` to run the server.
   - Open your browser and go to http://localhost:4000.
-  
+
 Editing Books
 ------------
 Books are the top level organization of content on the site. You can edit the name, summary and weight of a book by editing the file in the _books folder.
@@ -27,4 +27,4 @@ Chapters are the second level organization of content on the site. Chapters can 
 
 Editing Paragraphs
 ------------------
-Paragraphs are the third level organization of content on the site. Paragraphs can have html at the top of them and a title. Paragraphs are in the _paragraphs folder and are grouped by sub folders by book and chapter. 
+Paragraphs are the third level organization of content on the site. Paragraphs can have html at the top of them and a title. Paragraphs are in the _paragraphs folder and are grouped by sub folders by book and chapter.
