@@ -10,7 +10,7 @@ layout: wrapper
       {% assign sections = (site.sections | where: "book" , page.book | sort: "weight") %}
       <ul class="nav nav-tabs">
       {% for section in sections %}
-        <li role="presentation" {% if section.section == page.section %}class="active"{% endif %}><a href="/{{ section.book }}/{{ section.section }}/">{{ section.section-title }}</a></li>
+        <li role="presentation" {% if section.section == page.section %}class="active"{% endif %}><a href="{{ site.baseUrl }}/{{ section.book }}/{{ section.section }}/">{{ section.section-title }}</a></li>
       {% endfor %}
       </ul>
     {% endif %}
