@@ -6,7 +6,7 @@ weight: 60
 chapter: lambda
 ---
 There are many cases when you need to perform administrative tasks within your Form.io project, but do not wish to expose
-the permissions necessary for those everyday tasks to the users of your application. The most common example of an example
+the permissions necessary for updates to the users of your application. The most common example
 of this is for Subscription based applications. Let's suppose that you wish to allow your users to sign up for subscriptions
 within your application, and based on them paying the fee, their account should be promoted in some way. Either through
 assigning a role to that user, or by assigning a value within a resource they do not have permissions to update. Since the
