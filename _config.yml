@@ -9,6 +9,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - vendor
+  - _site
 collections:
   books:
     output: true
