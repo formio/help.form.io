@@ -31,13 +31,13 @@ If you are using Basic Access Authentication for the web hook url, enter the use
 
 If you are using Basic Access Authentication for the web hook url, enter the password here.
 
-## Webhook Reciever
+### Webhook Reciever
 
-In order to receive webhooks, we have created a library that serves to provide a reciever for them. You can download this library at [https://github.com/formio/formio-webhook-reciever](https://github.com/formio/formio-webhook-reciever). Please read the README documents on how to utilize this library.
+In order to receive webhooks, we have created a library that serves to provide a reciever for them. You can download this library at [https://github.com/formio/formio-webhook-receiver](https://github.com/formio/formio-webhook-receiver). Please read the README documents on how to utilize this library.
 
-## Testing Webhooks
+### Testing Webhooks
 
-In order to test webhooks, it is beneficial to point them to your local computer so that you can see them in action. We recommend installing the [Webhook Receiver](https://github.com/formio/formio-webhook-reciever) on your local machine and then install and run it using the following command.
+In order to test webhooks, it is beneficial to point them to your local computer so that you can see them in action. We recommend installing the [Webhook Receiver](https://github.com/formio/formio-webhook-receiver) on your local machine and then install and run it using the following command.
 
 ```
 npm install
