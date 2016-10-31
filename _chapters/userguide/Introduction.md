@@ -9,6 +9,7 @@ To best understand the **&lt;<span class="text-primary">form</span>.<span class=
 - [**User Portal Page**](/userguide/#user-portal-page)
 - [**Customer Applications**](/userguide/#cutomer-applications)
 - [**Projects**](/userguide/#projects)
+- [**Projects**](/userguide/#teams)
 - [**Roles and Permissions**](/userguide/#roles-and-permissions)
 - [**Resources**](/userguide/#resources)
 - [**Forms**](/userguide/#forms)
