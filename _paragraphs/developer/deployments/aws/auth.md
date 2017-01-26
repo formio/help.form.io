@@ -12,8 +12,9 @@ They way to accomplish this is outlined within the AWS Documentation found @ [ht
 The steps to get started are as follows.
 
   - Login to your Docker Hub account via command prompt.
-
+<pre>
     docker login https://hub.docker.com/r/formio/formio-server
+</pre>
 
   - Next you will need to copy the contents of the "auths" section of the ``` ~/.docker/config.json``` file to create a special AWS Authentication file which will look something similar to the following.
 
