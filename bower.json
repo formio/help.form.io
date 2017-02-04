@@ -17,9 +17,10 @@
   "dependencies": {
     "anchor-js": "~2.0.0",
     "angular": "~1.4.8",
-    "bootstrap": "~3.3.6",
+    "bootstrap": "^3.3.7",
     "formio": "develop",
-    "urijs": "URIjs#~1.17.0"
+    "urijs": "URIjs#~1.17.0",
+    "font-awesome": "fontawesome#^4.7.0"
   },
   "overrides": {
     "bootstrap": {

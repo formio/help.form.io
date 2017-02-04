@@ -1,9 +1,10 @@
 ---
 title: Tutorials
-summary: Walkthrough tutorials and video tutorials to help you become familar with the Form.io Platform.
-layout: section
 book: tutorials
+icon: fa fa-play-circle
 default-section: videos
+default-chapter: welcome
 image:
 weight: 8
+layout: default
 ---

@@ -1,8 +1,9 @@
 ---
 title: Getting Started
-layout: book
+icon: fa fa-rocket
 book: intro
-summary: An overview of Form.io, how to use, basic templates and examples, and more. Learn basic concepts and how things work together.
+default-chapter: welcome
 image:
 weight: 1
+layout: default
 ---

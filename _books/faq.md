@@ -1,8 +1,9 @@
 ---
 title: FAQ
-summary: Current issues and answers to common questions about the Form.io platform
-layout: book
+icon: fa fa-question-circle
+default-chapter: introduction
 book: faq
 image:
 weight: 12
+layout: default
 ---

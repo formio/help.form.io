@@ -1,9 +1,11 @@
 ---
-title: Form.io API Documentation
+title: Developer Info
+subtitle: Form.io API Documentation
 book: developer
 section: api
 weight: 1
 chapter: postman
+layout: chapter
 ---
 To help out with the development of API's we heavily rely on a wonderful tool called [Postman](https://www.getpostman.com/) to be used as our API documentation. Below is the full documentation for our API within the Postman Documentation.
 
@@ -20,16 +22,4 @@ data-postman-var-1="6c861ff514e69ee0dd98"></div>
       (n.id = s+t), (n.async = 1), (n.src = m), n
     ));
   }(window, document, "_pm", "PostmanRunObject", "https://run.pstmn.io/button.js"));
-</script>
-
-<button class="btn btn-primary btn-sm" target="_blank" style="float:left;margin-right:10px;margin-bottom:20px;" id="scrolltop"><span class="glyphicon glyphicon-collapse-up"></span> Scroll to Top</button>
-
-<iframe id="docframe" src="https://documenter.getpostman.com/view/684631/formio-api/2Jvuks#intro" style="width:100%;height:50000px;" frameborder="0" scrolling="no" allowfullscreen seamless></iframe>
-
-<script type="text/javascript">
-  jQuery(function() {
-    jQuery('#scrolltop').click(function() {
-      jQuery('#docframe').attr('src', 'https://documenter.getpostman.com/view/684631/formio-api/2Jvuks#intro');
-    })
-  });
 </script>

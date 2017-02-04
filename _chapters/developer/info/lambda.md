@@ -1,9 +1,11 @@
 ---
-title: AWS Lambda
+title: Developer Info
+subtitle: AWS Lambda
 book: developer
 section: info
 weight: 60
 chapter: lambda
+layout: chapter
 ---
 There are many cases when you need to perform administrative tasks within your Form.io project, but do not wish to expose
 the permissions necessary for updates to the users of your application. The most common example

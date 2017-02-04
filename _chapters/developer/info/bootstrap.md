@@ -1,9 +1,11 @@
 ---
-title: Application Cloning
+title: Developer Info
+subtitle: Application Cloning
 book: developer
 section: info
 weight: 80
 chapter: bootstrap
+layout: chapter
 ---
 You can bootstrap any Form.io application within GitHub easily with our one line bootstrap command. First find a repository that you wish to bootstrap. You can find some on [Formio Github](https://github.com/formio?utf8=%E2%9C%93&query=formio-app-).
 

@@ -1,8 +1,10 @@
 ---
-title: Environment Switcher
+title: User's Guide
+subtitle: Environment Switcher
 book: userguide
 weight: 120
-chapter: env
+chapter: environment-switcher
+layout: chapter
 ---
 Environment Switcher allows connecting the formio portal to an on premise serve backend such as those using Docker. The Portal app will be the same but the user accounts, projects, forms and submissions will all be stored on the on premise server. This makes managing on premise servers much simpler.
 
@@ -17,13 +19,13 @@ Please use **http://lvh.me** instead of **localhost**.
  * http://lvh.me:3000
  * https://example.com
  * https://test.me
- 
+
  **Incorrect URLS**
- 
+
   * lvh.me
   * http://test.co.uk
   * http://localhost
-  
+
 Once an environment is set up, simply select it to switch to the Server. You will be logged out of the old server before being switched to the new server since the new server contains different user accounts.
 
 Environments must be set up on each browser used to log in to the server. They may be added and removed at any time.

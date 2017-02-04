@@ -1,4 +1,5 @@
 title : Form.io Help
+formio: <strong>&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;</strong>
 kramdown:
   input: GFM
 permalink: pretty
@@ -15,10 +16,11 @@ collections:
   books:
     output: true
     permalink: /:path/
-  chapters:
-    output: false
-  paragraphs:
-    output: false
   sections:
     output: true
     permalink: /:path/
+  chapters:
+    output: true
+    permalink: /:path/
+  paragraphs:
+    output: false

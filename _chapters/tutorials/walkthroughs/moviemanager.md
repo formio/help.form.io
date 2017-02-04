@@ -1,9 +1,11 @@
 ---
-title: Movie Manager Application
+title: Tutorials
+subtitle: Movie Manager Application
 book: tutorials
 section: walkthroughs
 weight: 50
 chapter: moviemanager
+layout: chapter
 ---
 This is a video walkthrough where we teach you how to build a complete Movie Manager application which includes Playlists and Movie Trailers within that playlist.
 

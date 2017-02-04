@@ -1,9 +1,11 @@
 ---
-title: Microsoft Office 365
+title: Developer Info
+subtitle: Microsoft Office 365
 book: developer
 section: integrations
 weight: 5
 chapter: office365
+layout: chapter
 ---
 Microsoft Office 365 allows for external applications to integrate through the use of its Azure platform. Currently **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** provides a mechanism where it can act on behalf of your account through its Server-to-Server authentication mechanism. To get your project working with Microsoft Office 365, please walk through the following steps:
 

@@ -1,9 +1,11 @@
 ---
-title: Complete Walkthrough
+title: Tutorials
+subtitle: Complete Walkthrough
 book: tutorials
 section: videos
 weight: 21
 chapter: walkthrough
+layout: chapter
 ---
 This is a complete walkthrough where we teach you how to build a complete Movie Manager application which includes Playlists and Movie Trailers within that playlist.
 

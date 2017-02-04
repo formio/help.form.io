@@ -1,9 +1,11 @@
 ---
-title: OAuth
+title: Developer Info
+subtitle: OAuth
 book: developer
 section: integrations
 weight: 4
 chapter: oauth
+layout: chapter
 ---
 
 OAuth allows you to authenticate with **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** using a 3rd party OAuth provider. This is very convenient because users may register new accounts and log in without having to manually enter a new username and password. To get your project working with OAuth, please walk through the following steps. These steps will be using a new project from the Default template, but you may use any project you wish.

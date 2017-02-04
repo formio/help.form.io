@@ -6,7 +6,7 @@ chapter: angular
 slug: styling-angular-forms
 weight: 60
 ---
-Since embedding **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** forms embeds them directly in your HTML pages instead of using iframes, you can easily add CSS styles to your application to customize form appearances.
+Since embedding {{ site.formio }} forms embeds them directly in your HTML pages instead of using iframes, you can easily add CSS styles to your application to customize form appearances.
 
 Every form component is wrapped in a `<div>` with the class name `form-field-type-{fieldType}`. Use this to style all fields of a certain type. For example, to style only checkbox fields, you may have CSS that looks like this:
 

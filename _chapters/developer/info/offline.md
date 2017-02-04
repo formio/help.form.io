@@ -1,9 +1,11 @@
 ---
-title: Offline Mode
+title: Developer Info
+subtitle: Offline Mode
 book: developer
 section: info
 weight: 30
 chapter: offline
+layout: chapter
 ---
 We provide a plugin to users with Team Pro or Enterprise projects that enables their applications to request and submit forms offline.
 
@@ -218,7 +220,7 @@ Triggered when the submission queue starts to process a submission.
 
 #### offline.requeue
 
-Triggered when a submission fails and is added back to the front of the submission queue. 
+Triggered when a submission fails and is added back to the front of the submission queue.
 
 #### offline.formSubmission
 

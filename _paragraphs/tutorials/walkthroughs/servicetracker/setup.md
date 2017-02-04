@@ -9,7 +9,7 @@ weight: 2
 To get started, you will need to make sure that you have the following tools installed on your machine.
 
  - Form.io Account - Go to [https://portal.form.io](https://portal.form.io) and create a new account.
- - Node.js (https://nodejs.org/en/) - We recomment using 4.x version.
+ - Node.js (https://nodejs.org/en/) - We recommend using the latest LTS version.
  - Bower.js - Using your computer console, type the following
 
 ```

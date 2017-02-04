@@ -141,6 +141,9 @@ footer {
     display: none; /* Hide by default, but at >768px, show it */
     padding-bottom: 10px;
 }
+.docs-sidebar .nav .nav.active {
+    display: inherit;
+}
 .docs-sidebar .nav .nav > li > a {
     padding-top: 1px;
     padding-bottom: 1px;

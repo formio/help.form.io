@@ -1,12 +1,17 @@
-<nav class="docs-sidebar hidden-print hidden-xs hidden-sm">
-  <ul class="nav docs-sidenav">
-    {% assign chapters = (site.chapters | where: "book" , page.book | sort: "weight") %}
+<nav class="docs-sidebar">
+  <ul class="nav docs-sidenav list-group">
+    {% assign chapters = (site.chapters | where: "book",page.book | sort: "weight") %}
     {% for chapter in chapters %}
     {% if chapter.section == page.section %}
-    <li>
-      <a href="#{{ chapter.chapter }}">{{ chapter.title }}</a>
-      {% assign paragraphs = (site.paragraphs | where: "chapter" , chapter.chapter | sort: "weight") %}
-      <ul class="nav">
+    <li class="list-group-item {% if page.chapter == chapter.chapter %} active{% endif %}">
+      {% if chapter.section %}
+      <a href="{{ site.baseUrl }}/{{ chapter.book }}/{{ chapter.section }}/{{ chapter.chapter }}/">{{ chapter.subtitle }}</a>
+      {% endif %}
+      {% if chapter.section == nil %}
+      <a href="{{ site.baseUrl }}/{{ chapter.book }}/{{ chapter.chapter }}/">{{ chapter.subtitle }}</a>
+      {% endif %}
+      {% assign paragraphs = (site.paragraphs | where: "chapter",chapter.chapter | where: "section":chapter.section | sort: "weight") %}
+      <ul class="nav {% if page.chapter == chapter.chapter %}{% if page.section == chapter.section %}active{% endif %}{% endif %} hidden-print hidden-xs hidden-sm">
         {% for paragraph in paragraphs %}
         <li>
           <a href="#{{ paragraph.slug }}">{{ paragraph.title }}</a>

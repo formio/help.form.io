@@ -1,9 +1,11 @@
 ---
-title: Login with Email
+title: Developer Info
+subtitle: Login with Email
 book: developer
 section: info
 weight: 32
 chapter: emaillogin
+layout: chapter
 ---
 In addition to providing full authentication capabilities, Form.io also provides a very robust method for Automatic Logins via Email. There are many use cases where Email Login is utilized including, but not limited to...
 

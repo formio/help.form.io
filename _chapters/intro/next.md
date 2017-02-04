@@ -1,8 +1,10 @@
 ---
-title: Next Steps
+title: Getting Started
+subtitle: Next Steps
 book: intro
-weight: 60
+weight: 400
 chapter: next
+layout: chapter
 ---
 So now that you have a good idea on how Form.io works, here is a good place to go next to fully experience Form.io!
 

@@ -1,8 +1,10 @@
 ---
-title: Advanced Questions
+title: FAQ
+subtitle: Advanced Questions
 book: faq
 weight: 10
 chapter: advanced
+layout: chapter
 ---
 
 #### Can I query resource data using my custom fields as parameters?
@@ -25,7 +27,7 @@ For translations we are wrapping https://github.com/angular-translate/angular-tr
 
 Here are a couple ways of doing that:
 
-1. You can call 
+1. You can call
 $translateProvider.translation('en', {
   'Original String': 'Translated String'
 });
@@ -115,7 +117,7 @@ Make sure you have the latest renderer library @ https://github.com/formio/ngFor
 
 bower install --save ng-formio
 
-Once you log in, you should see an item in your localStorage called formioToken.  This contains the JWT token necessary to authenticate with Form.io. You can do this manually or using the Formio api. 
+Once you log in, you should see an item in your localStorage called formioToken.  This contains the JWT token necessary to authenticate with Form.io. You can do this manually or using the Formio api.
 
 To manually send an API request, you just need to provide this token in the header called x-jwt-token.   Here is an example of a manual request using Postman.  http://take.ms/6TWXT
 
@@ -151,17 +153,17 @@ controller(['Formio', '$scope', function(Formio, $scope) {
 #### Dynamic Field Mappings Within Form-Builder
 
 You can accomplish this with a separate form that has a file upload component along with a DataGrid component that is the Form Key to XML mapping that each user can use to not only load the XML file, but perform the mappings dynamically.
- 
+
 As for extending the Form Builder, you can do this as well by creating overrides using the formioComponentsProvider.register method seen here.
- 
+
 https://github.com/formio/ngFormBuilder/blob/master/src/components/checkbox.js#L5
- 
+
 This allows you to register new components, but also to modify properties of existing components.
 
-#### How are forms rendered using  formio directives? And the View/Edit/Delete tabs? 
+#### How are forms rendered using  formio directives? And the View/Edit/Delete tabs?
 When using the formio directives, the forms are rendered on the frontend based on the JSON schema generated on the backend. This allows for you to embed the html directive once into the page, and any modifications to the form on Form.io will have the changes reflected, without your intervention. As for the different CRUD operations, you will need to add the tabs yourself (if that’s what you want) but there are two main directives for singular submission work. The formio directive will allow you to create/read/update a submission depending on whether or not a submission object is present, and the formio-delete submission will allow you to delete an individual submission with a confirmation dialogue. For more information on our embed directives, see: https://help.form.io/api/#angular
 
-#### Manipulating DOM After Form Has Rendered 
+#### Manipulating DOM After Form Has Rendered
 1) Make sure you’re using the correct form load event, its “formLoad” not “formload”. The formLoad event is triggered after the api request has been made, but before the renderer turns the response into the interactive form. If you want to add something to the form, you can manually inject JSON during this event, and the renderer will add it to the form.
 
 2) If you want to add something manually (like permissions, without the user's interaction) you can inject additional submission data using the “formSubmit” event, which is called after the form has been submitted, but before the request is sent to the API server.

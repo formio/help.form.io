@@ -1,9 +1,11 @@
 ---
-title: Basic Tutorial
+title: Tutorials
+subtitle: Basic Tutorial
 book: tutorials
 section: videos
 weight: 30
 chapter: basictutorial
+layout: chapter
 ---
 
 In the basic tutorial section, we will show you how to create a new project from the ground up. The following video will explain the fundemental features you will learn in the Basic Tutorial section.

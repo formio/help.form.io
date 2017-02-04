@@ -1,9 +1,11 @@
 ---
-title: Login with Auth0
+title: Developer Info
+subtitle: Login with Auth0
 book: developer
 section: info
 weight: 33
 chapter: auth0
+layout: chapter
 ---
 A very common use case with Form.io is to integrate it with the amazing authentication platform called [Auth0](https://auth0.com). This integration can be used to bring the following functionality into your Form.io application.
 

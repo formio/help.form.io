@@ -1,29 +1,31 @@
 ---
-title: Basic Questions
+title: FAQ
+subtitle: Basic Questions
 book: faq
 weight: 5
 chapter: basic
+layout: chapter
 ---
 #### How are Passwords stored?
-Password data is stored as a hash once submitted, which is a one way cryptographic function for security purposes. Once it's hashed, there is no way to know what the original data was. 
+Password data is stored as a hash once submitted, which is a one way cryptographic function for security purposes. Once it's hashed, there is no way to know what the original data was.
 
 #### Do you offer encryption?
 Yes, we do have comprehensive encryption capabilities that can be configured to your specific needs.  As a starting point, user passwords are automatically encrypted using BCrypt, which is  the standard algorithm process for password encryption.
- 
+
 On a related note, we also utilize JSON Web Tokens (JWT) for our user authentication processes.
 
 #### Does Form.io support controllable authorization
-Yes, Form.io utilizes a robust Roles and Permissions systems that leverages JWT for authentication. 
+Yes, Form.io utilizes a robust Roles and Permissions systems that leverages JWT for authentication.
 
 #### Are there any restrictions on the distributions of IPs
 No.  Our platform software is very liberally licensed in order for you to be able to build and integrate our forms and APIs into your business applications without significant restriction from Form.io. You can read more about our [Privacy Policy](http://blog.form.io/form.io-privacy-policy), [Terms of Use](http://blog.form.io/form-terms-of-use), [Software Agreement](http://blog.form.io/form.io-software-licensing-agreement), and [Open Source License](http://blog.form.io/form.io-open-source-license-agreement) by following the links.
 
 #### Can data within the forms be easily reported off of?
-Yes, we provide the ability to access and report on all of the submission data for the Resources, and Forms, and components that you build into your applications.  We also report on API traffic and similar application submission activity data. 
- 
-Additionally, we have robust and flexible capabilities to send your data to integrated legacy, or 3rd-party systems for any additional data analysis and reporting as you wish.  Our platform is as much about facilitating and enabling complex data management workflows as it is about building complex forms themselves.  This is what makes us very different from many form platform providers. 
- 
-Entire projects/applications can also be exported and cloned as desired which can save significant time when building multiple similar apps from a single customized templates that you can build yourself or use ours. 
+Yes, we provide the ability to access and report on all of the submission data for the Resources, and Forms, and components that you build into your applications.  We also report on API traffic and similar application submission activity data.
+
+Additionally, we have robust and flexible capabilities to send your data to integrated legacy, or 3rd-party systems for any additional data analysis and reporting as you wish.  Our platform is as much about facilitating and enabling complex data management workflows as it is about building complex forms themselves.  This is what makes us very different from many form platform providers.
+
+Entire projects/applications can also be exported and cloned as desired which can save significant time when building multiple similar apps from a single customized templates that you can build yourself or use ours.
 
 #### By Default, when do tokens expire?
 Tokens will expire after 1 week. However, every request you make to Form.io returns a new token for the user so as long as a request is made within 1 week, there is no need to re-authenticate.
@@ -32,7 +34,7 @@ Tokens will expire after 1 week. However, every request you make to Form.io retu
 You can configure the token expire time as an environment variable.
 
 #### How to edit password data?
-To edit a user submission with a password field, you would need to know the original password of the user to perform the edit.   
+To edit a user submission with a password field, you would need to know the original password of the user to perform the edit.
 
 #### How do I retrieve the JSON Schema to my Form
 When you build a form,  click on the Embed code page, then copy the URL as you [see here](https://monosnap.com/file/0CLLWbpxP7jiGSBu1qk8R8XdEP9zir).
@@ -49,7 +51,7 @@ To create an admin/user account for your application click on the Forms section 
 Yes, you can create a form from a JSON Schema. All of our platform is based on REST APIs so all you need to do is POST to the proper endpoint. For example, creating a form is
 POST https://{projectname}.form.io/form
 
-Updating an existing form is 
+Updating an existing form is
 PUT https://{projectname}.form.io/{formname}
 
 You can also use the long form for each of those with the ids. for example:

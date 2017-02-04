@@ -6,8 +6,7 @@ chapter: angular
 slug: form-translation
 weight: 80
 ---
-
-You can translate your **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** forms by wrapping [Angular-Translate](https://github.com/angular-translate/angular-translate) in your application.
+You can translate your {{ site.formio }} forms by wrapping [Angular-Translate](https://github.com/angular-translate/angular-translate) in your application.
 
 There are a two ways of achieving this.
 

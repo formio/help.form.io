@@ -1,9 +1,9 @@
 ---
-title: How it works
+title: Getting Started
+subtitle: How it works
 book: intro
 weight: 20
 chapter: howworks
+layout: chapter
 ---
-To get started, skim through the following slides to get a better understanding at how Form.io works.
-Click on the following, then press your <strong>Right</strong> arrow key to move through the presentation.
-<iframe seamless src="https://help.form.io/howitworks/" style="width:100%; height: 450px">
+Before you begin building your next Serverless Data Managament application on {{ site.formio }}, it is beneficial to understand the underlying concepts of how {{ site.formio }} works. While this platform at its core is very simple, there are many aspects that make it a flexible and powerful Data Management platform. Because of this, it can be used in a wide variety of use cases spanning across many different industry sectors. Having a deep understanding of how this platform works will be the best ammunition you have to leverage this powerful platform to its fullest potential. Let's start with **Forms and Resources**.
