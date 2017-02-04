@@ -38,3 +38,9 @@ gulp.task('deploy:test', function() {
   aws.bucket = 'help.test-form.io';
   return gulp.src(['_site/**/*', '!**/node_modules/**']).pipe(s3(aws));
 });
+
+gulp.task('deploy:prod', function() {
+  var aws = require('./aws.json');
+  aws.bucket = 'help.form.io';
+  return gulp.src(['_site/**/*', '!**/node_modules/**']).pipe(s3(aws));
+});

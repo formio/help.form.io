@@ -14,6 +14,7 @@
   },
   "scripts": {
     "deploy:test": "bundle exec jekyll build --config _config.yml,_config.test.yml && gulp deploy:test",
+    "deploy:prod": "bundle exec jekyll build --config _config.yml && gulp deploy:prod",
     "serve": "bundle exec jekyll serve --config _config.yml,_config.dev.yml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
