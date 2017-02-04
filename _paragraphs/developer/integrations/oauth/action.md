@@ -11,7 +11,7 @@ Add a new OAuth Action.
 
 ![](/assets/img/oauth/project-form-actions.png)
 
-Fill in the settings as shown below. For more information on what these settings do, see the [OAuth Action](/userguide/#action-oauth) in the User's Guide.
+Fill in the settings as shown below. For more information on what these settings do, see the [OAuth Action](/userguide/actions/#action-oauth) in the User's Guide.
 
 ![](/assets/img/oauth/project-register-oauth-action-edit.png)
 

@@ -16,7 +16,7 @@ Every form component is wrapped in a `<div>` with the class name `form-field-typ
 }
 ```
 
-The same `<div>` wrapping each form component also is given an id in the form `form-group-{fieldKey}`. The `fieldKey` corresponds to the unique Property Name given to each form component. You can find this in the [API tab](/userguide/#component-api) of the form component settings. Use this id to style a single specific form element. For example, to style a field with the key `fullName`, you may have CSS that looks like this:
+The same `<div>` wrapping each form component also is given an id in the form `form-group-{fieldKey}`. The `fieldKey` corresponds to the unique Property Name given to each form component. You can find this in the [API tab](/userguide/form-components/#component-api) of the form component settings. Use this id to style a single specific form element. For example, to style a field with the key `fullName`, you may have CSS that looks like this:
 
 ```css
 #form-group-fullName {

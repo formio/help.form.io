@@ -6,7 +6,7 @@ chapter: oauth
 slug: linkform
 weight: 130
 ---
-At this point, your project is completely set up to use OAuth authentication! Once you embed the User Register and User Login forms in your application, users will be able to use the OAuth provider you configured to login. For information on how to embed forms into your application, see [Application Embedding](/api/#angular).
+At this point, your project is completely set up to use OAuth authentication! Once you embed the User Register and User Login forms in your application, users will be able to use the OAuth provider you configured to login. For information on how to embed forms into your application, see [Application Embedding](/developer/info/angular/).
 
 If you want to let users authenticate with both a traditional username-password pair or an OAuth provider, then one extra step is necessary to allow users who created an account with a username and password to link their existing account with an OAuth provider.
 
@@ -21,7 +21,7 @@ Click on the *Actions* tab and add a new OAuth Action with the settings below:
 ![](/assets/img/oauth/project-link-oauth-action-edit.png)
 
 Click *Submit*
-Next embed this form somewhere in your application where only authenticated users can access it, like a user settings page. 
+Next embed this form somewhere in your application where only authenticated users can access it, like a user settings page.
 You will need some custom logic to hide the form for users who have already logged in. Specifically, you must check if the user has an `externalIds` entry for your provider. Here is some sample code that will check if the user has been linked with GitHub using the [formio.js](https://github.com/formio/formio.js) library:
 
 ```javascript

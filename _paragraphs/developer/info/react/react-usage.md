@@ -33,13 +33,13 @@ ReactDOM.render(
 
 The form API source from [form.io](https://www.form.io) or your custom formio server.
 
-See [Creating a Form](/userguide/#new-form) for where to set the API Path for your form.
+See [Creating a Form](/userguide/forms/#new-form) for where to set the API Path for your form.
 
 You can also pass in the submission url as the `src` and the form will render with the data populated from the submission.
 
 #### `form` : `object`
 
-An object representing the form. Use this instead of src for custom forms. 
+An object representing the form. Use this instead of src for custom forms.
 
 **Note:** `src` will override this property if used.
 

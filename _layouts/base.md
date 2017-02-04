@@ -8,6 +8,7 @@
       'faq/#advanced': '/faq/advanced/',
       'faq/#basic': '/faq/basic/',
       'faq/#introdcution': '/faq/introdcution/',
+      'api': '/developer/api/postman/',
       'developer/api': '/developer/api/postman/',
       'developer/api/#postman': '/developer/api/postman/',
       'developer/deployments': '/developer/deployments/aws/',

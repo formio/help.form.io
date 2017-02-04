@@ -6,7 +6,7 @@ slug: conditional-components
 weight: 220
 ---
 <div class="note" markdown="1">
-  The conditional component requires an [API key](/userguide/#component-api) to be configured to function correctly.
+  The conditional component requires an [API key](/userguide/form-components/#component-api) to be configured to function correctly.
 </div><br>
 
 

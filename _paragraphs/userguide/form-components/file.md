@@ -5,7 +5,7 @@ chapter: form-components
 slug: file
 weight: 45
 ---
-A file field allows users to upload and download files to a form. In order to use a file field, file storage must be set up. This can be done from the project settings. See [File Storage](/integrations/#filestorage) for the types of providers supported.
+A file field allows users to upload and download files to a form. In order to use a file field, file storage must be set up. This can be done from the project settings. See [File Storage](/developer/integrations/filestorage/) for the types of providers supported.
 
 Form.io does not host any files itself. Files are stored on the storage provider which allows uploading and downloading files to and from it. Form.io only stores a reference to the files which allows seamless integration into your app.
 
@@ -17,11 +17,11 @@ The label for this field that will appear next to it.
 
 #### Storage
 
-This is the storage provider where the file will be stored and accessed from. Select the appropriate provider. All providers besides Url require additional configuration in project settings. 
+This is the storage provider where the file will be stored and accessed from. Select the appropriate provider. All providers besides Url require additional configuration in project settings.
 
 #### Upload Url
 
-If **Url** is selected in Storage, enter the Url of the service. It must be compatible with the ng-file-upload service and return an object that includes the url to access the file. 
+If **Url** is selected in Storage, enter the Url of the service. It must be compatible with the ng-file-upload service and return an object that includes the url to access the file.
 
 #### Directory
 

@@ -10,4 +10,4 @@ After you have your computer setup with all the dependencies, the first thing yo
 
 ![](/assets/img/tutorials/walkthroughs/servicetracker/create-project.png)
 
-Once you create your project, you will presented with the project page overview. If you are new to Form.io, then I highly recommend reading through the [User Guide](/userguide/) to understand all of the components about our Project interface. For this tutorial, we will simply be focusing on the Resource & Forms that create the structure.
+Once you create your project, you will presented with the project page overview. If you are new to Form.io, then I highly recommend reading through the [User Guide](/userguide/introduction/) to understand all of the components about our Project interface. For this tutorial, we will simply be focusing on the Resource & Forms that create the structure.

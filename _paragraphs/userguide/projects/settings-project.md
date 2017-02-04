@@ -23,12 +23,12 @@ Users can configure the settings for their Projects by clicking the **Settings**
 - Data Connections
    - The Data Connections allow you to configure various integrations and their settings.
       - Databases
-          - Here you can provide credentials to your Microsoft SQL Server or MySQL databases to be used with [SQL Actions](#action-sql).
-      - Office 365 (Settings to integrate with Outlook and other 365 applications, see [Office 365 Integration Guide](/integrations/#office365))
+          - Here you can provide credentials to your Microsoft SQL Server or MySQL databases to be used with [SQL Actions](/userguide/actions/#action-sqlconnector).
+      - Office 365 (Settings to integrate with Outlook and other 365 applications, see [Office 365 Integration Guide](/developer/integrations/office365/))
       - Hubspot
-          - Here you can enter your Hubspot API Key to use [Hubspot Actions](#action-hubspot)
+          - Here you can enter your Hubspot API Key to use [Hubspot Actions](/developer/integrations/hubspot/)
       - Atlassian
-          - Here you can enter your credentials for [Atlassian Jira](#action-jira)
+          - Here you can enter your credentials for [Atlassian Jira](/userguide/actions/#action-jira)
       - SQL Connector
           - Here you can enter the credentials for your [formio-sql](https://github.com/formio/formio-sql) instance.
 
