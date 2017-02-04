@@ -248,7 +248,9 @@
       'userguide/#create-team': '/userguide/teams/#create-team',
       'userguide/#template-previews': '/userguide/project-templates/#template-previews'
     };
-    path += '/' + location.hash;
+    if (location.hash) {
+      path += '/' + location.hash;
+    }
     if (redirects[path]) {
       window.location = redirects[path];
     }
