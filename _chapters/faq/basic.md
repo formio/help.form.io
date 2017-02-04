@@ -14,11 +14,11 @@ Yes, we do have comprehensive encryption capabilities that can be configured to 
 
 On a related note, we also utilize JSON Web Tokens (JWT) for our user authentication processes.
 
-#### Does Form.io support controllable authorization
-Yes, Form.io utilizes a robust Roles and Permissions systems that leverages JWT for authentication.
+#### Does {{ site.formio }} support controllable authorization
+Yes, {{ site.formio }} utilizes a robust Roles and Permissions systems that leverages JWT for authentication.
 
 #### Are there any restrictions on the distributions of IPs
-No.  Our platform software is very liberally licensed in order for you to be able to build and integrate our forms and APIs into your business applications without significant restriction from Form.io. You can read more about our [Privacy Policy](http://blog.form.io/form.io-privacy-policy), [Terms of Use](http://blog.form.io/form-terms-of-use), [Software Agreement](http://blog.form.io/form.io-software-licensing-agreement), and [Open Source License](http://blog.form.io/form.io-open-source-license-agreement) by following the links.
+No.  Our platform software is very liberally licensed in order for you to be able to build and integrate our forms and APIs into your business applications without significant restriction from {{ site.formio }}. You can read more about our [Privacy Policy](http://blog.form.io/form.io-privacy-policy), [Terms of Use](http://blog.form.io/form-terms-of-use), [Software Agreement](http://blog.form.io/form.io-software-licensing-agreement), and [Open Source License](http://blog.form.io/form.io-open-source-license-agreement) by following the links.
 
 #### Can data within the forms be easily reported off of?
 Yes, we provide the ability to access and report on all of the submission data for the Resources, and Forms, and components that you build into your applications.  We also report on API traffic and similar application submission activity data.
@@ -28,7 +28,7 @@ Additionally, we have robust and flexible capabilities to send your data to inte
 Entire projects/applications can also be exported and cloned as desired which can save significant time when building multiple similar apps from a single customized templates that you can build yourself or use ours.
 
 #### By Default, when do tokens expire?
-Tokens will expire after 1 week. However, every request you make to Form.io returns a new token for the user so as long as a request is made within 1 week, there is no need to re-authenticate.
+Tokens will expire after 1 week. However, every request you make to {{ site.formio }} returns a new token for the user so as long as a request is made within 1 week, there is no need to re-authenticate.
 
 #### Can I change when a token expires?
 You can configure the token expire time as an environment variable.
@@ -45,7 +45,7 @@ You can then copy and paste that URL in the browser where you will see the JSON 
 In order to login in to the preview section, you must first create an Admin or User record. See the question below on how to do so.
 
 #### How do I create an Admin/User for my project?
-To create an admin/user account for your application click on the Forms section in your Form.io project, then click on Admin/User form, then create an administrator record. You can then log into your app using that record.
+To create an admin/user account for your application click on the Forms section in your {{ site.formio }} project, then click on Admin/User form, then create an administrator record. You can then log into your app using that record.
 
 #### Can I create my forms from a JSON Schema?
 Yes, you can create a form from a JSON Schema. All of our platform is based on REST APIs so all you need to do is POST to the proper endpoint. For example, creating a form is
@@ -63,15 +63,15 @@ You can use the network tab in your browser's developer tools to watch exactly w
 #### What are “Existing Resource Fields”?
 Existing Resource Fields are just shallow copies of components within a Resource that can be reused to avoid redundancy. They do not link forms or resources in any way.
 
-#### Can the Form.io platform be embedded into my application?
+#### Can the {{ site.formio }} platform be embedded into my application?
 Yes, one of the huge benefits of using our product is that you can embed our form building, form rendering, form management, and data management capabilities right in with your own application. The following [codepen link](http://codepen.io/travist/full/xVyMjo/) illustrates our form builder within an easy embedded environment so I hope this gives you reassurance that we are well suited to do this.
 
 #### Can a report be created based on Form submission data?
-Reporting within your application is also something we provide. Here is the Data Grid component which you can embed within your own application that links directly with your Form.io project.
+Reporting within your application is also something we provide. Here is the Data Grid component which you can embed within your own application that links directly with your {{ site.formio }} project.
 https://github.com/formio/ngFormioGrid
 
 #### Can I upload files to your forms?
-Our file upload component works really well with all types of files including images or videos and allows you to capture images, upload them directly to Amazon S3, and then display then within your application. Additionally, when using a tablet or mobile device, users have the ability to upload files from pictures/videos taken on their device in real time.  Here is an example application that actually does this using Form.io.
+Our file upload component works really well with all types of files including images or videos and allows you to capture images, upload them directly to Amazon S3, and then display then within your application. Additionally, when using a tablet or mobile device, users have the ability to upload files from pictures/videos taken on their device in real time.  Here is an example application that actually does this using {{ site.formio }}.
 https://github.com/travist/groupselfie
 
 #### Can I search/filter submission data?

@@ -1,6 +1,6 @@
 ---
 title: Developer Info
-subtitle: Form.io API Documentation
+subtitle: API Documentation
 book: developer
 section: api
 weight: 1

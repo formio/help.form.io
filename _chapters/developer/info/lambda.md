@@ -7,7 +7,7 @@ weight: 60
 chapter: lambda
 layout: chapter
 ---
-There are many cases when you need to perform administrative tasks within your Form.io project, but do not wish to expose
+There are many cases when you need to perform administrative tasks within your {{ site.formio }} project, but do not wish to expose
 the permissions necessary for updates to the users of your application. The most common example
 of this is for Subscription based applications. Let's suppose that you wish to allow your users to sign up for subscriptions
 within your application, and based on them paying the fee, their account should be promoted in some way. Either through
@@ -17,7 +17,7 @@ project (give them more access), but cannot expose that API to the user who is l
 
 For this example, [AWS Lambda](https://aws.amazon.com/lambda) provides a very robust way to create a Proxy method which
 the application uses to perform the validation of the request (like through your payment processor) and then subsequently
-perform administrative API requests into the Form.io project. There is a lot of documents on the web that provide detail
+perform administrative API requests into the {{ site.formio }} project. There is a lot of documents on the web that provide detail
 on how to configure and utilize AWS Lambda, so below is some example Node.js code that can be placed within your Lambda
 function which will perform an administrative update to a record based on a user based authenticated request.
 
@@ -87,7 +87,7 @@ exports.handler = (event, context, callback) => {
 ```
 
 After you have the Lambda function created, you now just need to hook that up to the **AWS API Gateway** to create a
-serverless API proxy into your Form.io account.
+serverless API proxy into your {{ site.formio }} account.
 
 There are many applications for this capability, but this illustrates an example on how **AWS Lambda** can be used as an
-API Proxy into Form.io.
+API Proxy into {{ site.formio }}.

@@ -7,7 +7,7 @@ weight: 32
 chapter: emaillogin
 layout: chapter
 ---
-In addition to providing full authentication capabilities, Form.io also provides a very robust method for Automatic Logins via Email. There are many use cases where Email Login is utilized including, but not limited to...
+In addition to providing full authentication capabilities, {{ site.formio }} also provides a very robust method for Automatic Logins via Email. There are many use cases where Email Login is utilized including, but not limited to...
 
  - Email Registrations (where they must click on a link in their email to register)
  - Email Reset Password
@@ -54,7 +54,7 @@ This turns this email into something that looks like the following.
 ```
 
 ### Application Changes to handle Email Tokens
-Once you have the email being sent, this single sign on URL will direct them to the Serverless application which needs to handle the token. This requires a minor change within your application to accept the token and then reset the ```localStorage``` value with the new token. The Form.io library will then take it from there and authenticate all future requests with that token. You can make this change by adding the following to your ***/app/config.js*** file.
+Once you have the email being sent, this single sign on URL will direct them to the Serverless application which needs to handle the token. This requires a minor change within your application to accept the token and then reset the ```localStorage``` value with the new token. The {{ site.formio }} library will then take it from there and authenticate all future requests with that token. You can make this change by adding the following to your ***/app/config.js*** file.
 
 ```
 // Parse query string

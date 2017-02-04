@@ -8,7 +8,7 @@ layout: chapter
 ---
 
 #### Can I query resource data using my custom fields as parameters?
-Form.io offers flexible query capabilities which can be configured to query based on  variables like date parameters. All of the index endpoints use the Resource.js definitions that you can use to get the queries you want. You can look at that here.
+{{ site.formio }} offers flexible query capabilities which can be configured to query based on  variables like date parameters. All of the index endpoints use the Resource.js definitions that you can use to get the queries you want. You can look at that here.
 
 https://github.com/travist/resourcejs#filtering-the-results
 
@@ -22,7 +22,7 @@ Here is some code examples where we are doing this in an application.
 
 https://github.com/formio/formio-app-expensereport/blob/ec2bed69cc2f43d890d768f72ed4c591b4050cdc/src/app/factories/reloadFormioGrid.js#L18
 
-#### Internalizing Form.io using resource bundle files
+#### Internalizing {{ site.formio }} using resource bundle files
 For translations we are wrapping https://github.com/angular-translate/angular-translate so the process of setting it up is the same for us.
 
 Here are a couple ways of doing that:
@@ -39,13 +39,13 @@ This will register a new language to the translation provider. The Original Stri
 From then on use angular-translates language switching capability and the form will translate itself.
 
 Creating one time JWT tokens
-You can achieve this by creating a user accounts with passwords that only your server knows.  Since you will never send that password to the front end, this is secure since the communication is server-to-server.  You can then authenticate the users using only their email address and a password that only you know. I would actually recommend generating an API Key within your Form.io project settings.
+You can achieve this by creating a user accounts with passwords that only your server knows.  Since you will never send that password to the front end, this is secure since the communication is server-to-server.  You can then authenticate the users using only their email address and a password that only you know. I would actually recommend generating an API Key within your {{ site.formio }} project settings.
 
 https://monosnap.com/file/CfojMKtmTsWRlgyUZbUl8AmOOey35t
 
 You can then use this key for two purposes... 1.) To make requests to the API as the project owner (who has global admin privileges) and 2.) To serve as the password of all the users you create on the backend.
 
-You can then serve as the authentication proxy for Form.io by simply creating users with that password, and then logging them in using the same password. Here is a gist of what I am talking about.
+You can then serve as the authentication proxy for {{ site.formio }} by simply creating users with that password, and then logging them in using the same password. Here is a gist of what I am talking about.
 
 https://gist.github.com/travist/09c11ac0593f88cd3e9189d7c357c81c
 
@@ -87,7 +87,7 @@ There are some additional fields that can be part of the payload, but this is th
 
 
 #### Nested Data - Multiple Parents
-Form.io allows for nested data that can be utilized from a single or multiple parent data source. Where you would traditionally use a data object, like a SQL Table, you would create a resource within Form.io.
+{{ site.formio }} allows for nested data that can be utilized from a single or multiple parent data source. Where you would traditionally use a data object, like a SQL Table, you would create a resource within {{ site.formio }}.
 
  Example: You have an application that pulls from multiple data sources and is nested within one another.
 
@@ -117,7 +117,7 @@ Make sure you have the latest renderer library @ https://github.com/formio/ngFor
 
 bower install --save ng-formio
 
-Once you log in, you should see an item in your localStorage called formioToken.  This contains the JWT token necessary to authenticate with Form.io. You can do this manually or using the Formio api.
+Once you log in, you should see an item in your localStorage called formioToken.  This contains the JWT token necessary to authenticate with {{ site.formio }}. You can do this manually or using the Formio api.
 
 To manually send an API request, you just need to provide this token in the header called x-jwt-token.   Here is an example of a manual request using Postman.  http://take.ms/6TWXT
 
@@ -161,7 +161,7 @@ https://github.com/formio/ngFormBuilder/blob/master/src/components/checkbox.js#L
 This allows you to register new components, but also to modify properties of existing components.
 
 #### How are forms rendered using  formio directives? And the View/Edit/Delete tabs?
-When using the formio directives, the forms are rendered on the frontend based on the JSON schema generated on the backend. This allows for you to embed the html directive once into the page, and any modifications to the form on Form.io will have the changes reflected, without your intervention. As for the different CRUD operations, you will need to add the tabs yourself (if that’s what you want) but there are two main directives for singular submission work. The formio directive will allow you to create/read/update a submission depending on whether or not a submission object is present, and the formio-delete submission will allow you to delete an individual submission with a confirmation dialogue. For more information on our embed directives, see: https://help.form.io/api/#angular
+When using the formio directives, the forms are rendered on the frontend based on the JSON schema generated on the backend. This allows for you to embed the html directive once into the page, and any modifications to the form on {{ site.formio }} will have the changes reflected, without your intervention. As for the different CRUD operations, you will need to add the tabs yourself (if that’s what you want) but there are two main directives for singular submission work. The formio directive will allow you to create/read/update a submission depending on whether or not a submission object is present, and the formio-delete submission will allow you to delete an individual submission with a confirmation dialogue. For more information on our embed directives, see: https://help.form.io/api/#angular
 
 #### Manipulating DOM After Form Has Rendered
 1) Make sure you’re using the correct form load event, its “formLoad” not “formload”. The formLoad event is triggered after the api request has been made, but before the renderer turns the response into the interactive form. If you want to add something to the form, you can manually inject JSON during this event, and the renderer will add it to the form.
