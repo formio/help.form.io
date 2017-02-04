@@ -34,7 +34,7 @@ This will then show an Authentication form (/user/login) so that a user can log 
 ### Download Submission as PDF
 In addition to viewing the submission, the submission can also be downloaded as a PDF.
 
-![](/assets/img/formviewpdf.png)
+![](/assets/img/userguide/formviewpdf.png)
 
 ### Changing Theme
 The theme can also be changed dynamically using the ```theme=``` query parameter. Any theme from [Bootswatch](https://bootswatch.com/) can be provided here like so.
@@ -45,7 +45,7 @@ https://formview.io/#/examples/example?theme=paper
 
 This changes the form to look like this.
 
-![](/assets/img/formioformpaper.png)
+![](/assets/img/userguide/formioformpaper.png)
 
 ### IFrame Embed
 This form viewer is also used to embed forms using iframes. It contains a special library called [Seamless](https://github.com/travist/seamless) which will auto resize the iframe to the size of the form within the Parent page (the one doing the embedding). You can change the form to embed mode using the ```iframe=1``` parameter on the URL, which is what is used within the Form.io embed code as follows.
