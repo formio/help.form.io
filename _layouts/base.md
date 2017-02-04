@@ -38,7 +38,7 @@
       'developer/libraries/#ng-formio-grid': '/developer/libraries/ng-formio-grid/',
       'developer/libraries/#ng-formio-helper': '/developer/libraries/ng-formio-helper/',
       'developer/libraries/#ng-formio': '/developer/libraries/ng-formio/',
-      'intro': '/intro/welcome/'
+      'intro': '/intro/welcome/',
       'intro/#customizing': '/intro/appdev/',
       'intro/#explore': '/intro/explore/',
       'intro/#howworks': '/intro/howworks/',
