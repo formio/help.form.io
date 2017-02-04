@@ -17,6 +17,10 @@
   border-color: #ddd;
 }
 
+a.panel-title:hover, a.panel-title:focus {
+  color: #ddd;
+}
+
 header.docs-nav {
   background-color: #eee;
   background-repeat: unset;
