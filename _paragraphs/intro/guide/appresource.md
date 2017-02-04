@@ -13,6 +13,7 @@ We can register our **event** resource in our app pretty easily by adding an ent
 `/src/config.js`
 
 <small>
+
 ```
 angular.module('formioAppBasic').constant('AppConfig', {
   appUrl: APP_URL,
@@ -35,6 +36,7 @@ angular.module('formioAppBasic').constant('AppConfig', {
   }
 });
 ```
+
 </small>
 
 You will then copy the `/src/app/resources/User.js` file, rename it to **Event.js**, and paste it right next to User. You will then open up that file and rename the "UserResource" to "EventResource" like so.

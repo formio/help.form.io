@@ -3,7 +3,7 @@ formio: <strong>&lt;<span class="text-primary">form</span>.<span class="text-sec
 kramdown:
   input: GFM
 permalink: pretty
-baseUrl: https://help.form.io
+baseUrl: http://formio.github.io/help.form.io
 exclude:
   - CNAME
   - README.md
