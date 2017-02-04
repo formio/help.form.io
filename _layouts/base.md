@@ -252,7 +252,7 @@
       path += '/' + location.hash;
     }
     if (redirects[path]) {
-      window.location = redirects[path];
+      window.location = '{{ site.baseUrl }}' + redirects[path];
     }
   </script>
   <meta charset="utf-8">
