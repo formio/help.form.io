@@ -2,7 +2,7 @@
 title: Tutorials
 book: tutorials
 icon: fa fa-play-circle
-default-section: videos
+default-section: workflows
 default-chapter: welcome
 image:
 weight: 8

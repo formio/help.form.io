@@ -6208,7 +6208,8 @@ footer {
 /* First level of nav */
 .docs-sidenav {
   margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  overflow-y: auto; }
 
 /* All levels of nav */
 .docs-sidebar .nav > li > a {

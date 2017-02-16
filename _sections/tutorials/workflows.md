@@ -1,10 +1,10 @@
 ---
 title: Tutorials
-section-title: Videos
-section: videos
+section-title: Workflows
+section: workflows
 default-chapter: welcome
 book: tutorials
 image:
-weight: 2
+weight: 0
 layout: default
 ---
