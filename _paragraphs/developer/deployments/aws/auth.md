@@ -21,11 +21,17 @@ The steps to get started are as follows.
     **formio.dockercfg**
     <pre>
     {
-      "hub.docker.com": {
+      "https://index.docker.io/v1/": {
         "auth": "[YOUR AUTH KEY GOES HERE]",
         "email": "travis@form.io"
       }
     }
     </pre>
 
-  - You will now need to create an S3 bucket within your AWS Account and upload this file into this bucket. Be sure to remember both the bucket name as well as the filename which you will need later.
+  - Next you will find the S3 bucket that Elastic Beanstalk created within your AWS Account. This typically looks like the following when you go to **S3** section of your AWS Account.
+
+    <img src="/assets/img/developer/deployments/aws/elasticbeanstalks3.png" style="width:600px" />
+
+    If this bucket does not exist, then you may need to create a default Elastic Beanstalk deployment so that it will automatically create this bucket and configure it for Elastic Beanstalk use.
+
+  - Once you get this bucket created, you will now need to add your **formio.dockercfg** to this bucket and take note of the name of this bucket to configure the Dockerrun.aws.json

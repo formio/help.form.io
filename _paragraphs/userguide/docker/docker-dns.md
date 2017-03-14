@@ -1,11 +1,20 @@
 ---
-title: DNS
+title: DNS Configuration
 book: userguide
 chapter: docker
 slug: docker-dns
 weight: 50
 ---
 In order to run a docker version of the form.io server, a domain name needs to be set up for it. For testing purposes this may simply be localhost. However, one of the features of our server is that it allows having multiple projects on the same server. These can be accessed by subdomains or by the project path. To access a project by its path, use the format /project/{projectId}. You can get the project id by querying the /project endpoint after logging in to the server. (See Exploring Docker below).
+
+Every deployment needs the following 3 subdomains to function.
+
+{: .table .table-bordered .table-striped}
+| HostName | Description |
+|----------|-------------|
+| api.yourdomain.com | This subdomain points to the core API of the Form.io platform. |
+| formio.yourdomain.com | This points to the Main Form.io project which is required to login and manage your deployment. |
+| [YOURPROJECT].yourdomain.com | This points to the project within the deployment, which is your applications Form.io project. |
 
 For the following scenarios, assume the following project was created on the docker instance.
 
@@ -18,7 +27,7 @@ For the following scenarios, assume the following project was created on the doc
 ```
 
 #### Localhost
-For local testing, localhost would seem like a logical solution, however, since formio server relies on subdomains to manage projects and localhost does NOT support subdomains, it becomes a lot of work to constantly add additional lines to the /etc/hosts file each time a project is created.  
+For local testing, localhost would seem like a logical solution, however, since formio server relies on subdomains to manage projects and localhost does NOT support subdomains, it becomes a lot of work to constantly add additional lines to the /etc/hosts file each time a project is created.
 
 Instead, we recommend using a domain name with wildcard subdomain support already set up that points to 127.0.0.1. This will allow using a real domain name but will point at your localhost.
 

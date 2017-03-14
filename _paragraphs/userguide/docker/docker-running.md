@@ -5,7 +5,6 @@ chapter: docker
 slug: docker-server
 weight: 20
 ---
-
 #### Accessing the docker image
 Once on the commercial plan, you will have access to the docker repository. Our docker images are located on docker’s hub.
 
@@ -54,7 +53,7 @@ docker run -itd \
 #### Start the formio-server instance.
 Before running this command, replace all the CHANGEME secrets with your own custom random strings. This will ensure that the server remains secure.
 
-Set protocol, port and domain to the address where they will be accessible on the external network. For development it is recommended to use port 3000 and for production, use port 80. Configure in your domain name system to point that domain to the server running this docker engine. If you want to support subdomains, set the wildcard subdomain to also point at the server. See [#docker-dns](docker dns) for more information. 
+Set protocol, port and domain to the address where they will be accessible on the external network. For development it is recommended to use port 3000 and for production, use port 80. Configure in your domain name system to point that domain to the server running this docker engine. If you want to support subdomains, set the wildcard subdomain to also point at the server. See [#docker-dns](docker dns) for more information.
 
 **First time install**
 Set ADMIN_EMAIL and ADMIN_PASS the first time formio-server is run in a mongodb collection to set the primary account information.
@@ -62,14 +61,10 @@ ADMIN_EMAIL and ADMIN_PASS may be removed after the initial install.
 
 ```bash
 docker run -itd \
-  -e "PROTOCOL=http" \
-  -e "DOMAIN=localhost" \
-  -e "PORT=80" \
-  -e "JWT_SECRET=CHANGEME" \
-  -e "JWT_EXPIRE_TIME=240" \
-  -e "DB_SECRET=CHANGEME" \
   -e "ADMIN_EMAIL=admin@example.com" \
   -e "ADMIN_PASS=CHANGEME" \
+  -e "JWT_SECRET=CHANGEME" \
+  -e "DB_SECRET=CHANGEME" \
   --name formio-server \
   --network formio \
   --link formio-mongo:mongo \

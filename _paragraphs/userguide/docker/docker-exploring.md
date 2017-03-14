@@ -36,17 +36,17 @@ GET http://localhost:3000/project/5751c2df5717292c84f4211c/form
 Response:
 
 ```
-[  
-  {  
+[
+  {
     "_id":"5751c2e05717292c84f42120",
     "title":"User",
     "type":"resource",
     "name":"user",
     "path":"user",
     "project":"5751c2df5717292c84f4211c",
-    "components":[  
-      {  
-        "validate":{  
+    "components":[
+      {
+        "validate":{
           "required":true
         },
         "type":"email",
@@ -63,8 +63,8 @@ Response:
         "tableView":true,
         "input":true
       },
-      {  
-        "validate":{  
+      {
+        "validate":{
           "required":true
         },
         "type":"password",
@@ -79,7 +79,7 @@ Response:
         "tableView":false,
         "input":true
       },
-      {  
+      {
         "type":"button",
         "theme":"primary",
         "disableOnInvalid":true,
@@ -95,16 +95,16 @@ Response:
       }
     ]
   },
-  {  
+  {
     "_id":"5751c2e05717292c84f42121",
     "title":"User Login",
     "type":"form",
     "name":"userLogin",
     "path":"user/login",
     "project":"5751c2df5717292c84f4211c",
-    "components":[  
-      {  
-        "validate":{  
+    "components":[
+      {
+        "validate":{
           "required":true
         },
         "type":"email",
@@ -118,8 +118,8 @@ Response:
         "tableView":true,
         "input":true
       },
-      {  
-        "validate":{  
+      {
+        "validate":{
           "required":true
         },
         "type":"password",
@@ -132,7 +132,7 @@ Response:
         "tableView":false,
         "input":true
       },
-      {  
+      {
         "type":"button",
         "theme":"primary",
         "disableOnInvalid":true,
@@ -164,8 +164,8 @@ POST http://formio.localhost:3000/form/5751c2e05717292c84f42121/submission
 POST http://formio.localhost:3000/user/login/submission
 
 Payload:
-{  
-  "data":{  
+{
+  "data":{
     "email":ADMIN_EMAIL,
     "password":ADMIN_PASS
   }
@@ -202,5 +202,5 @@ Now that you have a jwt token, you can fully explore the API as an authenticated
 ```
 headers:
 x-jwt-token: (very long jwt hash)
-
 GET http://api.localhost:3000/project
+```
