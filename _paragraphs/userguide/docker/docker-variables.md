@@ -19,6 +19,8 @@ While we provide many variables to use during a deployment, the recommended conf
 | DB_SECRET | The database encryption secret | [DB SECRET] |
 | JWT_SECRET | The secret password for JWT token encryption. | [TOKEN SECRET] |
 
+**NOTE:** If you are hosting your Form.io API platform without SSL (for testing ONLY), then you will also need to provide the environment variable ```PROTOCOL``` set to the value of ```http```.
+
 #### All Configuration Variables
 
 Below are all the variables that you can set within your Docker deployment.
@@ -30,6 +32,7 @@ Below are all the variables that you can set within your Docker deployment.
 | MONGO_HIGH_AVAILABILITY | If your database is high availability (like from Mongo Cloud or Compose), then this needs to be set. | 1 |
 | ADMIN_EMAIL | The default administrator email | admin@example.com |
 | ADMIN_PASS | The default administrator password | [YOUR PASSWORD] |
+| PROTOCOL | The HTTP protocol to serve requests. Should be "http" or "https" | http |
 | DB_SECRET | The database encryption secret | [DB SECRET] |
 | DB_SECRET_OLD | If you need to change the DB_SECRET, set the old value here and it will decrypt with the old and encrypt with the new the next time the server is started. Once changed, you can remove the DB_SECRET_OLD. | [OLD DB SECRET] |
 | JWT_SECRET | The secret password for JWT token encryption. | [TOKEN SECRET] |
