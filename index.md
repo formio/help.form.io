@@ -53,7 +53,7 @@ summary: These four sections are designed to get you from being a new user, to b
         <li class="list-group-item"><a href="/developer/api/postman/">API</a></li>
         <li class="list-group-item"><a href="/developer/integrations/start/">Integrations</a></li>
         <li class="list-group-item"><a href="/developer/deployments/aws/">Deployments</a></li>
-        <li class="list-group-item"><a href="/developer/libraries/ng-formio/">Helper Libraries</a></li>
+        <li class="list-group-item"><a href="/developer/libraries/angular/">Helper Libraries</a></li>
       </ul>
     </div>
   </div>
@@ -67,7 +67,7 @@ summary: These four sections are designed to get you from being a new user, to b
         <li class="list-group-item"><a href="/tutorials/videos/walkthrough/">Complete Walkthrough</a></li>
         <li class="list-group-item"><a href="/tutorials/videos/basictutorial/">Basic Tutorials</a></li>
         <li class="list-group-item"><a href="/tutorials/videos/advancedtutorial/">Advanced Tutorials</a></li>
-        <li class="list-group-item"><a href="/tutorials/walkthroughs/humanresources/">Build a Human Resources App</a></li>
+        <li class="list-group-item"><a href="/intro/guide/">Build an Event Registration System</a></li>
         <li class="list-group-item"><a href="/tutorials/walkthroughs/servicetracker/">Build a Service Tracker App</a></li>
       </ul>
     </div>

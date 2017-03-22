@@ -74,6 +74,7 @@ Now that you have the authentication file in place, you are ready to create your
 | ADMIN_PASS | The default administrator password | [YOUR PASSWORD] |
 | DB_SECRET | The database encryption secret | [DB SECRET] |
 | JWT_SECRET | The secret password for JWT token encryption. | [TOKEN SECRET] |
+| PROTOCOL | Only use this if you are not behind https (for test environments only) | http |
 
   - When you are done, you can now press the <strong>Create Environment</strong> button at the bottom of the page to build your environment.
   - This will now create a new Environment within AWS for your deployment. You are now ready to attach your Domains to the deployment.
