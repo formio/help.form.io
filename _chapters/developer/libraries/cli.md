@@ -4,7 +4,7 @@ subtitle: Command Line Interface
 book: developer
 section: libraries
 chapter: cli
-weight: 200
+weight: 400
 layout: chapter
 ---
 The [{{ site.formio }} Command Line Interface](https://github.com/formio/formio-cli) is a great way to get the most out of the {{ site.formio }} tool. There are a number of different commands that help you interact with the service, migrate data, as well as deploy projects from one environment to another.

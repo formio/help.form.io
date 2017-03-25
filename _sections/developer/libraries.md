@@ -2,7 +2,7 @@
 title: Developer Info
 section-title: Libraries
 section: libraries
-default-chapter: angular
+default-chapter: javascript
 book: developer
 image:
 weight: 5
