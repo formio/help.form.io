@@ -65,6 +65,7 @@ docker run -itd \
   -e "ADMIN_PASS=CHANGEME" \
   -e "JWT_SECRET=CHANGEME" \
   -e "DB_SECRET=CHANGEME" \
+  -e "PROTOCOL=http" \
   --name formio-server \
   --network formio \
   --link formio-mongo:mongo \
@@ -72,6 +73,9 @@ docker run -itd \
   -p 3000:80 \
   formio/formio-server;
 ```
+
+**NOTE**
+If you are running this container in a production environment and have SSL enabled, then you will need to remove the Environment Variable ```PROTOCOL```
 
 #### Testing the installation
 You should now have an instance of the formio-server running in your environment. To test it, go to [http://localhost:3000](http://localhost:3000){:target="_blank"}. You should see a response with information about the primary project.
