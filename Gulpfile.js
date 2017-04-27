@@ -42,5 +42,6 @@ gulp.task('deploy:test', function() {
 gulp.task('deploy:prod', function() {
   var aws = require('../aws.json');
   aws.bucket = 'help.form.io';
+  aws.region = 'us-west-2';
   return gulp.src(['_site/**/*', '!**/node_modules/**']).pipe(s3(aws));
 });
