@@ -5,7 +5,10 @@ chapter: docker
 slug: docker-dns
 weight: 50
 ---
-In order to run a docker version of the form.io server, a domain name needs to be set up for it. For testing purposes this may simply be localhost. However, one of the features of our server is that it allows having multiple projects on the same server. These can be accessed by subdomains or by the project path. To access a project by its path, use the format /project/{projectId}. You can get the project id by querying the /project endpoint after logging in to the server. (See Exploring Docker below).
+In order to run a docker version of the form.io server, a domain name needs to be set up for it. There are now two options for configuring DNS for your docker server. You can run it using subdomains for multiple projects or run on a single domain and have projects as subdirectories of that domain.
+
+#### Subdomains
+When using subdomains, the server DNS must have the following three domains set up and an additional one per project OR have a wildcard subdomain entry in the DNS server. 
 
 Every deployment needs the following 3 subdomains to function.
 
@@ -26,7 +29,7 @@ For the following scenarios, assume the following project was created on the doc
 }
 ```
 
-#### Localhost
+##### Localhost
 For local testing, localhost would seem like a logical solution, however, since formio server relies on subdomains to manage projects and localhost does NOT support subdomains, it becomes a lot of work to constantly add additional lines to the /etc/hosts file each time a project is created.
 
 Instead, we recommend using a domain name with wildcard subdomain support already set up that points to 127.0.0.1. This will allow using a real domain name but will point at your localhost.
@@ -60,7 +63,7 @@ GET http://myproject.localhost:3000
 
 Each time a new project is added to the server for testing, be sure to add another entry to /etc/hosts.
 
-#### Public Domains
+##### Public Domains
 For publically available servers such as testing and production, set up a wildcard subdomain to point to the server. This will allow subdomains to route correctly to your server. For example, you should have something like this in your DNS settings:
 
 ```
@@ -77,3 +80,11 @@ GET https://myproject.example.com
 ```
 
 For all domains other than localhost it is best practice to set up SSL Certificates and run the server over https. This both keeps communication secure and also some browsers are starting to require https for certain cross browser requests.
+
+#### Subdirectories
+When using Subdirectories to refer to projects, simply set up a single domain and point it to the server. All projects will become subdirectories of that domain instead of subdomains. Be sure to select "Subdirectory" from the Project Path Type in the environment switcher.
+
+For example: **https://myformio.mydomain.com**
+
+#### Project Path
+Setting up for project path is identical to setting up for Subdirectories. Referring to the projects will be by absolute path instead of the project name alias.
