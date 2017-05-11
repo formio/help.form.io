@@ -14,28 +14,26 @@ We can register our **event** resource in our app pretty easily by adding an ent
 
 <small>
 
-```
-angular.module('formioAppBasic').constant('AppConfig', {
-  appUrl: APP_URL,
-  apiUrl: API_URL,
-  forms: {
-    userForm: APP_URL + '/user',
-    userLoginForm: APP_URL + '/user/login',
-    userRegisterForm: APP_URL + '/user/register',
-    eventRegisterForm: APP_URL + '/register'
-  },
-  resources: {
-    user: {
-      form: APP_URL + '/user',
-      resource: 'UserResource'
-    },
-    event: {
-      form: APP_URL + '/event',
-      resource: 'EventResource'
-    }
-  }
-});
-```
+    angular.module('formioAppBasic').constant('AppConfig', {
+      appUrl: APP_URL,
+      apiUrl: API_URL,
+      forms: {
+        userForm: APP_URL + '/user',
+        userLoginForm: APP_URL + '/user/login',
+        userRegisterForm: APP_URL + '/user/register',
+        eventRegisterForm: APP_URL + '/register'
+      },
+      resources: {
+        user: {
+          form: APP_URL + '/user',
+          resource: 'UserResource'
+        },
+        event: {
+          form: APP_URL + '/event',
+          resource: 'EventResource'
+        }
+      }
+    });
 
 </small>
 

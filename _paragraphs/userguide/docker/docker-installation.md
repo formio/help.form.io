@@ -16,7 +16,7 @@ If you are using a cloud hosted Docker Engine, please follow the appropriate ste
  * [https://aws.amazon.com/ecs/](Amazon Web Services)
  * [https://cloud.google.com/container-engine/docs/](Google Cloud Platform)
  * Many others
- 
+
 #### Using a Linux Server
 
 Docker Engine runs natively on the Linux architecture. Docker requires a 64-bit installation regardless of your Distrubution version. Additionally, your kernel must be 3.10 at minimum. The latest 3.10 minor version or a newer maintained version are also acceptable.
@@ -26,21 +26,15 @@ Docker Engine runs natively on the Linux architecture. Docker requires a 64-bit 
 ##### Quick install
 To do a quick install, run the following command. It will download, configure and install the Docker Engine on Linux hosts.
 
-```bash
-sudo curl -sSL https://get.docker.com/ | sh
-```
+    sudo curl -sSL https://get.docker.com/ | sh
 
 Any distrubutions running ```systemd```, which includes Ubuntu 15.04 and later, should run this command to ensure that the Docker Engine is started on reboot.
 
-```bash
-systemctl enable docker
-```
+    systemctl enable docker
 
 Optionally, If you would like to run docker commands without sudo, add your user to the docker group.
 
-```bash
-sudo usermod -aG docker myusername
-```
+    sudo usermod -aG docker myusername
 
 #### Using a Mac OS X computer
 

@@ -9,13 +9,10 @@ Use our [formio-cli](https://github.com/formio/formio-cli) tool to deploy to the
 
 Then type the following command on the command line.
 
-```
-npm install -g formio-cli
-```
+    npm install -g formio-cli
 
 Now you can use the formio command to deploy a project from one server to another server.
-```
-formio deploy https://myproject.form.io http://myproject.localhost:3000
-```
+
+    formio deploy https://myproject.form.io http://myproject.localhost:3000
 
 Each server will require authentication so you will be asked twice, once for the source server and once for the destination server.

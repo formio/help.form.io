@@ -12,43 +12,35 @@ Once on the commercial plan, you will have access to the docker repository. Our 
 
 Since the image is a private docker respository, you will need to log in with your docker account and test pulling the image. If you are unable to pull the image, please contact support with your username and account information.
 
-```bash
-docker login
-docker pull formio/formio-server
-```
+    docker login
+    docker pull formio/formio-server
 
 #### Create a docker network to contain all the docker instances.
 A typical Form.io installation includes a Redis, MongoDB, and a Node.js API Server. If your environment is fully dockerized, you can spin up the stack using the following example commands.
 
 This will create an isolated network for just the formio services that are required to run the server. In addition, it will provide for an easy way to link the services together.
 
-```bash
-docker network create formio
-```
+    docker network create formio
 
 #### Create the Mongo instance.
 Run mongodb with a volume mount for data. This will store the data in the host machine at /opt/mongodb. If the mongodb instance is restarte or replaced, the data still exists and can be restarted with a different mongodb instance.
 
 **On Mac OS** running native docker engine, be sure to add /opt/mongodb to File Sharing list in Docker->Preferences->File Sharing. You may use a different path if desired.
 
-```bash
-mkdir /opt/mongodb
-# Double check permissions on /opt/mongodb
-docker run -itd  \
-  --name formio-mongo \
-  --network formio \
-  --volume /opt/mongodb:/data/db \
-  mongo;
-```
+    mkdir /opt/mongodb
+    # Double check permissions on /opt/mongodb
+    docker run -itd  \
+      --name formio-mongo \
+      --network formio \
+      --volume /opt/mongodb:/data/db \
+      mongo;
 
 #### Create the Redis instance.
 
-```bash
-docker run -itd \
-  --name formio-redis \
-  --network formio \
-  redis;
-```
+    docker run -itd \
+      --name formio-redis \
+      --network formio \
+      redis;
 
 #### Start the formio-server instance.
 Before running this command, replace all the CHANGEME secrets with your own custom random strings. This will ensure that the server remains secure.
@@ -59,20 +51,18 @@ Set protocol, port and domain to the address where they will be accessible on th
 Set ADMIN_EMAIL and ADMIN_PASS the first time formio-server is run in a mongodb collection to set the primary account information.
 ADMIN_EMAIL and ADMIN_PASS may be removed after the initial install.
 
-```bash
-docker run -itd \
-  -e "ADMIN_EMAIL=admin@example.com" \
-  -e "ADMIN_PASS=CHANGEME" \
-  -e "JWT_SECRET=CHANGEME" \
-  -e "DB_SECRET=CHANGEME" \
-  -e "PROTOCOL=http" \
-  --name formio-server \
-  --network formio \
-  --link formio-mongo:mongo \
-  --link formio-redis:redis \
-  -p 3000:80 \
-  formio/formio-server;
-```
+    docker run -itd \
+      -e "ADMIN_EMAIL=admin@example.com" \
+      -e "ADMIN_PASS=CHANGEME" \
+      -e "JWT_SECRET=CHANGEME" \
+      -e "DB_SECRET=CHANGEME" \
+      -e "PROTOCOL=http" \
+      --name formio-server \
+      --network formio \
+      --link formio-mongo:mongo \
+      --link formio-redis:redis \
+      -p 3000:80 \
+      formio/formio-server;
 
 **NOTE**
 If you are running this container in a production environment and have SSL enabled, then you will need to remove the Environment Variable ```PROTOCOL```

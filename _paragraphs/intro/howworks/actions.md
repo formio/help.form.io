@@ -14,7 +14,7 @@ Here is an example screenshot of the Actions associated with a User Registration
 Here is a list of some actions that can be executed on every Form or Resource.
 
   - **Email** - Sending an email with the form information either to the person submitting the form or to a project administrator.
-  - **Save Submission - Saves the submission payload to either this form, or forward it along to a Resource
+  - **Save Submission** - Saves the submission payload to either this form, or forward it along to a Resource
   - **Login** - Authenticate a user by generating a JWT token for the submission payload that was submitted.
   - **Webhook** - Trigger a REST API call to an external system when an action is executed.
   - **Integrations** - We offer a number of integrations that will send the form submission data to 3rd party providers.
