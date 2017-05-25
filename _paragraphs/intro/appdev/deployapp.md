@@ -9,8 +9,8 @@ Once finished making modifications to an app, it is time to deploy it to a websi
 
 Building the App is relatively straightforward. If you have already set up the tools in the above section for modifying your app you should have Node, Git and Gulp installed. Then run this command.
 
-```
-  gulp build
+```shell
+    gulp build
 ```
 
 This will update the ```/dist``` folder with any changes you have made to the app.

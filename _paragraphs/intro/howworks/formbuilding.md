@@ -11,43 +11,45 @@ One major capability of Form.io is that it leverages an easy to drag-and-drop fo
 
 Our form builder, however, is very special where instead of building an HTML form, it instead generates a JSON schema representation of the form or resource. A very simple example of what a schema looks like is as follows.
 
+``` json
+{
+  "title": "Person",
+  "display": "form",
+  "type": "form",
+  "name": "person",
+  "path": "person",
+  "components": [
     {
-      "title": "Person",
-      "display": "form",
-      "type": "form",
-      "name": "person",
-      "path": "person",
-      "components": [
-        {
-          "type": "textfield",
-          "input": true,
-          "inputType": "text",
-          "label": "First Name",
-          "key": "firstName"
-        },
-        {
-          "type": "textfield",
-          "input": true,
-          "inputType": "text",
-          "label": "Last Name",
-          "key": "lastName"
-        },
-        {
-          "type": "email",
-          "key": "email",
-          "label": "Email",
-          "inputType": "email",
-          "input": true
-        },
-        {
-          "input": true,
-          "label": "Submit",
-          "key": "submit",
-          "action": "submit",
-          "type": "button"
-        }
-      ]
+      "type": "textfield",
+      "input": true,
+      "inputType": "text",
+      "label": "First Name",
+      "key": "firstName"
+    },
+    {
+      "type": "textfield",
+      "input": true,
+      "inputType": "text",
+      "label": "Last Name",
+      "key": "lastName"
+    },
+    {
+      "type": "email",
+      "key": "email",
+      "label": "Email",
+      "inputType": "email",
+      "input": true
+    },
+    {
+      "input": true,
+      "label": "Submit",
+      "key": "submit",
+      "action": "submit",
+      "type": "button"
     }
+  ]
+}
+```
 
 Here is a [Codepen demonstration](http://codepen.io/travist/pen/rjdebX/) of this JSON schema building that should help provide some working examples of how this functions.
 

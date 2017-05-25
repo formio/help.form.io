@@ -2,6 +2,9 @@ title : Form.io Help
 formio: <strong>&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;</strong>
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
 permalink: pretty
 baseUrl: http://formio.github.io/help.form.io
 exclude:

@@ -10,7 +10,7 @@ We will now add the **Event Registration** form to the event. Form Management ca
 
 ```/src/app.js```
 
-```
+```javascript
 .config([
   ...
   ...

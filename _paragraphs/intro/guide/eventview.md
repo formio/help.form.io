@@ -12,7 +12,7 @@ We can now alter the View page for our Event to show the information for that ev
 
 Now, inside of the **view.html** page, we can create our custom template for our Event as well as render the Event Registration form within that view. Like this...
 
-```
+```html
 <div class="row">
   <div class="col col-sm-6">
     <div class="panel panel-primary">
@@ -53,7 +53,7 @@ In this controller, we will do three things.
 
 Here is the code that does this. Take note of the comments which will help understand what code is doing what. Also, ignore the "..." since those are just there for brevity.
 
-```
+```javascript
 angular.module('formioAppBasic')
   .provider('EventResource', function() {
     return {
@@ -99,8 +99,8 @@ We now have a full working Event Management system, which even allows for other 
 
 If you would like to download the code behind this application, then go to <a class="btn btn-primary" href="https://github.com/formio/formio-app-eventmanager">Event Manager Github Page</a>. You can also bootstrap this application by typing the following command.
 
-```
-  npm install -g formio-cli
-  formio bootstrap formio/formio-app-eventmanager
+```shell
+npm install -g formio-cli
+formio bootstrap formio/formio-app-eventmanager
 ```
 

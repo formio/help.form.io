@@ -15,7 +15,7 @@ To install the **Basic Application** on your local machine, you will need to do 
   - Download the ZIP file of the [Basic Application from Github](https://github.com/formio/formio-app-basic/archive/master.zip)
   - Extract the ZIP download and then type the following.
 
-```
+```shell
   npm install
   bower install
 ```
@@ -26,7 +26,7 @@ To install the **Basic Application** on your local machine, you will need to do 
 
   - Now run the application by typing.
 
-```
+```shell
   gulp serve
 ```
 
