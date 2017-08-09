@@ -2,7 +2,7 @@
 title: Google Sheets
 book: developer
 section: integrations
-chapter: google-drive
+chapter: googledrive
 slug: google-sheet
 weight: 20
 ---
