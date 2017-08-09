@@ -2,7 +2,7 @@
 title: Refresh Token
 book: developer
 section: integrations
-chapter: google-drive
+chapter: googledrive
 slug: google-refreshtoken
 weight: 10
 ---
