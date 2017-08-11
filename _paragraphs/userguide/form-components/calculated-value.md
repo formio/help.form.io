@@ -12,6 +12,8 @@ If you field is within a datagrid, there is an additional variable available of 
 of the datagrid. You can access the values the same as with data as *row.myfieldkey*. The values are also in 
 *data.mydatagrid[0].myfieldkey* and *data.mydatagrid[1].myfieldkey* plus each additional row as the index.
 
+Also you have access to special util variable - library of useful functions. More information about *util* library could be find [here](https://github.com/formio/formio.js/wiki/Form-Utilities).
+
 Return the calculated value in the *value* variable and it will be set. Each time the form values change it will be recalculated.
 You do NOT need to watch form fields as you do for other custom logic in your form. It will automatically update.
 
