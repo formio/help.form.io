@@ -2,7 +2,7 @@
 title: Settings
 book: developer
 section: integrations
-chapter: google-drive
+chapter: googledrive
 slug: google-api-setting
 weight: 15
 ---
