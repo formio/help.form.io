@@ -11,10 +11,10 @@ Docker instances are run inside a Docker Engine. There are many options for wher
 
 If you are using a cloud hosted Docker Engine, please follow the appropriate steps to set up the formio server Docker container.
 
- * [https://cloud.docker.com/](Docker Cloud)
- * [https://www.joyent.com/triton](Joyent Triton)
- * [https://aws.amazon.com/ecs/](Amazon Web Services)
- * [https://cloud.google.com/container-engine/docs/](Google Cloud Platform)
+ * [Docker Cloud](https://cloud.docker.com/)
+ * [Joyent Triton](https://www.joyent.com/triton)
+ * [Amazon Web Services](https://aws.amazon.com/ecs/)
+ * [Google Cloud Platform](https://cloud.google.com/container-engine/docs/)
  * Many others
 
 #### Using a Linux Server
