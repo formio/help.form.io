@@ -3,7 +3,7 @@ title: Developer Info
 subtitle: Login with Auth0
 book: developer
 section: info
-weight: 33
+weight: 34
 chapter: auth0
 layout: chapter
 ---
