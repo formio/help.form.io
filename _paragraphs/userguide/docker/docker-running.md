@@ -57,6 +57,7 @@ ADMIN_EMAIL and ADMIN_PASS may be removed after the initial install.
       -e "JWT_SECRET=CHANGEME" \
       -e "DB_SECRET=CHANGEME" \
       -e "PROTOCOL=http" \
+      --restart unless-stopped \
       --name formio-server \
       --network formio \
       --link formio-mongo:mongo \
