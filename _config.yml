@@ -1,6 +1,7 @@
 title : Form.io Help
 formio: <strong>&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;</strong>
 markdown: kramdown
+excerpt_separator: ""
 highlighter: rouge
 kramdown:
   input: GFM
@@ -27,3 +28,5 @@ collections:
     permalink: /:path/
   paragraphs:
     output: false
+  liquid:
+    error_mode: lax
