@@ -33,6 +33,7 @@ Run mongodb with a volume mount for data. This will store the data in the host m
       --name formio-mongo \
       --network formio \
       --volume /opt/mongodb:/data/db \
+      --restart unless-stopped \
       mongo;
 
 #### Create the Redis instance.
@@ -40,6 +41,7 @@ Run mongodb with a volume mount for data. This will store the data in the host m
     docker run -itd \
       --name formio-redis \
       --network formio \
+      --restart unless-stopped \
       redis;
 
 #### Start the formio-server instance.
@@ -61,6 +63,7 @@ ADMIN_EMAIL and ADMIN_PASS may be removed after the initial install.
       --network formio \
       --link formio-mongo:mongo \
       --link formio-redis:redis \
+      --restart unless-stopped \
       -p 3000:80 \
       formio/formio-server;
 

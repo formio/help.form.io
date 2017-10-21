@@ -19,6 +19,7 @@ Now, you will need to configure your `nginx.conf` file. You will be setting up N
     server {
         listen       443 ssl;
         server_name  *.lvh.me;
+        client_max_body_size 20M;
         ssl_certificate      /usr/local/etc/nginx/nginx.crt;
         ssl_certificate_key  /usr/local/etc/nginx/nginx.key;
         location / {
