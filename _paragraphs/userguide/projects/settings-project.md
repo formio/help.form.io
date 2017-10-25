@@ -5,7 +5,7 @@ chapter: projects
 slug: settings-project
 weight: 30
 ---
-Users can configure the settings for their Projects by clicking the **Settings** tab within the Project at the top right of the page. The Project settings are used to configure [Actions](#actions). Project settings currently include:
+Users can configure the settings for their Projects by clicking the **Gear Icon**  within the Project at the top right of the page. The Project settings are used to configure [Actions](#actions). Project settings currently include:
 
 - General Settings
     - Here you can change the Title, Description of the Project, and CORS options.
