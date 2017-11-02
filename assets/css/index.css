@@ -6144,6 +6144,10 @@ h2[id] {
 h3[id] {
   color: #222; }
 
+h4 {
+  margin-top: 30px;
+}
+
 footer {
   padding: 40px 0;
   color: #999;
