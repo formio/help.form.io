@@ -16,7 +16,12 @@ There are three permission types for Submission Resource Permissions:
 
 #### Permission Assignment
 ---
-Submission Resource Permissions can be configured on any Form with a resource select component. In the Form permission editor, Submission Resource Access will be available for configuration. For each permission, you will see a unique list of each resource select component within the current Form. Selecting any resource for one of the permissions, will grant any selected resources on a new submission, that specific access to the submission.
+Field Based Resource Access can be configured on any Form with a resource select component. In the Form permission editor, Field Based Resource Access will be available for configuration. For each permission, you will see a unique list of each resource select component within the current Form. Selecting any resource for one of the permissions, will grant any selected resources on a new submission, that specific access to the submission.
 
 In the following example, the `users` resource select component is being assigned to the `Read` permission. On any following form submission, all of the selected `users` resources will be granted read access to that individual submission, regardless of the forms existing roles and permissions. The Submission Resource Permissions settings are configured on a per form basis, but the individual access is contained within each form submission.
-![](/assets/img/submissionpermissions.png)
+![](/assets/img/userguide/userguide-roles-resource.png)
+
+
+
+
+

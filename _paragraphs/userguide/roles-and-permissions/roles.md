@@ -28,11 +28,11 @@ The Anonymous Role is a special Role that defines access within an Application f
 
 #### Creating and Configuring Roles
 
-To create and configure a Role, navigate to the **Settings** tab located within a Project at the top right corner of the page and then click the **Roles** button on the left side. Select the **+New Role** button to add a new Role, delete a Role by selecting the **Trash Icon**, and edit a Role name and description by selecting the **Edit** button.
+To create and configure a Role, navigate to the **Access** tab located within a Project anchored navigation bar on the left. You can Select the **+New Role** button to add a new Role, delete a Role by selecting the **Trash Icon**, or edit a Role name and description by selecting the **Edit** button.
 
 <p class="note">When naming Roles, they are organized alphabetically and capital letters will be listed before lowercase letters. Staying consistent when naming your Roles will keep the Role list organized.</p>
 
-![3 roles](https://cloud.githubusercontent.com/assets/13321142/13097271/30b19550-d4e5-11e5-95ed-4eef84caa0de.png)
+![3 roles](/assets/img/userguide/userguide-roles-access-area.png)
 
 Additional Roles can be defined and added to a project at any time. In the next section, we will discuss Permissions associated with Roles to define access to the submissions within your application.
 

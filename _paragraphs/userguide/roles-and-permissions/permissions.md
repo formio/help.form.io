@@ -88,16 +88,16 @@ Once Roles have been created, there are a few different ways to configure and ma
 
 1.  Select Edit next to any role on your role Settings page:
 
-    ![4 edit role](https://cloud.githubusercontent.com/assets/13321142/13097272/30b2946e-d4e5-11e5-9104-a45a4245acc7.png)
+    ![4 edit role](/assets/img/userguide/userguide-roles-access-edit.png)
 
     This will give you a list of all forms or resources that hold the selected Role, along with their Permissions, within the entire project. Simply hit edit next to the form you want to configure and apply your changes:
 
-    ![5 edit permission](https://cloud.githubusercontent.com/assets/13321142/13097270/30b03340-d4e5-11e5-9d38-bc8e408b6447.png)
+    ![5 edit permission](/assets/img/userguide/userguide-roles-access-edit-permission.png)
 
-    Now you can select the Roles you want to associate with each Permission.Remember to save any changes made:
+    Now you can select the Roles you want to associate with each Permission. Remember to save any changes made:
 
-    ![6 permission](https://cloud.githubusercontent.com/assets/13321142/13097269/30af0c04-d4e5-11e5-8a2c-747b069bfcf1.png)
+    ![6 permission](/assets/img/userguide/userguide-roles-access-permission.png)
 
-2.  Assign permissions by clicking the **Permissions** button located at the top right of the page within a form or resource. Each permission may be assigned a role or more than one role, by clicking in the Roles field. After assigning roles to your Permissions, click the **Save** button at the bottom. Remember, you can always add, delete, and edit a role at anytime.
+2.  Assign permissions by clicking the **Permissions** button located at the top right of the page within a form or resource. Each permission may be assigned a role or more than one role, by clicking in the Roles field. Remember, you can always add, delete, and edit a role at anytime. (Changes are saved automatically)
 
 <p class="note"> The Project owner will have all permissions to any Form and Resource submissions by default.</p>
