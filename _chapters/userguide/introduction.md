@@ -13,6 +13,7 @@ To best understand the **&lt;<span class="text-primary">form</span>.<span class=
 - [**Projects**](/userguide/projects/)
 - [**Teams**](/userguide/teams/)
 - [**Roles and Permissions**](/userguide/roles-and-permissions/)
+- [**Staging and Form Versions**](/userguide/staging/)
 - [**Resources**](/userguide/resources/)
 - [**Forms**](/userguide/forms/)
 - [**Fields**](/userguide/form-components/)
