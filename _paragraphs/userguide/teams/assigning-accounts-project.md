@@ -5,15 +5,17 @@ chapter: teams
 slug: assigning-teams-project
 weight: 30
 ---
-To add a team to a project, make sure the project is upgraded to **Team Pro** or **Commercial**. Then from the portal home page, click the *Add Team* button on the project.
+Go to the Form.io portal home page and click on the  ```Teams``` button anchored to the top right of any project. 
 
-![](/assets/img/userguide/userguide-team-create.png)
+![](/assets/img/userguide/userguide-team-project.png)
 
-You will then be presented with a form to add a team to a project and assign a permission.
+Using the ```add a team``` drop down field, find and select any team you would like added to the active project.
 
-![2 team project setting](https://cloud.githubusercontent.com/assets/13321142/13097273/30b4e93a-d4e5-11e5-9517-83168143587d.png)
+![](/assets/img/userguide/userguide-team-project-add.png)
 
-Select which team you want to add and which permission. There are three options for permissions
+Please note that in order to add a team to a any project, that project must be a **Team Pro** or **Enterprise** level project. 
+
+Once a team has been added, you will be allowed to set the permissions of the team at a project level. There are three options for permissions 
 
 - Read - This will only allow the team to read form definitions
 
