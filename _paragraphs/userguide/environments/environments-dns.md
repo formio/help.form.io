@@ -1,11 +1,18 @@
 ---
-title: DNS Configuration
+title: DNS Setup
 book: userguide
-chapter: docker
-slug: docker-dns
-weight: 50
+chapter: environments
+slug: environments-dns
+weight: 60
 ---
 In order to run a docker version of the form.io server, a domain name needs to be set up for it. There are now two options for configuring DNS for your docker server. You can run it using subdomains for multiple projects or run on a single domain and have projects as subdirectories of that domain.
+
+#### Subdirectories
+When using Subdirectories to refer to projects, simply set up a single domain and point it to the server. All projects will become subdirectories of that domain instead of subdomains. Be sure to select "Subdirectory" from the Project Path Type in the environment switcher.
+
+For example: **https://myformio.mydomain.com**
+
+If using subdirectories, skip the Subdomains section.
 
 #### Subdomains
 When using subdomains, the server DNS must have the following three domains set up and an additional one per project OR have a wildcard subdomain entry in the DNS server.
@@ -68,11 +75,3 @@ Then, to access the project, use one of the following methods
     GET https://myproject.example.com
 
 For all domains other than localhost it is best practice to set up SSL Certificates and run the server over https. This both keeps communication secure and also some browsers are starting to require https for certain cross browser requests.
-
-#### Subdirectories
-When using Subdirectories to refer to projects, simply set up a single domain and point it to the server. All projects will become subdirectories of that domain instead of subdomains. Be sure to select "Subdirectory" from the Project Path Type in the environment switcher.
-
-For example: **https://myformio.mydomain.com**
-
-#### Project Path
-Setting up for project path is identical to setting up for Subdirectories. Referring to the projects will be by absolute path instead of the project name alias.

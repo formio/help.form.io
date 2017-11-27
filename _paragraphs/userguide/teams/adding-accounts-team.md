@@ -5,6 +5,13 @@ chapter: teams
 slug: adding-accounts-team
 weight: 20
 ---
-To add additional accounts to a team, go to the portal home page and click your team shown on the right. Team members must be registered Form.IO users.
+Currently teams are limited to registered users of the site; however, you can add additional team members at any time.
 
-Add more users to the team and click *Save*
+![](/assets/img/userguide/userguide-team-home.png)
+
+Using the ```add a person``` field anchored to the top right, you can 
+begin adding team members using their Form.io usernames. 
+
+![](/assets/img/userguide/userguide-team-adding.png)
+
+Much like the team owner, team admins have administrative privileges over team management meaning that team admins can both add and remove team members from a team as well as add a team to a project. It is important to note that this does not mean team admin members have additional privileges at the project level.
