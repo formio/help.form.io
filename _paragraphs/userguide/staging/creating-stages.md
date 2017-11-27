@@ -6,7 +6,7 @@ slug: creating-stages
 weight: 10
 ---
 To create a new stage, navigate inside of the project you wish extend. 
-Simply click the ```+ New Stage``` Tab at the top of the project.
+Simply click the ```+ New Stage``` tab at the top of the project.
 
 ![](/assets/img/userguide/userguide-stage-create-1.png)
 

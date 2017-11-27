@@ -26,4 +26,4 @@ using a stage deployment is the only way to make changes to the **Live** stage.
 
 ![](/assets/img/userguide/userguide-stage-deployment-4.png)
 
-Beyond whats been illustrated above, staging can be used to role back an active stage to any previous iteration. 
+Beyond what has been illustrated above, staging can be used to role back an active stage to any previous iteration. 
