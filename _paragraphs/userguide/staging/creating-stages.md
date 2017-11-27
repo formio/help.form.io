@@ -10,11 +10,11 @@ Simply click the ```+ New Stage``` Tab at the top of the project.
 
 ![](/assets/img/userguide/userguide-stage-create-1.png)
 
-Next, you'll need to name your stage in order to continue.
+In order to proceed, name the stage.
 
 ![](/assets/img/userguide/userguide-stage-create-2.png)
 
-Finally, click ```Add Stage``` and you're new stage has been added to your active project.
+Finally, click ```Add Stage``` button and the new stage will automatically be added to the active project.
 
 ![](/assets/img/userguide/userguide-stage-create-3.png)
 
