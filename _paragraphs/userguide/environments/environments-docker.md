@@ -1,12 +1,34 @@
 ---
-title: Running Containers
+title: Using Docker
 book: userguide
-chapter: docker
-slug: docker-server
+chapter: environments
+slug: environments docker
 weight: 20
 ---
+Docker instances are run inside a Docker Engine. There are many options for where and how to run a docker instance. Depending on which Docker Engine you are using, the formio server configuration will be different.
+
+#### Using Cloud Hosted Docker
+
+If you are using a cloud hosted Docker Engine, please follow the appropriate steps to set up the formio server Docker container.
+
+ * [Docker Cloud](https://cloud.docker.com/)
+ * [Joyent Triton](https://www.joyent.com/triton)
+ * [Amazon Web Services](https://aws.amazon.com/ecs/)
+ * [Google Cloud Platform](https://cloud.google.com/container-engine/docs/)
+ * [IBM Bluemix](https://www.ibm.com/cloud/)
+ * [Microsoft Azure](https://azure.microsoft.com/)
+
+We also have walkthroughs for some hosts. 
+
+ * [Amazon Web Services](/developer/deployments/aws)
+ * [IBM BlueMix](/developer/deployments/bluemix)
+
+#### Installing Docker on localhost for testing
+
+Download and install Docker from [https://docs.docker.com/engine/installation/#supported-platforms](https://docs.docker.com/engine/installation/#supported-platforms)
+
 #### Accessing the docker image
-Once on the commercial plan, you will have access to the docker repository. Our docker images are located on docker’s hub.
+Once on a team pro or enterprise plan, you will have access to the docker repository. Our docker images are located on docker hub.
 
 [https://hub.docker.com/r/formio/formio-server/](https://hub.docker.com/r/formio/formio-server/)
 
@@ -45,17 +67,14 @@ Run mongodb with a volume mount for data. This will store the data in the host m
       redis;
 
 #### Start the formio-server instance.
-Before running this command, replace all the CHANGEME secrets with your own custom random strings. This will ensure that the server remains secure.
+Before running this command, **you must** replace all the CHANGEME secrets with your own custom random strings. This will ensure that the server remains secure.
 
-Set protocol, port and domain to the address where they will be accessible on the external network. For development it is recommended to use port 3000 and for production, use port 80. Configure in your domain name system to point that domain to the server running this docker engine. If you want to support subdomains, set the wildcard subdomain to also point at the server. See [#docker-dns](docker dns) for more information.
+Set protocol, port and domain to the address where they will be accessible on the external network. For development it is recommended to use port 3000 and for production, use port 80.
 
-**First time install**
-Set ADMIN_EMAIL and ADMIN_PASS the first time formio-server is run in a mongodb collection to set the primary account information.
-ADMIN_EMAIL and ADMIN_PASS may be removed after the initial install.
+PORTAL_SECRET is the secret that will allow the form.io portal to communicate with this server. Please make a note of it as you will need it when connecting your project.
 
     docker run -itd \
-      -e "ADMIN_EMAIL=admin@example.com" \
-      -e "ADMIN_PASS=CHANGEME" \
+      -e "PORTAL_SECRET=CHANGEME" \
       -e "JWT_SECRET=CHANGEME" \
       -e "DB_SECRET=CHANGEME" \
       -e "PROTOCOL=http" \
@@ -72,4 +91,6 @@ ADMIN_EMAIL and ADMIN_PASS may be removed after the initial install.
 If you are running this container in a production environment and have SSL enabled, then you will need to remove the Environment Variable ```PROTOCOL```
 
 #### Testing the installation
-You should now have an instance of the formio-server running in your environment. To test it, go to [http://localhost:3000](http://localhost:3000){:target="_blank"}. You should see a response with information about the primary project.
+You should now have an instance of the formio-server running in your environment. To test it, go to [http://localhost:3000](http://localhost:3000){:target="_blank"}. You should see a response with an empty array since there will be no projects on your environment yet.
+
+Also test out [http://localhost:3000/status](http://localhost:3000/status){:target="_blank"} which will give you the build number and database schema version of your environment.
