@@ -20,5 +20,6 @@ To best understand the **&lt;<span class="text-primary">form</span>.<span class=
 - [**Actions**](/userguide/actions/)
 - [**APIs**](/developer/api/postman/)
 - [**Submissions**](/userguide/submissions/)
+- [**PDF Forms**](/userguide/pdf/)
 
 These major components are described below with additional information about how to use them.
