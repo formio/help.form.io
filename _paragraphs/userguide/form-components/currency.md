@@ -1,5 +1,5 @@
 ---
-title: Curreny
+title: Currency
 book: userguide
 chapter: form-components
 slug: currency
