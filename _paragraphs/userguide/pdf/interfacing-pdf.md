@@ -1,8 +1,8 @@
 ---
-title: PDF 2
+title: Interfacing with PDF Forms
 book: userguide
 chapter: pdf
-slug: pdf-2
+slug: interfacing-pdf
 weight: 20
 ---
 With a PDF Form constructed, users can now begin interfacing with the document by adding a variety 
