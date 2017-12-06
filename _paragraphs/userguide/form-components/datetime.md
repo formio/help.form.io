@@ -7,11 +7,15 @@ weight: 140
 ---
 Date/Time form components can be used to input dates, times or both dates and times.
 
-![22 date time](https://cloud.githubusercontent.com/assets/13321142/13097251/3071c75e-d4e5-11e5-87eb-ead6cecce9de.png)
+![22 date time](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/formio-date-time-help-form.png)
 
 #### Label
 
 The label for this field that will appear next to it.
+
+#### Default value
+
+The default value for the date component. You can put `new Date();` for the current date or use a few of Moment.js functions to set the date to a specific date. For example: `moment().add(50, 'days').calendar();` You can use the add or subtract function to go forward or backwards in dates.
 
 #### Placeholder
 
@@ -116,4 +120,3 @@ In addition, `input` variable is set to the value that has been entered in the f
 
 
 You can also reference other resources and properties for validation. For example, if there is a user resource with a password field, you can use its value with `user.password`
-

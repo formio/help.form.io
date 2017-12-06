@@ -10,14 +10,14 @@
   "devDependencies": {
     "angular-mocks": ">=1.3.6"
   },
-  "version": "1.6.7",
-  "_release": "1.6.7",
+  "version": "1.6.8",
+  "_release": "1.6.8",
   "_resolution": {
     "type": "version",
-    "tag": "1.6.7",
-    "commit": "71be966c26e0b158d8fa186e70fba94e991eb06e"
+    "tag": "1.6.8",
+    "commit": "64e75cbdffc9e1387b5ca1421c85fe884b437e87"
   },
-  "_source": "git://github.com/angular-ui/ui-mask.git",
-  "_target": "~1.6.6",
+  "_source": "https://github.com/angular-ui/ui-mask.git",
+  "_target": "~1.6.8",
   "_originalSource": "angular-ui-mask"
 }

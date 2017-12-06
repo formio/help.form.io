@@ -31,7 +31,17 @@ Enter a JSON Array to use. It should be formatted as an array of objects with na
 
 ##### URL
 
-Enter a url with a data source in JSON Array format.
+Enter a url with a data source in JSON Array format. This can be used to populate a Select list with external JSON values. For example, suppose you wish to populate your select drop down with a list of all States within the U.S. You can use an external JSON array like the following.
+
+```
+https://cdn.rawgit.com/mshafrir/2646763/raw/states_titlecase.json
+```
+
+And place that within the URL of the select drop down <strong>Data Source URL</strong>. You will then need to provide the <strong>Value Property</strong> as well as change the <strong>Item Template</strong> so that it will pull the right value as well as display correctly within the dropdown. The following image shows how the configuration would look for this particular setup.
+
+![Select URL JSON Source](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/userguide-select-url.png)
+
+This will now turn your select dropdown into a list of available States within the US.
 
 #### Value Property
 
@@ -58,4 +68,67 @@ Sets the `tabindex` attribute of this component to override the tab order of the
 #### Required
 
 If checked, the field will be required to have a value.
+
+#### Dynamic Select Filtering
+
+A very common use case that many people have in forms is to dynamically filter a Select dropdown based on the selection of another select dropdown. The typicaly usecase is a form that provides the Make, Model, and Year of automobiles where when you select the Make dropdown, it filters the Model dropdown for those that are within that Make. This functionality can be achieved using the following method. We will use the Make, Model, Year as an example use case for this docs.
+
+Step 1: Create a Make Resource to hold all of the vehicle makes.
+  ![Create Vehicle Resource](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy1.png)
+ 
+ Step 2: Create some Vehicle make records.
+  ![Create Vehicle Makes](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy2.png)
+
+Step 3: Create a Model Resource to hold all of the vehicle models.
+  ![Create Vehicle Model](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy3.png)
+
+Step 4: Create some Vehicle model records.
+  ![Create Vehicle Model](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy3b.png)
+
+Step 5: Create the Vehicle Resource to hold all of the vehicles.
+  ![Create Vehicle Resource](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy4.png)
+
+ with the following settings for Make:
+
+Data Resource Type: Resource | Resources: Make  | Value: Make
+
+  ![Vehicle Make Settings](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy5.png)
+
+and the following settings for Model
+
+Data Resource Type: Resource | Resources: Model  | Value: Model  |  Refresh on: Make
+
+Input a Filter Query: data.make={{ data.make }}
+  
+  ![Vehicle Model Settings](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy6.png)
+
+Step 6: Create a bunch of records within Vehicle resource.
+  ![Create Vehicle Records](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy7.png)
+
+Step 7: Create a new form called Vehicle Select
+  ![Vehicle Select Form](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy8.png)
+
+Step 8: Add the Make dropdown with the following field settings.
+
+Data Resource Type: Resource | Resources: Make  | Value: Make
+ 
+  ![Make Field](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy9.png)
+
+Step 9: Add the Model dropdown
+
+Data Resource Type: Resource | Resources: Model  | Value: Model  |  Refresh on: Make
+
+Input a Filter Query: data.make={{ data.make }}
+
+  ![Model Field](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy10.png)
+
+Step 10: Add the Year dropdown
+
+Data Resource Type: Resource | Resources: Vehicle  | Value: Year  |  Refresh on: Model
+
+Input a Filter Query: data.make={{ data.make }}&data.model={{ data.model }}
+ 
+  ![Year Field](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/userguide/formio-mmy11.png)
+
+You are done! Your form now will dyanamically filter based on what is selected.
 

@@ -25,7 +25,7 @@ The method of authentication to use with Office 365.
 
 This method will use the currently logged in user's OAuth token to authenticate with Office 365. This effectively logs into Office 365 as the current user, and will store all calendar events under *their account*. This is useful if your users will be logging in through Office 365, and you want them to manage their own calendar events.
 
-For more information on setting up Office 365 OAuth, see the [OAuth guide](/integrations/#oauth).
+For more information on setting up Office 365 OAuth, see the [OAuth guide](/developer/integrations/oauth/).
 
 <p class="note" markdown="1">OAuth Delegated **requires** that users log in via Office 365 OAuth.</p>
 
@@ -33,7 +33,7 @@ For more information on setting up Office 365 OAuth, see the [OAuth guide](/inte
 
 This method will use a client certificate to perform server-to-server authentication with Office 365. This effectively logs into Office 365 as an application, and will store all calendar events in a *single account*. This is useful if you do not want to require that your users log into **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** via Office 365 OAuth, and you want to manage your calendar events from a single location.
 
-For more information on setting up Office 365 client certificates, see the [Office365 guide](/integrations/#office365).
+For more information on setting up Office 365 client certificates, see the [Office365 guide](/developer/integrations/office365/).
 
 #### Subject
 

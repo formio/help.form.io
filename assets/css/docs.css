@@ -21,6 +21,10 @@ h3[id] {
     color: #222;
 }
 
+h4 {
+    margin-top: 30px;
+}
+
 footer {
     padding: 40px 0;
     color: #999;
@@ -50,6 +54,21 @@ footer {
 }
 .docs-header .container {
     position: relative;
+}
+.docs-header ul {
+    margin-top: 20px;
+    font-size: 14px;
+}
+.docs-header ul.nav-tabs>li>a {
+    background-color: #3a7530;
+    color: #eee;
+}
+.docs-header ul.nav-tabs>li.active>a {
+    background-color: #fff;
+    color: #555;
+}
+.docs-header.is-section {
+    padding-bottom: 0px;
 }
 
 @media (min-width: 768px) {
@@ -125,6 +144,9 @@ footer {
 .docs-sidebar .nav .nav {
     display: none; /* Hide by default, but at >768px, show it */
     padding-bottom: 10px;
+}
+.docs-sidebar .nav .nav.active {
+    display: inherit;
 }
 .docs-sidebar .nav .nav > li > a {
     padding-top: 1px;

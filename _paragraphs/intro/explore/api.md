@@ -5,10 +5,10 @@ weight: 305
 chapter: explore
 slug: api
 ---
-As forms and resources are created, a Rest API is automatically created for it. This page shows the API details so that it can easily be explored.
+At its core, Form.io is a powerful API platform that can be solely used as the Data management platform for your Serverless application. The API for each project is dynamically generated based on the JSON schema definitions of the Forms and Resources within that project. As an example, for the [Service Tracker](https://github.com/formio/formio-app-servicetracker) application, the API generated looks like the following.
 
-![](/assets/img/intro/intro-explore-api.png)
+![](/assets/img/userguide/service-api.png)
 
-Each endpoint can be directly queried from the endpoints. Use caution as this is against live data.
- 
-Use this page to experiment with how to access form data. For more information go to the [Developer API](/api/) Guide.
+In addition to the Forms and Resource API's that are automatically generated, there exists additional **core** API's that serve as the underlying structure for the Project. This **core** API is documented on our [Form.io Postman Documentation](https://documenter.getpostman.com/view/684631/formio-api/2Jvuks) page.
+
+Now that we are comfortable with the Portal, you are now ready to begin developing your application.

@@ -8,10 +8,14 @@
     "gulp": "^3.9.0",
     "gulp-filter": "^3.0.1",
     "gulp-s3": "^0.3.0",
+    "gulp-sass": "^3.1.0",
     "vinyl-transform": "^1.0.0",
     "wiredep": "^2.2.2"
   },
   "scripts": {
+    "deploy:test": "bundle exec jekyll build --config _config.yml,_config.test.yml && gulp deploy:test",
+    "deploy:prod": "bundle exec jekyll build --config _config.yml,_config.prod.yml && gulp deploy:prod",
+    "serve": "bundle exec jekyll serve --config _config.yml,_config.dev.yml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/formio/help.form.io/issues"
   },
-  "homepage": "https://github.com/formio/help.form.io#readme"
+  "homepage": "https://github.com/formio/help.form.io#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "bootswatch": "^3.3.7"
+  }
 }

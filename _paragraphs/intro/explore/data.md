@@ -5,18 +5,15 @@ weight: 303
 chapter: explore
 slug: data
 ---
-The Data page has two purposes. The first is to show the API usage for a project and the second is to allow viewing form submission data for a project.
+Attached to every **Form** and **Resource** is a **Data** section which provides you Data Management capabilities on a per-form basis.
 
-#### Analytics
+![](/assets/img/userguide/datagrid.png)
 
-The analytics data for a project shows the number of submission calls that have occurred. All API operations dealing with submissions, including Create, Read, Update, and Delete each count as one API operation. Any operations on the form definition do not count as an API operation.
+This allows any Administrator the ability to gain visibility into the data being collected as well as query the results using a per-column filtering capability.
 
-Analytics data can be drilled down into by clicking on the dot or using the dropdown to zoom in on the data.
+<div class="well">
+  <h3><i class="fa fa-info-circle"></i> Pro Tip</h3>
+  <p>The <strong>Data</strong> grid is actually hooked up to the <a href="https://documenter.getpostman.com/view/684631/formio-api/2Jvuks#Submission-API">Form.io Submission API</a>, which means that any queries and advanced reporting capabilities that can be achieved with our data grid, can also be achieved with our Submission API. Inspect your browsers Network activity to view the actual API requests being made as you use the Data grids advanced features to get a sense of the power behind it.</p>
+</div>
 
-#### Data Grid
-
-Click on any Resource or Form to view the data that has been submitted to the corresponding API. This data is displayed in a data grid that allows filtering, sorting and editing the data. Click the arrow to the right of each column to sort or filter that column.
-
-![](/assets/img/intro/intro-explore-data.png)
-
-You can also export the full data as a CSV or JSON file using this page.
+In addition to viewing the data within the Grid, you can also **Export** the submission data in either CSV format or raw JSON. Each of these exports are "streaming" exports which means they can also be piped into other processing tools for high performance data processing operations.

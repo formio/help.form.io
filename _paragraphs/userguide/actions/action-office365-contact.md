@@ -25,7 +25,7 @@ The method of authentication to use with Office 365.
 
 This method will use the currently logged in user's OAuth token to authenticate with Office 365. This effectively logs into Office 365 as the current user, and will store all contacts under *their account*. This is useful if your users will be logging in through Office 365, and you want them to manage their own contacts.
 
-For more information on setting up Office 365 OAuth, see the [OAuth guide](/integrations/#oauth).
+For more information on setting up Office 365 OAuth, see the [OAuth guide](/developer/integrations/oauth/).
 
 <p class="note" markdown="1">OAuth Delegated **requires** that users log in via Office 365 OAuth.</p>
 
@@ -33,9 +33,9 @@ For more information on setting up Office 365 OAuth, see the [OAuth guide](/inte
 
 This method will use a client certificate to perform server-to-server authentication with Office 365. This effectively logs into Office 365 as an application, and will store all contacts in a *single account*. This is useful if you do not want to require that your users log into **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** via Office 365 OAuth, and you want to manage your contacts from a single location.
 
-For more information on setting up Office 365 client certificates, see the [Office365 guide](/integrations/#office365).
+For more information on setting up Office 365 client certificates, see the [Office365 guide](/developer/integrations/office365/).
 
 #### Office 365 Fields
 
 These are all the Office 365 Contact fields you may map your form components to. For example, mapping the Email Address field to an Email component in your form will set the contact's Email Address field with the data submitted in the Email component.
-    
+

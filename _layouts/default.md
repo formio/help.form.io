@@ -1,11 +1,23 @@
 ---
 layout: wrapper
 ---
-{% if page.title %}
-<div class="docs-header"tabindex="-1">
+<div class="docs-header" tabindex="-1">
+{% if page.summary %}
   <div class="container">
     <h1>{{ page.title }}</h1>
     <p>{{ page.summary }}</p>
+  </div>
+{% endif %}
+</div>
+{% if page.section %}
+<div class="section-header">
+  <div class="container">
+    {% assign sections = (site.sections | where: "book" , page.book | sort: "weight") %}
+    <ul class="nav nav-tabs">
+    {% for section in sections %}
+      <li role="presentation" {% if section.section == page.section %}class="active"{% endif %}><a href="{{ site.baseUrl }}/{{ section.book }}/{{ section.section }}/{{ section.default-chapter }}">{{ section.section-title }}</a></li>
+    {% endfor %}
+    </ul>
   </div>
 </div>
 {% endif %}
