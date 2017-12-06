@@ -1,8 +1,8 @@
 ---
-title: Interfacing with PDF Forms
+title: Creating PDF Forms
 book: userguide
 chapter: pdf
-slug: interfacing-pdf
+slug: creating-pdf
 weight: 10
 ---
 At their heart, PDFs are just fancy forms. So in order to get started, simply select ```+ New Form``` from
