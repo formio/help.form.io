@@ -27,15 +27,15 @@ Enter the from email address for the emails.
 
 #### To
 
-Enter the email addresses to send to. You can use fields from the form by using `&#123;&#123; data.email &#125;&#125;` where the field name is email.
+Enter the email addresses to send to. You can use fields from the form by using <code>&#123;&#123; data.email &#125;&#125;</code> where the field name is email.
 
 #### Subject
 
-The subject of the email. You may use fields from the form using `&#123;&#123; data.fieldname &#125;&#125;`
+The subject of the email. You may use fields from the form using <code>&#123;&#123; data.fieldname &#125;&#125;</code>
 
 #### Message
 
-The message in the email. You may use fields from the form using `&#123;&#123; data.fieldname &#125;&#125;`
+The message in the email. You may use fields from the form using <code>&#123;&#123; data.fieldname &#125;&#125;</code>
 
 ### Nunjucks Templating
 All of the email fields are sent through a templating engine called [Nunjucks](https://mozilla.github.io/nunjucks/). It is recommended that you read through the documentation of this templating language to understand how it can be utilized to produce very complex templates for your emails using form data. This documentation can be found @ [https://mozilla.github.io/nunjucks/templating.html](https://mozilla.github.io/nunjucks/templating.html). You can use the following variables which are provided to each template.

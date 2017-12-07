@@ -7,7 +7,7 @@ weight: 140
 ---
 Date/Time form components can be used to input dates, times or both dates and times.
 
-![22 date time](https://raw.githubusercontent.com/formio/help.form.io/gh-pages/assets/img/formio-date-time-help-form.png)
+![22 date time](/assets/img/formio-date-time-help-form.png)
 
 #### Label
 
