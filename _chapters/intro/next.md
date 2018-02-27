@@ -13,10 +13,6 @@ So now that you have a good idea on how {{ site.formio }} works, here is a good 
     <h4 class="list-group-item-heading">Complete Walkthrough Tutorial</h4>
     <p class="list-group-item-text">This guide walks you through building an application using {{ site.formio }} projects.</p>
   </a>
-  <a class="list-group-item">
-    <h4 class="list-group-item-heading">Online Videos</h4>
-    <p class="list-group-item-text">Coming Soon</p>
-  </a>
   <a href="https://github.com/formio" class="list-group-item">
     <h4 class="list-group-item-heading">Github Source Code</h4>
     <p class="list-group-item-text">All of the source code provided with love from {{ site.formio }}.</p>
