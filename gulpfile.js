@@ -34,13 +34,13 @@ gulp.task('deploy:howitworks', function () {
 });
 
 gulp.task('deploy:test', function() {
-  var aws = require('../aws.json');
+  var aws = require('./aws.json');
   aws.bucket = 'help.test-form.io';
   return gulp.src(['_site/**/*', '!**/node_modules/**']).pipe(s3(aws));
 });
 
 gulp.task('deploy:prod', function() {
-  var aws = require('../aws.json');
+  var aws = require('./aws.json');
   aws.bucket = 'help.form.io';
   aws.region = 'us-west-2';
   return gulp.src(['_site/**/*', '!**/node_modules/**']).pipe(s3(aws));
