@@ -15,6 +15,6 @@ Let's create an Event Registration system in 60 minutes!
 ### Relevant links
 - [**Portal Login**](https://portal.form.io/#/)
 - [**Video Presentation**](http://travistidwell.com/presentations/eventmanager/#/)
-- [**Angular 2+ Wreapper**](https://github.com/formio/angular-formio)
+- [**Angular 2+ Wrapper**](https://github.com/formio/angular-formio)
 - [**The Starter Kit**](https://github.com/formio/angular-app-starterkit)
 - [**Core Renderer**](https://github.com/formio/formio.js)
