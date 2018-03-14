@@ -7,7 +7,7 @@ layout: default
   <div class="alert alert-info" role="alert"><p><strong>Important Note:</strong> {{ page.note }}</p></div>
   {% endif %}
   {{ page.content | markdownify }}
-  {% assign paragraphs = (site.paragraphs | where: "chapter", page.chapter | sort: "weight") %}
+  {% assign paragraphs = site.paragraphs | where: "chapter", page.chapter | sort: "weight" %}
   {% for paragraph in paragraphs %}
   <div class="docs-section">
     <h3 id="{{ paragraph.slug }}">{{ paragraph.title }}</h3>
