@@ -210,11 +210,6 @@
       'developer/integrations/#oauth': '/integrations/oauth/',
       'developer/integrations/#office365': '/integrations/office365/',
       'developer/integrations/#start': '/integrations/start/',
-      'developer/libraries': '/developer/frameworks/#angular/',
-      'developer/libraries/#ng-formio-builder': '/developer/frameworks/#angular/',
-      'developer/libraries/#ng-formio-grid': '/developer/frameworks/#angular/',
-      'developer/libraries/#ng-formio-helper': '/developer/frameworks/#angular/',
-      'developer/libraries/#ng-formio': '/developer/frameworks/#angular/',
       'developer/api/#formio-account': '/developer/api/',
       'developer/api/#project-user': '/developer/api/',
       'developer/api/#create': '/developer/api/',
@@ -272,11 +267,7 @@
       'developer/integrations/#linkform': '/integrations/oauth/#linkform',
       'developer/integrations/#msoffice365': '/integrations/oauth/#msoffice365',
       'developer/integrations/#settings': '/integrations/oauth/#settings',
-      'developer/integrations/#twitter': '/integrations/oauth/#twitter',
-      'developer/libraries/#actions': '/developer/frameworks/#angularjs',
-      'developer/libraries/#actions': '/developer/frameworks/#angularjs',
-      'developer/libraries/#actions': '/developer/frameworks/#angularjs',
-      'developer/libraries/#actions': '/developer/frameworks/#angularjs'
+      'developer/integrations/#twitter': '/integrations/oauth/#twitter'
     };
     if (location.hash) {
       path += '/' + location.hash;
