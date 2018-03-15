@@ -49,11 +49,10 @@ summary: These four sections are designed to get you from being a new user, to b
         <p>This section contains detailed information on how to develop applications on top of the Form.io platform.</p>
       </div>
       <ul class="list-group">
-        <li class="list-group-item"><a href="/developer/info/welcome/">Application Development</a></li>
-        <li class="list-group-item"><a href="/developer/api/postman/">API</a></li>
-        <li class="list-group-item"><a href="/developer/integrations/start/">Integrations</a></li>
-        <li class="list-group-item"><a href="/developer/deployments/aws/">Deployments</a></li>
-        <li class="list-group-item"><a href="/developer/libraries/angular/">Helper Libraries</a></li>
+        <li class="list-group-item"><a href="/developer/info/">Application Development</a></li>
+        <li class="list-group-item"><a href="/developer/frameworks/">Frontend Libraries</a></li>
+        <li class="list-group-item"><a href="/developer/api/">API</a></li>
+        <li class="list-group-item"><a href="/integrations/start/">Integrations</a></li>
       </ul>
     </div>
   </div>
@@ -67,6 +66,7 @@ summary: These four sections are designed to get you from being a new user, to b
         <li class="list-group-item"><a href="/tutorials/videos/walkthrough/">Complete Walkthrough</a></li>
         <li class="list-group-item"><a href="/tutorials/videos/basictutorial/">Basic Tutorials</a></li>
         <li class="list-group-item"><a href="/tutorials/videos/advancedtutorial/">Advanced Tutorials</a></li>
+        <li class="list-group-item"><a href="/tutorials/deployment/aws/">Deployments</a></li>
         <li class="list-group-item"><a href="/intro/guide/">Build an Event Registration System</a></li>
         <li class="list-group-item"><a href="/tutorials/walkthroughs/servicetracker/">Build a Service Tracker App</a></li>
       </ul>
