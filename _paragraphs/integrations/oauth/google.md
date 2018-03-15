@@ -3,7 +3,7 @@ title: Google
 book: integrations
 chapter: oauth
 slug: google
-weight: 28
+weight: 80
 ---
 Login to Google and visit the [Developer page](https://console.developers.google.com/).
 

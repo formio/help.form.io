@@ -1,16 +1,35 @@
 ---
-title: Add Oauth Action to Form
+title: Add OAuth Action to Form
 book: integrations
 chapter: oauth
 slug: action
-weight: 120
+weight: 30
 ---
-Click on the *Actions* tab for the **User Register Form**.
+Edit the Actions for the User Login Form
+
 Add a new OAuth Action.
 
-![](/assets/img/oauth/project-form-actions.png)
+### Remote Authentication
 
-Fill in the settings as shown below. For more information on what these settings do, see the [OAuth Action](/userguide/actions/#action-oauth) in the User's Guide.
+If you are using remote authentication then select that in the action and select your OAuth provider that you configured in the project settings. Make sure to also select which OAuth button to associate with the action.
+
+Finally, assign roles based on the external user properties. You can map any OAuth claim value to a property. For example, if the data comes back as
+```json
+{
+  name: 'joe',
+  group: 'admins'
+}
+```
+
+You can map:
+* Claim: group
+* Value: 'admins'
+* Role: Administrator
+
+This will give administrator to anyone who has a claim of group: 'admins'
+
+### Resource Authentication
+To use Resource authentication, fill in the settings as shown below. For more information on what these settings do, see the [OAuth Action](/userguide/actions/#action-oauth) in the User's Guide.
 
 ![](/assets/img/oauth/project-register-oauth-action-edit.png)
 

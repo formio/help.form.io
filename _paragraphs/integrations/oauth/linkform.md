@@ -3,7 +3,7 @@ title: Create a Link Form
 book: integrations
 chapter: oauth
 slug: linkform
-weight: 130
+weight: 40
 ---
 At this point, your project is completely set up to use OAuth authentication! Once you embed the User Register and User Login forms in your application, users will be able to use the OAuth provider you configured to login. For information on how to embed forms into your application, see [Application Embedding](/developer/info/angular/).
 

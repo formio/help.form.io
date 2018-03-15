@@ -1,8 +1,8 @@
 ---
 title: Developer Info
-subtitle: Login with Auth0
-book: developer
-weight: 34
+subtitle: Login with Auth0 Rule
+book: integrations
+weight: 8
 chapter: auth0
 layout: chapter
 ---

@@ -1,23 +1,25 @@
 ---
 title: Developer Info
-subtitle: JWT SSO (Single Sign On)
-book: developer
-weight: 33
+subtitle: Custom JWT Tokens
+book: integrations
+weight: 7
 chapter: sso
 layout: chapter
-note: This section only applies to <strong>Commercial</strong> Docker deployed environments.
+note: This section only applies to Docker deployed (on-premise) environments.
 ---
 There are many cases where Form.io needs to be tightly integrated into an existing platform with authentication mechanisms already established. Examples of this may include.
 
- - LDAP Authentication
- - Active Directory
+ - LDAP Authentication*
+ - Active Directory*
  - Custom platform authentication
+
+\* Form.io also has LDAP integration.
 
 For these cases, Form.io can be utilized within these environments by generating special JWT tokens that can be used as SSO into the Form.io platform. This does NOT require any user accounts within Form.io, but rather creates a way to pass along a dynamically generated JWT token claiming certain roles configured within the project.
 
 Here is how it works.
 
- 1. To get started, you will need to deploy your own Commercial deployment into your environment, and ensure you set the ```JWT_SECRET``` of that deployment to a secret only you know. Please see [Docker Deployments](/userguide/docker/) for more information.
+ 1. To get started, you will need to deploy your own on-premise deployment into your environment, and ensure you set the ```JWT_SECRET``` of that deployment to a secret only you know. Please see [Docker Deployments](/userguide/docker/) for more information.
  2. You will now need to create **Roles** within your Form.io project that you would like to use to control the access into certain Form.io operations. You can then assign those roles to the **Permissions** of the forms within the **Access** section of those forms. Please take note of the ID's of these roles that were created since they will be used when generating the SSO tokens.
  3. Now that you have some Roles created, you will then need to generate a special JWT token within your own backend platform, or within an authentication proxy using something like AWS Lambda. The payload for this token needs to be as follows.
 
@@ -25,11 +27,16 @@ Here is how it works.
 {
   external: true,
   form: {
-    _id: 'USER_RESOURCE_FORM_ID',
-    project: 'PROJECT_ID'
+    _id: 'USER_RESOURCE_FORM_ID'
   },
+  project: {
+    _id: 'PROJECT_ID
+  }
   user: {
     _id: 'external',
+    data: {
+      name: 'joe'
+    }
     roles: [
       'ROLE_ID_1',
       'ROLE_ID_2'
@@ -56,10 +63,15 @@ var token = jwt.sign({
   external: true,
   form: {
     _id: '59795d259be16e3ee58fddaa',
-    project: '59795d259be16e3ee58fdda6'
   },
+  project: {
+    _id: '59795d259be16e3ee58fdda6'
+  }
   user: {
     _id: 'external',
+    data: {
+      name: 'joe'
+    }
     roles: [
       '59795d259be16e3ee58fdda7'
     ]
@@ -83,5 +95,3 @@ localStorage.setItem('formioToken', 'FORMIO_TOKEN');
 Here you would just replace the FORMIO_TOKEN with the actual token generated from the server.
 
  5. Now that you have a token added to localStorage using the special token ```formioToken```, this will be used for all communication to the Form.io API platform and authenticate as the Roles provided in the token!
-
-Happy integration!

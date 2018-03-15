@@ -3,7 +3,7 @@ title: Github
 book: integrations
 chapter: oauth
 slug: github
-weight: 10
+weight: 60
 ---
 Login to GitHub and visit your [Developer applications settings page](https://github.com/settings/developers).
 

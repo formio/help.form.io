@@ -1,21 +1,12 @@
 ---
-title: Save in Project Settings
+title: OAuth Provider Settings
 book: integrations
 chapter: oauth
 slug: settings
-weight: 100
+weight: 10
 ---
-Login to **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** and go to the project you wish to use OAuth in.
-Click on the *Settings* tab.
+Select one of the OAuth providers below and generate the Client ID and Client Secret as well as any other required information. Go to the OAuth settings section of your project and enter the information in the correct OAuth provider.
 
-![](/assets/img/oauth/project-page.png)
+![](/assets/img/integrations/oauth/settings.png)
 
-Click on the *OAuth* tab.
-
-![](/assets/img/oauth/project-settings-page.png)
-
-Click on the OAuth provider you registered with and fill in the Client ID and Client Secret you received in the previous step.
-
-![](/assets/img/oauth/project-oauth-settings-page.png)
-
-Click *Save Settings*.
+*Save your Settings*

@@ -1,8 +1,8 @@
 ---
 title: Developer Info
 subtitle: Login with Email
-book: developer
-weight: 32
+book: integrations
+weight: 9
 chapter: emaillogin
 layout: chapter
 ---

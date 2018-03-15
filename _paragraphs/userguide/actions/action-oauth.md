@@ -22,6 +22,10 @@ The OAuth Provider to authenticate against. This is the service that users will 
 
 The action to perform after the user has authenticated against the OAuth provider.
 
+##### Remote Authentication
+
+This will log a user in based on their remote user account. Unlike the rest of the actions, it does not require creating a user resource submission in form.io. All permissions and ownership still work.
+
 ##### Register New Resource
 
 This will create a new submission and perform authentication against the new resource. Use this action for forms like Registration forms. This will create the user account, link the authenticated OAuth provider account, and log them in.

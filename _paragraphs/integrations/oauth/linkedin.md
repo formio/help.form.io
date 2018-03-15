@@ -3,7 +3,7 @@ title: LinkedIn
 book: integrations
 chapter: oauth
 slug: linkedin
-weight: 28
+weight: 90
 ---
 Login in to LinkedIn and Click On the [Create Application](https://www.linkedin.com/developer/apps){:target="_blank"}
 

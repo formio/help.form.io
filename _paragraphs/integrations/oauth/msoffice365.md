@@ -3,7 +3,7 @@ title: Microsoft Office 365
 book: integrations
 chapter: oauth
 slug: msoffice365
-weight: 30
+weight: 850
 ---
 
 [Create your Office 365 Business Account](https://products.office.com/en-us/business/compare-office-365-for-business-plans){:target="_blank"}

@@ -3,7 +3,7 @@ title: Twitter
 book: integrations
 chapter: oauth
 slug: twitter
-weight: 26
+weight: 80
 ---
 Login to Twitter and visit the [Developer page](https://apps.twitter.com/).
 

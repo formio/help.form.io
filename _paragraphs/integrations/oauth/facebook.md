@@ -3,7 +3,7 @@ title: Facebook
 book: integrations
 chapter: oauth
 slug: facebook
-weight: 20
+weight: 65
 ---
 Login to Facebook and visit the [Developer page](https://developers.facebook.com/).
 

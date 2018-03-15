@@ -3,7 +3,7 @@ title: Dropbox
 book: integrations
 chapter: oauth
 slug: dropbox-oauth
-weight: 25
+weight: 70
 ---
 Login in to Dropbox and visit the [Create Application page](https://www.dropbox.com/developers/apps/create)
 
