@@ -6145,8 +6145,7 @@ h3[id] {
   color: #222; }
 
 h4 {
-  margin-top: 30px;
-}
+  margin-top: 30px; }
 
 footer {
   padding: 40px 0;
@@ -6229,7 +6228,10 @@ footer {
   color: #4EAA17;
   text-decoration: none;
   background-color: #fff; }
-
+.docs-sidebar .nav > li.active {
+  background-color: #fbfbfb;
+  border-color: #ddd;
+}
 .docs-sidebar .nav > .active > a,
 .docs-sidebar .nav > .active:hover > a,
 .docs-sidebar .nav > .active:focus > a {
@@ -6335,3 +6337,12 @@ dd, dt {
 
 dd {
   border-bottom: 1px solid #DDD; }
+
+table {
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 21px;
+  font-size: 12px;
+  border-collapse: collapse;
+  border-spacing: 0; }

@@ -6,7 +6,6 @@ kramdown:
   input: GFM
   hard_wrap: false
 permalink: pretty
-baseUrl: https://help.form.io
 exclude:
   - CNAME
   - README.md

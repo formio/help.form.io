@@ -16,7 +16,7 @@ layout: base
       </a>
     </div>
     <ul id="navbar" class="nav navbar-nav navbar-collapse collapse">
-      {% assign books = site.books | sort: "weight" | reverse %}
+      {% assign books = site.books | sort: "weight" %}
       {% for book in books %}
       <li {% if book.book == page.book %}class="active"{% endif %}><a href="{{ site.baseUrl }}/{{ book.book }}/{% if book.default-section %}{{ book.default-section }}/{% endif %}{% if book.default-chapter %}{{ book.default-chapter }}/{% endif %}">{% if book.icon %}<i class="{{ book.icon }}"></i> {% endif %}{{ book.title }}</a></li>
       {% endfor %}
