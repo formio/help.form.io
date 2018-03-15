@@ -2,7 +2,7 @@
 title: Custom Remote Middleware
 book: developer
 chapter: middleware
-slug: cli
+slug: middleware
 weight: 60
 ---
 Not only can you bind to an API via command line, but you can also execute a middleware file which can gain direct, real-time

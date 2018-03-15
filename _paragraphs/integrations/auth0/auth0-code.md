@@ -1,6 +1,6 @@
 ---
 title: Auth0 + Form.io Example App
-book: developer
+book: integrations
 chapter: auth0
 slug: auth0-code
 weight: 12

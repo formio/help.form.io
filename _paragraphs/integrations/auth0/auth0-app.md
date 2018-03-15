@@ -1,6 +1,6 @@
 ---
 title: Auth0 + Form.io integration
-book: developer
+book: integrations
 chapter: auth0
 slug: auth0-app
 weight: 11

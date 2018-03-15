@@ -2,7 +2,7 @@
 title: Node.js Remote Middleware
 book: developer
 chapter: middleware
-slug: cli
+slug: nodejs
 weight: 60
 ---
 Remote middleware can also be utilized within a Node.js application using the popular module [Primus](http://primus.io){:target="_blank"}. We have

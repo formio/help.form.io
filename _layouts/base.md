@@ -8,37 +8,7 @@
       'faq/#advanced': '/faq/advanced/',
       'faq/#basic': '/faq/basic/',
       'faq/#introdcution': '/faq/introdcution/',
-      'api': '/developer/api/postman/',
-      <!-- 'developer/api/postman.': '/developer/api/', -->
-      <!-- 'developer/api/#postman': '/developer/api/', -->
-      <!-- 'developer/deployments': '/developer/deployments/aws/', -->
-      <!-- 'developer/deployments/#aws': '/developer/deployments/aws/', -->
-      <!-- 'developer/deployments/#bluemix': '/developer/deployments/bluemix/', -->
-      <!-- 'developer/info/welcome': '/developer/info#welcome/', -->
-      <!-- 'developer/info/#cordova': '/developer/info/cordova/', -->
-      <!-- 'developer/info/#angular': '/developer/info/angular/', -->
-      <!-- 'developer/info/#auth0': '/developer/info/auth0/', -->
-      <!-- 'developer/info/#bootstrap': '/developer/info/bootstrap/', -->
-      <!-- 'developer/info/#emaillogin': '/developer/info/emaillogin/', -->
-      <!-- 'developer/info/#lambda': '/developer/info/lambda/', -->
-      <!-- 'developer/info/#middleware': '/developer/info/middleware/', -->
-      <!-- 'developer/info/#node-library': '/developer/info/node-library/', -->
-      <!-- 'developer/info/#offline': '/developer/info/offline/', -->
-      <!-- 'developer/info/#react': '/developer/info/react/', -->
-      <!-- 'developer/info/#welcome': '/developer/info/welcome/', -->
-      <!-- 'developer/integrations': '/developer/integrations/start/', -->
-      <!-- 'developer/integrations/#email': '/developer/integrations/email/', -->
-      <!-- 'developer/integrations/#filestorage': '/developer/integrations/filestorage/', -->
-      <!-- 'developer/integrations/#google-drive': '/developer/integrations/google-drive/', -->
-      <!-- 'developer/integrations/#hubspot': '/developer/integrations/hubspot/', -->
-      <!-- 'developer/integrations/#oauth': '/developer/integrations/oauth/', -->
-      <!-- 'developer/integrations/#office365': '/developer/integrations/office365/', -->
-      <!-- 'developer/integrations/#start': '/developer/integrations/start/', -->
-      <!-- 'developer/libraries': '/developer/libraries/angular/', -->
-      <!-- 'developer/libraries/#ng-formio-builder': '/developer/libraries/ng-formio-builder/', -->
-      <!-- 'developer/libraries/#ng-formio-grid': '/developer/libraries/ng-formio-grid/', -->
-      <!-- 'developer/libraries/#ng-formio-helper': '/developer/libraries/ng-formio-helper/', -->
-      <!-- 'developer/libraries/#ng-formio': '/developer/libraries/ng-formio/', -->
+      'api': '/developer/api',
       'intro': '/intro/welcome/',
       'intro/#customizing': '/intro/appdev/',
       'intro/#explore': '/intro/explore/',
@@ -71,68 +41,6 @@
       'userguide/#form-components': '/userguide/form-components/',
       'userguide/#layout-components': '/userguide/layout-components/',
       'userguide/#roles-and-permissions': '/userguide/roles-and-permissions/',
-      <!-- 'developer/api/#formio-account': '/developer/api/postman/', -->
-      <!-- 'developer/api/#project-user': '/developer/api/postman/', -->
-      <!-- 'developer/api/#create': '/developer/api/postman/', -->
-      <!-- 'developer/api/#delete': '/developer/api/postman/', -->
-      <!-- 'developer/api/#index': '/developer/api/postman/', -->
-      <!-- 'developer/api/#read': '/developer/api/postman/', -->
-      <!-- 'developer/api/#update': '/developer/api/postman/', -->
-      <!-- 'developer/deployments/#aws-auth': '/developer/deployments/aws/#aws-auth', -->
-      <!-- 'developer/deployments/#aws-beanstalk': '/developer/deployments/aws/#aws-beanstalk', -->
-      <!-- 'developer/deployments/#aws-config': '/developer/deployments/aws/#aws-config', -->
-      <!-- 'developer/deployments/#aws-prerequisites': '/developer/deployments/aws/#aws-prerequisites', -->
-      <!-- 'developer/deployments/#bluemix-app': '/developer/deployments/bluemix/#bluemix-app', -->
-      <!-- 'developer/deployments/#bluemix-docker': '/developer/deployments/bluemix/#bluemix-docker', -->
-      <!-- 'developer/info/#conditional-fields': '/developer/info/angular/#conditional-fields', -->
-      <!-- 'developer/info/#form-translation': '/developer/info/angular/#form-translation', -->
-      <!-- 'developer/info/#formio-delete': '/developer/info/angular/#formio-delete', -->
-      <!-- 'developer/info/#formio-directive': '/developer/info/angular/#formio-directive', -->
-      <!-- 'developer/info/#formio-events': '/developer/info/angular/#formio-events', -->
-      <!-- 'developer/info/#formio-module': '/developer/info/angular/#formio-module', -->
-      <!-- 'developer/info/#formio-submissions': '/developer/info/angular/#formio-submissions', -->
-      <!-- 'developer/info/#styling-angular-forms': '/developer/info/angular/#styling-angular-forms', -->
-      <!-- 'developer/info/#auth0-app': '/developer/info/auth0/#auth0-app', -->
-      <!-- 'developer/info/#auth0-code': '/developer/info/auth0/#auth0-code', -->
-      <!-- 'developer/info/#auth0-rules': '/developer/info/auth0/#auth0-rules', -->
-      <!-- 'developer/info/#cordova-compile': '/developer/info/cordova/#cordova-compile', -->
-      <!-- 'developer/info/#cordova-install': '/developer/info/cordova/#cordova-install', -->
-      <!-- 'developer/info/#cordova-plugins': '/developer/info/cordova/#cordova-plugins', -->
-      <!-- 'developer/info/#cordova-prepare': '/developer/info/cordova/#cordova-prepare', -->
-      <!-- 'developer/info/#cli': '/developer/info/middleware/#cli', -->
-      <!-- 'developer/info/#cli': '/developer/info/middleware/#cli', -->
-      <!-- 'developer/info/#cli': '/developer/info/middleware/#cli', -->
-      <!-- 'developer/info/#react-module': '/developer/info/react/#react-module', -->
-      <!-- 'developer/info/#react-usage': '/developer/info/react/#react-usage', -->
-      <!-- 'developer/integrations/#gmail': '/developer/integrations/email/#gmail', -->
-      <!-- 'developer/integrations/#kickbox': '/developer/integrations/email/#kickbox', -->
-      <!-- 'developer/integrations/#mailgun': '/developer/integrations/email/#mailgun', -->
-      <!-- 'developer/integrations/#mandrill': '/developer/integrations/email/#mandrill', -->
-      <!-- 'developer/integrations/#sendgrid': '/developer/integrations/email/#sendgrid', -->
-      <!-- 'developer/integrations/#url': '/developer/integrations/filestorage/#url', -->
-      <!-- 'developer/integrations/#dropbox-storage': '/developer/integrations/filestorage/#dropbox-storage', -->
-      <!-- 'developer/integrations/#s3': '/developer/integrations/filestorage/#s3', -->
-      <!-- 'developer/integrations/#google-api-setting': '/developer/integrations/google-drive/#google-api-setting', -->
-      <!-- 'developer/integrations/#google-oauthclient': '/developer/integrations/google-drive/#google-oauthclient', -->
-      <!-- 'developer/integrations/#google-refreshtoken': '/developer/integrations/google-drive/#google-refreshtoken', -->
-      <!-- 'developer/integrations/#google-sheet': '/developer/integrations/google-drive/#google-sheet', -->
-      <!-- 'developer/integrations/#hubspot-action': '/developer/integrations/hubspot/#hubspot-action', -->
-      <!-- 'developer/integrations/#hubspot-apikey': '/developer/integrations/hubspot/#hubspot-apikey', -->
-      <!-- 'developer/integrations/#hubspot-mappings': '/developer/integrations/hubspot/#hubspot-mappings', -->
-      <!-- 'developer/integrations/#github': '/developer/integrations/oauth/#github', -->
-      <!-- 'developer/integrations/#action': '/developer/integrations/oauth/#action', -->
-      <!-- 'developer/integrations/#button': '/developer/integrations/oauth/#button', -->
-      <!-- 'developer/integrations/#dropbox-oauth': '/developer/integrations/oauth/#dropbox-oauth', -->
-      <!-- 'developer/integrations/#facebook': '/developer/integrations/oauth/#facebook', -->
-      <!-- 'developer/integrations/#google': '/developer/integrations/oauth/#google', -->
-      <!-- 'developer/integrations/#linkform': '/developer/integrations/oauth/#linkform', -->
-      <!-- 'developer/integrations/#msoffice365': '/developer/integrations/oauth/#msoffice365', -->
-      <!-- 'developer/integrations/#settings': '/developer/integrations/oauth/#settings', -->
-      <!-- 'developer/integrations/#twitter': '/developer/integrations/oauth/#twitter', -->
-      <!-- 'developer/libraries/#actions': '/developer/libraries/ng-formio-builder/#actions', -->
-      <!-- 'developer/libraries/#actions': '/developer/libraries/ng-formio-grid/#actions', -->
-      <!-- 'developer/libraries/#actions': '/developer/libraries/ng-formio-helper/#actions', -->
-      <!-- 'developer/libraries/#actions': '/developer/libraries/ng-formio/#actions', -->
       'integrations': '/developer/integrations/start/',
       'integrations/#linkedin': '/integrations/oauth/#linkedin',
       'intro/#deployapp': '/intro/customizing/#deployapp',
@@ -247,7 +155,128 @@
       'userguide/#adding-accounts-team': '/userguide/teams/#adding-accounts-team',
       'userguide/#assigning-teams-project': '/userguide/teams/#assigning-teams-project',
       'userguide/#create-team': '/userguide/teams/#create-team',
-      'userguide/#template-previews': '/userguide/project-templates/#template-previews'
+      'userguide/#template-previews': '/userguide/project-templates/#template-previews',
+      'developer/info/welcome/': '/developer/welcome/',
+      'developer/info/angular/': '/developer/frameworks/#angular',
+      'developer/info/offline/': '/developer/offline/',
+      'developer/info/emaillogin/': '/integrations/emaillogin/',
+      'developer/info/sso/': '/integrations/sso/',
+      'developer/info/auth0/': '/integrations/auth0/',
+      'developer/info/react/': '/developer/frameworks/#react',
+      'developer/info/cordova/': '/developer/cordova/',
+      'developer/info/middleware/': '/developer/middleware/',
+      'developer/info/lambda/': '/developer/lambda/',
+      'developer/info/bootstrap/': '/developer/libraries/#cli',
+      'developer/info/node-library/': '/developer/libraries/#node',
+      'developer/api/postman/': '/developer/api/',
+      'developer/integrations/start/': '/integrations/start/',
+      'developer/integrations/email/': '/integrations/email/',
+      'developer/integrations/filestorage/': '/integrations/filestorage/',
+      'developer/integrations/oauth/': '/integrations/oauth/',
+      'developer/integrations/office365/': '/integrations/office365/',
+      'developer/integrations/hubspot/': '/integrations/hubspot/',
+      'developer/integrations/googledrive/': '/integrations/googledrive/',
+      'developer/deployments/aws/': '/tutorials/deployment/aws/',
+      'developer/deployments/bluemix/': '/tutorials/deployment/bluemix/',
+      'developer/libraries/javascript/': '/developer/frameworks/#javascript',
+      'developer/libraries/angular2/': '/developer/frameworks/#angular',
+      'developer/libraries/angular/': '/developer/frameworks/#angularjs',
+      'developer/libraries/react/': '/developer/frameworks/#react',
+      'developer/libraries/cli/': '/developer/libraries/#cli',
+      'developer/libraries/node/': '/developer/libraries/#node',
+      'developer/libraries/php/': '/developer/libraries/#php',
+      'developer/libraries/viewer/': '/developer/libraries/#viewer',
+      'developer/api/postman.': '/developer/api/',
+      'developer/api/#postman': '/developer/api/',
+      'developer/deployments': '/tutorials/deployment/aws/',
+      'developer/deployments/#aws': '/tutorials/deployment/aws/',
+      'developer/deployments/#bluemix': '/tutorials/deployments/bluemix/',
+      'developer/info/#cordova': '/developer/cordova/',
+      'developer/info/#angular': '/developer/frameworks/#angular',
+      'developer/info/#auth0': '/integrations/auth0/',
+      'developer/info/#bootstrap': '/developer/libraries/#cli',
+      'developer/info/#emaillogin': '/integrations/emaillogin/',
+      'developer/info/#lambda': '/developer/lambda/',
+      'developer/info/#middleware': '/developer/middleware/',
+      'developer/info/#node-library': '/developer/libraries/#node',
+      'developer/info/#offline': '/developer/offline/',
+      'developer/info/#react': '/developer/frameworks/#react',
+      'developer/info/#welcome': '/developer/welcome/',
+      'developer/integrations': '/integrations/start/',
+      'developer/integrations/#email': '/integrations/email/',
+      'developer/integrations/#filestorage': '/integrations/filestorage/',
+      'developer/integrations/#google-drive': '/integrations/google-drive/',
+      'developer/integrations/#hubspot': '/integrations/hubspot/',
+      'developer/integrations/#oauth': '/integrations/oauth/',
+      'developer/integrations/#office365': '/integrations/office365/',
+      'developer/integrations/#start': '/integrations/start/',
+      'developer/libraries': '/developer/frameworks/#angular/',
+      'developer/libraries/#ng-formio-builder': '/developer/frameworks/#angular/',
+      'developer/libraries/#ng-formio-grid': '/developer/frameworks/#angular/',
+      'developer/libraries/#ng-formio-helper': '/developer/frameworks/#angular/',
+      'developer/libraries/#ng-formio': '/developer/frameworks/#angular/',
+      'developer/api/#formio-account': '/developer/api/',
+      'developer/api/#project-user': '/developer/api/',
+      'developer/api/#create': '/developer/api/',
+      'developer/api/#delete': '/developer/api/',
+      'developer/api/#index': '/developer/api/',
+      'developer/api/#read': '/developer/api/',
+      'developer/api/#update': '/developer/api/',
+      'developer/deployments/#aws-auth': '/tutorials/deployment/aws/#aws-auth',
+      'developer/deployments/#aws-beanstalk': '/tutorials/deployment/aws/#aws-beanstalk',
+      'developer/deployments/#aws-config': '/tutorials/deployment/aws/#aws-route',
+      'developer/deployments/#aws-prerequisites': '/tutorials/deployment/aws/#aws-prerequisites',
+      'developer/deployments/#bluemix-app': '/tutorials/deployment/bluemix/#bluemix-app',
+      'developer/deployments/#bluemix-docker': '/tutorials/deployment/bluemix/#bluemix-docker',
+      'developer/info/#conditional-fields': '/developer/info',
+      'developer/info/#form-translation': '/developer/frameworks/#angular',
+      'developer/info/#formio-delete': '/developer/frameworks/#angular',
+      'developer/info/#formio-directive': '/developer/frameworks/#angular',
+      'developer/info/#formio-events': '/developer/frameworks/#angular',
+      'developer/info/#formio-module': '/developer/frameworks/#angular',
+      'developer/info/#formio-submissions': '/developer/frameworks/#angular',
+      'developer/info/#styling-angular-forms': '/developer/frameworks/#angular',
+      'developer/info/#auth0-app': '/integrations/auth0/#auth0-app',
+      'developer/info/#auth0-code': '/integrations/auth0/#auth0-code',
+      'developer/info/#auth0-rules': '/integrations/auth0/#auth0-rules',
+      'developer/info/#cordova-compile': '/developer/cordova/#cordova-compile',
+      'developer/info/#cordova-install': '/developer/cordova/#cordova-install',
+      'developer/info/#cordova-plugins': '/developer/cordova/#cordova-plugins',
+      'developer/info/#cordova-prepare': '/developer/cordova/#cordova-prepare',
+      'developer/info/#cli': '/developer/middleware/#cli',
+      'developer/info/#middleware': '/developer/middleware/#middleware',
+      'developer/info/#nodejs': '/developer/middleware/#nodejs',
+      'developer/info/#react-module': '/developer/frameworks/#react',
+      'developer/info/#react-usage': '/developer/frameworks/#react',
+      'developer/integrations/#gmail': '/integrations/email/#smtp',
+      'developer/integrations/#kickbox': '/integrations/email/#kickbox',
+      'developer/integrations/#mailgun': '/integrations/email/#mailgun',
+      'developer/integrations/#mandrill': '/integrations/email/#mandrill',
+      'developer/integrations/#sendgrid': '/integrations/email/#sendgrid',
+      'developer/integrations/#url': '/integrations/filestorage/#url',
+      'developer/integrations/#dropbox-storage': '/integrations/filestorage/#dropbox-storage',
+      'developer/integrations/#s3': '/integrations/filestorage/#s3',
+      'developer/integrations/#google-api-setting': '/integrations/google-drive/#google-api-setting',
+      'developer/integrations/#google-oauthclient': '/integrations/google-drive/#google-oauthclient',
+      'developer/integrations/#google-refreshtoken': '/integrations/google-drive/#google-refreshtoken',
+      'developer/integrations/#google-sheet': '/integrations/google-drive/#google-sheet',
+      'developer/integrations/#hubspot-action': '/integrations/hubspot/#hubspot-action',
+      'developer/integrations/#hubspot-apikey': '/integrations/hubspot/#hubspot-apikey',
+      'developer/integrations/#hubspot-mappings': '/integrations/hubspot/#hubspot-mappings',
+      'developer/integrations/#github': '/integrations/oauth/#github',
+      'developer/integrations/#action': '/integrations/oauth/#action',
+      'developer/integrations/#button': '/integrations/oauth/#button',
+      'developer/integrations/#dropbox-oauth': '/integrations/oauth/#dropbox-oauth',
+      'developer/integrations/#facebook': '/integrations/oauth/#facebook',
+      'developer/integrations/#google': '/integrations/oauth/#google',
+      'developer/integrations/#linkform': '/integrations/oauth/#linkform',
+      'developer/integrations/#msoffice365': '/integrations/oauth/#msoffice365',
+      'developer/integrations/#settings': '/integrations/oauth/#settings',
+      'developer/integrations/#twitter': '/integrations/oauth/#twitter',
+      'developer/libraries/#actions': '/developer/frameworks/#angularjs',
+      'developer/libraries/#actions': '/developer/frameworks/#angularjs',
+      'developer/libraries/#actions': '/developer/frameworks/#angularjs',
+      'developer/libraries/#actions': '/developer/frameworks/#angularjs'
     };
     if (location.hash) {
       path += '/' + location.hash;

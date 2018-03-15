@@ -1,6 +1,6 @@
 ---
 title: Adding Rules to Auth0
-book: developer
+book: integrations
 chapter: auth0
 slug: auth0-rules
 weight: 10
