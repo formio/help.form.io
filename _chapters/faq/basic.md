@@ -18,7 +18,7 @@ On a related note, we also utilize JSON Web Tokens (JWT) for our user authentica
 Yes, {{ site.formio }} utilizes a robust Roles and Permissions systems that leverages JWT for authentication.
 
 #### Are there any restrictions on the distributions of IPs
-No.  Our platform software is very liberally licensed in order for you to be able to build and integrate our forms and APIs into your business applications without significant restriction from {{ site.formio }}. You can read more about our [Privacy Policy](http://blog.form.io/form.io-privacy-policy), [Terms of Use](http://blog.form.io/form-terms-of-use), [Software Agreement](http://blog.form.io/form.io-software-licensing-agreement), and [Open Source License](http://blog.form.io/form.io-open-source-license-agreement) by following the links.
+No.  Our platform software is very liberally licensed in order for you to be able to build and integrate our forms and APIs into your business applications without significant restriction from {{ site.formio }}. You can read more about our [Privacy Policy](https://form.io/#/privacy), [Terms of Use](https://form.io/#/terms), [Software Agreement](https://form.io/#/agreement), and [Open Source License](https://form.io/#/opensource) by following the links.
 
 #### Can data within the forms be easily reported off of?
 Yes, we provide the ability to access and report on all of the submission data for the Resources, and Forms, and components that you build into your applications.  We also report on API traffic and similar application submission activity data.

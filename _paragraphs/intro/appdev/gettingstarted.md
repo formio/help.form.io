@@ -24,8 +24,13 @@ Form.io provides a number of Open Source libraries that interface with Angular, 
   - [React Library](https://github.com/formio/react-formio) - Form Renderer + Helper libraries to rapidly build data management applications in React.
   - [React Starter Kit](https://github.com/formio/react-app-starterkit) - A starter kit to get a Form.io app up and running quickly with Form.io
 
-#### Angular 2
-  - [Form Renderer](https://github.com/formio/ng2-formio) - A form renderer for Angular 2
+#### Vue
+  - [Vue Library](https://github.com/formio/vue-formio) - Form Renderer + Helper libraries to rapidly build data management applications in Vue.
+  - [Vue Starter Kit](https://github.com/formio/vue-app-starterkit) - A starter kit to get a Form.io app up and running quickly with Form.io
+
+#### Angular 2+
+  - [Form Renderer](https://github.com/formio/angular-formio) - A form renderer for Angular 2+
+  - [Angular Starter Kit](https://github.com/formio/angular-app-starterkit) - A form renderer for Angular 2
 
 #### Other Libraries
   - [CLI Tool](https://github.com/formio/formio-cli) - A command line interface which allows for advanced functions.
@@ -49,10 +54,11 @@ We have also provided a number of example applications which you can use as a re
   - [Sales Quoting Application](https://github.com/formio/formio-app-salesquote)
 
 #### React
-
   - [Example Application](https://github.com/formio/react-example)
   - [Starter Kit](https://github.com/formio/react-app-starterkit)
 
-#### Angular 2
+#### Vue
+  - [Starter Kit](https://github.com/formio/vue-app-starterkit)
 
-  - COMMING SOON
+#### Angular 2+
+  - [Starter Kit](https://github.com/formio/angular-app-starterkit)

@@ -35,7 +35,7 @@ A list of search filters based on the fields of the resource. See the [Resource.
 
 #### Item Template
 
-How an item should appear in the list. Use `{{}}` brackets to reference variables to display. Be sure to use "Select Fields" above to select the fields to display.
+How an item should appear in the list. Use `{% raw %}{{}}{% endraw %}` brackets to reference variables to display. Be sure to use "Select Fields" above to select the fields to display.
 
 #### Custom CSS Class
 

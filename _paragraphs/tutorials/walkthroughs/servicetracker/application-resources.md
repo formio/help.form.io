@@ -106,7 +106,7 @@ Notice here we provided the parent and base, but also a view controller that wil
 ```
   <h2>{{ currentResource.resource.data.name }}</h2>
   <p><strong>Address: </strong> {{ currentResource.resource.data.address.formatted_address }}</p>
-  <p><strong>Status: </strong> {{ currentResource.resource.data.inactive ? 'Inactive' : 'Active' }}</p>
+  <p><strong>Status: </strong> {% if currentResource.resource.data.inactive %}Inactive{% else %}Active{% endif %}</p>
   <map ng-if="position" zoom="8" center="[{{ position.lat }}, {{ position.lng }}]"> <marker position="[{{ position.lat }}, {{ position.lng }}]" title="{{ currentResource.resource.data.address.formatted_address }}" visible></marker></map>
   <br>
   <div class="panel panel-default">

@@ -5,15 +5,15 @@
     'use strict';
     $(function () {
         // Scrollspy
-        var $window = $(window);
-        var $body = $(document.body);
+        // var $window = $(window);
+        // var $body = $(document.body);
 
-        $body.scrollspy({
-            target: '.docs-sidebar'
-        });
-        $window.on('load', function () {
-            $body.scrollspy('refresh')
-        });
+        // $body.scrollspy({
+        //     target: '.docs-sidebar'
+        // });
+        // $window.on('load', function () {
+        //     $body.scrollspy('refresh')
+        // });
 
         // Kill links
         $('.bs-docs-container [href=#]').click(function (e) {

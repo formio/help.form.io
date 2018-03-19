@@ -6,7 +6,6 @@ kramdown:
   input: GFM
   hard_wrap: false
 permalink: pretty
-baseUrl: http://formio.github.io/help.form.io
 exclude:
   - CNAME
   - README.md
@@ -15,6 +14,9 @@ exclude:
   - node_modules
   - vendor
   - _site
+  - aws.json
+  - npm-debug.log
+  - gulpfile.js
 collections:
   books:
     output: true
