@@ -11,5 +11,5 @@ While {{ site.formio }} provides an easy to use form builder and embeddable inte
 For a complete walkthrough on how to build an application using {{ site.formio }}, we recommend watching the following video.
 
 <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UDKo_qst0mU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zEvzW_sSXk0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
