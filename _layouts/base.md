@@ -217,6 +217,8 @@
       'developer/api/#index': '/developer/api/',
       'developer/api/#read': '/developer/api/',
       'developer/api/#update': '/developer/api/',
+      'developer/deployments/aws/': '/tutorials/deployment/aws/',
+      'developer/deployments/bluemix/': '/tutorials/deployment/bluemix/',
       'developer/deployments/#aws-auth': '/tutorials/deployment/aws/#aws-auth',
       'developer/deployments/#aws-beanstalk': '/tutorials/deployment/aws/#aws-beanstalk',
       'developer/deployments/#aws-config': '/tutorials/deployment/aws/#aws-route',

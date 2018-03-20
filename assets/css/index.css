@@ -6091,7 +6091,7 @@ input[type="checkbox"] {
 .navbar .navbar-toggle:hover .icon-bar {
   background-color: #aaa; }
 
-.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+li.list-group-item.active, li.list-group-item.active:hover, li.list-group-item.active:focus {
   background-color: #fbfbfb;
   border-color: #ddd; }
 
@@ -6228,10 +6228,7 @@ footer {
   color: #4EAA17;
   text-decoration: none;
   background-color: #fff; }
-.docs-sidebar .nav > li.active {
-  background-color: #fbfbfb;
-  border-color: #ddd;
-}
+
 .docs-sidebar .nav > .active > a,
 .docs-sidebar .nav > .active:hover > a,
 .docs-sidebar .nav > .active:focus > a {
