@@ -1,0 +1,190 @@
+{
+  "actions": {
+    "pdf:pdf:save": {
+      "title": "Save Submission",
+      "name": "save",
+      "form": "pdf",
+      "priority": 10,
+      "method": [
+        "create",
+        "update"
+      ],
+      "handler": [
+        "before"
+      ]
+    }
+  },
+  "roles": {},
+  "forms": {},
+  "resources": {
+    "pdf": {
+      "title": "PDF",
+      "type": "resource",
+      "name": "pdf",
+      "path": "pdf",
+      "display": "form",
+      "tags": [],
+      "components": [
+        {
+          "tags": [],
+          "type": "textfield",
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "pattern": "",
+            "maxLength": "",
+            "minLength": "",
+            "required": false
+          },
+          "clearOnHide": true,
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "defaultValue": "",
+          "multiple": false,
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "",
+          "key": "project",
+          "label": "Project",
+          "inputMask": "",
+          "inputType": "text",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "lockKey": true,
+          "tags": [],
+          "type": "textfield",
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "pattern": "",
+            "maxLength": "",
+            "minLength": "",
+            "required": false
+          },
+          "clearOnHide": true,
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "defaultValue": "",
+          "multiple": false,
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "",
+          "key": "id",
+          "label": "ID",
+          "inputMask": "",
+          "inputType": "text",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "lockKey": true,
+          "tags": [],
+          "type": "textfield",
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "validate": {
+            "customPrivate": false,
+            "custom": "",
+            "pattern": "",
+            "maxLength": "",
+            "minLength": "",
+            "required": false
+          },
+          "clearOnHide": true,
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "defaultValue": "",
+          "multiple": false,
+          "suffix": "",
+          "prefix": "",
+          "placeholder": "",
+          "key": "path",
+          "label": "Path",
+          "inputMask": "",
+          "inputType": "text",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "conditional": {
+            "eq": "",
+            "when": null,
+            "show": ""
+          },
+          "tags": [],
+          "type": "select",
+          "validate": {
+            "required": false
+          },
+          "clearOnHide": true,
+          "persistent": true,
+          "unique": false,
+          "protected": false,
+          "multiple": false,
+          "template": "<span>{{ item.label }}</span>",
+          "authenticate": false,
+          "filter": "",
+          "refreshOn": "",
+          "defaultValue": "",
+          "valueProperty": "",
+          "dataSrc": "values",
+          "data": {
+            "custom": "",
+            "resource": "",
+            "url": "",
+            "json": "",
+            "values": [
+              {
+                "label": "Active",
+                "value": "active"
+              },
+              {
+                "label": "Inactive",
+                "value": "inactive"
+              }
+            ]
+          },
+          "placeholder": "",
+          "key": "status",
+          "label": "Status",
+          "tableView": true,
+          "input": true
+        },
+        {
+          "type": "button",
+          "theme": "primary",
+          "disableOnInvalid": false,
+          "action": "submit",
+          "block": false,
+          "rightIcon": "",
+          "leftIcon": "",
+          "size": "md",
+          "key": "submit",
+          "tableView": false,
+          "label": "Submit",
+          "input": true
+        }
+      ],
+      "access": [],
+      "submissionAccess": []
+    }
+  }
+}
