@@ -8,7 +8,7 @@ layout: chapter
 ---
 To help out with the development of API's we heavily rely on a wonderful tool called [Postman](https://www.getpostman.com/) to be used as our API documentation. Below is the full documentation for our API within the Postman Documentation.
 
-<a class="btn btn-primary btn-sm" href="https://documenter.getpostman.com/view/684631/formio-api/2Jvuks" target="_blank" style="float:left;margin-right:10px;"><span class="glyphicon glyphicon-new-window"></span> View in separate tab</a>
+<a class="btn btn-primary btn-sm" href="https://apidocs.form.io" target="_blank" style="float:left;margin-right:10px;"><span class="glyphicon glyphicon-new-window"></span> View in separate tab</a>
 
 <div class="postman-run-button" style="float:left !important; margin-right: 10px !important;"
 data-postman-action="collection/import"
