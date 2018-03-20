@@ -3,7 +3,7 @@ title: Tutorials
 subtitle: Password Reset
 book: tutorials
 section: workflows
-weight: 1
+weight: 10
 chapter: resetpass
 layout: chapter
 ---
