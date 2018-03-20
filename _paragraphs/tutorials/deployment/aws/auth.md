@@ -11,12 +11,11 @@ They way to accomplish this is outlined within the AWS Documentation found @ [ht
 
 The steps to get started are as follows.
 
-  - Login to your Docker Hub account via command prompt.
-<pre>
-    docker login https://hub.docker.com/r/formio/formio-server
-</pre>
+ - Generate your docker auth token. To do this, use a base64 encoding tool like [https://www.base64encode.net/](https://www.base64encode.net/) or your command line by typing ```openssl base64``` (press Enter and then Ctrl+d when done entering username and password).
 
-  - Next you will need to copy the contents of the "auths" section of the ``` ~/.docker/config.json``` file to create a special AWS Authentication file which will look something similar to the following.
+ - Enter your docker username, a colon, and your password and press the encode button. For example: 'myusername:mypassword'.
+
+ - Next you will need to copy the bas64 encoding of your username and password to create a special AWS Authentication file which will look something similar to the following.
 
     **formio.dockercfg**
     <pre>
@@ -28,10 +27,10 @@ The steps to get started are as follows.
     }
     </pre>
 
-  - Next you will find the S3 bucket that Elastic Beanstalk created within your AWS Account. This typically looks like the following when you go to **S3** section of your AWS Account.
+ - Next you will find the S3 bucket that Elastic Beanstalk created within your AWS Account. This typically looks like the following when you go to **S3** section of your AWS Account.
 
     <img src="/assets/img/developer/deployments/aws/elasticbeanstalks3.png" style="width:600px" />
 
     If this bucket does not exist, then you may need to create a default Elastic Beanstalk deployment so that it will automatically create this bucket and configure it for Elastic Beanstalk use.
 
-  - Once you get this bucket created, you will now need to add your **formio.dockercfg** to this bucket and take note of the name of this bucket to configure the Dockerrun.aws.json
+ - Once you get this bucket created, you will now need to add your **formio.dockercfg** to this bucket and take note of the name of this bucket to configure the Dockerrun.aws.json
