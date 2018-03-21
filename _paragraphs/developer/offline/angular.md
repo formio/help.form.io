@@ -17,7 +17,7 @@ The following documentation serves to show you how to add this capability into y
 
 #### Adding Offline Mode to your Project
 
-To add offline mode to your project, you must first upgrade your project to **Team Pro** or **Enterprise**. Once you do this, you will then be added to our Offline Mode Github project which will allow you to include it within your application. To do that you will use bower and type the following.
+To add offline mode to your project, you must first upgrade your project to **Enterprise**. Once you do this, you will then be added to our Offline Mode Github project which will allow you to include it within your application. To do that you will use bower and type the following.
 
 ```
 bower install --save git@github.com:formio/formio-plugin-offline.git
