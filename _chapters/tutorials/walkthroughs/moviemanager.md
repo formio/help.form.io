@@ -3,7 +3,7 @@ title: Tutorials
 subtitle: Movie Manager Application
 book: tutorials
 section: walkthroughs
-weight: 50
+weight: 30
 chapter: moviemanager
 layout: chapter
 ---
