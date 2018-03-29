@@ -15,8 +15,13 @@ that we'll be importing throughout this walk-through. Additional you'll be expec
 Repositories 
  - @formio.js - view live on [github](https://github.com/formio/formio.js) 
  - @angular-formio - view live on [github](https://github.com/formio/angular-formio)
- - @ngx-translate/core view live on [github]( https://github.com/ngx-translate/core)
- - @ngx-translate-phraseapp view live on [github](https://github.com/phrase/ngx-translate-phraseapp)
+ - @ngx-translate/core - view live on [github](https://github.com/ngx-translate/core)
+ - @ngx-translate/http-loader] - view live on [github](https://github.com/ngx-translate/http-loader)
+ - @ngx-translate-phraseapp - view live on [github](https://github.com/phrase/ngx-translate-phraseapp)
+  
+ ```
+ npm install --save ngx-translate/http-loader@^2.0.1
+ ```
  
 Framework
  - Angular - view official documentation at [angular.io](https://angular.io/) 
