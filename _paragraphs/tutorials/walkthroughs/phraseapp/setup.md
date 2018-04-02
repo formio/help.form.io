@@ -13,7 +13,7 @@ To get started, you will need to make sure that you have the following accounts 
  - An installation of Node.js - visit [node.org](https://nodejs.org/en/) for download instructions, we recommend using the latest LTS version.
  
 While not required, we will be using the Angular CLI to build this demo application. Please reference [cli.angular.io](https://cli.angular.io/) for additional support. 
-To install and create our application's environment please run the following commands from either your Mac Terminal or Windows PowerShell: 
+To install and create the application's development environment please run the following commands from within either the Mac Terminal or Windows PowerShell: 
 
 ```
 npm install -g angular/cli

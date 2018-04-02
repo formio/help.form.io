@@ -6,13 +6,13 @@ chapter: translations
 slug: objective
 weight: 30
 ---
-The Objective of this walk through is to not only translate all the labels, and placeholders but the error messages as well.
-if you click the `Submit` button without entering any data into the fields, following error message will present themselves
+The Objective of this walk through is to not only translate all the labels, and placeholders within the form, but also the system error messages.
+Clicking the `Submit` button without entering any data into the fields will result in the following error messages:
 
  - Primary Error Dialog
   - Please fix the following errors before submitting.
-  -  ● First Name is required
-  -  ● Last Name is required
+    - First Name is required
+    - Last Name is required
  - Below Input Fields
   - First Name is required 
   - Last Name is required

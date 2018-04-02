@@ -7,10 +7,11 @@ slug: helpful
 weight: 70
 ---
 
-As a quick reference here is a list of all the default error message properties. You'll notice the in the example
-we were able to change the `required : "{{field}} is required"` message. 
+As a quick reference here is a list of some default error message properties. Notice that in above example,
+the `required : "{{field}} is required"` message was able to be translated into other languages while preserving
+the bracket notation.  
 
-```json
+```
 {
   "error" : "Please fix the following errors before submitting.",
   "invalid_date" :"{{field}} is not a valid date.",
@@ -28,5 +29,5 @@ we were able to change the `required : "{{field}} is required"` message.
 }
 ```
 
-for a full list of message defaults please reference the [i18n.json](https://github.com/formio/formio.js/blob/master/src/i18n.js)
+For a complete list of all Form.io defaults, please reference the [i18n.json](https://github.com/formio/formio.js/blob/master/src/i18n.js)
 file in the [formio.js library](https://github.com/formio/formio.js).

@@ -6,32 +6,32 @@ chapter: phraseapp
 slug: structure
 weight: 60
 ---
-We're going to create all the components and modules we need upfront. Since we're using the cli, we can generate
-the necessary components quickly
+To structure the application, we are going to create all the components and modules we need upfront. 
+Since we're using the Angular's CLI tool, we can generate the necessary components via command line. 
 
-We'll start by creating home and navigation component. We'll use out navigation to change between an edit and view mode for our translations. 
-This can be useful should you decide to add authentication to the project and want to give admins the ability to add or
-alter translations, while letting users experience the updates on the fly. 
+We shall start by creating the home and navigation component. We will use the navigation to change between an edit and view mode for the in context editor. 
+Should you decide to add authentication to the project, you can lock down the edit mode such that only admins have the ability to add or
+alter translations.
 
 ```
 ng g component home
 ng g component navigation
 ```
 
-Next, we'll need to create a module that will be responsible for handling all phraseapp configuration. 
+Next, create a module that will be responsible for handling the phraseapp editor logic. 
  
 ```
 ng g module phraseapp
 ```
 
-Finally, let's create the two components that will handle the view and edit modes. 
+Finally, create two components that will handle the view and edit modes. 
  
 ```
 ng g component phraseapp/phraseapp-view
 ng g component phraseapp/phraseapp-edit
 ```
 
-Once done our `src/app` structure should look like this, excluding css and spec.ts files:
+Once done the `src/app` structure should look like this, excluding css and spec.ts files:
 
   * home ▼
     * home.component.html
@@ -51,15 +51,15 @@ Once done our `src/app` structure should look like this, excluding css and spec.
   * app.component.ts
   * app.module.ts
   
-If we inspect out `app.module.ts` file we can see that our components have been added automatically our project. 
-Additionally in our assets folder lets create 2 files inside a i18n directory.  
+If you inspect the `app.module.ts`, you can see that our components have been automatically added to the project. 
+Additionally, in our assets folder, create the following two files inside a i18n directory.  
 
   * assets ▼
     * i18n ▼
       * en.json
       * es.json
 
-Inside en.json place the following JSON object
+Inside the en.json file, place the following JSON object:
 
 ```
 {
@@ -68,7 +68,7 @@ Inside en.json place the following JSON object
 }
 ```
 
-Inside es.json place the following JSON object
+Inside the es.json file, place the following JSON object:
 
 ```
 {
@@ -77,6 +77,6 @@ Inside es.json place the following JSON object
 }
 ```
 
-While these files arn't strictly necessary for phraseapp, you can use them with phraseapp if you wish to localize your
-phraseapp exports. While we won't be doing this in this demo, as well be fetching our translations via the PhraseApp API,
-we can leverage these file to translate items outside of the Form.io object.  
+While these files are not strictly necessary for phraseapp, you can use them with phraseapp if you wish to localize your
+phraseapp exports. While we will not be doing this in this demo, you're welcome to fetch the localization date 
+from your own files.

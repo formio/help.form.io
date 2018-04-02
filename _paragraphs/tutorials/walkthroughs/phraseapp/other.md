@@ -6,23 +6,23 @@ chapter: phraseapp
 slug: other
 weight: 50
 ---
-While The following libraries are *optional*, we'll be including them in this application as they add some
-styling to the application and structure to our application.
+While The following libraries are *optional*, we will be including them in this application as they add both
+styling and structure to the application.
 
 If you'd like to include [bootstrap styling](https://getbootstrap.com/docs/4.0/getting-started/introduction/) run the following command:
 
 ```
-npm install --save bootstrap --version ^4.0.0
+npm install --save bootstrap@^4.0.0
 ```
 
 If you'd like to include [bootswatch templates](https://bootswatch.com/) run the following command: 
 
 ```
-npm install --save bootswatch --version ^4.0.0
+npm install --save bootswatch@^4.0.0
 ```
 
-Once installed, you'll need to include bootstrap and bootswatch in your application by including the following
-in the `src/styles.scss` directory: 
+Once installed, you will need to include bootstrap and bootswatch libraries in the application by inserting the following
+code in the `src/styles.scss` file:
 
 ```
 @import "~bootswatch/dist/pulse/_variables.scss";
@@ -30,14 +30,13 @@ in the `src/styles.scss` directory:
 @import "~bootswatch/dist/pulse/_bootswatch.scss";
 ```
 
-if you'd like to include [font-awesome](https://fontawesome.com/) run the following command: 
+If you would like to include [font-awesome](https://fontawesome.com/) to the project, please run the following command: 
 
 ```
-npm install --save font-awsome --version ^4.7.0
+npm install --save font-awesome@^4.7.0
 ```
 
-Once installed, you'll need to include font-awesome in your application by including the following in your
-```angular-cli.json``` file at the root level.
+Once installed, include font-awesome in the the ```angular-cli.json``` file at the root level.
  
 ```
 {
@@ -57,7 +56,8 @@ Once installed, you'll need to include font-awesome in your application by inclu
 }
 ```
 
-With all of our dependencies installed, feel free to relaunch launch the application with `ng serve`. 
-You can leave it running while we working in another terminal instance as the application will recompile 
-automatically while we continue to make changes to the `src` directory. 
- 
+With all of the dependencies installed, feel free to relaunch launch the application by running `ng serve`. 
+You can leave the development server active while we start working inside the `src` directory as the project
+will now automatically update as we make changes to the application.
+
+

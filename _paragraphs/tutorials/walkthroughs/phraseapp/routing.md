@@ -18,12 +18,11 @@ import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common
 import { TranslateModule, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { PhraseappModule } from './phraseapp/phraseapp.module';
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { PhraseappViewComponent } from './phraseapp/phraseapp-view/phraseapp-view.component';
+import { PhraseappModule } from './phraseapp/phraseapp.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,9 +30,9 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 const navStack: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent},
   { path: 'phraseapp/view', component: PhraseappViewComponent },
-  { path: '**', pathMatch: 'full', redirectTo: '' }
+  { path: '**', pathMatch: 'full', redirectTo: ''}
 ];
 
 @NgModule({
@@ -86,10 +85,27 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(translate: TranslateService){
+  constructor(translate: TranslateService) {
     translate.setDefaultLang('en');
   }
-}
+```
+
+in the `appts.compoent.html` give the `router-outles` a place to injection our components
+
+```
+<div class="container">
+  <div class="row" style="padding: 10px 0">
+    <div class="col-md-12">
+      <app-navigation></app-navigation>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 ```
 
 In the `navigation.component.html` let's bootstrap navbar class and configure our links.
@@ -126,17 +142,14 @@ Finally, we have to configure the `phraseapp.module.ts` with the following:
 
 ```
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { PhraseAppCompiler } from 'ngx-translate-phraseapp';
 
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { PhraseappViewComponent } from './phraseapp/phraseapp-view/phraseapp-view.component';
-import { PhraseappModule } from './phraseapp/phraseapp.module';
+import { PhraseappEditComponent } from './phraseapp-edit/phraseapp-edit.component';
 
 const navStack: Routes = [
   { path: 'phraseapp',
@@ -170,6 +183,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   declarations: [PhraseappEditComponent]
 })
+export class PhraseappModule { }
 ```
 
 With the core configuration in place, feel free to  test everything using `ng serve`. While on the surface not a lot has changed,
