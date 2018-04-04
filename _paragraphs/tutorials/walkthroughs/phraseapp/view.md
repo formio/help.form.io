@@ -58,12 +58,12 @@ export class PhraseappViewComponent implements OnInit {
   }
 
   getLanguages():Promise<any> {
-    return this.http.get(this.PhraseBase).toPromise()
+    return this.http.get(this.PhraseBase).toPromise();
   }
 
   getTranslations(data) {
     let promises:any = [];
-    for (var i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
       promises.push(this.http.get(this.PhraseBase + data[i]['id'] + '/translations').toPromise());
     }
     return promises
@@ -75,7 +75,7 @@ export class PhraseappViewComponent implements OnInit {
       let toMergePhrase = {};
       let newLanguage = {};
       for (let i = 0; i < phrases.length; i++) {
-        for (var propt in phrases[i]) {
+        for (let propt in phrases[i]) {
           let injectLang = phrases[i][propt]['locale']['code'];
           let injectKeyBase = phrases[i][propt]['key']['name'];
           let injectKeyPhrase = '[[__phrase_' + phrases[i][propt]['key']['name'] + '__]]';
@@ -88,7 +88,7 @@ export class PhraseappViewComponent implements OnInit {
           newLanguage[injectLang] = Object.assign(prevValue, toMergePhrase, toMergeBase);
         }
 
-        resolve(newLanguage)
+        resolve(newLanguage);
       }
     });
   }
@@ -141,14 +141,14 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         this.currentUrl = event.url;
-        if(this.currentUrl === '/phraseapp/edit' && this.previousUrl != '/phraseapp/edit' && this.previousUrl) {
+        if(this.currentUrl === '/phraseapp/edit' && this.previousUrl !== '/phraseapp/edit' && this.previousUrl) {
           this.previousUrl = this.currentUrl;
           window.location.reload(true);
         }
-        if(this.previousUrl === '/phraseapp/edit' && this.currentUrl != '/phraseapp/edit') {
+        if(this.previousUrl === '/phraseapp/edit' && this.currentUrl !== '/phraseapp/edit') {
           window.location.reload(true);
         }
-        this.previousUrl = this.currentUrl
+        this.previousUrl = this.currentUrl;
       }
     });
   }

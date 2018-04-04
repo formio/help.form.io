@@ -9,7 +9,7 @@ weight: 100
 Before we configure the view mode we, need to create an interceptor to handle the `Access Token`.
 This is to lock down the edit access to only people who have PhraseApp login credentials with respect current the project. 
 
-under `phraseapp` → `phraseapp-view` create a fifth file called `phraseapp-interceptor.ts`, and add the following code:
+under `phraseapp` → `phraseapp-view` create a fifth file called `phraseapp-interceptor.ts` and add the following code:
 
 ```
 import { Injectable } from '@angular/core';
@@ -24,6 +24,7 @@ export class PhraseappInterceptor implements HttpInterceptor {
     });
     return next.handle(accessRequest);
   }
+}
 ```
 
 with this in place we need to revisit the `app.module.ts` file and append the providers.

@@ -15,7 +15,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { TranslateModule, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
@@ -67,7 +67,7 @@ The translation provider that we've included will allow us to access those json 
 in the navigation component. and finally, we've added the PhraseappModule which will handle the edit view and out HTTP
 module that will be responsible for handling out asynchronous request to the PhraseApp APIs.  
 
-for the `apps.component.html` feel free to change it to whatever you'd like. we'll be setting it to:
+for the `home.component.html` feel free to change it to whatever you'd like. we'll be setting it to:
 
 ```
 <p>This is demo application for PhraseApp Translations</p>
@@ -88,9 +88,10 @@ export class AppComponent {
   constructor(translate: TranslateService) {
     translate.setDefaultLang('en');
   }
+}
 ```
 
-in the `appts.compoent.html` give the `router-outles` a place to injection our components
+in the `apps.component.html` give the `router-outlet` a place to injection our components
 
 ```
 <div class="container">
@@ -112,7 +113,7 @@ In the `navigation.component.html` let's bootstrap navbar class and configure ou
 
 ```
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" routerLink="/">{{ 'title' | translate }}</a>
+  <a class="navbar-brand" routerLink="/"><i class="fa fa-home"></i> {{ 'title' | translate }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -124,7 +125,7 @@ In the `navigation.component.html` let's bootstrap navbar class and configure ou
       </li>
 
       <li class="nav-item dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
           Phraseapp
         </a>
 

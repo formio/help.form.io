@@ -99,8 +99,9 @@ export class PhraseappEditComponent implements OnInit {
   ngOnInit() {
     createForm(document.getElementById('PhraseEdit'), this.formRemote, {
       readOnly: false,
-    })
+    });
   }
+}
 ```  
 
 Here we're doing a couple of things. First, we're creating the Form on our HTML's target `#PhraseEdit`. 

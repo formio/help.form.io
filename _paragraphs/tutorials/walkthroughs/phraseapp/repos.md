@@ -6,13 +6,13 @@ chapter: phraseapp
 slug: repositories
 weight: 20
 ---
-Before diving into the Phraseapp integration, here is a list of several resource, including application modules 
-that we will be importing throughout this walk-through. Additionally you will be expected to have:
+Before diving into the PhraseApp integration, here is a list of several resource, including application modules
+that we will be importing throughout this walk-through. Additionally, you will be expected to have:
 
  - A Form.io Account - visit [portal.form.io](https://portal.form.io) to register
  - A Phraseapp Account - visit [phraseapp.com](https://phraseapp.com/en/signup) to register
 
-Feel free to antiquate yourself with the following repositories and libraries 
+Feel free to antiquate yourself with the following repositories and libraries:
 
  - @formio.js - view live on [github](https://github.com/formio/formio.js) 
  - @angular-formio - view live on [github](https://github.com/formio/angular-formio)
@@ -23,6 +23,6 @@ Feel free to antiquate yourself with the following repositories and libraries
 
 For specific information regarding our `Core Render`, formio.js, you can find supplemental materials on our [wiki](https://github.com/formio/formio.js/wiki).
 
-For specific information regarding our `Angular2+ Wrapper`, angular-formio, you can find supplemental materials on our [wiki](https://github.com/formio/angular-formio/wiki). 
+For specific information regarding our `Angular 2+  Wrapper`, angular-formio, you can find supplemental materials on our [wiki](https://github.com/formio/angular-formio/wiki).
 
-For a general overview of how translations work in formio.js please visit [this section](https://help.form.io/tutorials/walkthroughs/translations) on help.form.io.
+For a general overview of how translations work in formio.js, please visit [this section](https://help.form.io/tutorials/walkthroughs/translations) on help.form.io.
