@@ -21,7 +21,7 @@ Feel free to antiquate yourself with the following repositories and libraries:
  - @ngx-translate-phraseapp - view live on [github](https://github.com/phrase/ngx-translate-phraseapp)
  - Angular - view the official documentation at [angular.io](https://angular.io) 
 
-For specific information regarding our `Core Render`, formio.js, you can find supplemental materials on our [wiki](https://github.com/formio/formio.js/wiki).
+For specific information regarding our `Core Renderer`, formio.js, you can find supplemental materials on our [wiki](https://github.com/formio/formio.js/wiki).
 
 For specific information regarding our `Angular 2+  Wrapper`, angular-formio, you can find supplemental materials on our [wiki](https://github.com/formio/angular-formio/wiki).
 
