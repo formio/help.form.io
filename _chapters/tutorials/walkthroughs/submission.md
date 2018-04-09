@@ -1,9 +1,9 @@
 ---
 title: Tutorials
-subtitle: PhraseApp Integration
+subtitle: Formio.js Submission Object
 book: tutorials
 section: walkthroughs
-weight: 60
-chapter: phraseapp
+weight: 70
+chapter: submission
 layout: chapter
 ---

@@ -18,7 +18,7 @@ ng g component home
 ng g component navigation
 ```
 
-Next, create a module that will be responsible for handling the phraseapp editor logic. 
+Next, create a module that will be responsible for handling the PhraseApp editor logic.
  
 ```
 ng g module phraseapp
@@ -77,6 +77,6 @@ Inside the es.json file, place the following JSON object:
 }
 ```
 
-While these files are not strictly necessary for phraseapp, you can use them with phraseapp if you wish to localize your
-phraseapp exports. While we will not be doing this in this demo, you're welcome to fetch the localization date 
-from your own files.
+While these files are not strictly necessary, we can use them with PhraseApp to localize the translation exports for inclusion during the compile process.
+This can be useful when building an application that may need to work in an offline configuration. Feel welcome to localize the data
+instead of retrieving the files from the API as shown later in this walk-through.

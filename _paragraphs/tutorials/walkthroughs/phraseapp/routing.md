@@ -15,14 +15,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { TranslateModule, TranslateLoader, TranslateCompiler } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { PhraseappViewComponent } from './phraseapp/phraseapp-view/phraseapp-view.component';
-import { PhraseappModule } from './phraseapp/phraseapp.module';
+import { PhraseAppViewComponent } from './phraseapp/phraseapp-view/phraseapp-view.component';
+import { PhraseAppModule } from './phraseapp/phraseapp.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,7 +31,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 const navStack: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'phraseapp/view', component: PhraseappViewComponent },
+  { path: 'phraseapp/view', component: PhraseAppViewComponent },
   { path: '**', pathMatch: 'full', redirectTo: ''}
 ];
 
@@ -39,13 +39,13 @@ const navStack: Routes = [
   declarations: [
     AppComponent,
     NavigationComponent,
-    PhraseappViewComponent,
+    PhraseAppViewComponent,
     HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    PhraseappModule,
+    PhraseAppModule,
     RouterModule.forRoot(navStack, {useHash: true}),
     TranslateModule.forRoot({
       loader: {
@@ -64,10 +64,10 @@ export class AppModule { }
 at this point `HTTP_INTERCEPTORS` and `TranslateCompiler` arn't configured but we'll come back to those later. 
 as for the rest of the code, we've add angular's router which will interact with our navigation component.
 The translation provider that we've included will allow us to access those json files which you'll see utilized
-in the navigation component. and finally, we've added the PhraseappModule which will handle the edit view and out HTTP
+in the navigation component. and finally, we've added the PhraseAppModule which will handle the edit view and out HTTP
 module that will be responsible for handling out asynchronous request to the PhraseApp APIs.  
 
-for the `apps.component.html` feel free to change it to whatever you'd like. we'll be setting it to:
+for the `home.component.html` feel free to change it to whatever you'd like. we'll be setting it to:
 
 ```
 <p>This is demo application for PhraseApp Translations</p>
@@ -88,9 +88,10 @@ export class AppComponent {
   constructor(translate: TranslateService) {
     translate.setDefaultLang('en');
   }
+}
 ```
 
-in the `appts.compoent.html` give the `router-outles` a place to injection our components
+in the `apps.component.html` give the `router-outlet` a place to injection our components
 
 ```
 <div class="container">
@@ -99,7 +100,7 @@ in the `appts.compoent.html` give the `router-outles` a place to injection our c
       <app-navigation></app-navigation>
     </div>
   </div>
-
+PhraseApp
   <div class="row">
     <div class="col-md-12">
       <router-outlet></router-outlet>
@@ -112,7 +113,7 @@ In the `navigation.component.html` let's bootstrap navbar class and configure ou
 
 ```
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" routerLink="/">{{ 'title' | translate }}</a>
+  <a class="navbar-brand" routerLink="/"><i class="fa fa-home"></i> {{ 'title' | translate }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -124,8 +125,8 @@ In the `navigation.component.html` let's bootstrap navbar class and configure ou
       </li>
 
       <li class="nav-item dropdown" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-          Phraseapp
+        <a class="nav-link dropdown-toggle" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          PhraseApp
         </a>
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -154,7 +155,7 @@ import { PhraseappEditComponent } from './phraseapp-edit/phraseapp-edit.componen
 const navStack: Routes = [
   { path: 'phraseapp',
     children: [
-      { path: 'edit', component: PhraseappEditComponent },
+      { path: 'edit', component: PhraseAppEditComponent },
     ]
   }
 ];
@@ -181,9 +182,9 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
   ],
-  declarations: [PhraseappEditComponent]
+  declarations: [PhraseAppEditComponent]
 })
-export class PhraseappModule { }
+export class PhraseAppModule { }
 ```
 
 With the core configuration in place, feel free to  test everything using `ng serve`. While on the surface not a lot has changed,

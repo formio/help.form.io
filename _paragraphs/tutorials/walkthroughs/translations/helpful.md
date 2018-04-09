@@ -1,5 +1,5 @@
 ---
-title: Helpful tools
+title: Helpful Tools
 book: tutorials
 section: walkthroughs
 chapter: translations
