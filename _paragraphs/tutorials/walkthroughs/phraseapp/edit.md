@@ -10,7 +10,7 @@ With our form built, make sure the form `access` is configured for your intended
 are set to `anonymous`. Starting with out `phraseapp-edit.component.ts` import the following HTML:
 
 ```
-<h4>Phraseapp Edit Mode</h4>
+<h4>PhraseApp Edit Mode</h4>
 <hr>
 
 <div class="card" style="padding: 10px">
@@ -79,7 +79,7 @@ import { createForm } from 'formiojs';
   styleUrls: ['./phraseapp-edit.component.scss']
 })
 
-export class PhraseappEditComponent implements OnInit {
+export class PhraseAppEditComponent implements OnInit {
   formRemote: string;
   phraseConfig: object;
 

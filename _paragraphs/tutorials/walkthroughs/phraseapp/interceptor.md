@@ -17,7 +17,7 @@ import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/c
 import { Observable } from 'rxjs/observable';
 
 @Injectable()
-export class PhraseappInterceptor implements HttpInterceptor {
+export class PhraseAppInterceptor implements HttpInterceptor {
   intercept (request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const accessRequest = request.clone({
       headers: request.headers.set('Authorization', 'token <AccessTokenGoesHere>')
@@ -31,13 +31,13 @@ with this in place we need to revisit the `app.module.ts` file and append the pr
 
 ```
 ...
-import { PhraseappInterceptor } from './phraseapp/phraseapp-view/phraseapp-interceptor';
+import { PhraseAppInterceptor } from './phraseapp/phraseapp-view/phraseapp-interceptor';
 ...
 @NgModule({
   ...
   providers: [{
     provide: HTTP_INTERCEPTORS,
-    useClass: PhraseappInterceptor,
+    useClass: PhraseAppInterceptor,
     multi: true,
   }],
   ...

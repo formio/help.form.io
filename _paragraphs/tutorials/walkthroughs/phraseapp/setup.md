@@ -9,7 +9,7 @@ weight: 30
 To get started, you will need to make sure that you have the following accounts and tools installed on your machine.
 
  - A Form.io Account - visit [portal.form.io](https://portal.form.io) to register
- - A Phraseapp Account - visit [phraseapp.com](https://phraseapp.com/en/signup) to register
+ - A PhraseApp Account - visit [phraseapp.com](https://phraseapp.com/en/signup) to register
  - An installation of Node.js - visit [node.org](https://nodejs.org/en/) for download instructions, we recommend using the latest LTS version
  
 While not required, we will be using the Angular CLI to build this demo application. Please reference [cli.angular.io](https://cli.angular.io/) for additional support. 

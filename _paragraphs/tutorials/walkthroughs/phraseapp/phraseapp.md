@@ -1,5 +1,5 @@
 ---
-title: Phraseapp Interface
+title: PhraseApp Interface
 book: tutorials
 section: walkthroughs
 chapter: phraseapp

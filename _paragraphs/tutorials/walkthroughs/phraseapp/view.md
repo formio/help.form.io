@@ -8,7 +8,7 @@ weight: 110
 ---
 With the interceptor built, we can now configure the view mode. Add the following code to `phraseapp-view.component.html`
 ```
-<h4>Phraseapp View Mode: {{ 'activeLang' | translate }}</h4>
+<h4>PhraseApp View Mode: {{ 'activeLang' | translate }}</h4>
 
 <div class="row">
   <div class="col-sm-4 offset-2">
@@ -112,13 +112,13 @@ export class PhraseappViewComponent implements OnInit {
 ```  
 
 To summarize whats happening here, because this is where bulk of the code is handled, 
-we start by getting the locales from then PhraseApp API. This makes the configuration work whether there is 1 or 60 
+we start by getting the locales from then PhraseApp API. This makes the configuration work whether there is 1 or 60
 languages in your PhraseApp portal. Once the list of locales is returned we then fetch the remote object that contains
 all translations as provided by PhraseApp. Finally we need to convert and pass the return into the form's construction.
 for a simple versions of whats happening you reference our [Form.io Translations](https://help.form.io/tutorials/walkthroughs/translations/) example.
 
 Finally, there is one more hitch we have to account for in this demo. If you visit the `Edit Mode` and the visit other pages,
-the Phraseapp interface persists. This is because once the app is initialized via the `initializePhraseAppEditor()` function,
+the PhraseApp interface persists. This is because once the app is initialized via the `initializePhraseAppEditor()` function,
 it affects the entire state. To fix this we need to add router properties to our `app.component.ts` file.
 
 ```

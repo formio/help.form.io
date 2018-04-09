@@ -10,7 +10,7 @@ Before diving into the PhraseApp integration, here is a list of several resource
 that we will be importing throughout this walk-through. Additionally, you will be expected to have:
 
  - A Form.io Account - visit [portal.form.io](https://portal.form.io) to register
- - A Phraseapp Account - visit [phraseapp.com](https://phraseapp.com/en/signup) to register
+ - A PhraseApp Account - visit [phraseapp.com](https://phraseapp.com/en/signup) to register
 
 Feel free to antiquate yourself with the following repositories and libraries:
 

@@ -18,7 +18,7 @@ ng g component home
 ng g component navigation
 ```
 
-Next, create a module that will be responsible for handling the phraseapp editor logic. 
+Next, create a module that will be responsible for handling the PhraseApp editor logic.
  
 ```
 ng g module phraseapp
