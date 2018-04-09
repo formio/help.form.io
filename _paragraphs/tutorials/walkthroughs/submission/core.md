@@ -11,7 +11,7 @@ It appears to have a default ```Populating...``` when in actuality, its value is
 is independent of the form's definition.
 
 <div id="formiojs">
-  <script async src="http://jsfiddle.net/Formio/obhgrrd8/embed/result,js,html,css/"></script>
+  <script async src="https://jsfiddle.net/Formio/obhgrrd8/embed/result,js,html,css/"></script>
 </div>
 
 Taking a look at the javascript, notice the event listener that checks the parent form's select component

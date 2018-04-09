@@ -12,7 +12,7 @@ these values with ones from your own project.  Additionally, fetch logic has bee
 retrieving, parsing, and injecting the language returns into the form definition.
 
 <div id="step2">
-  <script async src="http://jsfiddle.net/Formio/4j7w2f4g/37/embed/result,js,html,css/"></script>
+  <script async src="https://jsfiddle.net/Formio/4j7w2f4g/embed/result,js,html,css/"></script>
 </div>
 
 

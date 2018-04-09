@@ -11,7 +11,7 @@ Below is as an example of a bare-bones use case of our [core renderer](https://g
 code to throughout this walk through.  
 
 <div id="step1">
-  <script async src="//jsfiddle.net/Formio/83tkkzLc/embed/result,js,html,css/"></script>
+  <script async src="https://jsfiddle.net/Formio/83tkkzLc/embed/result,js,html,css/"></script>
 </div>
 
 

@@ -14,7 +14,7 @@ Each button has had the `Action` property switched to `Event`, and the `Button E
 With the form configured, take a look at the javascript of the third and final section. 
 
 <div id="step3">
-  <script async src="//jsfiddle.net/Formio/yvg8zweh/embed/result,js,html,css/"></script>
+  <script async src="https://jsfiddle.net/Formio/yvg8zweh/embed/result,js,html,css/"></script>
 </div>
 
 Notice the two properties added during the `Formio.createForm` method: `language` and `i18n`. 
