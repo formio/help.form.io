@@ -1,9 +1,9 @@
 ---
 title: Tutorials
-subtitle: PhraseApp Integration
+subtitle: Translations Resource
 book: tutorials
 section: walkthroughs
-weight: 60
-chapter: phraseapp
+weight: 50
+chapter: resource
 layout: chapter
 ---
