@@ -79,11 +79,24 @@ docker run -itd \
   formio/formio-files-core;
 ```
 
-You will need to copy these settings. For the Minio server deployments, you will need to provide the FORMIO_S3_SERVER configuration. You will then run this within your terminal which should spin up your new server. The settings are described as follows.
+You will need to copy these settings. For the Minio server deployments, you will need to provide the FORMIO_S3_SERVER configuration. You will then run this within your terminal which should spin up your new server.
+
+### Remote Form.io Server + PDF Server
+If you have a combination of both the remote Form.io API server **formio/formio-server** as well as the deployed PDF server **formio/formio-files-core**, you will need to introduce two new Environment variables to ensure that the API server can communicate to the PDF server and vice versa. Because of this, you will need to introduce the following two Environment Variables within the API Server and PDF Server respectively.
+
+{: .table .table-bordered .table-striped}
+| Deployment | Setting | Description | Example |
+|---------|---------|-------------|---------|
+| API Server (formio/formio-server) | FORMIO_PDF_SERVER | This is the URL of the PDF server, which is set within the API server so that it can download Submission PDF's pointed to the PDF Server | https://pdf.yourserver.com |
+| PDF Server (formio/formio-files-core) | FORMIO_SERVER | This is the URL of the API server, so that the remote PDF server can communicate to the API server to authenticate certain requests. | https://forms.yourserver.com |
+
+### PDF Server Environment Variables
+The settings for the deployed PDF Server are described as follows.
 
 {: .table .table-bordered .table-striped}
 | Setting | Description | Example |
 |---------|-------------|---------|
+| FORMIO_SERVER | This is the URL to a remotely deployed server | https://forms.yourserver.com |
 | FORMIO_PROJECT | This is your project ID, which can be seen by looking at your project URL and copying what comes after ```/project/...``. | 5aafe4e36d2d1e3153681e2a |
 | FORMIO_PROJECT_TOKEN | This is a provided PDF server token that must be provided to start the server. | OFU1XbBosvNMpses2LBTawcLrUX6K2 |
 | FORMIO_PDF_PROJECT | This is the URL of your project. If you imported the pdf template into your current project, then this is the URL of your project. | https://pdfexample.form.io |
