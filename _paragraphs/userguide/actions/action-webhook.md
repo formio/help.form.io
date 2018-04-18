@@ -19,9 +19,17 @@ The handler determines when the webhook request will be sent. Currently there ar
 
 When to run this action. Select which system events will trigger this action.
 
-#### Webhook URL
+#### Request Method
 
-The url of the external system that will handle the web hook.
+This is the REST Verb that will be used to make the request. If set to Match (or blank) it will use the request method that came with the request. For example, a Create request will have the Post method.
+
+#### Request URL
+
+The url of the external system that will handle the web hook. This should be accessible to the form.io server.
+
+#### Forward Headers
+
+If checked, all of the headers received by the form.io server will be forwarded with the webhook.
 
 #### Authorize User
 
@@ -31,7 +39,23 @@ If you are using Basic Access Authentication for the web hook url, enter the use
 
 If you are using Basic Access Authentication for the web hook url, enter the password here.
 
-### Webhook Reciever
+#### Additional Headers
+
+You can add additional headers as needed. These typically are adding an Authorization header or Content-Type.
+
+#### Transform Payload
+
+You can modify the request payload by writing custom javascript code. There are available variables that can be used to aggregate into a custom object as desired. Whatever is placed into payload will be sent as the body of the request.
+
+#### Wait for webhook
+
+By default webhooks continue on to other actions before the request finishes. If you check this box it will wait for the webhook to finish before continuing and return the results to the frontend in the metadata field.
+
+#### External Id Type and Path
+
+If the webhook endpoint creates a data object in the external system there is often an id number created and returned in the response. If you want to save this and associate it with the submission in form.io you can specify a type and id path here. The type name is the key it is stored in the database (for example: github or alfresco). If you use the same type name in multiple webhooks it will associate with the same id. The id path is the location of the id in the response object from the webhook endpoint. This is used to get the id out of the data object.
+
+### Webhook Receiver
 
 In order to receive webhooks, we have created a library that serves to provide a reciever for them. You can download this library at [https://github.com/formio/formio-webhook-receiver](https://github.com/formio/formio-webhook-receiver). Please read the README documents on how to utilize this library.
 
