@@ -14,7 +14,7 @@ While **Resources** and **Forms** share the same structure and form building pro
 <div class="row well">
   <div class="col col-sm-6">
     <h4><strong>Resource Definition</strong></h4>
-    <hr></hr>
+    <hr>
     <p>Resources are the "structured" data objects that support your application. Anything that has a static data structure can be defined as a Resource. For example, Users within your application have a data "structure" as follows, and therefore are considered Resources within Form.io.</p>
     <table class="table table-striped">
      <thead>
@@ -30,7 +30,7 @@ While **Resources** and **Forms** share the same structure and form building pro
   </div>
   <div class="col col-sm-6">
     <h4><strong>Form Definition</strong></h4>
-    <hr></hr>
+    <hr>
     <p>Forms represent the "unstructured" data that is used to supplement a Resource. For example, a <strong>Customer Survey</strong> may have free-form questions (fields) like "Did you enjoy your visit?", and those free-form fields should be associated to the Customer who submitted it. In this example, a <strong>Customer Survey</strong> would be a <strong>Form</strong> that references the <strong>Customer</strong> Resource.</p>
   </div>
 </div>
