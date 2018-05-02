@@ -1,8 +1,22 @@
 ---
 layout: default
-app: formioForm
 title: Contact <img src="/assets/img/formio-logo-white.png" style="margin-bottom:10px" />
 summary: We would love to hear from you! Please use the following form to send us a message.
+app: formioContact
 ---
-<script type="text/javascript">angular.module('formioForm', ['formio']);</script>
-<formio src="'https://formio.form.io/contact'"></formio>
+<script type="text/javascript">
+  console.log('redirect');
+  angular.module('formioContact', ['formio'])
+    .controller('formController', function($scope) {
+      $scope.$on('formSubmission', function(err, submission) {
+        window.location = "/thankyou";
+      });
+    });
+</script>
+<div ng-app="formioContact" ng-controller="formController">
+  <formio src="'https://formio.form.io/contact'"></formio>
+</div>
+
+
+
+

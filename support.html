@@ -2,7 +2,19 @@
 layout: default
 title: <img src="/assets/img/formio-logo-white.png" style="margin-bottom:10px" /> Support
 summary: Need some help? Fill out the following form and we will get back with you as soon as possible.
-app: formioForm
+app: formioSupport
 ---
-<script type="text/javascript">angular.module('formioForm', ['formio']);</script>
-<formio src="'https://formio.form.io/support'"></formio>
+<script type="text/javascript">
+  console.log('redirect');
+  angular.module('formioSupport', ['formio'])
+    .controller('formController', function($scope) {
+      $scope.$on('formSubmission', function(err, submission) {
+        window.location = "/thankyou";
+      });
+    });
+</script>
+
+<div ng-app="formioSupport" ng-controller="formController">
+  <formio src="'https://formio.form.io/support'"></formio>
+</div>
+
