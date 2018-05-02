@@ -11,7 +11,7 @@ They way to accomplish this is outlined within the AWS Documentation found @ [ht
 
 The steps to get started are as follows.
 
- - Generate your docker auth token. To do this, use a base64 encoding tool like [https://www.base64encode.net/](https://www.base64encode.net/) or your command line by typing ```openssl base64``` (press Enter and then Ctrl+d when done entering username and password).
+ - Generate your docker auth token. To do this, use a base64 encoding tool like [https://www.base64encode.net/](https://www.base64encode.net/) or your command line by typing ```echo -n 'myusername:mypassword' | openssl base64```.
 
  - Enter your docker username, a colon, and your password and press the encode button. For example: 'myusername:mypassword'.
 
