@@ -30,6 +30,12 @@ code in the `src/styles.scss` file:
 @import "~bootswatch/dist/pulse/_bootswatch.scss";
 ```
 
+Bootstrap requests [jquery](https://fontawesome.com/) so if you are planning on using the above dependency add:
+
+```
+npm install --save jquery@^3.3.0
+```
+
 If you would like to include [font-awesome](https://fontawesome.com/) to the project, please run the following command: 
 
 ```

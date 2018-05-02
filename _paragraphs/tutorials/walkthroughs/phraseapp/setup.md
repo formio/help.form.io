@@ -19,10 +19,11 @@ To install and create the application's development environment, please run the 
 npm install -g @angular/cli
 ng new translations --style=scss
 cd translations
+npm install
 ng serve
 ```
 
-If everything is configured correctly, a default angular application should be live at `localhost:4200`.
+If everything is configured correctly, a default Angular 2+ application should be live at `localhost:4200`.
 
 
 
