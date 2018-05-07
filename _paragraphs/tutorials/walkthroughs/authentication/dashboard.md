@@ -6,7 +6,7 @@ chapter: authentication
 slug: portal-password-reset
 weight: 120
 ---
-With everything setup, the only left to do is to create a dashboard form and allow authenticated users access to its content.
+With everything setup, the only thing left to do is to create a dashboard form on portal.form.io and allow authenticated users access to its content.
 
-If you're interested in building out the admin platform we have a dedicated video that teach users how to create an event management
-system that could us used in place of the preconfigured dashboard.
+If you are interested in building out an authenticated platform you can view Angular 2+ video that showcases how to create an event management
+system [here](/intro/guide/#videoguide).
