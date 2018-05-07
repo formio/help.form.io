@@ -1,9 +1,9 @@
 ---
 title: Tutorials
-subtitle: Angular 2+ Auth
+subtitle: Form.io Authentication
 book: tutorials
 section: walkthroughs
 weight: 70
-chapter: password
+chapter: authentication
 layout: chapter
 ---
