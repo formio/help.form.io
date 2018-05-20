@@ -94,3 +94,34 @@ If you are running this container in a production environment and have SSL enabl
 You should now have an instance of the formio-server running in your environment. To test it, go to [http://localhost:3000](http://localhost:3000){:target="_blank"}. You should see a response with an empty array since there will be no projects on your environment yet.
 
 Also test out [http://localhost:3000/status](http://localhost:3000/status){:target="_blank"} which will give you the build number and database schema version of your environment.
+
+#### Upgrading your deployment
+Once you have your Docker container running, you will certainly get to a point where you will need to upgrade your Docker container server. To do this, you simply pull down the latest container, and launch the new instance. Before you update, it is important to stage your commands within a text editor so that you simply need to copy and paste your command in your shell to perform the udpate. To determine the environment variables you will need to call, it is important to ensure that the same environment variables are used from one version to another. You can determine what environment variables to use by typing the following command in your terminal.
+
+```
+docker inspect formio-server
+```
+
+This will print out the information from the formio-server container, including the environment variables. You will then copy those environment variables and merge them with the following command within a Text editor of your chosing.
+
+```
+docker pull formio/formio-server && \
+docker rm formio-server-old && \
+docker stop formio-server && \
+docker rename formio-server formio-server-old && \
+docker run -itd \
+  -e "PORTAL_SECRET=CHANGEME" \
+  -e "JWT_SECRET=CHANGEME" \
+  -e "DB_SECRET=CHANGEME" \
+  -e "PROTOCOL=http" \
+  --restart unless-stopped \
+  --name formio-server \
+  --network formio \
+  --link formio-mongo:mongo \
+  --link formio-redis:redis \
+  --restart unless-stopped \
+  -p 3000:80 \
+  formio/formio-server;
+```
+
+This command pulls down the latest version of the container, stops the current container, renames it to ```formio-server-old``` so that you have a path to go back if the update causes any problems, and then launches the new server in its place.
