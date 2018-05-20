@@ -106,7 +106,7 @@ This will print out the information from the formio-server container, including 
 
 ```
 docker pull formio/formio-server && \
-docker rm formio-server-old && \
+docker rm formio-server-old || true && \
 docker stop formio-server && \
 docker rename formio-server formio-server-old && \
 docker run -itd \
