@@ -40,7 +40,7 @@ https://cdn.rawgit.com/mshafrir/2646763/raw/states_titlecase.json
 And place that within the URL of the select drop down <strong>Data Source URL</strong>. You will then need to provide the <strong>Value Property</strong> as well as change the <strong>Item Template</strong> so that it will pull the right value as well as display correctly within the dropdown. The following image shows how the configuration would look for this particular setup.
 
 
-![Select URL JSON Source](assets/img/userguide/userguide-select-url.png)
+![Select URL JSON Source](/assets/img/userguide/userguide-select-url.png)
 
 This will now turn your select dropdown into a list of available States within the US.
 
