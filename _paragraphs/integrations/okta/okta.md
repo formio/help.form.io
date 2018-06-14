@@ -5,23 +5,30 @@ chapter: okta
 slug: okta-app
 weight: 10
 ---
-The fastest way to get started with trying out Okta is to start with a **Developer Account**, which creates a new account within their Developer Sandbox. This provides you a way to have all the features enabled for development purposes.
+The fastest way to get started with trying out Okta is to create a trial account by going to https://okta.com and then clicking on the "Try Okta" button.
 
-To create a new Developer account, go to https://developer.okta.com/signup/
+This will walk you through a new Account creation which you can setup for your Organization.
 
 Once you create a new Okta account, your first step will be to create a new application within the Okta interface. From
-your main dashboard page, go to the **Applications** section, and then click on the **Add Application** button.
+your main dashboard page, go to the **Admin** section.
+
+![](/assets/img/integrations/okta/okta-admin-button.png)
+
+Now then click on **Applications** menu, and then click on the **Add Application** button.
 
 ![](/assets/img/integrations/okta/add-application.png)
 
-Within the application wizard, make sure to click on **Web** button to create a new web application, and then click **Next**
+Now click **Create New App** within the Applications section.
 
-Next click on the "Create New App" button.
+![](/assets/img/integrations/okta/okta-create-new-app.png)
 
-![](/assets/img/integrations/okta/okta-web-create.png)
+Within the Create Application modal, make sure to select **Single Page App (SPA)** from the Platform dropdown, and then click **Create**
 
-In the next page, you will want to provide a title for your application, provide the **Base URIs** and then set the **Login redirect URIs** to the URL of your hosted application.
+![](/assets/img/integrations/okta/create-spa-app.png)
+
+In the next page, you will want to provide a title for your application, upload a logo, and then provide the **Login redirect URIs** to the URL of your hosted application. This is typically just the URL of your hosted application. If you are developing locally, then this can be the *localhost* URL of your application.
 
 ![](/assets/img/integrations/okta/app-general-settings.png)
 
-Now click the **Done** button and it will create your application. You are now ready to configure the Groups for your Okta application.
+Now click the **Save** button and it will create your application. 
+
