@@ -87,7 +87,7 @@ If you have a combination of both the remote Form.io API server **formio/formio-
 {: .table .table-bordered .table-striped}
 | Deployment | Setting | Description | Example |
 |---------|---------|-------------|---------|
-| API Server (formio/formio-server) | FORMIO_PDF_SERVER | This is the URL of the PDF server, which is set within the API server so that it can download Submission PDF's pointed to the PDF Server | https://pdf.yourserver.com |
+| API Server (formio/formio-server) | FORMIO_FILES_SERVER | This is the URL of the PDF server, which is set within the API server so that it can download Submission PDF's pointed to the PDF Server | https://pdf.yourserver.com |
 | PDF Server (formio/formio-files-core) | FORMIO_SERVER | This is the URL of the API server, so that the remote PDF server can communicate to the API server to authenticate certain requests. | https://forms.yourserver.com |
 
 ### PDF Server Environment Variables
