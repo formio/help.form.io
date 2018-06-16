@@ -114,3 +114,132 @@ The final step is to point your project to use the new PDF server that you just 
 ![](/assets/img/userguide/pdfserver/pdfserverurl.png)
 
 You are now running a completely hosted **PDF Server**!
+
+### Typical Form.io Server + PDF Server scalable environment.
+It is very common to setup the Form.io API Server within a scalable environment along with the PDF Server. Here are the Docker commands to configure a side-by-side API Server + PDF Server deployment.
+
+#### API Server + Redis
+Assuming that you have an external MongoDB setup, the only thing that you will need to configure in addition to a MongoDB server is a Redis instance. The PDF downloads uses a temp token feature of the API server which does require that **Redis** be installed. You can either setup Redis externally, or in some cases this can be managed on the actual API Server. Typically, for a production environment, you would want to have Redis running external, but it is also not considered bad practice to have Redis on the actual server since it is only used to store the temporary download tokens and the worst thing that will happen is that a token would expire if the servers reset. To accomplish this, you will execute the following commands within your terminal.
+
+First create a newtwork that will connect Form.io Server to the local Redis Instance
+
+```bash
+docker network create formio
+```
+
+Now spin up a local instance of Redis on this server.
+
+```bash
+docker run -itd \
+  --name formio-redis \
+  --network formio \
+  --restart unless-stopped \
+  redis;
+```
+
+Next, spin up your Form.io API server connecting it to the local Redis instance. 
+
+```bash
+docker run -itd \
+  -e "PORTAL_SECRET=CHANGEME" \
+  -e "JWT_SECRET=CHANGEME" \
+  -e "DB_SECRET=CHANGEME" \
+  -e "PROTOCOL=http" \
+  -e "MONGO=mongodb://:@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true" \
+  -e "FORMIO_FILES_SERVER=https://pdfserver.yourdomain.com" \
+  --network formio \
+  --link formio-redis:redis \
+  --restart unless-stopped \
+  --name formio-server \
+  -p 80:80 \
+  formio/formio-server;
+```
+
+Note that you would provide your own URL to the ```MONGO``` database and also provide your own domain where you are hosting the PDF server for the ```FORMIO_FILES_SERVER``` variable.
+
+#### API Server Standalone
+For some cases, you may wish to keep your Redis database external to your Form.io API server. This would allow for your API servers to become more ephemeral where they can autoscale. If this is the case, then you would provide the following configurations when spinning up your servers. For example, this would be what our Docker command would look like connecting to an ElasticCache instance in AWS.
+
+```bash
+docker run -itd \
+  -e "PORTAL_SECRET=CHANGEME" \
+  -e "JWT_SECRET=CHANGEME" \
+  -e "DB_SECRET=CHANGEME" \
+  -e "PROTOCOL=http" \
+  -e "MONGO=mongodb://:@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true" \
+  -e "REDIS_ADDR=production-001.2iu8pr.0001.usw2.cache.amazonaws.com" \
+  -e "REDIS_PORT=6379" \
+  -e "FORMIO_FILES_SERVER=https://pdfserver.yourdomain.com" \
+  --restart unless-stopped \
+  --name formio-server \
+  -p 80:80 \
+  formio/formio-server;
+```
+
+Notice that in this scenario, you do not need to create a ```formio``` newtork and connect your Docker container to the redis machine with the ```-link``` command.
+
+### PDF (files) Server
+To run the PDF Server in a production environment, the first thing you need to do is create an external mechanism for storing files. If you are using AWS S3, then this can be pretty simple where you just connect the PDF Server to that instance of S3 using the ```FORMIO_S3_SERVER``` as follows
+
+```bash
+docker run -itd \
+  -e "FORMIO_SERVER=https://formio.yourdomain.com" \
+  -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
+  -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
+  -e "FORMIO_PDF_PROJECT=https://formio.yourdomain.com/yourproject" \
+  -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
+  -e "FORMIO_S3_KEY=[S3 KEY]" \
+  -e "FORMIO_S3_SECRET=[S3 SECRET]" \
+  -e "FORMIO_S3_BUCKET=[S3 BUCKET]" \
+  -e "FORMIO_S3_REGION=[S3 REGION]" \
+  --restart unless-stopped \
+  --name formio-files-core \
+  -p 80:4005 \
+  formio/formio-files-core;
+```
+
+### PDF (files) Server + Minio
+If you would like to run a different file storage mechanism than S3, or maybe you would like to host your files locally, then you will need to use [Minio](https://minio.io). This allows you to connect to any external file system or a local file system if you would like. You can go to their website, and read their documentation on how to set it up.
+
+Once you are ready to install it, you can then run it locally as follows by first creating a newtwork as follows.
+
+```host
+formio network create formio
+```
+
+Then run Minio. For example, this command would connect with Minio, which is connected to an Azure Blob.
+
+```bash
+docker run -itd \
+ -e "MINIO_ACCESS_KEY=myblob" \
+ -e "MINIO_SECRET_KEY=[AZURE BLOB SECRET KEY]" \
+ --network formio \
+ --name formio-minio \
+ -p 9000:9000 \
+ minio/minio gateway azure;
+```
+
+You can now connect to Minio with the following.
+
+```host
+docker run -itd \
+  -e "FORMIO_SERVER=https://formio.yourdomain.com" \
+  -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
+  -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
+  -e "FORMIO_PDF_PROJECT=https://formio.yourdomain.com/yourproject" \
+  -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
+  -e "FORMIO_S3_KEY=myblob" \
+  -e "FORMIO_S3_SECRET=[AZURE BLOB SECRET]" \
+  -e "FORMIO_S3_BUCKET=formio" \
+  -e "FORMIO_S3_REGION=us-east-1" \
+  -e "FORMIO_S3_SERVER=minio" \
+  -e "FORMIO_S3_PORT=9000" \
+  --network formio \
+  --link formio-minio:minio \
+  --restart unless-stopped \
+  --name formio-files-core \
+  -p 80:4005 \
+  formio/formio-files-core;
+```
+
+You can now run your Form.io API Server alongside your PDF Server!
