@@ -24,24 +24,28 @@ In your console, install formiojs library using the following.
 
 ```
 npm install --save formiojs
+npm install @okta/okta-auth-js --save
 ```
 
 You will then need to put the following within your application.
 
 ```javascript
 import Formio from 'formiojs/Formio';
+import OktaAuth from '@okta/okta-auth-js';
 ```
 
 or
 
 ```javascript
 const Formio = require('formiojs/Formio');
+var OktaAuth = require('@okta/okta-auth-js');
 ```
 
 #### Within your HTML page
 You can also include the Formio SDK within your application by including the following.
 
 ```html
+<script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-auth-js/1.16.0/okta-auth-js.min.js" type="text/javascript"></script>
 <script href="https://unpkg.com/formiojs@3.0.0-rc.11/dist/formio.min.js"></script>
 ```
 
@@ -50,6 +54,20 @@ You can now place the following code as one of the first scripts that is execute
 
 ```javascript
 Formio.ssoInit('okta', {
+  url: 'https://formio.okta.com',
+  clientId: '0oa2bshrAhgqeZb42333',
+  redirectUri: 'http://localhost:3002/',
+  scopes: ['openid', 'groups', 'profile']
+}).then(() => {
+  console.log('We are logged in!');
+});
+```
+
+If you used the NPM method above, you will also want to ensure that you provide the OktaAuth class to the library as follows.
+
+```javascript
+Formio.ssoInit('okta', {
+  OktaAuth: OktaAuth,
   url: 'https://formio.okta.com',
   clientId: '0oa2bshrAhgqeZb42333',
   redirectUri: 'http://localhost:3002/',
