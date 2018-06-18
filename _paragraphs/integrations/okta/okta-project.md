@@ -16,7 +16,7 @@ You only need to fill out the following fields to get the SSO working.
 | Setting | Description | Example |
 |---------|---------|
 | Client ID | Client ID provided by Okta within your App Settings | 023ds0d2dslkef3sa0b9 |
-| User Info (claims) URI | The Url to fetch the user information from Okta | https://{{ ORGANIZATION_NAME }}.okta.com/oauth2/default/v1/userinfo |
+| User Info (claims) URI | The Url to fetch the user information from Okta | https://{{ ORGANIZATION_NAME }}.okta.com/oauth2/v1/userinfo |
 | Roles (Claim) | This is where you will provide your role mappings based on the Okta Group ID's created within the previous section. | Please see the image below for an example. |
 
 When you are done filling out this information, this should look like the following.
