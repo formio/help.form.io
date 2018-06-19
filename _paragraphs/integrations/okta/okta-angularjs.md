@@ -17,18 +17,12 @@ You will also need to include the OktaAuth library CDN within your index.html pa
 <script src="https://ok1static.oktacdn.com/assets/js/sdk/okta-auth-js/1.16.0/okta-auth-js.min.js" type="text/javascript"></script>
 ```
 
-You will then need to add the ```FormioAuth``` provider to your application as follows. You will also need to make sure you that you set the ```$locationProvider``` to **html5Mode** as follows.
+You will then need to add the ```FormioAuth``` provider to your application as follows.
 
 ```javascript
 angular
     .module('myApp', [
       'ngFormioHelper'
-    ])
-    .config([
-      '$locationProvider',
-      function($locationProvider) {
-        $locationProvider.html5Mode(true);
-      }
     ])
     .run([
        'FormioAuth',
@@ -42,7 +36,7 @@ angular
              options: {
                url: 'https://formio.okta.com',
                clientId: '0oa2bshrAhgqeZb42333',
-               redirectUri: 'http://localhost:3002/',
+               redirectUri: location.origin + location.pathname,
                scopes: ['openid', 'groups', 'profile']
              }
            }
