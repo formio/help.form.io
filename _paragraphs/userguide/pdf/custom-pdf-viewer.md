@@ -7,7 +7,7 @@ weight: 60
 ---
 By default, the submission PDF's that are generated use a hosted Form viewer application to render the submissions. This is great for many use cases, but there may be other situations where you would like to introduce your own **viewer** application to render the submissions for PDF generation. This is very helpful if you wish to provide your own PDF templates, or maybe even create submission pdf's that introduce your own custom elements into the pdf generation. To achieve, this, the first thing you will need to do is fork the Form Viewer found @
 
-https://github.com/formio/formio-viewer
+[https://github.com/formio/formio-viewer](https://github.com/formio/formio-viewer)
 
 Once you download this Viewer application, you will want to make sure you install dependencies with the following command.
 
@@ -35,3 +35,14 @@ This will create a **dist** folder, which you can then launch to your own hostin
 Once you save, and then go back to a submission and download that submission, you will notice that the PDF download now uses your own custom viewer application to render the submission PDF.
 
 ![](/assets/img/userguide/pdf/custom-viewer-download.png)
+
+### Hosted Viewer
+The current viewer is currently hosted @ https://formio.github.io/formio-viewer/dist. If you wish to make changes to the theme based on [Bootswatch Themes](https://bootswatch.com/3/), then you can use the following format
+
+```
+https://formio.github.io/formio-viewer/dist?theme=paper
+```
+
+Like so...
+
+![](/assets/img/userguide/pdf/custom-viewer-hosted.png)
