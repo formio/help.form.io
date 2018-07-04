@@ -8,7 +8,8 @@ weight: 12
 ---
 Now that you have the authentication file in place, you are ready to create your Elastic Beanstalk deployment.
 
- - Create your Docker deployment file - Within your local machine, create a new file called ```Dockerrun.aws.json``` with the contents as follows. The Authentication Bucket and Key should be the bucket name and the file name you uploaded to that bucket with your docker hub configuration.
+ - First create a new folder where you will store your deployment files, and call it **formio-server**
+ - Within this folder, create your Docker deployment file - Within your local machine, create a new file called ```Dockerrun.aws.json``` with the contents as follows. The Authentication Bucket and Key should be the bucket name and the file name you uploaded to that bucket with your docker hub configuration.
 
     **Dockerrun.aws.json**
 
@@ -32,7 +33,27 @@ Now that you have the authentication file in place, you are ready to create your
 }
 ```
 
-  - Create a new Elastic Beanstalk deployment by clicking on the icon in the AWS Dashboard.
+  - Now that this is done, you will want to create a new folder within this folder called **.ebextensions**, within this folder, you will need to create a new file called **01_files.config** with the following contents.
+  
+    ```
+    files:
+        "/etc/nginx/conf.d/proxy.conf" :
+            mode: "000755"
+            owner: root
+            group: root
+            content: |
+               client_max_body_size 20M;
+    ```
+
+  - When you are done, your folder should look like the following.
+  
+  ![](/assets/img/tutorials/deployment/aws/deploy-folder.png)
+  
+  - Next, select the files within this folder, and then create a new ZIP file with those files. Make sure you create a ZIP of the files, and not the **formio-server** folder that we created at the beginning of this intro. Rename this file to **formio-server.zip**. Your folder should look like the following.
+  
+  ![](/assets/img/tutorials/deployment/aws/folder-zip.png)
+
+  - Next, create a new Elastic Beanstalk deployment by clicking on the icon in the AWS Dashboard.
 
     <img src="/assets/img/developer/deployments/aws/awsdashboard.png" style="width:600px" />
 
@@ -52,7 +73,7 @@ Now that you have the authentication file in place, you are ready to create your
 
     <img src="/assets/img/developer/deployments/aws/webserver.png" style="width:600px" />
 
-  - Now select the Docker predefined configuration, and then upload your **Dockerrun.aws.json** file for the Application code, and then select **Configure more options**.
+  - Now select the Docker predefined configuration, and then upload your **formio-server.zip** file for the Application code, and then select **Configure more options**.
 
     <img src="/assets/img/developer/deployments/aws/createenvironment.png" style="width:600px" />
 
