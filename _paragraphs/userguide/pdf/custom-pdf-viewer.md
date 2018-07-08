@@ -48,7 +48,7 @@ Like so...
 ![](/assets/img/userguide/pdf/custom-viewer-hosted.png)
 
 ### Viewer Parameters
-There are also some parameters that you can pass to the Hosted viewer if you wish to alter the output of the generated PDF. These parameters can be provided a GET query parameters to the viewer. For example, to not show the header for the viewier, you can provide the following.
+There are also some parameters that you can pass to the Hosted viewer if you wish to alter the output of the generated PDF. These parameters can be provided a GET query parameters to the viewer. For example, to not show the header for the viewer, you can provide the following.
 
 ```
 https://formio.github.io/formio-viewer/dist?theme=paper&header=0
@@ -60,7 +60,7 @@ The following viewer parameters are supported.
 | Setting | Description | Example |
 |---------|-------------|---------|
 | theme | The Bootswatch 3 theme to provide to the pdf. | theme=yeti |
-| heading | If you wish to hide the heading | heading=0 |
+| header | If you wish to hide the header | header=0 |
 
 ### PDF Generation Parmameters
 In addition to there being viewer parameters, there are also parameters that you can provide to the end of the PDF generation API. For example, if you wish to alter the margins of the generated PDF document, you can provide the following to the PDF generation url.
