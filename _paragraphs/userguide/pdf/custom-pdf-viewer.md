@@ -79,4 +79,3 @@ The accepted PDF parameters are as follows.
 | width | The width of the viewport when generating the PDF | width=800 |
 | height | The height of the viewport when generating the PDF | height=1100 |
 | view | To show the submission in "viewAsHtml" mode | view=1 |
-| 
