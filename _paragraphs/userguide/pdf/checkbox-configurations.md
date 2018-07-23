@@ -47,7 +47,7 @@ The following classes will alter the shape of the checkbox and radio input.
 | Class | Description |
 |---------|-------------|
 | p-round | Turns the square checkbox into a circle (good for Radio interfaces). |
-| p-curved | Turns the square checkbox into a rounded square |
+| p-curve | Turns the square checkbox into a rounded square |
 
 #### Fill
 The following classes will alter the fill thickness of the input.
