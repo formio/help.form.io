@@ -40,4 +40,4 @@ Your **Refresh Token** should be generated. You will need the refresh token for 
 }
 ```
 
-![](/assets/img/googlesheet/googlesheet-refresh-token.png)
+![](/assets/img/integrations/google/sheets-refresh-token.png)

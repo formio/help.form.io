@@ -35,5 +35,5 @@ Now, you will provide the **Web Application** information with the Redirect URL 
 
 Save your **Client ID** and **Client Secret**
 
-![](/assets/img/integrations/google/sheets-refresh-token.png)
+![](/assets/img/integrations/google/sheets-creds.png)
 
