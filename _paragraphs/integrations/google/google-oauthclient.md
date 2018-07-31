@@ -1,44 +1,39 @@
 ---
-title: OAuth Client
+title: Google Sheets Project
 book: developer
 section: integrations
 chapter: googledrive
-slug: google-oauthclient
+slug: sheets-api
 weight: 5
 ---
 
 To get your OAuth token, log in with you google credentials on [Google Developers Console](https://console.developers.google.com/){:target="_blank"}
  
-Select **Use Google API**. Then click on **Drive API** and ensure that it is enabled.
+Select your project you would like to use at the top of the page. If you do not have a project, you can usse this modal to create a new project by clicking **New Project** and fill out the required fields.
 
-If you already have a project in the console, click on it in the console. Otherwise, click *Create Project* and fill out the required fields.
+![](/assets/img/integrations/google/new-project.png)
 
-![](/assets/img/googlesheet/googlesheet-create-project-at-first-time.png)
+Once you have created a new project, you will now click on **Library** and then select the **Google Sheets API** 
 
-A popup will appear which ask you for project name. Add the project name and click the *Create* button.
+![](/assets/img/integrations/google/search-google-sheets.png)
 
-![](/assets/img/googlesheet/googlesheet-create-project.png)
+Now, click **Enable** button to enable the sheets API.
 
-Once the project is created it will appear in the 'Dashboard' as well as in the 'Header'. To go to API Manager page click on *User Google APIs*. It will lead you to **API Manager** page.
- 
-Find **Credentials** Tab inside **API Manager** to create new credential. While creating new credential please make sure to select **OAuth client ID**.
+![](/assets/img/integrations/google/sheets-enable.png)
 
-![](/assets/img/googlesheet/googlesheet-credential-tab.png)
+Once, the API is enabled, you will now click on the **Credentials** section on the right sidebar.
 
-Once done, you will be redirected to **Create Client ID** page. If you get message like **To create an OAuth client ID, you must set a product name on the consent screen** click on *Configure Consent Screen* button. Otherwise this step can be skipped.
+![](/assets/img/integrations/google/sheets-credentials.png)
 
-![](/assets/img/googlesheet/googlesheet-configure-consent-screen.png)
+Next, you will click on the **Create Credentials** button drop-down and then select **OAuth client ID**
 
-Enter the name of your app in the Name field and then **Save**. The rest of the fields may be skipped.
+![](/assets/img/integrations/google/sheets-oauth-create.png)
 
-![](/assets/img/googlesheet/googlesheet-product-name-save.png)
+Now, you will provide the **Web Application** information with the Redirect URL setup as **https://developers.google.com/oauthplayground** and click **Create**
 
-It will now ask you to set **Application Type** having multiple options like "Web Applications", "Android" etc. Select **Web Application**.
+![](/assets/img/integrations/google/sheets-oauth-web-client.png)
 
-In the **Authorized Redirect URIs** section add "https://developers.google.com/oauthplayground" if it is not already there.
+Save your **Client ID** and **Client Secret**
 
-![](/assets/img/googlesheet/googlesheet-web-application.png)
+![](/assets/img/integrations/google/sheets-creds.png)
 
-Once done, click on the *Create* button and it will create **Client ID** and **Secret Key** for you.
-
-![](/assets/img/googlesheet/googlesheet-oauth-client.png)

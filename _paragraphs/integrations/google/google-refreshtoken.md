@@ -7,7 +7,6 @@ slug: google-refreshtoken
 weight: 10
 ---
 
-
 To create a Refresh Token go to [https://developers.google.com/oauthplayground/](https://developers.google.com/oauthplayground/){:target="_blank"} and sign in using your Google Credentials. 
 
 Click the gear icon in the upper right corner and check the box **labeled Use your own OAuth credentials** if it isn't already checked, then:
@@ -18,15 +17,13 @@ Click the gear icon in the upper right corner and check the box **labeled Use yo
 * For the OAuth Client ID, enter the Client ID obtained above.
 * For the OAuth Client secret, enter the Client secret obtained above.
 
-Under Step 1 on the left hand side of the page, expand the **Drive API v3** and select the indicated services and click *Authorize APIs*.
+Under Step 1 on the left hand side of the page, expand the **Google Sheets API v4** and select **https://www.googleapis.com/auth/spreadsheets** scope and then click **Authorize APIs**.
 
-![](/assets/img/googlesheet/googlesheet-developers-tool.png)
-
+![](/assets/img/integrations/google/sheets-authorize.png)
 
 Click **Allow** to authorize the app.
 
-
-![](/assets/img/googlesheet/googlesheet-allowservice.png)
+![](/assets/img/integrations/google/sheets-allow.png)
 
 The above step will generate an **Authorization Code** for you. Be sure that 'Auto-refresh the token before it expires' is checked and then click on *Exchange authorization code for token* button.
 
