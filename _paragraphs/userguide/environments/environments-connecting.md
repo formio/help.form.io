@@ -7,11 +7,11 @@ weight: 80
 ---
 #### Prepare your project
 
-Ensure that you have a project created and that it is on Team Pro or Enterprise plan. You cannot connect a project that is not on Team Pro or Enterprise. If you don't already have one, create a project and upgrade its plan.
+Now that you have your remote deployment API set up for your backend, you must now connect that backend to the Form.io portal. Ensure that you are logged in to Form.io and have a project created that is on Team Pro or Enterprise plan. You cannot connect a project that is not on Team Pro or Enterprise. If you don't already have one, create a project and upgrade its plan.
 
 #### Connect to Environment
 
-For each stage of your project that you want to move to an environment, go to the Stage Settings on the left and select On-Premise Environments
+For each stage of your project that you want to move to a remote environment, go to the Stage Settings on the left and select On-Premise Environments
  
 ![](/assets/img/userguide/environments/connect.png)
 
