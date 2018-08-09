@@ -221,7 +221,7 @@ docker run -itd \
 
 You can now connect to Minio with the following.
 
-```host
+```bash
 docker run -itd \
   -e "FORMIO_SERVER=https://formio.yourdomain.com" \
   -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
@@ -239,6 +239,67 @@ docker run -itd \
   --restart unless-stopped \
   --name formio-files-core \
   -p 80:4005 \
+  formio/formio-files-core;
+```
+
+### Local Deployment: API, PDF, Minio, Mongo, and Redis
+
+The following commands can be used to spin up a single server environment that will host all of the necessary dependencies
+to run the Form.io API server + PDF server all on one server. The following command can be performed on a fresh Unix based system with Docker already installed.
+
+```bash
+docker network create formio && \
+docker run -itd  \
+  --name formio-mongo \
+  --network formio \
+  --volume ~/opt/mongodb:/data/db \
+  --restart unless-stopped \
+  mongo && \
+docker run -itd \
+  --name formio-redis \
+  --network formio \
+  --restart unless-stopped \
+  redis && \
+docker run -itd \
+  -e "FORMIO_FILES_SERVER=http://formio-files:4005" \
+  -e "PORTAL_SECRET=CHANGEME" \
+  -e "JWT_SECRET=CHANGEME" \
+  -e "DB_SECRET=CHANGEME" \
+  -e "PROTOCOL=http" \
+  --restart unless-stopped \
+  --network formio \
+  --name formio-server \
+  --link formio-files-core:formio-files \
+  --link formio-mongo:mongo \
+  --link formio-redis:redis \
+  -p 3000:80 \
+  formio/formio-server && \
+docker run -itd \
+  -e "MINIO_ACCESS_KEY=CHANGEME" \
+  -e "MINIO_SECRET_KEY=CHANGEME" \
+  --network formio \
+  --name formio-minio \
+  -p 9000:9000 \
+  -v ~/minio/data:/data \
+  -v ~/minio/config:/root/.minio \
+  minio/minio server /data && \
+docker run -itd \
+  -e "FORMIO_SERVER=http://formio:3000" \
+  -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
+  -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
+  -e "FORMIO_PDF_PROJECT=https://formio.yourdomain.com/yourproject" \
+  -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
+  -e "FORMIO_S3_SERVER=minio" \
+  -e "FORMIO_S3_PORT=9000" \
+  -e "FORMIO_S3_BUCKET=formio" \
+  -e "FORMIO_S3_KEY=CHANGEME" \
+  -e "FORMIO_S3_SECRET=CHANGEME" \
+  --network formio \
+  --link formio-server:formio \
+  --link formio-minio:minio \
+  --restart unless-stopped \
+  --name formio-files-core \
+  -p 4005:4005 \
   formio/formio-files-core;
 ```
 
