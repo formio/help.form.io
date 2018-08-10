@@ -3,11 +3,11 @@ title: Connecting To Portal
 book: userguide
 chapter: environments
 slug: environments-connecting
-weight: 80
+weight: 5
 ---
 #### Prepare your project
 
-Now that you have your remote deployment API set up for your backend, you must now connect that backend to the Form.io portal. Ensure that you are logged in to Form.io and have a project created that is on Team Pro or Enterprise plan. You cannot connect a project that is not on Team Pro or Enterprise. If you don't already have one, create a project and upgrade its plan.
+After you have your remote deployment API set up for your backend, you must connect that backend to the Form.io portal. Ensure that you are logged in to Form.io and have a project created that is on Team Pro or Enterprise plan. You cannot connect a project that is not on Team Pro or Enterprise. If you don't already have one, create a project and upgrade its plan.
 
 #### Connect to Environment
 
