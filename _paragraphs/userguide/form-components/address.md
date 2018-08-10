@@ -5,9 +5,29 @@ chapter: form-components
 slug: address
 weight: 110
 ---
+<div class="alert alert-info"><strong>Important Notice</strong> With recent changes to the Google GeoCode API usage policy, you are now required to provide the Google GeoCode API key along with the configuration for the Address component. Please see the section below on how to setup and configure this within your Google account.</div>
+
 The address form component is a special component that does lookups for addresses entered. It can be entered in free form and will save the address as well as geolocation and other information.
 
 ![17 address](https://cloud.githubusercontent.com/assets/13321142/13097257/3082f0d8-d4e5-11e5-9931-78cf62137fb0.png)
+
+#### Google Maps API Key
+Due to recent changes to the Google Geocode API usage policies, this is now required for all Address components. To setup an API key, you must follow the following directions.
+
+- First, go to [https://cloud.google.com/maps-platform/](https://cloud.google.com/maps-platform/) and then click on the button that says **Get Started**
+- Next, click on the button that says **Places*** and then press **Continue**
+  ![](/assets/img/integrations/google/google-geocode-enable.png)
+- On the next page, click the dropdown and select **+ Create new project** (note, if you already have a project, then just select it) and then give your project a name, then click **Next**.
+  ![](/assets/img/integrations/google/google-geocode-newproject.png)
+- Now that you have a project created, you can then setup Billing for that project by clicking on **Set Account** on the billing modal. If you selected an existing project, you will not see this page.
+  ![](/assets/img/integrations/google/google-geocode-billing.png)
+- If you created a new project, you will then need to provide a payment mechanism so that Google can charge for your usage of their GeoCode API.
+- On the next modal, you will then click **Next** to enable the Mapping API's needed for the Address compoennt.
+  ![](/assets/img/integrations/google/google-geocode-enableapis.png)
+- The next modal will then show you the API Key that you need to use for this field in the Address component.
+  ![](/assets/img/integrations/google/google-geocode-apikey.png)
+
+You will then paste this API key into the place on the Address component modal that says **Google Maps API Key**.
 
 #### Label
 
