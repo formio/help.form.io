@@ -3,7 +3,7 @@ title: Developer Info
 subtitle: IBM BlueMix
 book: tutorials
 section: deployment
-weight: 2
+weight: 3
 chapter: bluemix
 layout: chapter
 ---
