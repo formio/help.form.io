@@ -69,6 +69,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
     -e "MINIO_SECRET_KEY=[AZURE BLOB SECRET KEY]" \
     --network formio \
     --name formio-minio \
+    --restart unless-stopped \
     minio/minio gateway azure;
    ```
    
