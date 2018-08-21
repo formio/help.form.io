@@ -15,7 +15,12 @@ Form.io requires a **MongoDB** compatible database to run its platform. While yo
    ![](/assets/img/integrations/azure/cosmos-create.png)
    
  - You will then wait a few minutes for your database to create.
- - After this is done creating, you will then click on the new database, and then click **Connection String**. 
+ - After the database is done creating, you will now need to enable the **MongoDB Aggregation Framework** for this CosmosDB. Since this is a "Preview" feature, you can enable it by clicking on your created database, and then clicking **Preview Features**
+ - Once you are there, you will then click on the **Enable** button next to the **MongoDB Aggregation Framework**
+ 
+   ![](/assets/img/integrations/azure/cosmos-aggregation.png)
+ 
+ - After this is complete, you will then **Connection String**. 
  - You will now make a copy of the connection string, and then place it in a Text editor. Form.io does require that you use a standard connection string, so you will need to make a small change to what Azure provides you by adding your database name to the connection string. This is placed right after the ***formio.documents.azure.com:10255/*** and before the text ***?ssl=true***. It should look like the following.
  
    ```mongodb://formio:[PASSWORD]@formio.documents.azure.com:10255/formio?ssl=true&replicaSet=globaldb```

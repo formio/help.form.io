@@ -215,6 +215,7 @@ docker run -itd \
  -e "MINIO_SECRET_KEY=[AZURE BLOB SECRET KEY]" \
  --network formio \
  --name formio-minio \
+ --restart unless-stopped \
  -p 9000:9000 \
  minio/minio gateway azure;
 ```
@@ -279,6 +280,7 @@ docker run -itd \
   -e "MINIO_SECRET_KEY=CHANGEME" \
   --network formio \
   --name formio-minio \
+  --restart unless-stopped \
   -p 9000:9000 \
   -v ~/minio/data:/data \
   -v ~/minio/config:/root/.minio \

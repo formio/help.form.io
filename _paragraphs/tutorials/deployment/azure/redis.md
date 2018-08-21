@@ -23,5 +23,10 @@ Follow these steps to setup a new **Redis** instance.
    ![](/assets/img/integrations/azure/redis-create.png)
    
  - You will now wait for the Redis server to startup. Once it is created, you will then click on the new cache in the list.
- - Now click on **Access Keys** and then click on copy on the **Primary Connection String**. Save this string for later.
+ - Now click on **Access Keys** and then make sure you copy the following.
+
+   - **Primary**: This will be used as the REDIS_PASS parameter
+   - **Connection Host** (such as formio.redis.cache.windows.net): This will be used as the REDIS_ADDR
+   - **Connection Port** (such as 6380): This will be used as the REDIS_PORT parameter.
+ 
  - You are now ready to setup your file hosting in Azure.
