@@ -15,6 +15,7 @@ docker run -itd \
   -e "MINIO_ACCESS_KEY=CHANGEME" \
   -e "MINIO_SECRET_KEY=CHANGEME" \
   --name formio-minio \
+  --restart unless-stopped \
   -p 9000:9000 \
   -v ~/minio/data:/data \
   -v ~/minio/config:/root/.minio \
