@@ -10,35 +10,96 @@ If you wish to enable SSL (https) configuration for your Environment, then we re
  - [Install NGINX](https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/)
  - You will need to get an SSL Certificate, or generate a Self Signed Certificate. [This tutorial has good instructions on how to do that](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04)
 
-Now, you will need to configure your `nginx.conf` file. You will be setting up NGINX to serve as a reverse proxy to the Environment. The following configuration is an example of what would work.
+To setup this configuration, please go through the following steps.
 
-    ###
-    # A LOT OF OTHER CONFIGURATIONS MAY BE ABOVE THIS POINT.
-    ###
+ - Install NGINX using the following command.
+ 
+   ```
+   sudo apt-get update
+   sudo apt-get install nginx
+   ```
+   
+ - We can check to ensure that we have NGINX running with the following command.
+ 
+   ```
+   systemctl status nginx
+   ```
+   
+ - We now need to edit the nginx.conf file to redirect HTTP traffic to the internal servers.
+ 
+   ```
+   sudo vi /etc/nginx/sites-available/formio
+   ```
+   
+ - Put the following contents in that file.
 
-    server {
-        listen       443 ssl;
-        server_name  *.lvh.me;
-        client_max_body_size 20M;
-        ssl_certificate      /usr/local/etc/nginx/nginx.crt;
-        ssl_certificate_key  /usr/local/etc/nginx/nginx.key;
-        location / {
-            proxy_set_header        Host $host;
-            proxy_set_header        X-Real-IP $remote_addr;
-            proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header        X-Forwarded-Proto $scheme;
-
-            # Fix the “It appears that your reverse proxy set up is broken" error.
-            proxy_pass          http://localhost:3000;
-            proxy_read_timeout  90;
-            proxy_redirect      http://localhost:3000 https://$host;
-        }
-    }
-
-    ###
-    # A LOT OF OTHER CONFIGURATIONS MAY BE BELOW THIS POINT
-    ###
+```
+server {
+  listen 443 ssl;
+  server_name  *.lvh.me;
+  client_max_body_size 20M;
+  ssl_certificate      /usr/local/etc/nginx/nginx.crt;
+  ssl_certificate_key  /usr/local/etc/nginx/nginx.key;
+ 
+  location / {
+    proxy_set_header    Host $host;
+    proxy_set_header    X-Real-IP $remote_addr;
+    proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header    X-Forwarded-Proto $scheme;
+    proxy_pass          http://localhost:3000;
+    proxy_read_timeout  90;
+    proxy_redirect      http://localhost:3000 https://$host;
+  }
+}
+```
 
 In this case, your Environment would be listening to port 3000, and NGINX would serve as the reverse proxy to point to that container.
+
+If you also have a Minio + PDF Server running on this server, then you will also want to provide them within subdirectories like the following.
+
+```
+server {
+  listen 443 ssl;
+  server_name  *.lvh.me;
+  client_max_body_size 20M;
+  ssl_certificate      /usr/local/etc/nginx/nginx.crt;
+  ssl_certificate_key  /usr/local/etc/nginx/nginx.key;
+ 
+  location / {
+    proxy_set_header    Host $host;
+    proxy_set_header    X-Real-IP $remote_addr;
+    proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header    X-Forwarded-Proto $scheme;
+    proxy_pass          http://localhost:3000;
+    proxy_read_timeout  90;
+    proxy_redirect      http://localhost:3000 https://$host;
+  }
+
+  location /files/ {
+    rewrite ^/files/(.*)$ /$1 break;
+    proxy_set_header    Host $host;
+    proxy_set_header    X-Real-IP $remote_addr;
+    proxy_set_header    X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header    X-Forwarded-Proto $scheme;
+    proxy_pass          http://localhost:4005;
+    proxy_read_timeout  90;
+    proxy_redirect      http://localhost:4005 https://$host;
+  }
+ 
+  location /minio/ {
+    proxy_buffering off;
+    proxy_set_header Host $http_host;
+    proxy_pass http://localhost:9000;
+  }
+}
+```
+
+- Now save that file, and then switch this out for the ```default``` server
+ 
+   ```
+   sudo rm /etc/nginx/sites-enabled/default
+   sudo ln -s /etc/nginx/sites-available/formio /etc/nginx/sites-enabled/default
+   sudo systemctl restart nginx
+   ```
 
 Once you start up your NGINX instance, you will now have an SSL connection into your Form.io Environment!
