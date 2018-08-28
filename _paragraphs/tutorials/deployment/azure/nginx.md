@@ -63,6 +63,12 @@ To setup this configuration, please go through the following steps.
        proxy_read_timeout  90;
        proxy_redirect      http://localhost:4005 https://$host;
      }
+     
+     location /minio/ {
+       proxy_buffering off;
+       proxy_set_header Host $http_host;
+       proxy_pass http://localhost:9000;
+     }
    }
    ```
    
