@@ -7,7 +7,6 @@ weight: 50
 ---
 If you wish to enable SSL (https) configuration for your Environment, then we recommend using [NGINX](https://www.nginx.com) as a reverse proxy to point to the Form.io environment. Follow these steps to get this working.
 
- - [Install NGINX](https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/)
  - You will need to get an SSL Certificate, or generate a Self Signed Certificate. [This tutorial has good instructions on how to do that](https://www.digitalocean.com/community/tutorials/how-to-create-an-ssl-certificate-on-nginx-for-ubuntu-14-04)
 
 To setup this configuration, please go through the following steps.
@@ -18,6 +17,8 @@ To setup this configuration, please go through the following steps.
    sudo apt-get update
    sudo apt-get install nginx
    ```
+   
+   Or walk through the following tutorial: [Installing NGINX](https://www.nginx.com/resources/admin-guide/installing-nginx-open-source/)
    
  - We can check to ensure that we have NGINX running with the following command.
  
