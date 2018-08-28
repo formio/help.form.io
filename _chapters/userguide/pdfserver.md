@@ -286,10 +286,10 @@ docker run -itd \
   -v ~/minio/config:/root/.minio \
   minio/minio server /data && \
 docker run -itd \
-  -e "FORMIO_SERVER=http://formio:3000" \
+  -e "FORMIO_SERVER=http://formio" \
   -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
   -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
-  -e "FORMIO_PDF_PROJECT=https://formio.yourdomain.com/yourproject" \
+  -e "FORMIO_PDF_PROJECT=http://formio/yourproject" \
   -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
   -e "FORMIO_S3_SERVER=minio" \
   -e "FORMIO_S3_PORT=9000" \

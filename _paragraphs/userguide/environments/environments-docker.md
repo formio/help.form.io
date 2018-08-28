@@ -47,16 +47,16 @@ This will create an isolated network for just the formio services that are requi
 #### Create the Mongo instance.
 Run mongodb with a volume mount for data. This will store the data in the host machine at /opt/mongodb. If the mongodb instance is restarte or replaced, the data still exists and can be restarted with a different mongodb instance.
 
-**On Mac OS** running native docker engine, be sure to add /opt/mongodb to File Sharing list in Docker->Preferences->File Sharing. You may use a different path if desired.
+**On Mac OS** running native docker engine, be sure to add ~/opt/mongodb to File Sharing list in Docker->Preferences->File Sharing. You may use a different path if desired.
 
-    mkdir /opt/mongodb
+    mkdir ~/opt/mongodb
     # Double check permissions on /opt/mongodb
     docker run -itd  \
       --name formio-mongo \
       --network formio \
-      --volume /opt/mongodb:/data/db \
+      --volume ~/opt/mongodb:/data/db \
       --restart unless-stopped \
-      mongo;
+      mongo
 
 #### Create the Redis instance.
 
@@ -73,6 +73,7 @@ Set protocol, port and domain to the address where they will be accessible on th
 
 PORTAL_SECRET is the secret that will allow the form.io portal to communicate with this server. Please make a note of it as you will need it when connecting your project.
 
+##### For Stand-alone API Server w/ No PDF Server
     docker run -itd \
       -e "PORTAL_SECRET=CHANGEME" \
       -e "JWT_SECRET=CHANGEME" \
@@ -86,6 +87,23 @@ PORTAL_SECRET is the secret that will allow the form.io portal to communicate wi
       --restart unless-stopped \
       -p 3000:80 \
       formio/formio-server;
+      
+##### For Stand-alone API Server with PDF Server
+
+    docker run -itd \
+      -e "FORMIO_FILES_SERVER=http://formio-files:4005" \
+      -e "PORTAL_SECRET=CHANGEME" \
+      -e "JWT_SECRET=CHANGEME" \
+      -e "DB_SECRET=CHANGEME" \
+      -e "PROTOCOL=http" \
+      --restart unless-stopped \
+      --network formio \
+      --name formio-server \
+      --link formio-files-core:formio-files \
+      --link formio-mongo:mongo \
+      --link formio-redis:redis \
+      -p 3000:80 \
+      formio/formio-server
 
 **NOTE**
 If you are running this container in a production environment and have SSL enabled, then you will need to remove the Environment Variable ```PROTOCOL```
@@ -193,3 +211,68 @@ Notice that in this scenario, you do not need to create a ```formio``` newtork a
 
 ### PDF Server Deployment
 For help on PDF server deployments, please see our help documentation by [clicking on the following link](https://help.form.io/userguide/pdfserver/).
+
+#### Local or On-Premise Deployment including API, PDF, Minio, Mongo, and Redis on a Single Server
+
+The following commands can be used to spin up a single server environment that will host all of the necessary dependencies
+to run the Form.io API server + PDF server all on one server. The following command can be performed on a fresh Unix based system with Docker already installed.
+
+```bash
+docker network create formio && \
+docker run -itd  \
+  --name formio-mongo \
+  --network formio \
+  --volume ~/opt/mongodb:/data/db \
+  --restart unless-stopped \
+  mongo && \
+docker run -itd \
+  --name formio-redis \
+  --network formio \
+  --restart unless-stopped \
+  redis && \
+docker run -itd \
+  -e "FORMIO_FILES_SERVER=http://formio-files:4005" \
+  -e "PORTAL_SECRET=CHANGEME" \
+  -e "JWT_SECRET=CHANGEME" \
+  -e "DB_SECRET=CHANGEME" \
+  -e "PROTOCOL=http" \
+  --restart unless-stopped \
+  --network formio \
+  --name formio-server \
+  --link formio-files-core:formio-files \
+  --link formio-mongo:mongo \
+  --link formio-redis:redis \
+  -p 3000:80 \
+  formio/formio-server && \
+docker run -itd \
+  -e "MINIO_ACCESS_KEY=CHANGEME" \
+  -e "MINIO_SECRET_KEY=CHANGEME" \
+  --network formio \
+  --name formio-minio \
+  --restart unless-stopped \
+  -p 9000:9000 \
+  -v ~/minio/data:/data \
+  -v ~/minio/config:/root/.minio \
+  minio/minio server /data && \
+docker run -itd \
+  -e "FORMIO_SERVER=http://formio" \
+  -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
+  -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
+  -e "FORMIO_PDF_PROJECT=http://formio/yourproject" \
+  -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
+  -e "FORMIO_S3_SERVER=minio" \
+  -e "FORMIO_S3_PORT=9000" \
+  -e "FORMIO_S3_BUCKET=formio" \
+  -e "FORMIO_S3_KEY=CHANGEME" \
+  -e "FORMIO_S3_SECRET=CHANGEME" \
+  --network formio \
+  --link formio-server:formio \
+  --link formio-minio:minio \
+  --restart unless-stopped \
+  --name formio-files-core \
+  -p 4005:4005 \
+  formio/formio-files-core;
+```
+
+You will need to change the FORMIO_PROJECT, FORMIO_PROJECT_TOKEN, FORMIO_PDF_APIKEY, and the project name only ("/yourproject") within FORMIO_PDF_PROJECT.
+You will also want to change all CHANGEME to a secret password that only you know.

@@ -113,10 +113,10 @@ You will now setup the **API Server** by using the Azure Container Instances set
     
    ```
    docker run -itd \
-       -e "FORMIO_SERVER=http://formio:3000" \
+       -e "FORMIO_SERVER=http://formio" \
        -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
        -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
-       -e "FORMIO_PDF_PROJECT=https://formio.yourdomain.com/yourproject" \
+       -e "FORMIO_PDF_PROJECT=http://formio/yourproject" \
        -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
        -e "FORMIO_S3_SERVER=minio" \
        -e "FORMIO_S3_PORT=9000" \
@@ -132,7 +132,10 @@ You will now setup the **API Server** by using the Azure Container Instances set
        formio/formio-files-core
    ```
    
-   You will need to change the FORMIO_PROJECT, FORMIO_PROJECT_TOKEN, FORMIO_PDF_PROJECT, FORMIO_PDF_APIKEY, FORMIO_S3_KEY, and FORMIO_S3_SECRET with configurations provided previously as well as settings that are provided to you within your Project Settings, under **PDF Management** @ https://portal.form.io. 
+   You will need to change the FORMIO_PROJECT, FORMIO_PROJECT_TOKEN, FORMIO_PDF_PROJECT, FORMIO_PDF_APIKEY, FORMIO_S3_KEY, and FORMIO_S3_SECRET with configurations provided previously as well as settings that are provided to you within your Project Settings, under **PDF Management** @ https://portal.form.io.
+   
+   For the FORMIO_PDF_PROJECT, you can keep the "http://formio/" since this will connect to the locally running server, and then with the correct project name, it will find your project.
+    
  - Once this is running, you should be able to type the following.
  
    ```
