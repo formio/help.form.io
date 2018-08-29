@@ -207,7 +207,27 @@ docker run -itd \
   formio/formio-server;
 ```
 
-Notice that in this scenario, you do not need to create a ```formio``` newtork and connect your Docker container to the redis machine with the ```-link``` command.
+Some Redis server implementations do require that the connection is over SSL as well as require a password. Azure Redis is a good example of this. For this, you need both REDIS_PASS and REDIS_USE_SSL variables as well. For example, the following is an example of an Azure deployment.
+
+##### Azure Deployemnt
+```bash
+   docker run -itd \
+     -e "PORTAL_SECRET=CHANGEME" \
+     -e "JWT_SECRET=CHANGEME" \
+     -e "DB_SECRET=CHANGEME" \
+     -e "MONGO=mongodb://formio:[PASSWORD]@formio.documents.azure.com:10255/formio?ssl=true&replicaSet=globaldb" \
+     -e "REDIS_ADDR=formio.redis.cache.windows.net" \
+     -e "REDIS_PORT=6380" \
+     -e "REDIS_PASS=[PASSWORD]" \
+     -e "REDIS_USE_SSL=true" \
+     -e "PROTOCOL=http" \
+     --restart unless-stopped \
+     --network formio \
+     --name formio-server \
+     -p 3000:80 \
+     formio/formio-server
+   ```
+See [Azure Deployments](/tutorials/deployment/azure/) for more information.
 
 ### PDF Server Deployment
 For help on PDF server deployments, please see our help documentation by [clicking on the following link](https://help.form.io/userguide/pdfserver/).

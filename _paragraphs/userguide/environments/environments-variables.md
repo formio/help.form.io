@@ -43,6 +43,7 @@ Below are all the variables that you can set within your On-Premise Environment.
 | REDIS_ADDR | The address of the redis server. This is used for analytics and caching for the Environment. | localhost |
 | REDIS_PORT | The port of the redis server | 6379 |
 | REDIS_PASS | (Optional) If you redis server has a password, set it with this. |  |
+| REDIS_USE_SSL | (Optional) If your redis server uses SSL transport protocols, then this can be used to enable that. This is required for Azure Redis deployments | |
 | EMAIL_OVERRIDE | Provides a way to point all Email traffic to a server. | {"transport":"smtp","settings":{"port":2525,"host":"smtp.mailtrap.io","auth":{"user":"23esdffd53ac","pass":"324csdfsdf989a"}}} |
 
 #### Using environment variables with Docker

@@ -94,6 +94,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
      -e "REDIS_ADDR=formio.redis.cache.windows.net" \
      -e "REDIS_PORT=6380" \
      -e "REDIS_PASS=[PASSWORD]" \
+     -e "REDIS_USE_SSL=true" \
      -e "PROTOCOL=http" \
      --restart unless-stopped \
      --network formio \

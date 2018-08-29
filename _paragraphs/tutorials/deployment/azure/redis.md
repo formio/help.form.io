@@ -28,5 +28,6 @@ Follow these steps to setup a new **Redis** instance.
    - **Primary**: This will be used as the REDIS_PASS parameter
    - **Connection Host** (such as formio.redis.cache.windows.net): This will be used as the REDIS_ADDR
    - **Connection Port** (such as 6380): This will be used as the REDIS_PORT parameter.
+   - **SSL** For Azure Redis, you will also be using the REDIS_USE_SSL flag, but this will be used later.
  
  - You are now ready to setup your file hosting in Azure.
