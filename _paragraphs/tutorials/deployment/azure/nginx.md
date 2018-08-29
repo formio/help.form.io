@@ -34,7 +34,7 @@ To setup this configuration, please go through the following steps.
    ```
    server {
      listen 80;
-     server_name  *.lvh.me;
+     server_name  ~^(www\.)?(.+)$;
      client_max_body_size 20M;
      
      ############# Use the following for SSL ################
@@ -63,14 +63,28 @@ To setup this configuration, please go through the following steps.
        proxy_read_timeout  90;
        proxy_redirect      http://localhost:4005 https://$host;
      }
+   }
+   
+   server {
+     listen 80;
+     server_name  ~^minio.(.+)$;
+     client_max_body_size 20M;
      
-     location /minio/ {
+     ############# Use the following for SSL ################
+     # listen               443 ssl;
+     # ssl_certificate      /usr/local/etc/nginx/nginx.crt;
+     # ssl_certificate_key  /usr/local/etc/nginx/nginx.key;
+     ########################################################
+     
+     location / {
        proxy_buffering off;
        proxy_set_header Host $http_host;
        proxy_pass http://localhost:9000;
      }
    }
    ```
+   
+   Note, for this configuration to work with Minio, you will need to create a subdomain @ http://minio.yourserver.com that points to this server. Minio does not support being hosted outsiide of the root domain.
    
  - Now save that file, and then switch this out for the ```default``` server
  
