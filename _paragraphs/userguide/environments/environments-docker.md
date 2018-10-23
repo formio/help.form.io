@@ -18,7 +18,7 @@ If you are using a cloud hosted Docker Engine, please follow the appropriate ste
  * [IBM Bluemix](https://www.ibm.com/cloud/)
  * [Microsoft Azure](https://azure.microsoft.com/)
 
-We also have walkthroughs for some hosts. 
+We also have walkthroughs for some hosts.
 
  * [Amazon Web Services](/developer/deployments/aws)
  * [IBM BlueMix](/developer/deployments/bluemix)
@@ -28,7 +28,7 @@ We also have walkthroughs for some hosts.
 Download and install Docker from [https://docs.docker.com/engine/installation/#supported-platforms](https://docs.docker.com/engine/installation/#supported-platforms)
 
 #### Accessing the docker image
-Once on a team pro or enterprise plan, you will have access to the docker repository. Our docker images are located on docker hub.
+Once on a team pro or enterprise plan, you will need to have access to the docker repository. Our docker images are located on docker hub.
 
 [https://hub.docker.com/r/formio/formio-server/](https://hub.docker.com/r/formio/formio-server/)
 
@@ -87,7 +87,7 @@ PORTAL_SECRET is the secret that will allow the form.io portal to communicate wi
       --restart unless-stopped \
       -p 3000:80 \
       formio/formio-server;
-      
+
 ##### For Stand-alone API Server with PDF Server
 
     docker run -itd \
@@ -166,7 +166,7 @@ docker run -itd \
   redis;
 ```
 
-Next, spin up your Form.io API server connecting it to the local Redis instance. 
+Next, spin up your Form.io API server connecting it to the local Redis instance.
 
 ```bash
 docker run -itd \
