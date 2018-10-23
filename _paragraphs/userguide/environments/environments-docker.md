@@ -2,7 +2,7 @@
 title: Using Docker
 book: userguide
 chapter: environments
-slug: environments docker
+slug: environments-docker
 weight: 20
 ---
 Docker instances are run inside a Docker Engine. There are many options for where and how to run a docker instance. Depending on which Docker Engine you are using, the formio server configuration will be different.
@@ -28,14 +28,13 @@ We also have walkthroughs for some hosts.
 Download and install Docker from [https://docs.docker.com/engine/installation/#supported-platforms](https://docs.docker.com/engine/installation/#supported-platforms)
 
 #### Accessing the docker image
-Once on a team pro or enterprise plan, you will need to have access to the docker repository. Our docker images are located on docker hub.
+Our docker images are located on docker hub.
 
-[https://hub.docker.com/r/formio/formio-server/](https://hub.docker.com/r/formio/formio-server/)
+[https://hub.docker.com/r/formio/formio-enterprise/](https://hub.docker.com/r/formio/formio-enterprise/)
 
-Since the image is a private docker respository, you will need to log in with your docker account and test pulling the image. If you are unable to pull the image, please contact support with your username and account information.
+To pull it down, run the following docker command.
 
-    docker login
-    docker pull formio/formio-server
+    docker pull formio/formio-enterprise
 
 #### Create a docker network to contain all the docker instances.
 A typical Form.io installation includes a Redis, MongoDB, and a Node.js API Server. If your environment is fully dockerized, you can spin up the stack using the following example commands.
@@ -66,7 +65,7 @@ Run mongodb with a volume mount for data. This will store the data in the host m
       --restart unless-stopped \
       redis;
 
-#### Start the formio-server instance.
+#### Start the formio-enterprise instance.
 Before running this command, **you must** replace all the CHANGEME secrets with your own custom random strings. This will ensure that the server remains secure.
 
 Set protocol, port and domain to the address where they will be accessible on the external network. For development it is recommended to use port 3000 and for production, use port 80.
@@ -80,13 +79,13 @@ PORTAL_SECRET is the secret that will allow the form.io portal to communicate wi
       -e "DB_SECRET=CHANGEME" \
       -e "PROTOCOL=http" \
       --restart unless-stopped \
-      --name formio-server \
+      --name formio-enterprise \
       --network formio \
       --link formio-mongo:mongo \
       --link formio-redis:redis \
       --restart unless-stopped \
       -p 3000:80 \
-      formio/formio-server;
+      formio/formio-enterprise;
 
 ##### For Stand-alone API Server with PDF Server
 
@@ -98,18 +97,18 @@ PORTAL_SECRET is the secret that will allow the form.io portal to communicate wi
       -e "PROTOCOL=http" \
       --restart unless-stopped \
       --network formio \
-      --name formio-server \
+      --name formio-enterprise \
       --link formio-files-core:formio-files \
       --link formio-mongo:mongo \
       --link formio-redis:redis \
       -p 3000:80 \
-      formio/formio-server
+      formio/formio-enterprise
 
 **NOTE**
 If you are running this container in a production environment and have SSL enabled, then you will need to remove the Environment Variable ```PROTOCOL```
 
 #### Testing the installation
-You should now have an instance of the formio-server running in your environment. To test it, go to [http://localhost:3000](http://localhost:3000){:target="_blank"}. You should see a response with an empty array since there will be no projects on your environment yet.
+You should now have an instance of the formio-enterprise running in your environment. To test it, go to [http://localhost:3000](http://localhost:3000){:target="_blank"}. You should see a response with an empty array since there will be no projects on your environment yet.
 
 Also test out [http://localhost:3000/status](http://localhost:3000/status){:target="_blank"} which will give you the build number and database schema version of your environment.
 
@@ -117,32 +116,32 @@ Also test out [http://localhost:3000/status](http://localhost:3000/status){:targ
 Once you have your Docker container running, you will certainly get to a point where you will need to upgrade your Docker container server. To do this, you simply pull down the latest container, and launch the new instance. Before you update, it is important to stage your commands within a text editor so that you simply need to copy and paste your command in your shell to perform the udpate. To determine the environment variables you will need to call, it is important to ensure that the same environment variables are used from one version to another. You can determine what environment variables to use by typing the following command in your terminal.
 
 ```
-docker inspect formio-server
+docker inspect formio-enterprise
 ```
 
-This will print out the information from the formio-server container, including the environment variables. You will then copy those environment variables and merge them with the following command within a Text editor of your chosing.
+This will print out the information from the formio-enterprise container, including the environment variables. You will then copy those environment variables and merge them with the following command within a Text editor of your chosing.
 
 ```
-docker pull formio/formio-server && \
-docker rm formio-server-old || true && \
-docker stop formio-server && \
-docker rename formio-server formio-server-old && \
+docker pull formio/formio-enterprise && \
+docker rm formio-enterprise-old || true && \
+docker stop formio-enterprise && \
+docker rename formio-enterprise formio-enterprise-old && \
 docker run -itd \
   -e "PORTAL_SECRET=CHANGEME" \
   -e "JWT_SECRET=CHANGEME" \
   -e "DB_SECRET=CHANGEME" \
   -e "PROTOCOL=http" \
   --restart unless-stopped \
-  --name formio-server \
+  --name formio-enterprise \
   --network formio \
   --link formio-mongo:mongo \
   --link formio-redis:redis \
   --restart unless-stopped \
   -p 3000:80 \
-  formio/formio-server;
+  formio/formio-enterprise;
 ```
 
-This command pulls down the latest version of the container, stops the current container, renames it to ```formio-server-old``` so that you have a path to go back if the update causes any problems, and then launches the new server in its place.
+This command pulls down the latest version of the container, stops the current container, renames it to ```formio-enterprise-old``` so that you have a path to go back if the update causes any problems, and then launches the new server in its place.
 
 ### Production Environments
 It is very common to setup the Form.io API Server within a scalable environment for production use. Here is some help regarding the best practices on getting an API Server deployed for a Production enviornment.
@@ -179,9 +178,9 @@ docker run -itd \
   --network formio \
   --link formio-redis:redis \
   --restart unless-stopped \
-  --name formio-server \
+  --name formio-enterprise \
   -p 80:80 \
-  formio/formio-server;
+  formio/formio-enterprise;
 ```
 
 Note: You will notice that this command also includes a connection to a deployed PDF server using the ```FORMIO_FILES_SERVER``` command. If you are not running your own local PDF server, then this command can be ignored.
@@ -202,9 +201,9 @@ docker run -itd \
   -e "REDIS_PORT=6379" \
   -e "FORMIO_FILES_SERVER=https://pdfserver.yourdomain.com" \
   --restart unless-stopped \
-  --name formio-server \
+  --name formio-enterprise \
   -p 80:80 \
-  formio/formio-server;
+  formio/formio-enterprise;
 ```
 
 Some Redis server implementations do require that the connection is over SSL as well as require a password. Azure Redis is a good example of this. For this, you need both REDIS_PASS and REDIS_USE_SSL variables as well. For example, the following is an example of an Azure deployment.
@@ -223,9 +222,9 @@ Some Redis server implementations do require that the connection is over SSL as 
      -e "PROTOCOL=http" \
      --restart unless-stopped \
      --network formio \
-     --name formio-server \
+     --name formio-enterprise \
      -p 3000:80 \
-     formio/formio-server
+     formio/formio-enterprise
    ```
 See [Azure Deployments](/tutorials/deployment/azure/) for more information.
 
@@ -258,12 +257,12 @@ docker run -itd \
   -e "PROTOCOL=http" \
   --restart unless-stopped \
   --network formio \
-  --name formio-server \
+  --name formio-enterprise \
   --link formio-files-core:formio-files \
   --link formio-mongo:mongo \
   --link formio-redis:redis \
   -p 3000:80 \
-  formio/formio-server && \
+  formio/formio-enterprise && \
 docker run -itd \
   -e "MINIO_ACCESS_KEY=CHANGEME" \
   -e "MINIO_SECRET_KEY=CHANGEME" \
@@ -286,7 +285,7 @@ docker run -itd \
   -e "FORMIO_S3_KEY=CHANGEME" \
   -e "FORMIO_S3_SECRET=CHANGEME" \
   --network formio \
-  --link formio-server:formio \
+  --link formio-enterprise:formio \
   --link formio-minio:minio \
   --restart unless-stopped \
   --name formio-files-core \

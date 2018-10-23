@@ -5,11 +5,20 @@ chapter: environments
 slug: environments-variables
 weight: 40
 ---
-The formio server is configured with environment variables. 
+The formio server is configured with environment variables.
 
 When using Docker, you can set these by using the -e flag. Many Docker hosting platforms have easier ways of setting environment variables for your docker containers.
 
 When using Node.js these variables can either be set in the OS or passed as a prefix to the command. For example: ```MYVAR=value node index```. In addition they can be set in a ```.env``` file in the root of the repository.
+
+#### Required Configuration Variables
+You must obtain and add a LICENSE variable or the server will not start.
+
+{: .table .table-bordered .table-striped}
+| Setting | Description | Example |
+|---------|-------------|---------|
+| LICENSE | A valid license obtained from form.io. | abc123 |
+
 
 #### Recommended Configuration Variables
 While we provide many variables to use during a deployment, the recommended configuration should provide the following settings.
