@@ -86,7 +86,7 @@ exports.handler = (event, context, callback) => {
 ```
 
 After you have the Lambda function created, you now just need to hook that up to the **AWS API Gateway** to create a
-serverless API proxy into your {{ site.formio }} account.
+progressive API proxy into your {{ site.formio }} account.
 
 There are many applications for this capability, but this illustrates an example on how **AWS Lambda** can be used as an
 API Proxy into {{ site.formio }}.
