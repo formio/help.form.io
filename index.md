@@ -18,8 +18,8 @@ summary: These four sections are designed to get you from being a new user, to b
         <li class="list-group-item"><a href="/intro/howworks/#formbuilding">Form Building</a></li>
         <li class="list-group-item"><a href="/intro/howworks/#actions">Form Actions</a></li>
         <li class="list-group-item"><a href="/intro/howworks/#permissions">Roles and Permissions</a></li>
-        <li class="list-group-item"><a href="/intro/appdev/">Application Development</a></li>
-        <li class="list-group-item"><a href="/intro/guide/">30 minute guide</a></li>
+        <li class="list-group-item"><a href="/intro/embed/">Form Embedding</a></li>
+        <li class="list-group-item"><a href="/intro/guide/">Application Development</a></li>
       </ul>
     </div>
   </div>
