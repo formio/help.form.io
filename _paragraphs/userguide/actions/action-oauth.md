@@ -7,7 +7,7 @@ weight: 70
 ---
 The OAuth action allows you to do user authentication within your application against an OAuth provider. When a user authenticates, a popup window will ask them to log into the configured OAuth provider's website, and authenticates them into your application on successful login. This allows users to register and login to your application without having to create a new account.
 
-![](/assets/img/action-oauth.png)
+![](/assets/img/action-oauth.png){: .img-fluid .img-thumbnail }
 
 #### OAuth Provider
 

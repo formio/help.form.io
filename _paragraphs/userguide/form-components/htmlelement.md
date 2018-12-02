@@ -9,7 +9,7 @@ An HTML Element component may be added to a form to display a single HTML elemen
 
 If you wish to insert more complicated HTML in your form, see the [Content component](#content-component)
 
-![](/assets/img/html-element-display.png)
+![](/assets/img/html-element-display.png){: .img-fluid .img-thumbnail }
 
 #### HTML Tag
 

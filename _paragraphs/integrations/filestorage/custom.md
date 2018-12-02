@@ -11,7 +11,7 @@ In order to use a Custom Url Provider, you will need to set up a service that ca
 
 The information posted to the server will be 
 
-```
+```js
 {
   file: file
 }
@@ -19,7 +19,7 @@ The information posted to the server will be
 
 The server should save the contents of the file somewhere and return the following object.
 
-```
+```js
 {
   url: 'http://link.to/file',
   name: 'The_Name_Of_The_File.doc',

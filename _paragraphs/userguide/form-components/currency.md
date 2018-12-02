@@ -7,7 +7,7 @@ weight: 155
 ---
 The Currency component should be used when a field should display currency amounts on a form. This component holds a numeric input mask that allows two decimal values and automatically adds commas as a user inputs a currency amount.
 
-![currency](https://cloud.githubusercontent.com/assets/13321142/15562032/3fdc7e9e-22c1-11e6-8e32-7d918befa98f.png)
+![currency](https://cloud.githubusercontent.com/assets/13321142/15562032/3fdc7e9e-22c1-11e6-8e32-7d918befa98f.png){: .img-fluid .img-thumbnail }
 
 #### Label
 

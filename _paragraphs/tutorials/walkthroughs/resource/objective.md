@@ -11,7 +11,7 @@ Please take this opportunity to download and import the <a href="/assets/project
 we'll be using for the next part of the walk-through. Once finished, feel free to make a few language submission, for reference here is
 the spanish submission used in the demo.
 
-![](/assets/img/tutorials/walkthroughs/resource/lang-resource.png)
+![](/assets/img/tutorials/walkthroughs/resource/lang-resource.png){: .img-fluid .img-thumbnail }
 
 As a point of reference, the language text-field defines the language codes while the data grid is responsible
 for creating the key value pairs which will manages the actual translated content. Finally, you will want to markdown the

@@ -7,7 +7,7 @@ weight: 20
 ---
 The authentication action allows you to do user authentication within your application against a User Resource. When a user authenticates, they will be issued a JSON Web Token (JWT) which will authorize access to parts of the system.
 
-![](/assets/img/action-authentication.png)
+![](/assets/img/action-authentication.png){: .img-fluid .img-thumbnail }
 
 #### Resource Association
 

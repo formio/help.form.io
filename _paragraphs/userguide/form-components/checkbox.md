@@ -8,7 +8,7 @@ weight: 120
 
 A check box is a boolean value input field. It will either be on or off.
 
-![18 checkbox](https://cloud.githubusercontent.com/assets/13321142/13097256/307b6b92-d4e5-11e5-91ec-2c92e185e315.png)
+![18 checkbox](https://cloud.githubusercontent.com/assets/13321142/13097256/307b6b92-d4e5-11e5-91ec-2c92e185e315.png){: .img-fluid .img-thumbnail }
 
 #### Label
 
@@ -34,7 +34,7 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![19 checkbox validation](https://cloud.githubusercontent.com/assets/13321142/13097255/3078b636-d4e5-11e5-8784-8bc737fc146c.png)
+![19 checkbox validation](https://cloud.githubusercontent.com/assets/13321142/13097255/3078b636-d4e5-11e5-8784-8bc737fc146c.png){: .img-fluid .img-thumbnail }
 
 #### Required
 

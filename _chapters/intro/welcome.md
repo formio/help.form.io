@@ -8,7 +8,7 @@ layout: chapter
 ---
 {{ site.formio }} is a combined Form and Data Management platform for form-based Progressive web applications. It enables web application developers to rapidly create the Forms and Resources using a simple drag-and-drop form builder interface. The creation of these forms generates a JSON schema that is used to both dynamically render the forms within the Progressive application, but also automatically generate the corresponding API to receive the data when that form is submitted.
 
-![](/assets/img/formio-overview-sm.png)
+![](/assets/img/formio-overview-sm.png){: .img-fluid .img-thumbnail }
 
 The {{ site.formio }} platform is capable of being the complete API engine for your Data Management Application. Typical applications built on top of {{ site.formio }} are those which require complex Business workflows and Data Management, while at the same time need the deployment flexibilities offered through a Progressive environment (such as offline mode). Some examples of successful applications built on top of {{ site.formio }} include but are definitely not limited too...
 

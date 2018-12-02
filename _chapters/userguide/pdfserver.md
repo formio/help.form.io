@@ -16,7 +16,7 @@ In order to get the PDF server connected to your project, you must first upgrade
 of your project. Your project must be at least a **Team Pro** project in order to enable the PDF Server capabilities. You can
 upgrade, by selecting more than one PDF Server within the project upgrade section.
 
-![](/assets/img/userguide/pdfserver/pdfupgrade.png)
+![](/assets/img/userguide/pdfserver/pdfupgrade.png){: .img-fluid .img-thumbnail }
 
 ### Import the PDF Resources
 Now that you have upgraded your project, you will now need to import the PDF Resources into your project. To do this, download the
@@ -26,7 +26,7 @@ following PDF project.json locally to your computer.
 
 You can now navigate to your current project, and then import this template into your project, by clicking on .
 
-![](/assets/img/userguide/pdfserver/pdfimport.png)
+![](/assets/img/userguide/pdfserver/pdfimport.png){: .img-fluid .img-thumbnail }
 
 then click on the **Import Project Template to Live**. You will now see a new Resource in your project called **PDF** that will be used to keep track of all your pdf forms.
 
@@ -34,7 +34,7 @@ then click on the **Import Project Template to Live**. You will now see a new Re
 We will now need to create an **API key** for your project so that the PDF server can communicate to your project and add new entries into the PDF form that was imported in the previous step. To do this,
 we will simply click on the settings of your project and create a new api key as follows.
 
-![](/assets/img/userguide/pdfserver/pdfapikeys.png)
+![](/assets/img/userguide/pdfserver/pdfapikeys.png){: .img-fluid .img-thumbnail }
 
 Make sure you keep track of this key since we will need it later.
 
@@ -58,7 +58,7 @@ docker pull formio/formio-files-core
 
 Once you have the server deployed, you can then navigate to your **PDF Enterprise Page** which can be found in the PDF section of your project as follows.
 
-![](/assets/img/userguide/pdfserver/pdfsettings.png)
+![](/assets/img/userguide/pdfserver/pdfsettings.png){: .img-fluid .img-thumbnail }
 
 In these settings, you will see a block of code that looks like this.
 
@@ -111,7 +111,7 @@ The settings for the deployed PDF Server are described as follows.
 ### Point your project to your new PDF Server
 The final step is to point your project to use the new PDF server that you just deployed. Within the **PDF Enterprise Page** of your project, you will add the url of your server to the settings and then press **Save**.
 
-![](/assets/img/userguide/pdfserver/pdfserverurl.png)
+![](/assets/img/userguide/pdfserver/pdfserverurl.png){: .img-fluid .img-thumbnail }
 
 You are now running a completely hosted **PDF Server**!
 

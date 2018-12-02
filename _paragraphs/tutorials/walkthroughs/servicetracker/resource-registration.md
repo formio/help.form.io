@@ -42,7 +42,7 @@ Once you do that, you should then be able to restart your application by closing
 
 And you are done!  You should now be able to see the full working application running Serverless within your browser!
 
-![](/assets/img/tutorials/walkthroughs/servicetracker/app-running.png)
+![](/assets/img/tutorials/walkthroughs/servicetracker/app-running.png){: .img-fluid .img-thumbnail }
 
 We hope that this walkthrough demonstration really illustrates the power of Form.io. In just a short walkthrough, we were able to create a very complex Serverless Enterprise application that incorporates a number of nested resources, mapping, as well as total separtion between the front end application and the backend API Server!
 

@@ -7,7 +7,7 @@ weight: 90
 ---
 A select field will display a list of values in a drop down list to users. Users can select one of the values.
 
-![16 select](https://cloud.githubusercontent.com/assets/13321142/13097258/3083d2fa-d4e5-11e5-96e9-28759d9a045b.png)
+![16 select](https://cloud.githubusercontent.com/assets/13321142/13097258/3083d2fa-d4e5-11e5-96e9-28759d9a045b.png){: .img-fluid .img-thumbnail }
 
 #### Label
 
@@ -40,7 +40,7 @@ https://cdn.rawgit.com/mshafrir/2646763/raw/states_titlecase.json
 And place that within the URL of the select drop down <strong>Data Source URL</strong>. You will then need to provide the <strong>Value Property</strong> as well as change the <strong>Item Template</strong> so that it will pull the right value as well as display correctly within the dropdown. The following image shows how the configuration would look for this particular setup.
 
 
-![Select URL JSON Source](/assets/img/userguide/userguide-select-url.png)
+![Select URL JSON Source](/assets/img/userguide/userguide-select-url.png){: .img-fluid .img-thumbnail }
 
 This will now turn your select dropdown into a list of available States within the US.
 
@@ -64,7 +64,7 @@ A custom CSS class to add to this component. You may add multiple class names se
 
 Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
 
-![](/assets/img/select-validation.png)
+![](/assets/img/select-validation.png){: .img-fluid .img-thumbnail }
 
 #### Required
 

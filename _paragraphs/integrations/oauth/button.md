@@ -9,7 +9,7 @@ If you are using Remote Authentication you do not need to modify the register fo
 
 Edit your User Login Form and drag a new button component onto the form.
 
-![](/assets/img/integrationsoauth/button.png)
+![](/assets/img/integrationsoauth/button.png){: .img-fluid .img-thumbnail }
 
 Be sure to select OAuth for the button action. You will not be able to assign the OAuth action later if it is not an OAuth action.
 

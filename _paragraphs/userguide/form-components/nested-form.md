@@ -9,7 +9,7 @@ Nested Form component allows you to insert one (child) Resource/Form with all it
 
 For example, if you have Song resource (parent) and Artist resource (child) and you want to create both Song and Artist submissions by submitting one form, you may use Nested Form component for this case. 
 
-![](/assets/img/userguide/form-components/nested-form-display.png)
+![](/assets/img/userguide/form-components/nested-form-display.png){: .img-fluid .img-thumbnail }
 
 #### Name
 
@@ -43,4 +43,3 @@ If your project is remotely deployed with subdirectories, then you need in your 
  Formio.setProjectUrl(<project_URL>). 
  ```
  This will help Formio understand where to fetch nested resources from and will set up base URLs properly.
- 

@@ -9,7 +9,7 @@ weight: 80
 The form we'll be using for this example can be found at [https://examples.form.io/phraseapp](https://examples.form.io/phraseapp). 
 Feel free to import the JSON into your own project or make your own.
 
-![](/assets/img/tutorials/walkthroughs/translations/form-definition.png)
+![](/assets/img/tutorials/walkthroughs/translations/form-definition.png){: .img-fluid .img-thumbnail }
 
 There are few things to note. First all the components are prefixed with `[[__phrase_` and sufixed with `_]]`. 
 This format is how PhraseApp identifies what items in the DOM can be translated. 

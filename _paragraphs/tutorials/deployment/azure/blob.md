@@ -20,6 +20,6 @@ Use the following steps to set this up.
  - Once it is created, click on the created instance, and then click on **Access Keys**
  - Make sure you save the first key in your Text editor.
  
-   ![](/assets/img/integrations/azure/blob-keys.png)
+   ![](/assets/img/integrations/azure/blob-keys.png){: .img-fluid .img-thumbnail }
    
  You are now ready to setup your hosted Virtual Machine.

@@ -8,7 +8,7 @@ weight: 1
 ---
 Before we complete the workflow from the application perspective, we will first need to create a new form within Form.io that will serve as the **Password Reset** form. This can be accomplished by creating the following form.
 
-![](/assets/img/tutorials/workflows/resetpass/resetpassform.png)
+![](/assets/img/tutorials/workflows/resetpass/resetpassform.png){: .img-fluid .img-thumbnail }
 
 The **Verify Password** field has a custom validation configured with the following rule.
 
@@ -18,7 +18,7 @@ valid = (input == '{{ password }}') ? true : 'Passwords must match';
 
 Once you save this form, go ahead and remove the **Save Submission** action since we are not using this form to save any data.
 
-![](/assets/img/tutorials/workflows/resetpass/resetpassactions.png)
+![](/assets/img/tutorials/workflows/resetpass/resetpassactions.png){: .img-fluid .img-thumbnail }
 
 You don't need to worry about setting up Access permissions since we are not really using this form for submission, but rather to render the form in the application.
 

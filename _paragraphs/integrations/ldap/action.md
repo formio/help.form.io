@@ -7,7 +7,7 @@ weight: 20
 ---
 Once you have LDAP set up, add an action to your User Login Form for the "LDAP Login" action.
 
-![](/assets/img/integrations/ldap/action.png)
+![](/assets/img/integrations/ldap/action.png){: .img-fluid .img-thumbnail }
 
 Select the form field that represents your username in LDAP. It must be a string or email field.
 

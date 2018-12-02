@@ -14,23 +14,23 @@ Connections required in the corresponding projects settings.
 To get started go to Settings -> Data Connections -> Atlassian and input your `Atlassian URL` without protocol.
 Then add your Atlassian login credentials.
 
-![](/assets/img/jira-action-01.png)
+![](/assets/img/jira-action-01.png){: .img-fluid .img-thumbnail }
 
 Once configured, create or edit any form which you intend on adding the Jira action to.
 
-![](/assets/img/jira-action-02.png)
+![](/assets/img/jira-action-02.png){: .img-fluid .img-thumbnail }
 
 Once constructed click the `Action` tab.
 
-![](/assets/img/jira-action-03.png)
+![](/assets/img/jira-action-03.png){: .img-fluid .img-thumbnail }
 
 In the dropdown find and select the `Jira (Premium)` option, then click `Add Action`.
 
-![](/assets/img/jira-action-04.png)
+![](/assets/img/jira-action-04.png){: .img-fluid .img-thumbnail }
 
 If everything is configured correctly, the Jira action can now be configured and integrated into your form.
 
-![](/assets/img/jira-action-05.png)
+![](/assets/img/jira-action-05.png){: .img-fluid .img-thumbnail }
 
 
 The Jira action configuration page has the following settings:

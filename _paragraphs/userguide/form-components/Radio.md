@@ -7,7 +7,7 @@ weight: 80
 ---
 Radio form components should be used when presenting a list of options from which one should be chosen.
 
-![14 radio](https://cloud.githubusercontent.com/assets/13321142/13097261/308aa0e4-d4e5-11e5-8583-63290301a52a.png)
+![14 radio](https://cloud.githubusercontent.com/assets/13321142/13097261/308aa0e4-d4e5-11e5-8583-63290301a52a.png){: .img-fluid .img-thumbnail }
 
 #### Label
 
@@ -41,7 +41,7 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![15 radio validation](https://cloud.githubusercontent.com/assets/13321142/13097259/3084f112-d4e5-11e5-841e-b5f9ce549007.png)
+![15 radio validation](https://cloud.githubusercontent.com/assets/13321142/13097259/3084f112-d4e5-11e5-841e-b5f9ce549007.png){: .img-fluid .img-thumbnail }
 
 #### Required
 

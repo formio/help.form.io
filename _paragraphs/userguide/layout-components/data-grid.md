@@ -12,20 +12,20 @@ within a form which is especially useful when needing the ability to add or dupl
 From the **Data** component menu, add the **Data Gird (Array)** to any active form. By default the grid is empty 
 but can have other form components placed inside. 
 
-![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-1.png)
+![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-1.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
 The example below illustrates three **Basic Components** placed inside of a **Data Gird (Array)**. A new column is 
 automatically added whenever another component is added the the data grid interface 
 
-![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-2.png)
+![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-2.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
 Below is an in depth look at the specific data grid options that users can add or interface with as of the 5.0.0 release.  
 
-![Data Grid Component Details](/assets/img/userguide/layout-components/Data-Grid-3.png)
+![Data Grid Component Details](/assets/img/userguide/layout-components/Data-Grid-3.png){: .img-fluid .img-thumbnail }
 
 #### Label
 
@@ -99,19 +99,19 @@ Below is an in depth look at the specific data grid options that users can add o
 
 An example of the **Data Grid** displayed in the ```Use``` tab.  
 
-![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-4.png)
+![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-4.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
 Rows can be dynamically added, and removed as highlighted below.
 
-![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-5.png)
+![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-5.png){: .img-fluid .img-thumbnail }
 
 &nbsp; 
 
 Data can be submitted and edited via the traditional platform interfaces. 
 
-![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-6.png)
+![Data Grid Example](/assets/img/userguide/layout-components/Data-Grid-6.png){: .img-fluid .img-thumbnail }
 
 
 

@@ -32,7 +32,7 @@ To create and configure a Role, navigate to the **Access** tab located within a 
 
 <p class="note">When naming Roles, they are organized alphabetically and capital letters will be listed before lowercase letters. Staying consistent when naming your Roles will keep the Role list organized.</p>
 
-![3 roles](/assets/img/userguide/userguide-roles-access-area.png)
+![3 roles](/assets/img/userguide/userguide-roles-access-area.png){: .img-fluid .img-thumbnail }
 
 Additional Roles can be defined and added to a project at any time. In the next section, we will discuss Permissions associated with Roles to define access to the submissions within your application.
 

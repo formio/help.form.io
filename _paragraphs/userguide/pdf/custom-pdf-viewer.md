@@ -30,11 +30,11 @@ gulp build
 
 This will create a **dist** folder, which you can then launch to your own hosting service. Once you have this hosted, you can then edit your form settings, and then introduce a new **Custom Property** called **viewer** and then set the value to the URL of your custom viewer application like so.
 
-![](/assets/img/userguide/pdf/custom-viewer.png)
+![](/assets/img/userguide/pdf/custom-viewer.png){: .img-fluid .img-thumbnail }
 
 Once you save, and then go back to a submission and download that submission, you will notice that the PDF download now uses your own custom viewer application to render the submission PDF.
 
-![](/assets/img/userguide/pdf/custom-viewer-download.png)
+![](/assets/img/userguide/pdf/custom-viewer-download.png){: .img-fluid .img-thumbnail }
 
 ### Hosted Viewer
 The current viewer is currently hosted @ https://formio.github.io/formio-viewer/dist. If you wish to make changes to the theme based on [Bootswatch Themes](https://bootswatch.com/3/), then you can use the following format
@@ -45,7 +45,7 @@ https://formio.github.io/formio-viewer/dist?theme=paper
 
 Like so...
 
-![](/assets/img/userguide/pdf/custom-viewer-hosted.png)
+![](/assets/img/userguide/pdf/custom-viewer-hosted.png){: .img-fluid .img-thumbnail }
 
 ### Viewer Parameters
 There are also some parameters that you can pass to the Hosted viewer if you wish to alter the output of the generated PDF. These parameters can be provided a GET query parameters to the viewer. For example, to not show the header for the viewer, you can provide the following.

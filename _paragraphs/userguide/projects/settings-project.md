@@ -32,4 +32,4 @@ Users can configure the settings for their Projects by clicking the **Settings**
       - SQL Connector
           - Here you can enter the credentials for your [formio-sql](https://github.com/formio/formio-sql) instance.
 
-![](/assets/img/project-settings.png)
+![](/assets/img/project-settings.png){: .img-fluid .img-thumbnail }

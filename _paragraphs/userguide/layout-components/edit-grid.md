@@ -12,7 +12,7 @@ within a form which is especially useful when needing the ability to add or dupl
 From the **Data** component menu, add the **Edit Gird (Array)** to any active form. By default the grid is empty 
 but can have other form components placed inside. 
 
-![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-1.png)
+![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-1.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
@@ -21,12 +21,12 @@ can be used to replicate the split view below, and additional rows are added aut
 are dragged into the interface. 
 
 
-![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-2.png)
+![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-2.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
 Below is an in depth look at the specific data grid options that users can add or interface with as of the 5.0.0 release
-![Edit Grid Component](/assets/img/userguide/layout-components/Edit-Grid-3.png)
+![Edit Grid Component](/assets/img/userguide/layout-components/Edit-Grid-3.png){: .img-fluid .img-thumbnail }
 
 #### Label
 
@@ -73,22 +73,22 @@ Below is an in depth look at the specific data grid options that users can add o
 
 An example of the **Edit Grid** displayed in the ```Use``` tab.  
 
-![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-4.png)
+![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-4.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
 As Entries are added the table displays the data below each respective header independent of the form layout.
 
-![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-5.png)
+![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-5.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
 The form layout is displayed when ```Add Another``` is pressed, and the form appears below the grid for user entry.
 
-![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-6.png)
+![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-6.png){: .img-fluid .img-thumbnail }
 
 &nbsp;
 
 Once submitted, form data can be viewed and edit via traditional platform methods. 
 
-![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-7.png)
+![Edit Grid Example](/assets/img/userguide/layout-components/Edit-Grid-7.png){: .img-fluid .img-thumbnail }

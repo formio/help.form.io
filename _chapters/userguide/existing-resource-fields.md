@@ -11,4 +11,4 @@ Existing Resource Fields allow components within your Resources to be reutilized
 <div><div>
 Each Resource within your project will display when the Existing Resource Fields tab is clicked. When a Resource is clicked, it will display the components found in that particular Resource. Simply drag a field just like any other component to add to a form. Because these components are tied to an existing Resource, the API key for the component can not be changed.
 
-![existing - show](https://cloud.githubusercontent.com/assets/13321142/15560509/d3c0861a-22b1-11e6-8e4d-4b65891eacba.png)
+![existing - show](https://cloud.githubusercontent.com/assets/13321142/15560509/d3c0861a-22b1-11e6-8e4d-4b65891eacba.png){: .img-fluid .img-thumbnail }

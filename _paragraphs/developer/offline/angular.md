@@ -122,4 +122,4 @@ The next thing you need to do is add the Offline mode button to your header of y
 ```
 
 Once you do that you should now have offline capabilities within your application!
-![](/assets/img/userguide/formio-offline.png)
+![](/assets/img/userguide/formio-offline.png){: .img-fluid .img-thumbnail }

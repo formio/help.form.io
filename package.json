@@ -4,13 +4,20 @@
   "description": "The help site for Form.io.",
   "main": "gulpfile.js",
   "devDependencies": {
-    "browserify": "^13.0.0",
+    "browserify": "^16.2.3",
     "gulp": "^3.9.0",
-    "gulp-filter": "^3.0.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
     "gulp-s3": "^0.11.0",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.2",
     "vinyl-transform": "^1.0.0",
-    "wiredep": "^2.2.2"
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-stream": "^5.1.1",
+    "wiredep": "^4.0.0"
   },
   "scripts": {
     "deploy:test": "bundle exec jekyll build --config _config.test.yml,_config.yml && gulp deploy:test",
@@ -29,8 +36,13 @@
   },
   "homepage": "https://github.com/formio/help.form.io#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "anchor-js": "^4.1.1",
+    "bootstrap": "^4.1.3",
     "bootstrap-sass": "^3.3.7",
-    "bootswatch": "^3.3.7"
+    "bootswatch": "^4.1.3",
+    "font-awesome": "^4.7.0",
+    "formiojs": "^3.9.1",
+    "jquery": "^3.3.1",
+    "pygments-css": "^1.0.0"
   }
 }

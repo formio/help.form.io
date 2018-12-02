@@ -10,7 +10,7 @@ Forms can be created from the Project home page. Get to this page by clicking on
 
 At the bottom of the list of Forms, click the **New Form** button to begin creating a Form.
 
-![7 create form](https://cloud.githubusercontent.com/assets/13321142/13097268/30ad40ae-d4e5-11e5-8de6-833cd4bda0c0.png)
+![7 create form](https://cloud.githubusercontent.com/assets/13321142/13097268/30ad40ae-d4e5-11e5-8de6-833cd4bda0c0.png){: .img-fluid .img-thumbnail }
 
 #### Title
 

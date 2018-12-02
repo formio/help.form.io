@@ -9,7 +9,7 @@ New Projects can be created from the User Portal home page. To get there from an
 
 At the top will be a blue banner that contains the buttons to create a project. You can either create a custom project or use an application template.
 
-![](/assets/img/userguide/userguide-projects-create.png)
+![](/assets/img/userguide/userguide-projects-create.png){: .img-fluid .img-thumbnail }
 
 When choosing an application template, the project is immediately created and ready for editing and previewing. The title and description of the newly created project may be changed by going to the project settings on the left.
 

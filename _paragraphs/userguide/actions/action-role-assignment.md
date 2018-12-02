@@ -7,7 +7,7 @@ weight: 60
 ---
 The Role Assignment Action allows for the modification of a submissions roles, when an event occurs on a form.
 
-![](/assets/img/action-role-assignment.png)
+![](/assets/img/action-role-assignment.png){: .img-fluid .img-thumbnail }
 
 #### Resource Association
 

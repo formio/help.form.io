@@ -8,15 +8,15 @@ weight: 10
 To get started, create or enter an existing project. For the purpose of this walk-through, an HTML element will
 be anchored to the top of each form to keep track of the current iteration. 
 
-![](/assets/img/userguide/versioning-enable-1.png)
+![](/assets/img/userguide/versioning-enable-1.png){: .img-fluid .img-thumbnail }
 
 To enable Form Versioning, expand the ```Advanced Settings``` tab by clicking on it.
 
-![](/assets/img/userguide/versioning-enable-2.png)
+![](/assets/img/userguide/versioning-enable-2.png){: .img-fluid .img-thumbnail }
 
 In the Form Revisions section, expand the select dropdown menu and select either ```Enable``` option.  
 
-![](/assets/img/userguide/versioning-enable-3.png)
+![](/assets/img/userguide/versioning-enable-3.png){: .img-fluid .img-thumbnail }
 
 Form Revisions can be configured in two different ways:
 
@@ -32,7 +32,7 @@ externally like inside the users application.
 Afterwards, click either ```Create Form``` if creating the a new form or ```Publish``` when interacting with an
 existing form. Once saved, **Form Versioning** is now enabled and the ```Revisions``` tab is now available for user interaction.
 
-![](/assets/img/userguide/versioning-enable-4.png)
+![](/assets/img/userguide/versioning-enable-4.png){: .img-fluid .img-thumbnail }
 
 Once inside the revisions interface, users can see the full scope of their current development cycle. Important information 
 such as who made the revision, when the revision was made, the revision number, and any notes made are all available. 

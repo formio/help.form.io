@@ -9,7 +9,7 @@ The Webhook action allows you to integrate form submissions into your custom app
 
 Webhooks can not be performed within the "Form Editor". However, you can see the action take place within the Preview section of your Project.
 
-![](/assets/img/action-webhook.png)
+![](/assets/img/action-webhook.png){: .img-fluid .img-thumbnail }
 
 #### Handler
 

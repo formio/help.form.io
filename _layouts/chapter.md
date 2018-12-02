@@ -10,7 +10,8 @@ layout: default
   {% assign paragraphs = site.paragraphs | where: "chapter", page.chapter | sort: "weight" %}
   {% for paragraph in paragraphs %}
   <div class="docs-section">
-    <h3 id="{{ paragraph.slug }}">{{ paragraph.title }}</h3>
+    <a id="{{ paragraph.slug }}" class="anchor"></a>
+    <h3>{{ paragraph.title }}</h3>
     {{ paragraph.content | markdownify }}
   </div>
   {% endfor %}

@@ -20,7 +20,7 @@ The conditional logic is based on the following rules:
  - The visibility is dependent on another component defined within the form.
  - The logic is activated when the configured field contains the plaintext value defined in the settings.
 
-![](/assets/img/conditional-components.png)
+![](/assets/img/conditional-components.png){: .img-fluid .img-thumbnail }
 
 In addition to Simple Conditional logic, you can also use Advanced Conditional logic, which uses actual JavaScript for
 any combination of conditions.
@@ -29,7 +29,7 @@ JavaScript conditional logic requires you to set the value of show to either tru
 current value of any form component via the data object, and the components API key. Advanced Conditional logic will
 only work, if Simple Conditional logic isn't already defined.
 
-![](/assets/img/conditional-components2.png)
+![](/assets/img/conditional-components2.png){: .img-fluid .img-thumbnail }
 
 <div class="note" markdown="1">
   When using Advanced Conditional logic with the select boxes form component, you must use the following syntax to get

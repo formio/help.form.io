@@ -6,19 +6,19 @@ chapter: guide
 layout: chapter
 slug: createeventresource
 ---
-An Event Management system will need to store some "structured" objects called **Events**. These are called **Resources** in Form.io, so lets create a new **Event** by clicking on the following.
+An Event Registration application will need to store some "structured" objects called **Events**. These are called **Resources** in Form.io, so lets create a new **Event** by clicking on the following.
 
-![](/assets/img/userguide/newresource.png)
+![](/assets/img/userguide/newresource.png){: .img-fluid .img-thumbnail }
 
 We will then build our **Event** object using a form builder (pretty cool). We could also provide some field validations and such, but for now we will keep the form simple.
 
-![](/assets/img/userguide/eventcreate.png)
+![](/assets/img/userguide/eventcreate.png){: .img-fluid .img-thumbnail }
 
 When you are done, click on **Create Resource**
 
 ### Assigning Permissions
-You now need to allow Authenticated users to read all events, but only Admins can manage them. To do this, click on **Access** section, and configure the settings as follows.
+You now need to allow Authenticated users to read all events. To do this, click on **Access** section, and configure the settings as follows.
 
-![](/assets/img/userguide/eventaccess.png)
+![](/assets/img/userguide/eventaccess.png){: .img-fluid .img-thumbnail }
 
-Make sure you press **Save Changes** when you are done adding those.
+The settings should automatically save when you add this role to this permission.

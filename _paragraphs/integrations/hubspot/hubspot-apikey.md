@@ -10,6 +10,6 @@ In order to use the Hubspot integration, you will need an API key from Hubspot. 
 
 Once you have the key, go to your project settings on form.io and enter the API Key in the Hubspot section.
 
-![](/assets/img/hubspot/hubspot-apikey.png).
+![](/assets/img/hubspot/hubspot-apikey.png){: .img-fluid .img-thumbnail }
 
 If you add a Hubspot action to a form before setting your API Key, the options will not populate as the information cannot be pulled from Hubspot.

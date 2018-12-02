@@ -10,7 +10,7 @@ The Form.io platform supports **On-Premise** or **Private Cloud** file hosting t
 ### Minio Setup
 To deploy a new Minio server, you will need to first install [Docker](https://docker.io) either on your local machine or on your privte cloud server. Once you have Docker installed, you can then run the following command to spin up a new Minio instance.
 
-```
+```sh
 docker run -itd \
   -e "MINIO_ACCESS_KEY=CHANGEME" \
   -e "MINIO_SECRET_KEY=CHANGEME" \
@@ -32,15 +32,15 @@ docker ps
 
 You should see something that looks like the following.
 
-![](/assets/img/integrations/minio/dockerps.png)
+![](/assets/img/integrations/minio/dockerps.png){: .img-fluid .img-thumbnail }
 
 You can also go to the URL http://localhost:9000 in your browser and see the minio interface. You can log in using the ```MINIO_ACCESS_KEY``` and ```MINIO_SECRET_KEY``` that you used to spin up the minio server.
 
-![](/assets/img/integrations/minio/miniobrowser.png)
+![](/assets/img/integrations/minio/miniobrowser.png){: .img-fluid .img-thumbnail }
 
 Once, there you will want to creata a new Bucket by clicking on the **+** icon toward the bottom right of the screen, and then select **Create Bucket**. You can give your bucket any name you wish and then press Enter to save.
 
-![](/assets/img/integrations/minio/miniocreatebucket.png)
+![](/assets/img/integrations/minio/miniocreatebucket.png){: .img-fluid .img-thumbnail }
 
 Keep the name of the bucket for future configurations.
 
@@ -60,14 +60,14 @@ Now that you have a Minio Server running, the next thing you will need to do is 
  - Click on the checkbox that says **Use Minio Server**
  - Next, configure the Minio settings as follows where you will provide your own configurations.
  
-![](/assets/img/integrations/minio/miniosettings.png)
+![](/assets/img/integrations/minio/miniosettings.png){: .img-fluid .img-thumbnail }
 
 Press **Save** to save your settings.
 
 ### Create a Form that uses Minio
 Next, you will need to create a new Webform that has a **File** component. In the configurations of the file upload, you will want to make sure that you have selected **S3** as the **Storage** provider.
 
-![](/assets/img/integrations/minio/minios3config.png)
+![](/assets/img/integrations/minio/minios3config.png){: .img-fluid .img-thumbnail }
 
 You are now off and running with the Minio!
  

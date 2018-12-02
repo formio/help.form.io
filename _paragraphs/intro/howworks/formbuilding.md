@@ -7,7 +7,7 @@ slug: formbuilding
 ---
 One major capability of Form.io is that it leverages an easy to drag-and-drop form builder to dynamically create the **Forms** and **Resources** for your application.
 
-![](/assets/img/userguide/form-builder.png)
+![](/assets/img/userguide/form-builder.png){: .img-fluid .img-thumbnail }
 
 Our form builder, however, is very special where instead of building an HTML form, it instead generates a JSON schema representation of the form or resource. A very simple example of what a schema looks like is as follows.
 
@@ -58,6 +58,6 @@ Here is a [Codepen demonstration](http://codepen.io/travist/pen/rjdebX/) of this
 
 By creating this schema, this form is now capable of being dynamically rendered within the Serverless application (using Angular, React, etc), but is also used to automatically generate the REST API to support this form using the same JSON schema. This API can be viewed as follows.
 
-![](/assets/img/userguide/person-api.png)
+![](/assets/img/userguide/person-api.png){: .img-fluid .img-thumbnail }
 
 

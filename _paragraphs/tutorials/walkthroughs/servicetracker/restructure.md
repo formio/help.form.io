@@ -14,7 +14,7 @@ Your bower.json file should look like the following when you are done.
 
 ***/bower.json***
 
-![](/assets/img/tutorials/walkthroughs/servicetracker/restructure-delete-overrides.png)
+![](/assets/img/tutorials/walkthroughs/servicetracker/restructure-delete-overrides.png){: .img-fluid .img-thumbnail }
 
 ### Don't exclude bootstrap.js in Gulp task
 
@@ -142,7 +142,7 @@ Doing this allows you to add your own variables to your application like the fol
 
 ### Create the views folder and the gulp task to add it to the distribution
 
-![](/assets/img/tutorials/walkthroughs/servicetracker/restructure-views.png)
+![](/assets/img/tutorials/walkthroughs/servicetracker/restructure-views.png){: .img-fluid .img-thumbnail }
 
 ***/gulp/build.js***
 

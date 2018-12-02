@@ -131,6 +131,6 @@ We can now run the following within our Command Prompt to run the application an
   gulp serve
 ```
 
-![](/assets/img/tutorials/walkthroughs/servicetracker/user-auth-page.png)
+![](/assets/img/tutorials/walkthroughs/servicetracker/user-auth-page.png){: .img-fluid .img-thumbnail }
 
 We are now ready to start registering our Resources!

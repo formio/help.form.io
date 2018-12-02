@@ -16,7 +16,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
    - **Test Environments** - A1 Standard
    - **Production Environments** - A6 Standard
    
-   ![](/assets/img/integrations/azure/vm-create.png)  
+   ![](/assets/img/integrations/azure/vm-create.png){: .img-fluid .img-thumbnail }  
    
  - Now press **Create**
  - You will now wait for this machine to be created, and once it is, we will need to open up the HTTP port 80 on this machine.
@@ -31,7 +31,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
  - To login to this machine, you will first need to get the **DNS Name** by clicking on the **Overview** tab.
  - You will then see the **DNS Name**, which you will then need to copy.
  
-   ![](/assets/img/integrations/azure/vm-dns-name.png)
+   ![](/assets/img/integrations/azure/vm-dns-name.png){: .img-fluid .img-thumbnail }
    
  - Next, you will open up a Terminal on your local computer and type the following.
  
@@ -108,7 +108,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
    
  - After this runs for a minute, you should then be able to type the following to check on the status.
  
-   ![](/assets/img/integrations/azure/api-server-running.png)
+   ![](/assets/img/integrations/azure/api-server-running.png){: .img-fluid .img-thumbnail }
    
  - Next, we will deploy our **PDF server** to point to both the API server + Minio File Server.
     
@@ -145,7 +145,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
    
    and then see the following.
    
-   ![](/assets/img/integrations/azure/files-running.png)
+   ![](/assets/img/integrations/azure/files-running.png){: .img-fluid .img-thumbnail }
    
  - You should now have two public ports accessible on this machine.
    - API Server: Port 3000

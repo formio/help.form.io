@@ -47,11 +47,11 @@ Now that you have the authentication file in place, you are ready to create your
 
   - When you are done, your folder should look like the following.
   
-  ![](/assets/img/tutorials/deployment/aws/deploy-folder.png)
+  ![](/assets/img/tutorials/deployment/aws/deploy-folder.png){: .img-fluid .img-thumbnail }
   
   - Next, select the files within this folder, and then create a new ZIP file with those files. Make sure you create a ZIP of the files, and not the **formio-server** folder that we created at the beginning of this intro. Rename this file to **formio-server.zip**. Your folder should look like the following.
   
-  ![](/assets/img/tutorials/deployment/aws/folder-zip.png)
+  ![](/assets/img/tutorials/deployment/aws/folder-zip.png){: .img-fluid .img-thumbnail }
 
   - Next, create a new Elastic Beanstalk deployment by clicking on the icon in the AWS Dashboard.
 

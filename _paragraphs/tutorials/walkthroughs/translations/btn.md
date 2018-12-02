@@ -9,7 +9,7 @@ weight: 60
 Adding an interface to toggle the between the languages has been added via a separate panel with 3 buttons. 
 Each button has had the `Action` property switched to `Event`, and the `Button Event` property set to `toggle'lng'`.
 
-![](/assets/img/tutorials/walkthroughs/translations/btn-portal-settings.png)
+![](/assets/img/tutorials/walkthroughs/translations/btn-portal-settings.png){: .img-fluid .img-thumbnail }
 
 With the form configured, take a look at the javascript of the third and final section. 
 

@@ -14,7 +14,7 @@ Add a new OAuth Action.
 If you are using remote authentication then select that in the action and select your OAuth provider that you configured in the project settings. Make sure to also select which OAuth button to associate with the action.
 
 Finally, assign roles based on the external user properties. You can map any OAuth claim value to a property. For example, if the data comes back as
-```json
+```js
 {
   name: 'joe',
   group: 'admins'
@@ -31,13 +31,13 @@ This will give administrator to anyone who has a claim of group: 'admins'
 ### Resource Authentication
 To use Resource authentication, fill in the settings as shown below. For more information on what these settings do, see the [OAuth Action](/userguide/actions/#action-oauth) in the User's Guide.
 
-![](/assets/img/oauth/project-register-oauth-action-edit.png)
+![](/assets/img/oauth/project-register-oauth-action-edit.png){: .img-fluid .img-thumbnail }
 
 Click *Submit*.
 Go to the *Actions* tab for the **User Login Form**.
 Add a new OAuth Action.
 Fill in the settings as shown below:
 
-![](/assets/img/oauth/project-login-oauth-action-edit.png)
+![](/assets/img/oauth/project-login-oauth-action-edit.png){: .img-fluid .img-thumbnail }
 
 Click *Submit*.

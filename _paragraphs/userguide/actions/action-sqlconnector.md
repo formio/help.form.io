@@ -13,7 +13,7 @@ PostgreSQL. When a submission is created, it will be created in your database fo
 [Data Connection](#settings-project) is required in the corresponding projects settings. Once the settings are
 configured, you can map your Form.io form to your Table Columns.
 
-![](/assets/img/action-sql-connector.png)
+![](/assets/img/action-sql-connector.png){: .img-fluid .img-thumbnail }
 
 Additionally the [formio-sql](https://github.com/formio/formio-sql) server must have access to your database and be
 configured with your settings, see [formio-sql](https://github.com/formio/formio-sql) for more information.

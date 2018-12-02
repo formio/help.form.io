@@ -13,14 +13,14 @@ Follow these steps to setup a new **Redis** instance.
  - Click on the link that says **All Services** in the left hand side of the screen.
  - Type **Redis** in the search, which will then show you the following.
  
-   ![](/assets/img/integrations/azure/redis-search.png)
+   ![](/assets/img/integrations/azure/redis-search.png){: .img-fluid .img-thumbnail }
    
  - After clickin on **Redis Caches**, you will then click on **+ Add** and then provide information about your Redis Cache.
  - Provide a **DNS name** and then make sure you select the **Existing Resource Group** and select the group we created earlier.
  - You will now select a **Pricing tier**, but for Form.io's purpose of redis, the **Standard C1** is sufficient.
  - Now click **Create** button.
  
-   ![](/assets/img/integrations/azure/redis-create.png)
+   ![](/assets/img/integrations/azure/redis-create.png){: .img-fluid .img-thumbnail }
    
  - You will now wait for the Redis server to startup. Once it is created, you will then click on the new cache in the list.
  - Now click on **Access Keys** and then make sure you copy the following.

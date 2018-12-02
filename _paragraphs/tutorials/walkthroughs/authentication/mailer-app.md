@@ -10,7 +10,7 @@ With portal configured to send a password reset link, we need to incorporate the
 But before we do that we need to make sure that the unauthenticated users can interact with out form. Go to the `Access` tab
 on the `Reset Mailer Form` and add `Anonymous` to the create own submissions field.
 
-![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-00.png)
+![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-00.png){: .img-fluid .img-thumbnail }
 
 Starting in our app -> auth -> auth.module.ts we need to configure our modules routes to accommodate the reset password
 forms we'll be adding.
@@ -84,7 +84,7 @@ export class LoginComponent extends FormioAuthLoginComponent implements OnInit {
 }
 ```
 
-![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-01.png)
+![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-01.png){: .img-fluid .img-thumbnail }
 
 
 We'll do the same thing for the auth -> register -> register.component.html page as well.
@@ -169,9 +169,9 @@ export class ResetMailerComponent implements OnInit {
 }
 ```
 
-![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-02.png)
+![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-02.png){: .img-fluid .img-thumbnail }
 
 Additionally, there is some good UX involved where after submission, a notification informs the user that an email has
 been sent to the entered email address.
 
-![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-03.png)
+![Mailer Interface](/assets/img/tutorials/walkthroughs/authentication/mailer-interface-03.png){: .img-fluid .img-thumbnail }

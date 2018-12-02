@@ -1,32 +1,26 @@
-var gulp = require('gulp');
-var wiredep = require('wiredep').stream;
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const wiredep = require('wiredep').stream;
+const sass = require('gulp-sass');
+const filter = require('gulp-filter');
+const concat = require('gulp-concat');
+const replace = require('gulp-replace');
+const rename = require('gulp-rename');
+const cleanCSS = require('gulp-clean-css');
+const s3 = require('gulp-s3');
 
-gulp.task('styles', function () {
-  return gulp.src('assets/scss/index.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('assets/css'))
-    .pipe(gulp.dest('_site/assets/css'));
-});
+gulp.task('styles', () => gulp.src('assets/index.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(replace(/\.\.\/node_modules\/font-awesome\//g, ''))
+  .pipe(cleanCSS({compatibility: 'ie8'}))
+  .pipe(gulp.dest('assets'))
+);
 
-gulp.task('wiredep', function() {
-    gulp.src('./_layouts/base.md')
-        .pipe(wiredep({
-            ignorePath: '../',
-            fileTypes: {
-                html: {
-                    replace: {
-                        js: '<script src="{{ site.baseUrl }}/{{filePath}}"></script>',
-                        css: '<link rel="stylesheet" href="{{ site.baseUrl }}/{{filePath}}" />'
-                    }
-                }
-            }
-        }))
-        .pipe(gulp.dest('./_layouts'));
-});
+gulp.task('scripts', () => webpackStream(require('./webpack.config'), webpack).pipe(gulp.dest('assets')));
+gulp.task('fonts', () => gulp.src('./node_modules/font-awesome/fonts/*').pipe(gulp.dest('assets/fonts')));
+gulp.task('build', ['styles', 'scripts', 'fonts']);
 
-var s3 = require("gulp-s3");
-var filter = require('gulp-filter');
 gulp.task('deploy:howitworks', function () {
   var aws = require('./aws.json');
   aws.bucket = 'brochure.form.io';

@@ -21,6 +21,6 @@ You only need to fill out the following fields to get the SSO working.
 
 When you are done filling out this information, this should look like the following.
 
-![](/assets/img/integrations/okta/formio-project-openid.png)
+![](/assets/img/integrations/okta/formio-project-openid.png){: .img-fluid .img-thumbnail }
 
 Make sure you press the **Save Project** button to save your project settings.

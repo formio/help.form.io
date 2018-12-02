@@ -7,7 +7,7 @@ weight: 80
 ---
 The Office 365 Contact action allows you to integrate form submissions into your Office 365 Contact list. When a new submission is made, this action will add a contact to your Office 365 Contact list. When a submission is updated/deleted, it will update/delete the corresponding Office 365 Contact.
 
-![](/assets/img/action-office365-calendar.png)
+![](/assets/img/action-office365-calendar.png){: .img-fluid .img-thumbnail }
 
 #### Handler
 

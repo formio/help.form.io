@@ -7,7 +7,7 @@ weight: 40
 ---
 To use Mailgun as an email transport, go to [mailgun](http://www.mailgun.com/) and sign up for an account.
 
-![](/assets/img/mailgun.png)
+![](/assets/img/mailgun.png){: .img-fluid .img-thumbnail }
 
 After signing up you will get an API key. Enter the API key into the settings field and select the Mailgun in the Email Action.
 

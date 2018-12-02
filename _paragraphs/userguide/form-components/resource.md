@@ -7,7 +7,7 @@ weight: 170
 ---
 A resource field allows users to reference other resources in your project. For example, if you have a Director resource and a Movie resource, you can add a resource field on the Movie to reference the Director.
 
-![30 resource](https://cloud.githubusercontent.com/assets/13321142/13097244/30611e4a-d4e5-11e5-8467-3c0756ddc553.png)
+![30 resource](https://cloud.githubusercontent.com/assets/13321142/13097244/30611e4a-d4e5-11e5-8467-3c0756ddc553.png){: .img-fluid .img-thumbnail }
 
 #### Label
 

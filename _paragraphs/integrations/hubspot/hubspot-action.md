@@ -8,11 +8,11 @@ weight: 20
 ---
 The next thing to integrating with Hubspot is to either create a form or select a form to add an action to. Here is an example form:
 
-![](/assets/img/hubspot/hubspot-createform.png)
+![](/assets/img/hubspot/hubspot-createform.png){: .img-fluid .img-thumbnail }
 
 Then add an action to the form using the Hubspot Action.
 
-![](/assets/img/hubspot/hubspot-addaction.png)
+![](/assets/img/hubspot/hubspot-addaction.png){: .img-fluid .img-thumbnail }
 
 The list of fields is the list of editable fields in your Hubspot Contacts. You can add additional contact properties in Hubspot and they will show up in this list. 
 

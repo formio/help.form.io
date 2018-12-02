@@ -222,7 +222,7 @@ navigation controller. Additionally, the local storage for the application now c
 which is used by the aforementioned FormioAuthService to authenticate the user. Reloading the `User Resource` we can now see that
 support@form.io is now registered in the system.
 
-![Routing Example](/assets/video/authentication-01.gif)
+![Routing Example](/assets/video/authentication-01.gif){: .img-fluid .img-thumbnail }
 
 While the application authenticates and routes correctly there are a few quirks that need to be addressed. First, the app
 dashboard isn't configured yet. Secondly, registering or logging in won't automatically route the user to their dashboard. Third

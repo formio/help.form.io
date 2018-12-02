@@ -13,29 +13,34 @@ For example, a fieldset with the following fields
 firstName = First Name field
 lastName = Last Name field
 Would submit as
-```{
+
+```
+{
   data: {
     firstName: “Joe”,
     lastName: “Smith”
   }
-}```
+}
+```
 
 However, with a container, the fields are put into an object with the container key. This is useful for creating more complex objects within your form.
 
 For example, a container with the key ```user``` and the same fields above would submit as
-```{
+
+```
+{
  data: {
     user {  
       firstName: “Joe”,
       lastName: “Smith”
     }
   }
-}```
+}
+```
 
+![](/assets/img/container.png){: .img-fluid .img-thumbnail }
 
-![](/assets/img/container.png)
-
-![](/assets/img/container-display.png)
+![](/assets/img/container-display.png){: .img-fluid .img-thumbnail }
 
 #### Label
 

@@ -8,7 +8,7 @@ weight: 180
 
 A signature field is a special field that allows someone to sign the field with either their finger on a touch enabled device or with the mouse pointer. This signature will be converted into an image and stored with the form submission.
 
-![31 signature](https://cloud.githubusercontent.com/assets/13321142/13097242/30551636-d4e5-11e5-90e3-104241ac50fb.png)
+![31 signature](https://cloud.githubusercontent.com/assets/13321142/13097242/30551636-d4e5-11e5-90e3-104241ac50fb.png){: .img-fluid .img-thumbnail }
 
 #### Footer Label
 

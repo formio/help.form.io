@@ -279,15 +279,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <title>{{ site.title }} | {{ page.title | strip_html }}</title>
-
-  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/css/index.css">
-  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/font-awesome/css/font-awesome.min.css">
-  <!-- bower:css -->
-  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/angular-ui-select/dist/select.css" />
-  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/ui-select/dist/select.css" />
-  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/lib/formio/css/formio.css" />
-  <!-- endbower -->
+  <link rel="stylesheet" href="{{ site.baseUrl }}/assets/index.css">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseUrl }}/assets/favicons/apple-touch-icon-57x57.png">
@@ -307,41 +299,13 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-TileImage" content="{{ site.baseUrl }}/assets/favicons/mstile-144x144.png">
   <meta name="theme-color" content="#ffffff">
-
-  <!-- bower:js -->
-  <script src="{{ site.baseUrl }}/assets/lib/jquery/dist/jquery.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/anchor-js/anchor.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/angular/angular.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/ng-file-upload/dist/ng-file-upload.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/angular-sanitize/angular-sanitize.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/moment/moment.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/angular-moment/angular-moment.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/angular-ui-select/dist/select.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/signature_pad/signature_pad.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/angular-ui-mask/dist/mask.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/ui-select/dist/select.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/formio/dist/formio.js"></script>
-  <script src="{{ site.baseUrl }}/assets/lib/urijs/src/URI.js"></script>
-  <!-- endbower -->
 </head>
-
 <body{% if page.app %} ng-app='{{ page.app }}'{% endif %}{% if page.controller %} ng-controller='{{ page.controller }}'{% endif %}>
-{{ content }}
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<script src="{{ site.baseUrl }}/assets/js/docs.js"></script>
-{% include analytics.html %}
-{% if page.nofooter == nil %}
-    {% include footer.html %}
-{% endif %}
+    {{ content }}
+    {% include analytics.html %}
+    {% if page.nofooter == nil %}
+        {% include footer.html %}
+    {% endif %}
+    <script src="{{ site.baseUrl }}/assets/index.min.js"></script>
 </body>
 </html>

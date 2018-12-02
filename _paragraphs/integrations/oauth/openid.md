@@ -13,4 +13,4 @@ Popular OpenID Connect services include [Auth0](https://auth0.com/) and [Okta](h
 
 OpenID must use Authorization code flow.
 
-![](/assets/img/integrations/oauth/openid.png)
+![](/assets/img/integrations/oauth/openid.png){: .img-fluid .img-thumbnail }

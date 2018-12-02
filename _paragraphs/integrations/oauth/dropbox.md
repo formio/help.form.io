@@ -7,11 +7,11 @@ weight: 70
 ---
 Login in to Dropbox and visit the [Create Application page](https://www.dropbox.com/developers/apps/create)
 
-![](/assets/img/oauth/dropbox.png)
+![](/assets/img/oauth/dropbox.png){: .img-fluid .img-thumbnail }
 
 Fill out the appropriate settings for your app. Using "Dropbox API" and "App Folder" should work for most applications.
 
-![](/assets/img/oauth/dropbox-settings.png)
+![](/assets/img/oauth/dropbox-settings.png){: .img-fluid .img-thumbnail }
 
 You should **Enable additional users** for your app so that others can use it as well. When ready, you can apply for production as well.
 

@@ -11,7 +11,7 @@ Within the **General Settings** of this new application, you need to change the 
 
 When you are done, your settings should look similar to the following.
 
-![](/assets/img/integrations/okta/app-settings.png)
+![](/assets/img/integrations/okta/app-settings.png){: .img-fluid .img-thumbnail }
 
 Make sure to press **Save** button to save these settings.
 
@@ -30,12 +30,12 @@ Once you are on the **Sign On** section of your application, we need to click on
 
 When you are done, it should look like this.
 
-![](/assets/img/integrations/okta/openid-token-claims.png)
+![](/assets/img/integrations/okta/openid-token-claims.png){: .img-fluid .img-thumbnail }
 
 ### Assignments
 Now that you have the Sign On Settings configured, you need to click on the **Assignments** section, and then ensure you have added your groups to the application. You can do this by clicking on the **Assign** button, and then say **Assign to Groups**, and then in the next dialog select the groups you wish to assign to the application.
 
-![](/assets/img/integrations/okta/assign-to-groups.png)
+![](/assets/img/integrations/okta/assign-to-groups.png){: .img-fluid .img-thumbnail }
 
 Note: If you wish to add new groups to your Okta, you can click on the **Directory** section and then click on **Groups**. 
 

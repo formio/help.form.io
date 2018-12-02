@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-subtitle: Up & Running
+subtitle: Application Development
 book: intro
 weight: 300
 chapter: guide

@@ -88,15 +88,15 @@ Once Roles have been created, there are a few different ways to configure and ma
 
 1.  Select Edit next to any role on your role Settings page:
 
-    ![4 edit role](/assets/img/userguide/userguide-roles-access-edit.png)
+    ![4 edit role](/assets/img/userguide/userguide-roles-access-edit.png){: .img-fluid .img-thumbnail }
 
     This will give you a list of all forms or resources that hold the selected Role, along with their Permissions, within the entire project. Simply hit edit next to the form you want to configure and apply your changes:
 
-    ![5 edit permission](/assets/img/userguide/userguide-roles-access-edit-permission.png)
+    ![5 edit permission](/assets/img/userguide/userguide-roles-access-edit-permission.png){: .img-fluid .img-thumbnail }
 
     Now you can select the Roles you want to associate with each Permission. Remember to save any changes made:
 
-    ![6 permission](/assets/img/userguide/userguide-roles-access-permission.png)
+    ![6 permission](/assets/img/userguide/userguide-roles-access-permission.png){: .img-fluid .img-thumbnail }
 
 2.  Assign permissions by clicking the **Permissions** button located at the top right of the page within a form or resource. Each permission may be assigned a role or more than one role, by clicking in the Roles field. Remember, you can always add, delete, and edit a role at anytime. (Changes are saved automatically)
 

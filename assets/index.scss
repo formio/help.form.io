@@ -1,0 +1,489 @@
+// Variables
+$blue:    #0079C0 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #e74c3c !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #4EAA17 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$secondary: $green !default;
+@import "../node_modules/bootswatch/dist/yeti/_variables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootswatch/dist/yeti/_bootswatch.scss";
+$fa-font-path: '../node_modules/font-awesome/fonts';
+@import '../node_modules/font-awesome/scss/font-awesome';
+@import '../node_modules/formiojs/dist/formio.full.css';
+@import './syntax.css';
+$primary-light: lighten($primary, 15%);
+$primary-dark: darken($primary, 10%);
+$primary-darker: darken($primary, 20%);
+
+div.highlight {
+  padding: 8px;
+}
+pre.highlight {
+  margin-bottom:0;
+}
+
+// Bootstrap Button Variant
+@mixin button-variant($color, $background, $border)
+{
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle & {
+    color: $color;
+    background-color: darken($background, 10%);
+    border-color: darken($border, 12%);
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle & {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+@mixin price-panel($color) {
+  &>.panel-heading {
+    color: #fff;
+    background-color: $color;
+    border-color: lighten($color, 10%);
+    border-bottom: 1px solid $color;
+  }
+
+
+  &>.panel-body {
+    color: #fff;
+    background-color: lighten($color, 10%);
+  }
+
+
+  &>.panel-body .lead{
+    text-shadow: 0px 3px 0px rgba(50,50,50, .3);
+  }
+
+  & .list-group-item {
+    color: #333;
+    background-color: rgba(50,50,50, .01);
+    font-weight:600;
+    text-shadow: 0px 1px 0px rgba(250,250,250, .75);
+  }
+}
+
+@mixin transition($prop, $time) {
+  -webkit-transition: $prop $time;
+  -moz-transition: $prop $time;
+  transition: $prop $time;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Background Features
+
+@mixin background-cover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+// Font Selections
+
+@mixin serif-font()
+{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  letter-spacing: normal;
+}
+
+@mixin script-font()
+{
+  font-family: "Confortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@mixin body-font()
+{
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+@mixin heading-font()
+{
+  font-family: "Confortaa", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+.main-wrapper {
+  margin-top: 80px;
+  min-height: 1024px;
+}
+
+/* Container for a sidebar. */
+.sidebar-container {
+  height: 100%;
+  position: fixed;
+}
+
+.sidebar-header {
+  position: relative;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Scrollable sidebar. */
+.sidebar {
+  height: 100%;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.navbar-brand {
+  padding-left: 20px;
+}
+
+.navbar-toggle .icon-bar {
+  background-color: #444;
+}
+
+.navbar .navbar-toggle:hover .icon-bar {
+  background-color: #aaa;
+}
+
+li.list-group-item.active, li.list-group-item.active:hover, li.list-group-item.active:focus {
+  background-color: #fbfbfb;
+  border-color: #ddd;
+}
+
+a.panel-title:hover, a.panel-title:focus {
+  color: #ddd;
+}
+
+nav.docs-nav {
+  padding: 0;
+  border-bottom: 6px solid $primary-darker;
+  background-color: #eee;
+  background-repeat: unset;
+  background-attachment: scroll;
+  background-position: center center;
+  @include background-cover();
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 18px;
+  ul.navbar-nav {
+    li {
+      padding: 8px;
+    }
+    li.active {
+      background-color: $primary;
+      a {
+        color: #eee !important;
+      }
+      a:hover {
+        color: #fff;
+      }
+    }
+
+    li:hover {
+      background-color: #fff;
+      a {
+        color: #333 !important;
+      }
+    }
+  }
+}
+
+.section-header ul.nav-tabs>li>a {
+  background-color: $primary;
+  color: #eee;
+  &:hover {
+    background-color: $primary-light;
+  }
+}
+.section-header ul.nav-tabs>li.active>a {
+  background-color: #fff;
+  color: #555;
+}
+
+a {
+  color: #0e5c8f;
+}
+a:hover {
+  text-decoration: none;
+}
+h2[id] {
+  padding-bottom: 9px;
+  margin: 20px 0;
+  border-bottom: 1px solid #eee;
+  color: #093e61;
+}
+
+h3[id] {
+  color: #222;
+}
+
+h4 {
+  margin-top: 30px;
+}
+
+footer {
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+
+#content img {
+  width: 100%;
+}
+/* Page headers */
+.docs-header {
+  background-color: $primary-darker;
+  margin-bottom: 10px;
+  margin-top: -20px;
+  font-size: 20px;
+}
+.docs-header h1 {
+  margin-top: 10px;
+  color: #fff;
+}
+.docs-header p {
+  margin-bottom: 10px;
+  font-weight: 100;
+  line-height: 1.4;
+  color: #ddd;
+}
+.docs-header .container {
+  position: relative;
+}
+.docs-header ul {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .docs-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 24px;
+    text-align: left;
+    .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .docs-header h1 {
+    font-size: 50px;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .docs-header h1,
+  .docs-header p {
+    margin-right: 200px;
+  }
+}
+
+/*
+ * Side navigation
+ *
+ * Scrollspy and affixed enhanced navigation to highlight sections and secondary
+ * sections of docs content.
+ */
+
+/* By default it's not affixed in mobile views, so undo that */
+.docs-sidebar.affix {
+  position: static;
+}
+
+/* First level of nav */
+.docs-sidenav {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow-y: auto;
+}
+
+/* All levels of nav */
+.docs-sidebar .nav > li > a {
+  display: block;
+  padding: 4px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #767676;
+}
+.docs-sidebar .nav > li > a:hover,
+.docs-sidebar .nav > li > a:focus {
+  padding-left: 19px;
+  color: $primary;
+  text-decoration: none;
+  background-color: #fff;
+}
+.docs-sidebar .nav > .active > a,
+.docs-sidebar .nav > .active:hover > a,
+.docs-sidebar .nav > .active:focus > a {
+  padding-left: 18px;
+  font-weight: bold;
+  color: $primary-darker;
+  background-color: transparent;
+  border-left: 2px solid $primary-darker;
+}
+
+/* Nav: second level (shown on .active) */
+.docs-sidebar .nav .nav {
+  display: none; /* Hide by default, but at >768px, show it */
+  padding-bottom: 10px;
+}
+.docs-sidebar .nav .nav.active {
+  display: inherit;
+}
+.docs-sidebar .nav .nav > li > a {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 30px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 24px;
+}
+.docs-sidebar .nav .nav > li > a:hover,
+.docs-sidebar .nav .nav > li > a:focus {
+  padding-left: 29px;
+}
+.docs-sidebar .nav .nav > .active > a,
+.docs-sidebar .nav .nav > .active:hover > a,
+.docs-sidebar .nav .nav > .active:focus > a {
+  padding-left: 28px;
+  font-weight: 500;
+}
+
+/* Back to top (hidden on mobile) */
+.back-to-top,
+.docs-theme-toggle {
+  padding: 4px 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+  .docs-sidebar .nav > .active > ul {
+    display: block;
+  }
+  /* Widen the fixed sidebar */
+  .docs-sidebar.affix,
+  .docs-sidebar.affix-bottom {
+    width: 213px;
+  }
+  .docs-sidebar.affix {
+    position: fixed; /* Undo the static from mobile first approach */
+    top: 20px;
+  }
+  .docs-sidebar.affix-bottom {
+    position: absolute; /* Undo the static from mobile first approach */
+  }
+  .docs-sidebar.affix-bottom .docs-sidenav,
+  .docs-sidebar.affix .docs-sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  /* Widen the fixed sidebar again */
+  .docs-sidebar.affix-bottom,
+  .docs-sidebar.affix {
+    width: 263px;
+  }
+}
+
+/*
+ * Docs sections
+ *
+ * Content blocks for each component or feature.
+ */
+
+/* Space things out */
+.docs-section {
+  margin-bottom: 60px;
+}
+.docs-section:last-child {
+  margin-bottom: 0;
+}
+
+.note {
+  background-color: #fcf8e3;
+  padding: 15px;
+  border: 1px solid #f2e187;
+}
+
+.warning {
+  background-color: #f2dede;
+  padding: 15px;
+  border: 1px solid #dfadad;
+}
+
+.text-primary {
+  color: #127abe;
+}
+
+.text-secondary {
+  color: #6eb246;
+}
+
+dd, dt {
+  padding: 5px 0 5px 0;
+}
+
+dd {
+  border-bottom: 1px solid #DDD;
+}
+
+
+table {
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 21px;
+  font-size: 12px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+

@@ -7,7 +7,7 @@ weight: 90
 ---
 The Office 365 Calendar action allows you to integrate form submissions into your Office 365 Calendar. When a new submission is made, this action will add a calendar event to your Office 365 Calendar. When a submission is updated/deleted, it will update/delete the corresponding calendar event.
 
-![](/assets/img/action-office365-calendar.png)
+![](/assets/img/action-office365-calendar.png){: .img-fluid .img-thumbnail }
 
 #### Handler
 

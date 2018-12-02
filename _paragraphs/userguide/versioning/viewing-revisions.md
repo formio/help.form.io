@@ -21,22 +21,22 @@ Additionally, the following submissions have been made to each for form version:
 
 A simple inspection of the ```Data``` action for Vid #1 will reveal the two submissions listed in the table above. 
 
-![](/assets/img/userguide/versioning-data-1.png)
+![](/assets/img/userguide/versioning-data-1.png){: .img-fluid .img-thumbnail }
 
 Notice that only submissions made using Vid #1 are displayed. Ergo Apricot and Avocado entries are not present. 
 
-![](/assets/img/userguide/versioning-data-2.png)
+![](/assets/img/userguide/versioning-data-2.png){: .img-fluid .img-thumbnail }
 
 To view all submissions, click the ```Data``` tab at top and all 7 entries will display.  
 Notice, that **(B) Version Field** entries are not displayed. 
 
-![](/assets/img/userguide/versioning-data-3.png)
+![](/assets/img/userguide/versioning-data-3.png){: .img-fluid .img-thumbnail }
 
 Not to worry, as illustrated above, the data is still there. 
 Recall that the most recent form revision removed **(B) Version Field** and as a result the data table only
 displays key value pairs that exist within the active form. 
 
-![](/assets/img/userguide/versioning-data-4.png)
+![](/assets/img/userguide/versioning-data-4.png){: .img-fluid .img-thumbnail }
 
 
 

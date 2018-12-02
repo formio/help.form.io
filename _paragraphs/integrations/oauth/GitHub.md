@@ -13,12 +13,12 @@ Fill in the Application name, Homepage URL, and Application description with app
 
 Fill in the **Authorization callback URL** with your application's **hostname**. OAuth will not work unless you enter the same hostname as the one your application is served from. Using `localhost` for running your app locally is acceptable, but make sure the right port is provided.
 
-![](/assets/img/oauth/github-app-settings-edit.png)
+![](/assets/img/oauth/github-app-settings-edit.png){: .img-fluid .img-thumbnail }
 
 Click *Register application*.
 
 Take note of the Client ID and Client Secret. Enter them in the Project Settings for GitHub Oauth.
 
-![](/assets/img/oauth/github-app-settings-view.png)
+![](/assets/img/oauth/github-app-settings-view.png){: .img-fluid .img-thumbnail }
 
 Github OAuth should now be set up. Continue with adding [Login, Register and Link buttons](#button) to your forms.

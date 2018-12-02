@@ -6,32 +6,92 @@ chapter: guide
 layout: chapter
 slug: createeventapp
 ---
-To get started quickly, we recommend using our pre-built templates which provide scaffolding for your application on Form.io. The best one for us to start with is the **[Basic Template](https://github.com/formio/formio-app-basic)** since it just provides User Authentication out of the box, which we can then add the Event management functionality.
+To get started quickly in [Angular](https://angular.io), we recommend using the [Angular CLI](https://cli.angular.io/) tool to create our application. We can do this by typing the following within your terminal.
 
-To install the **Basic Application** on your local machine, you will need to do the following.
-
-  - Ensure you have [Node.js](https://nodejs.org) installed
-  - Install [Gulp](https://gulpjs.com) `npm install gulp-cli -g`
-  - Download the ZIP file of the [Basic Application from Github](https://github.com/formio/formio-app-basic/archive/master.zip)
-  - Extract the ZIP download and then type the following.
-
-```shell
-  npm install
-  bower install
+```
+npm install -g @angular/cli
+ng new eventmanager --style=scss
 ```
 
-  - Now open up the file @ `/src/config.js` and change the following line to point to your API like so.
+For the options, we will select the following
 
-  ![](/assets/img/userguide/appconfig.png)
+ - Would you like to add Angular routing? **Yes**
+ - Which stylesheet format would you like to use? **SCSS**
 
-  - Now run the application by typing.
+This will now create a new application within the folder **eventmananger**, we can navigate into that folder by typing the following in the terminal.
 
-```shell
-  gulp serve
+```
+cd eventmanager
 ```
 
-  - Now log in as the Admin user you created in a previous step. You can also register new users who will be assigned the role of **Authenticated**.
 
-  ![](/assets/img/userguide/apprun.png)
+We will now bring in all of our dependencies into the application by typing the following within the application folder.
 
-Now let's bring in our **Events** and **Event Registration** form.
+```
+npm install --save bootstrap bootswatch font-awesome angular-formio
+```
+
+We can now setup the styles for our application by editing the following file.
+
+***src/styles.scss***
+```scss
+@import "~bootswatch/dist/cosmo/_variables.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootswatch/dist/cosmo/_bootswatch.scss";
+$fa-font-path: '../node_modules/font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';
+```
+
+We now need to ensure that the **global** keyword is set to the browser window. We can do this within the following file by adding the following line.
+
+***src/polyfills.ts***
+```ts
+...
+...
+
+/***************************************************************************************************
+ * APPLICATION IMPORTS
+ */
+(window as any).global = window;
+```
+
+We will now start our application by typing the following in the terminal.
+
+```
+ng serve
+```
+
+You should see the following when you go to **http://localhost:4200** in your browser.
+
+![](/assets/img/userguide/ngserve.png){: .img-fluid .img-thumbnail }
+
+We can now create a home page, by typing the following in the terminal.
+
+```
+ng g component home
+```
+
+And then provide the following code in the following file.
+
+***src/app/home/home.component.html***
+```html
+<div class="jumbotron">
+  <h3>Event Registration Application</h3>
+  <p>This is an example home page for the Event Registration Application</p>
+</div>
+```
+
+And then add the following to the routes.
+
+***src/app/app-routing.module.ts***
+```ts
+...
+import { HomeComponent } from './home/home.component';
+
+const routes: Routes = [
+  {
+    path: 'auth',
+    loadChildren: './auth/auth.module#AuthModule'
+  }
+];
+```

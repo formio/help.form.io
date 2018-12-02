@@ -7,7 +7,7 @@ weight: 10
 ---
 A textfield can be used for short and general text input. There are options to define input masks and validations, allowing users to mold information into desired formats.
 
-![9 textfield edit settings](https://cloud.githubusercontent.com/assets/13321142/13097265/309cbebe-d4e5-11e5-9c8a-963c24da40ef.png)
+![9 textfield edit settings](https://cloud.githubusercontent.com/assets/13321142/13097265/309cbebe-d4e5-11e5-9c8a-963c24da40ef.png){: .img-fluid .img-thumbnail }
 
 #### Label
 
@@ -65,7 +65,7 @@ If checked, the field will be stored in the database. If you want a field to not
 
 If checked, this value will show up in the table view of the submissions list.
 
-![10 validation](https://cloud.githubusercontent.com/assets/13321142/13097264/3099b7c8-d4e5-11e5-9f53-29ae43b61806.png)
+![10 validation](https://cloud.githubusercontent.com/assets/13321142/13097264/3099b7c8-d4e5-11e5-9f53-29ae43b61806.png){: .img-fluid .img-thumbnail }
 
 #### Required
 

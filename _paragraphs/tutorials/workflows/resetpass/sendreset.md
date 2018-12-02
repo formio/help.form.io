@@ -8,7 +8,7 @@ weight: 0
 ---
 The first step is to present to the user a page within the application to reset their password. In this page, they will see a simple form where they will provide their Email address to then send an email. We can create that form within Form.io by creating a new Form call **Send Reset**. Within this form, we will also add a hidden field which will be the Application URL. This will be useful when adding that to the email template on where to send the user when they click on the Reset Password link. The form we are building will look like the following.
 
-![](/assets/img/tutorials/workflows/resetpass/sendresetform.png)
+![](/assets/img/tutorials/workflows/resetpass/sendresetform.png){: .img-fluid .img-thumbnail }
 
 Now that you have created this form, you will need add an **Email Action** which will trigger a SSO token for the user to login. For the Message body, we will provide the following.
 
@@ -18,15 +18,15 @@ Now that you have created this form, you will need add an **Email Action** which
 
 This uses the [Login with Email](/developer/info/emaillogin/) capabilities discussed in the Developer section. Here is what that email action configuration looks like.
 
-![](/assets/img/tutorials/workflows/resetpass/sendresetaction.png)
+![](/assets/img/tutorials/workflows/resetpass/sendresetaction.png){: .img-fluid .img-thumbnail }
 
 We now need to **Save Action**. We will then remove the **Save Submission** action (since we don't really care about saving the reset password events).
 
-![](/assets/img/tutorials/workflows/resetpass/sendresetactions.png)
+![](/assets/img/tutorials/workflows/resetpass/sendresetactions.png){: .img-fluid .img-thumbnail }
 
 Next, we need to ensure that **Anonymous** users can submit this form since they will be logged out when they need to reset their password. We can do this easily within the **Access** section of our form.
 
-![](/assets/img/tutorials/workflows/resetpass/sendresetaccess.png)
+![](/assets/img/tutorials/workflows/resetpass/sendresetaccess.png){: .img-fluid .img-thumbnail }
 
 Make sure you press **Save Changes** so that the changes take effect.
 
@@ -102,6 +102,6 @@ We now need to add the forgot password link to the Authentication block, which w
 
 This will now work like the following.
 
-![](/assets/img/tutorials/workflows/resetpass/sendresetapp.png)
+![](/assets/img/tutorials/workflows/resetpass/sendresetapp.png){: .img-fluid .img-thumbnail }
 
 When they put in their email, they will now receive an email to reset their password. Once they click on that link, they will be redirected back to the application with a SSO token attached to the URL. Here we will have the user reset their password.

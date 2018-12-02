@@ -19,15 +19,15 @@ Click the gear icon in the upper right corner and check the box **labeled Use yo
 
 Under Step 1 on the left hand side of the page, expand the **Google Sheets API v4** and select **https://www.googleapis.com/auth/spreadsheets** scope and then click **Authorize APIs**.
 
-![](/assets/img/integrations/google/sheets-authorize.png)
+![](/assets/img/integrations/google/sheets-authorize.png){: .img-fluid .img-thumbnail }
 
 Click **Allow** to authorize the app.
 
-![](/assets/img/integrations/google/sheets-allow.png)
+![](/assets/img/integrations/google/sheets-allow.png){: .img-fluid .img-thumbnail }
 
 The above step will generate an **Authorization Code** for you. Be sure that 'Auto-refresh the token before it expires' is checked and then click on *Exchange authorization code for token* button.
 
-![](/assets/img/googlesheet/googlesheet-exchange-authorization.png)
+![](/assets/img/googlesheet/googlesheet-exchange-authorization.png){: .img-fluid .img-thumbnail }
 
 Your **Refresh Token** should be generated. You will need the refresh token for the next step.
 
@@ -40,4 +40,4 @@ Your **Refresh Token** should be generated. You will need the refresh token for 
 }
 ```
 
-![](/assets/img/integrations/google/sheets-refresh-token.png)
+![](/assets/img/integrations/google/sheets-refresh-token.png){: .img-fluid .img-thumbnail }

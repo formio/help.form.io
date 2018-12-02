@@ -7,7 +7,7 @@ weight: 25
 ---
 The table component allows creating a table with columns and rows that allow adding additional components within it.
 
-![34 table](https://cloud.githubusercontent.com/assets/13321142/13097237/304f9f58-d4e5-11e5-9e8a-b1becba739fc.png)
+![34 table](https://cloud.githubusercontent.com/assets/13321142/13097237/304f9f58-d4e5-11e5-9e8a-b1becba739fc.png){: .img-fluid .img-thumbnail }
 
 #### Number of Rows
 

@@ -3,7 +3,7 @@ title: AngularJS
 book: developer
 chapter: frameworks
 slug: angularjs
-weight: 10
+weight: 100
 ---
 The Form.io AngularJS library has two versions. The original AngularJS based libraries (2.x) and the new Core Formio.js based libraries.
 

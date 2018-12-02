@@ -7,7 +7,7 @@ weight: 35
 ---
 Custom components allow creating a form field with a custom JSON schema that can be rendered as anything within a frontend application. This is usefully for special or complex form fields that don't already exist in form.io. Using this type, any kind of field can be created.
  
-![](/assets/img/custom.png)
+![](/assets/img/custom.png){: .img-fluid .img-thumbnail }
  
 To use a custom component, create a JSON definition of the field with the information needed to render it. Create a custom field and paste the JSON object into it. This must be a valid JSON object.
 

@@ -48,6 +48,6 @@ This will take several minutes to install. Once it does, you can now run the app
 
 Which will show the following.
 
-![](/assets/img/tutorials/walkthroughs/servicetracker/angular-gulp-create.png)
+![](/assets/img/tutorials/walkthroughs/servicetracker/angular-gulp-create.png){: .img-fluid .img-thumbnail }
 
 We can now install all the dependencies we will need to create our Service Tracker applcation.
