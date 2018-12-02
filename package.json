@@ -1,6 +1,6 @@
 {
   "name": "help.form.io",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The help site for Form.io.",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -16,13 +16,13 @@
     "vinyl-transform": "^1.0.0",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
-    "webpack-stream": "^5.1.1",
+    "webpack-stream": "^5.2.0",
     "wiredep": "^4.0.0"
   },
   "scripts": {
-    "deploy:test": "bundle exec jekyll build --config _config.test.yml,_config.yml && gulp deploy:test",
-    "deploy:prod": "bundle exec jekyll build --config _config.prod.yml,_config.yml && gulp deploy:prod",
-    "serve": "bundle exec jekyll serve --config _config.dev.yml,_config.yml",
+    "deploy:test": "gulp build && bundle exec jekyll build --config _config.test.yml,_config.yml && gulp deploy:test",
+    "deploy:prod": "gulp build && bundle exec jekyll build --config _config.prod.yml,_config.yml && gulp deploy:prod",
+    "serve": "gulp build && bundle exec jekyll serve --config _config.dev.yml,_config.yml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
