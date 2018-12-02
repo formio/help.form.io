@@ -73,6 +73,6 @@ This produces the following result...
 
 We now have a full working Event Management system, which even allows for other users to create an account and Register for this event. We hope that this walkthrough guide provides you a solid footing on building your next Serverless application on Form.io!
 
-If you would like to download the code behind this application, then go to <a class="btn btn-primary" href="https://github.com/formio/eventmanager">Event Manager Github Page</a>.
+If you would like to download the code behind this application, then go to <a class="btn btn-primary" href="https://github.com/formio/eventmanager" target="_blank">Event Manager Github Page</a>.
 
 

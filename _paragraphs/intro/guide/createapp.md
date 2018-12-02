@@ -94,4 +94,6 @@ const routes: Routes = [
     loadChildren: './auth/auth.module#AuthModule'
   }
 ];
+
+...
 ```

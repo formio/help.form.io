@@ -24,11 +24,7 @@ Now that we have an **Event** resource field, we can add other fields to the reg
 
 ![](/assets/img/userguide/eventregister.png){: .img-fluid .img-thumbnail }
 
-We will now press the **Create Form** button to save our form. Once it is done saving, we will now need to **Tag** our form so that it is differentiated from the other forms and relates to the events. We do that under **Settings** and **Form Tags**.
-
-![](/assets/img/userguide/eventtag.png){: .img-fluid .img-thumbnail }
-
-When you are done, make sure you press the **Save Settings** button to save your form.
+We will now press the **Create Form** button to save our form.
 
 ### Access Permissions
 We also need to ensure that **Authenticated** users can submit the Registration Form, so we will go to the **Access** section and configure the following.

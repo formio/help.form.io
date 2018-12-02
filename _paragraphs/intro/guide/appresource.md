@@ -8,7 +8,7 @@ slug: eventresource
 ---
 Now that you have a running application with authentication, we can now add the **Event** resource using the **FormioResource** module.
 
-[Angular Resource Documentation](https://github.com/formio/angular-formio/wiki/Resource-Management){: .btn .btn-primary }
+[Angular Resource Documentation](https://github.com/formio/angular-formio/wiki/Resource-Management){:target="_blank" .btn .btn-primary}
 
 ```
 ng g module event

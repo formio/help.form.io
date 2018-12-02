@@ -17,8 +17,8 @@ We will then build our **Event** object using a form builder (pretty cool). We c
 When you are done, click on **Create Resource**
 
 ### Assigning Permissions
-You now need to allow Authenticated users to read all events. To do this, click on **Access** section, and configure the settings as follows.
+You now need to allow **Authenticated** users to read all events. We will also want them to be able to **create their own**, **update their own**, and **delete their own** events. To do this, click on **Access** section, and configure the settings as follows.
 
 ![](/assets/img/userguide/eventaccess.png){: .img-fluid .img-thumbnail }
 
-The settings should automatically save when you add this role to this permission.
+The settings should automatically save when you add this role to these permissions.

@@ -6,7 +6,11 @@ chapter: guide
 layout: chapter
 slug: userauth
 ---
-Now that we have the configuration file in place, we can setup User Authentication. We accomplish this by first creating an Angular module that will contain the authentication routes.
+Now that we have the configuration file in place, we can setup User Authentication. 
+
+[Angular Auth Documentation](https://github.com/formio/angular-formio/wiki/User-Authentication){:target="_blank" .btn .btn-primary}
+
+We accomplish this by first creating an Angular module that will contain the authentication routes.
 
 ```
 ng g module auth
@@ -67,13 +71,13 @@ import { FormioAuthService, FormioAuthConfig } from 'angular-formio/auth';
     FormioAuthService,
     {provide: FormioAppConfig, useValue: AppConfig},
     {provide: FormioAuthConfig, useValue: {
-        login: {
-          form: 'user/login'
-        },
-        register: {
-          form: 'user/register'
-        }
-      }}
+      login: {
+        form: 'user/login'
+      },
+      register: {
+        form: 'user/register'
+      }
+    }}
   ]
 })
 export class AppModule { }
