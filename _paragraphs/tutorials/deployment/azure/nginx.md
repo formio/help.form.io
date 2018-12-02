@@ -12,26 +12,26 @@ To setup this configuration, please go through the following steps.
 
  - Install NGINX using the following command.
  
-   ```
+   ```bash
    sudo apt-get update
    sudo apt-get install nginx
    ```
    
  - We can check to ensure that we have NGINX running with the following command.
  
-   ```
+   ```bash
    systemctl status nginx
    ```
    
  - We now need to edit the nginx.conf file to redirect HTTP traffic to the internal servers.
  
-   ```
+   ```bash
    sudo vi /etc/nginx/sites-available/formio
    ```
    
  - Put the following contents in that file.
  
-   ```
+   ```bash
    server {
      listen 80;
      server_name  ~^(www\.)?(.+)$;
@@ -88,7 +88,7 @@ To setup this configuration, please go through the following steps.
    
  - Now save that file, and then switch this out for the ```default``` server
  
-   ```
+   ```bash
    sudo rm /etc/nginx/sites-enabled/default
    sudo ln -s /etc/nginx/sites-available/formio /etc/nginx/sites-enabled/default
    sudo systemctl restart nginx

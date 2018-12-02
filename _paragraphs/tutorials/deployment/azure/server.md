@@ -43,27 +43,27 @@ You will now setup the **API Server** by using the Azure Container Instances set
  - You will then be prompted to enter your password which you will enter the same password you provided when you created the virtual machine.
  - You should then see the console of the Ubuntu virtual machine. You will now need to login to your **Docker Hub** acount by typing 
  
-   ```
+   ```bash
    docker login
    ```
    
  - Once logged in, you will now need to download the Docker containers. 
    While it is recommended to put the **API Server** and the **PDF Server** on separate Virtual machines, for this example, we will just download both of them on the same machine.
    
-   ```
-   docker pull formio/formio-server
+   ```bash
+   docker pull formio/formio-enterprise
    docker pull formio/formio-files-core
    ```
    
  - You will now need to create an "internal" network that you will use to connect all the internal docker containers together.
  
-   ```
+   ```bash
    docker network create formio
    ```
    
  - Next you will create the Minio Server which will connect to your **Azure Blob** that we just created.
  
-   ```
+   ```bash
    docker run -itd \
     -e "MINIO_ACCESS_KEY=myblob" \
     -e "MINIO_SECRET_KEY=[AZURE BLOB SECRET KEY]" \
@@ -76,7 +76,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
    Where you will replace "myblob" with you Azure blob name, and the ```[AZURE BLOB SECRET KEY]``` with the key we saved earlier.
  - Once this is completed, we can ensure this is running by typing the following command.
  
-   ```
+   ```bash
    docker logs formio-minio
    ```
  
@@ -84,8 +84,9 @@ You will now setup the **API Server** by using the Azure Container Instances set
    
  - Next we will spin up our **API Server** using the following command.
  
-   ```
+   ```bash
    docker run -itd \
+     -e "LICENSE=YOURLICENSE" \
      -e "FORMIO_FILES_SERVER=http://formio-files:4005" \
      -e "PORTAL_SECRET=CHANGEME" \
      -e "JWT_SECRET=CHANGEME" \
@@ -95,13 +96,12 @@ You will now setup the **API Server** by using the Azure Container Instances set
      -e "REDIS_PORT=6380" \
      -e "REDIS_PASS=[PASSWORD]" \
      -e "REDIS_USE_SSL=true" \
-     -e "PROTOCOL=http" \
      --restart unless-stopped \
      --network formio \
      --name formio-server \
      --link formio-files-core:formio-files \
      -p 3000:80 \
-     formio/formio-server
+     formio/formio-enterprise;
    ```
    
    You will need to make sure that you change out the values for PORTAL_SECRET, JWT_SECRET, DB_SECRET, MONGO, REDIS_ADDR, AND REDIS_PASS to be the values that you saved in your editor during the setup process.
@@ -112,25 +112,25 @@ You will now setup the **API Server** by using the Azure Container Instances set
    
  - Next, we will deploy our **PDF server** to point to both the API server + Minio File Server.
     
-   ```
+   ```bash
    docker run -itd \
-       -e "FORMIO_SERVER=http://formio" \
-       -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
-       -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
-       -e "FORMIO_PDF_PROJECT=http://formio/yourproject" \
-       -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
-       -e "FORMIO_S3_SERVER=minio" \
-       -e "FORMIO_S3_PORT=9000" \
-       -e "FORMIO_S3_BUCKET=formio" \
-       -e "FORMIO_S3_KEY=myblob" \
-       -e "FORMIO_S3_SECRET=[AZURE BLOB SECRET KEY]" \
-       --network formio \
-       --link formio-server:formio \
-       --link formio-minio:minio \
-       --restart unless-stopped \
-       --name formio-files-core \
-       -p 4005:4005 \
-       formio/formio-files-core
+     -e "FORMIO_SERVER=http://formio" \
+     -e "FORMIO_PROJECT=59b7b78367d7fa2312a57979" \
+     -e "FORMIO_PROJECT_TOKEN=wi83DYHAieyt1MYRsTYA289MR9UIjM" \
+     -e "FORMIO_PDF_PROJECT=http://formio/yourproject" \
+     -e "FORMIO_PDF_APIKEY=is8w9ZRiW8I2TEioY39SJVWeIsO925" \
+     -e "FORMIO_S3_SERVER=minio" \
+     -e "FORMIO_S3_PORT=9000" \
+     -e "FORMIO_S3_BUCKET=formio" \
+     -e "FORMIO_S3_KEY=myblob" \
+     -e "FORMIO_S3_SECRET=[AZURE BLOB SECRET KEY]" \
+     --network formio \
+     --link formio-server:formio \
+     --link formio-minio:minio \
+     --restart unless-stopped \
+     --name formio-files-core \
+     -p 4005:4005 \
+     formio/formio-files-core
    ```
    
    You will need to change the FORMIO_PROJECT, FORMIO_PROJECT_TOKEN, FORMIO_PDF_PROJECT, FORMIO_PDF_APIKEY, FORMIO_S3_KEY, and FORMIO_S3_SECRET with configurations provided previously as well as settings that are provided to you within your Project Settings, under **PDF Management** @ https://portal.form.io.
@@ -139,7 +139,7 @@ You will now setup the **API Server** by using the Azure Container Instances set
     
  - Once this is running, you should be able to type the following.
  
-   ```
+   ```bash
    docker logs formio-files-core
    ```
    

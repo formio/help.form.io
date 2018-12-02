@@ -22,7 +22,7 @@ upgrade, by selecting more than one PDF Server within the project upgrade sectio
 Now that you have upgraded your project, you will now need to import the PDF Resources into your project. To do this, download the
 following PDF project.json locally to your computer.
 
-  <a href="/assets/pdfproject.json" class="btn btn-default" download>Download PDF Project</a>
+[Download PDF Project](/assets/pdfproject.json){: .btn .btn-primary }
 
 You can now navigate to your current project, and then import this template into your project, by clicking on .
 
@@ -51,7 +51,7 @@ In order to do this, you will need to have a [Docker Hub](https://hub.docker.com
 provide you read access to the PDF server repository. Once you have been given read access, you should then be able to perform the following within your
 Docker enabled server.
 
-```
+```bash
 docker login
 docker pull formio/formio-files-core
 ```
@@ -62,7 +62,7 @@ Once you have the server deployed, you can then navigate to your **PDF Enterpris
 
 In these settings, you will see a block of code that looks like this.
 
-```
+```bash
 docker run -itd \
   -e "FORMIO_PROJECT=[PROJECT ID]" \
   -e "FORMIO_PROJECT_TOKEN=[PROJECT TOKEN]" \
@@ -82,12 +82,12 @@ docker run -itd \
 You will need to copy these settings. For the Minio server deployments, you will need to provide the FORMIO_S3_SERVER configuration. You will then run this within your terminal which should spin up your new server.
 
 ### Remote Form.io Server + PDF Server
-If you have a combination of both the remote Form.io API server **formio/formio-server** as well as the deployed PDF server **formio/formio-files-core**, you will need to introduce two new Environment variables to ensure that the API server can communicate to the PDF server and vice versa. Because of this, you will need to introduce the following two Environment Variables within the API Server and PDF Server respectively.
+If you have a combination of both the remote Form.io API server **formio/formio-enterprise** as well as the deployed PDF server **formio/formio-files-core**, you will need to introduce two new Environment variables to ensure that the API server can communicate to the PDF server and vice versa. Because of this, you will need to introduce the following two Environment Variables within the API Server and PDF Server respectively.
 
 {: .table .table-bordered .table-striped}
 | Deployment | Setting | Description | Example |
 |---------|---------|-------------|---------|
-| API Server (formio/formio-server) | FORMIO_FILES_SERVER | This is the URL of the PDF server, which is set within the API server so that it can download Submission PDF's pointed to the PDF Server | https://pdf.yourserver.com |
+| API Server (formio/formio-enterprise) | FORMIO_FILES_SERVER | This is the URL of the PDF server, which is set within the API server so that it can download Submission PDF's pointed to the PDF Server | https://pdf.yourserver.com |
 | PDF Server (formio/formio-files-core) | FORMIO_SERVER | This is the URL of the API server, so that the remote PDF server can communicate to the API server to authenticate certain requests. | https://forms.yourserver.com |
 
 ### PDF Server Environment Variables
@@ -141,10 +141,10 @@ Next, spin up your Form.io API server connecting it to the local Redis instance.
 
 ```bash
 docker run -itd \
+  -e "LICENSE=YOURLICENSE" \
   -e "PORTAL_SECRET=CHANGEME" \
   -e "JWT_SECRET=CHANGEME" \
   -e "DB_SECRET=CHANGEME" \
-  -e "PROTOCOL=http" \
   -e "MONGO=mongodb://:@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true" \
   -e "FORMIO_FILES_SERVER=https://pdfserver.yourdomain.com" \
   --network formio \
@@ -152,7 +152,7 @@ docker run -itd \
   --restart unless-stopped \
   --name formio-server \
   -p 80:80 \
-  formio/formio-server;
+  formio/formio-enterprise;
 ```
 
 Note that you would provide your own URL to the ```MONGO``` database and also provide your own domain where you are hosting the PDF server for the ```FORMIO_FILES_SERVER``` variable.
@@ -162,10 +162,10 @@ For some cases, you may wish to keep your Redis database external to your Form.i
 
 ```bash
 docker run -itd \
+  -e "LICENSE=YOURLICENSE" \
   -e "PORTAL_SECRET=CHANGEME" \
   -e "JWT_SECRET=CHANGEME" \
   -e "DB_SECRET=CHANGEME" \
-  -e "PROTOCOL=http" \
   -e "MONGO=mongodb://:@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true" \
   -e "REDIS_ADDR=production-001.2iu8pr.0001.usw2.cache.amazonaws.com" \
   -e "REDIS_PORT=6379" \
@@ -173,7 +173,7 @@ docker run -itd \
   --restart unless-stopped \
   --name formio-server \
   -p 80:80 \
-  formio/formio-server;
+  formio/formio-enterprise;
 ```
 
 Notice that in this scenario, you do not need to create a ```formio``` newtork and connect your Docker container to the redis machine with the ```-link``` command.
@@ -262,11 +262,11 @@ docker run -itd \
   --restart unless-stopped \
   redis && \
 docker run -itd \
+  -e "LICENSE=YOURLICENSE" \
   -e "FORMIO_FILES_SERVER=http://formio-files:4005" \
   -e "PORTAL_SECRET=CHANGEME" \
   -e "JWT_SECRET=CHANGEME" \
   -e "DB_SECRET=CHANGEME" \
-  -e "PROTOCOL=http" \
   --restart unless-stopped \
   --network formio \
   --name formio-server \
@@ -274,7 +274,7 @@ docker run -itd \
   --link formio-mongo:mongo \
   --link formio-redis:redis \
   -p 3000:80 \
-  formio/formio-server && \
+  formio/formio-enterprise && \
 docker run -itd \
   -e "MINIO_ACCESS_KEY=CHANGEME" \
   -e "MINIO_SECRET_KEY=CHANGEME" \

@@ -66,9 +66,9 @@ cf ic init
 Next you will pull in the Form.io Docker Image (***NOTE: You must have a Commercial License to pull in the Form.io Docker image***), then tag it, and then push it to your Private BlueHost account.
 
 ```
-docker pull formio/formio-server
-docker tag formio/formio-server registry.ng.bluemix.net/[YOUR NAMESPACE]/formio-server
-docker push registry.ng.bluemix.net/[YOUR NAMESPACE]/formio-server
+docker pull formio/formio-enterprise
+docker tag formio/formio-enterprise registry.ng.bluemix.net/[YOUR NAMESPACE]/formio-enterprise
+docker push registry.ng.bluemix.net/[YOUR NAMESPACE]/formio-enterprise
 ```
 
 Your docker image is ready to deploy, but we will now need to setup the ***MongoDB*** database first.

@@ -155,7 +155,7 @@ pre.highlight {
 
 /* Container for a sidebar. */
 .sidebar-container {
-  height: 100%;
+  height: 90%;
   position: fixed;
 }
 
@@ -167,9 +167,18 @@ pre.highlight {
 
 /* Scrollable sidebar. */
 .sidebar {
-  height: 100%;
+  height: 90%;
   position: relative;
   overflow-y: scroll;
+}
+
+.sidebar-container ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+.sidebar-container ::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  -webkit-box-shadow: 0 0 1px rgba($primary, .5);
 }
 
 .navbar-brand {

@@ -11,25 +11,25 @@ To upgrade the server version running in your AWS elastic beantalk environment, 
 
     **Dockerrun.aws.json**
 
-```
-{
-  "AWSEBDockerrunVersion": "1",
-  "Authentication": {
-    "Bucket": "elasticbeanstalk-us-east-1-385952297805",
-    "Key": "formio.dockercfg"
-  },
-  "Image": {
-    "Name": "formio/formio-server:5.5.0",
-    "Update": "true"
-  },
-  "Ports": [
+    ```json
     {
-      "ContainerPort": "80"
+      "AWSEBDockerrunVersion": "1",
+      "Authentication": {
+        "Bucket": "elasticbeanstalk-us-east-1-385952297805",
+        "Key": "formio.dockercfg"
+      },
+      "Image": {
+        "Name": "formio/formio-enterprise:6.0.7",
+        "Update": "true"
+      },
+      "Ports": [
+        {
+          "ContainerPort": "80"
+        }
+      ],
+      "Logging": "/var/log/nodejs"
     }
-  ],
-  "Logging": "/var/log/nodejs"
-}
-```
+    ```
 
   - Next, in Elastic Beanstalk go to Application versions and click the Upload button.
 

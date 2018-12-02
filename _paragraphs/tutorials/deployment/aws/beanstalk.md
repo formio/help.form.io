@@ -13,29 +13,29 @@ Now that you have the authentication file in place, you are ready to create your
 
     **Dockerrun.aws.json**
 
-```
-{
-  "AWSEBDockerrunVersion": "1",
-  "Authentication": {
-    "Bucket": "elasticbeanstalk-us-east-1-385952297805",
-    "Key": "formio.dockercfg"
-  },
-  "Image": {
-    "Name": "formio/formio-server:latest",
-    "Update": "true"
-  },
-  "Ports": [
+    ```json
     {
-      "ContainerPort": "80"
+      "AWSEBDockerrunVersion": "1",
+      "Authentication": {
+        "Bucket": "elasticbeanstalk-us-east-1-385952297805",
+        "Key": "formio.dockercfg"
+      },
+      "Image": {
+        "Name": "formio/formio-enterprise:latest",
+        "Update": "true"
+      },
+      "Ports": [
+        {
+          "ContainerPort": "80"
+        }
+      ],
+      "Logging": "/var/log/nodejs"
     }
-  ],
-  "Logging": "/var/log/nodejs"
-}
-```
+    ```
 
   - Now that this is done, you will want to create a new folder within this folder called **.ebextensions**, within this folder, you will need to create a new file called **01_files.config** with the following contents.
   
-    ```
+    ```yaml
     files:
         "/etc/nginx/conf.d/proxy.conf" :
             mode: "000755"
@@ -86,16 +86,16 @@ Now that you have the authentication file in place, you are ready to create your
 
     <img src="/assets/img/developer/deployments/aws/envvariables.png" style="width:600px" />
 
-{: .table .table-bordered .table-striped}
-| Setting | Description | Example |
-|---------|-------------|---------|
-| MONGO | The MongoDB connection string to connect to your remote database. | mongodb://<username>:<password>@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true |
-| MONGO_HIGH_AVAILABILITY | If your database is high availability (like from Mongo Cloud or Compose), then this needs to be set. | 1 |
-| ADMIN_EMAIL | The default administrator email | admin@example.com |
-| ADMIN_PASS | The default administrator password | [YOUR PASSWORD] |
-| DB_SECRET | The database encryption secret | [DB SECRET] |
-| JWT_SECRET | The secret password for JWT token encryption. | [TOKEN SECRET] |
-| PROTOCOL | Only use this if you are not behind https (for test environments only) | http |
+    {: .table .table-bordered .table-striped}
+    | Setting | Description | Example |
+    |---------|-------------|---------|
+    | MONGO | The MongoDB connection string to connect to your remote database. | mongodb://<username>:<password>@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true |
+    | MONGO_HIGH_AVAILABILITY | If your database is high availability (like from Mongo Cloud or Compose), then this needs to be set. | 1 |
+    | ADMIN_EMAIL | The default administrator email | admin@example.com |
+    | ADMIN_PASS | The default administrator password | [YOUR PASSWORD] |
+    | DB_SECRET | The database encryption secret | [DB SECRET] |
+    | JWT_SECRET | The secret password for JWT token encryption. | [TOKEN SECRET] |
+    | FORMIO_FILES_SERVER | This is the URL of the PDF server, which is set within the API server so that it can download Submission PDF's pointed to the PDF Server | https://pdf.yourserver.com |
 
   - When you are done, you can now press the <strong>Create Environment</strong> button at the bottom of the page to build your environment.
   - This will now create a new Environment within AWS for your deployment. You are now ready to attach your Domains to the deployment.
