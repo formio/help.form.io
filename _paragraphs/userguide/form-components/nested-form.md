@@ -39,7 +39,7 @@ If not checked, whole child submission object will be saved, and no any child su
 #### Nested Forms for remotely deployed project
 
 If your project is remotely deployed with subdirectories, then you need in your app call 
- ```
+ ```javascript
  Formio.setProjectUrl(<project_URL>). 
  ```
  This will help Formio understand where to fetch nested resources from and will set up base URLs properly.

@@ -22,7 +22,7 @@ In order to create a login event, you will need to install our **Formio.js** cor
 #### Using NPM
 In your console, install formiojs library using the following.
 
-```
+```bash
 npm install --save formiojs
 npm install @okta/okta-auth-js --save
 ```

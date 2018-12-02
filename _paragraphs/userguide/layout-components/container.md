@@ -27,7 +27,7 @@ However, with a container, the fields are put into an object with the container 
 
 For example, a container with the key ```user``` and the same fields above would submit as
 
-```
+```javascript
 {
  data: {
     user {  

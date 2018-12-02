@@ -9,32 +9,32 @@ Now that you have a rule setup, the next step is to create an application and in
 
 Once you download this application, you will need to install all dependencies by typing.
 
-```
+```bash
 bower install
 ```
 
 You will then need to install the [formio.js](https://github.com/formio/formiojs) library by typing the following.
 
-```
+```bash
 npm install formiojs
 ```
 
 And then provide the following within the ***/index.html*** file.
 
-```
+```html
 <script type="text/javascript" src="node_modules/formiojs/dist/formio.min.js"></script>
 ```
 
 Once you do that, you can then put the following within the ***/auth0-variables.js*** file.
 
-```
+```javascript
 var FORMIO_PROJECT = 'https://yourproject.form.io';
 var FORMIO_API = 'https://api.form.io';
 ```
 
 Now, within the ***/app.js*** file, we will need to initialize the Formio library with the following.
 
-```
+```javascript
 function config($stateProvider, lockProvider, $urlRouterProvider) {
    Formio.setBaseUrl(FORMIO_API);
    Formio.setAppurl(FORMIO_PROJECT);
@@ -46,7 +46,7 @@ function config($stateProvider, lockProvider, $urlRouterProvider) {
 
 And finally, within the ***/components/auth/auth.service.js*** file, we will need to alter the service to set the Form.io JWT token with the one that we provided to the Auth0 Rule.
 
-```
+```javascript
 function authService(lock, authManager) {
 
     function login() {

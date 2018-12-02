@@ -7,7 +7,7 @@ weight: 40
 ---
 For AngularJS applications, you can use our helper library @ https://github.com/formio/ngFormioHelper to add Okta SSO into your application.
 
-```
+```bash
 bower install --save ng-formio-helper
 ```
 

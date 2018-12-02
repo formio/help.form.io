@@ -22,7 +22,7 @@ function which will perform an administrative update to a record based on a user
 
 ***Example Lambda Code to Update a User via Admin privileges from a users JWT Token***
 
-```
+```javascript
 'use strict';
 const https = require('https');
 

@@ -31,7 +31,7 @@ The above step will generate an **Authorization Code** for you. Be sure that 'Au
 
 Your **Refresh Token** should be generated. You will need the refresh token for the next step.
 
-```
+```json
 {
   "access_token": "ya29.fwKue996sM2tUwlgASySADFjlsdSDFCcCbHd4gaaEKDUjdJD237o-pF7hhrXvm6MQNbYZq",
   "token_type": "Bearer",

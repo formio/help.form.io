@@ -8,7 +8,7 @@ weight: 20
 #### Example Application
 To help with the implementation of Offline Mode, we have contributed an Open Source application that incorportes our offline mode capabilities. This application is called the [GPS Tracker](https://github.com/formio/formio-app-gpstracker). To quickly bootstrap this project to test locally you can run the following {{ site.formio }} CLI command.
 
-```
+```bash
 npm install -g formio-cli
 formio bootstrap formio/formio-app-gpstracker
 ```
@@ -19,13 +19,13 @@ The following documentation serves to show you how to add this capability into y
 
 To add offline mode to your project, you must first upgrade your project to **Enterprise**. Once you do this, you will then be added to our Offline Mode Github project which will allow you to include it within your application. To do that you will use bower and type the following.
 
-```
+```bash
 bower install --save git@github.com:formio/formio-plugin-offline.git
 ```
 
 You will also need to include the following project dependencies which will be needed to build the offline manifest as well as include the offline mode in your project.
 
-```
+```bash
 npm install --save-dev gulp-manifest
 bower install --save ng-formio-helper
 ```
@@ -34,7 +34,7 @@ Once you do this, you can then include the Offline mode into your application by
 
 ***/src/app/index.module.js***
 
-```
+```javascript
 (function() {
   'use strict';
   angular
@@ -49,7 +49,7 @@ Now that the Offline mode has been added to your project, you will now need to c
 
 ***/gulp/build.js***
 
-```
+```javascript
 gulp.task('offline', ['html', 'config', 'fonts', 'other'], function() {
   return gulp.src([path.join(conf.paths.dist, '/**/*')], { base: './dist/' })
     .pipe($.manifest({
@@ -65,7 +65,7 @@ gulp.task('offline', ['html', 'config', 'fonts', 'other'], function() {
 
 and then register it to the build task.
 
-```
+```javascript
 gulp.task('build', ['html', 'fonts', 'other', 'views', 'config', 'offline']);
 ```
 
@@ -73,7 +73,7 @@ We now need to add the manifest to our **index.html** file.
 
 ***/src/index.html***
 
-```
+```html
 <html manifest="app.manifest" ng-app="myApp">
 ```
 
@@ -82,7 +82,7 @@ To get offline mode working in your application, we will use the Formio helper l
 
 ***/src/app/index.route.js***
 
-```
+```javascript
 /** @ngInject */
 function routeConfig(
   FormioOfflineProvider,
@@ -98,7 +98,7 @@ We now need to initialize this within the application using the following.
 
 ***/src/app/index.run.js***
 
-```
+```javascript
 angular
   .module('myApp')
   .run([
@@ -113,7 +113,7 @@ angular
 #### Add the offline button to the header
 The next thing you need to do is add the Offline mode button to your header of your application. This will allow you to syncronize the submissions that have been captured within offline mode. You can do that with the following ```<offline-button>``` directive code in your applications navbar.
 
-```
+```html
 <div id="navbar" class="navbar-collapse collapse">
   <ul class="nav navbar-nav navbar-right">
     <li><offline-button></offline-button></li>

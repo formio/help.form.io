@@ -11,7 +11,7 @@ Custom components allow creating a form field with a custom JSON schema that can
  
 To use a custom component, create a JSON definition of the field with the information needed to render it. Create a custom field and paste the JSON object into it. This must be a valid JSON object.
 
-```
+```json
 {
   "type": "custom",
   "isNew": true,

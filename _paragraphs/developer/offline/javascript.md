@@ -123,5 +123,4 @@ In order to run this, you will need to install the offline plugin into the node_
 </script>
 </body>
 </html>
-
 ```
