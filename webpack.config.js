@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './assets/index.js',
   output: {
     filename: 'index.min.js',
