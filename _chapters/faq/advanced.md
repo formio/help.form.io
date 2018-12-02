@@ -207,7 +207,9 @@ Add a Hidden field to your form named "form". This will create the form property
 
 Then your angular code would look something like this:
 
+```html
 <formio form="form" submission="submission">
+```
 
 Inside the controller for your state inject Formio and put:
 

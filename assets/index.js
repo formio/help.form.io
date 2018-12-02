@@ -1,6 +1,5 @@
 import jQuery from 'jquery';
 import 'bootstrap';
-import 'formiojs/dist/formio.full';
 import AnchorJS from 'anchor-js';
 const anchors = new AnchorJS({
   placement: 'left'

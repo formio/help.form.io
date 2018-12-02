@@ -4,17 +4,6 @@ title: <img src="/assets/img/formio-logo-white.png" style="margin-bottom:10px" /
 summary: Need some help? Fill out the following form and we will get back with you as soon as possible.
 app: formioSupport
 ---
-<script type="text/javascript">
-  console.log('redirect');
-  angular.module('formioSupport', ['formio'])
-    .controller('formController', function($scope) {
-      $scope.$on('formSubmission', function(err, submission) {
-        window.location = "/thankyou";
-      });
-    });
-</script>
-
-<div ng-app="formioSupport" ng-controller="formController">
-  <formio src="'https://formio.form.io/support'"></formio>
+<div class="container">
+    <script src="https://unpkg.com/formiojs@latest/dist/formio.embed.js?src=https://formio.form.io/support&return=/thankyou"></script>
 </div>
-
