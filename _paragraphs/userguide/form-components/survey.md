@@ -7,7 +7,7 @@ weight: 182
 ---
 The Survey component works similar to the radio. Instead of one question, users are able to select a value for multiple questions which are configured within the component settings. Survey is a great component to utilize when asking multiple questions with the same context of answers or values. 
 
-![](/assets/img/userguide/form-components/Survey-Example.png){: .img-fluid .img-thumbnail }
+![](/assets/img/userguide/form-components/survey.png){: .img-fluid .img-thumbnail }
 
 #### Label
 The label for this component that will appear next to it.
