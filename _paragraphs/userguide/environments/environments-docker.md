@@ -152,6 +152,35 @@ docker run -itd \
 
 This command pulls down the latest version of the container, stops the current container, renames it to ```formio-server-old``` so that you have a path to go back if the update causes any problems, and then launches the new server in its place.
 
+#### Upgrading Stand-alone MongoDB
+In some cases, you may have a local MongoDB running where you would also wish to upgrade the MongoDB container. You must be careful when doing this since removing a container could remove your database. Because of this, the following commands should be performed when upgrading a local stand-alone MongoDB database container.
+
+```bash
+# Backup the current database into "/tmp/mongoexport"
+docker run -i --rm --network formio --link formio-mongo -v /tmp/mongoexport:/tmp mongo bash -c 'mongodump -v --host formio-mongo:27017 --out=/tmp';
+
+# Stop and remove the running mongo server.
+docker stop formio-mongo;
+docker rm formio-mongo;
+
+# Move the current mongo directory to a backup folder in case the import fails.
+sudo mv ~/opt/mongodb ~/opt/mongodb-backup;
+
+# Pull the latest version of Mongo.
+docker pull mongo;
+
+# Start up a new container with the latest version of MongoDB.
+docker run -itd  \
+  --name formio-mongo \
+  --network formio \
+  --volume ~/opt/mongodb:/data/db \
+  --restart unless-stopped \
+  mongo;
+  
+# Import the export into the mongodb container.
+docker run -i --rm --network formio --link formio-mongo -v /tmp/mongoexport:/tmp mongo bash -c 'mongorestore -v --host formio-mongo:27017 /tmp';
+```
+
 ### Production Environments
 It is very common to setup the Form.io API Server within a scalable environment for production use. Here is some help regarding the best practices on getting an API Server deployed for a Production enviornment.
 
