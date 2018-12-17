@@ -75,3 +75,48 @@ A custom CSS class to add to this component. You may add multiple class names se
 Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
 
 ![](/assets/img/general/general2.png){: .img-fluid .img-thumbnail }
+
+#### Multiple Values
+
+If checked, multiple values can be added in this field. The values will appear as an array in the API and an “Add Another” button will be visible on the field allowing the creation of additional fields for this component.
+
+#### Enable Spell Check
+
+This setting will enable spell check on the field.
+
+#### Protected
+
+If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by viewing the form submissions.
+
+#### Persistent
+
+If checked, the field will be stored in the database. If you want a field to not save, uncheck this box. This is useful for fields like password validation that shouldn’t save.
+
+#### Encrypted
+
+Encrypt this field on the server. This is two way encryption which is not be suitable for passwords. This setting is only available on the ‘Enterprise’ project plan.
+
+#### Hidden 
+
+A hidden field is still a part of the form JSON, but is hidden when viewing the form is rendererd.
+
+#### Initial Focus
+
+Make this field the initially focused element on this form when renderered. Only one component on this form or wizard page can carry the Initial Focus setting. 
+
+#### Hide Input
+
+Hide the input when viewing the form from the front end browser. This does not encrypt on the server. Do not use for passwords.
+
+#### Disabled
+
+Disable this field on the form.
+
+#### Show Label in DataGrid
+
+Show the label of this component when in a datagrid.
+
+#### Table View
+
+If checked, this value will show up in the table view of the submissions list.
+
