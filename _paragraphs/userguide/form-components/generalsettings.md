@@ -13,6 +13,17 @@ Below is a list of general settings that are offered for the majority of our com
 
 The name or title for this component.
 
+<div class="row">
+  <div class="col-sm-6">
+    ![](/assets/img/general/label2.png){: .img-fluid .img-thumbnail }
+  </div>
+  <div class="col-sm-6">
+    ![](/assets/img/general/label1.png){: .img-fluid .img-thumbnail }
+  </div>
+</div>
+ 
+
+
 
 #### Hide Label
 
