@@ -10,4 +10,21 @@ Below is a list of general settings that are offered for the majority of our com
 #### Label
 
 The name or title for this component.
-![](/assets/img//general/label2.png){:width="40%"} <div style="width:50%">![](/assets/img//general/label1.png)</div>
+
+#### Hide Label
+
+Hide the label of this component. This setting will display the label in the form builder, but hide the label when the form is rendered.
+
+#### Label Position
+
+Position for the label for this field.
+
+#### Label Width
+
+The width of label on line in percentages.
+
+#### Label Margin 
+
+The width of label margin on line in percentages.
+
+#### Placeholder
