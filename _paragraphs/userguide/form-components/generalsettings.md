@@ -10,4 +10,4 @@ Below is a list of general settings that are offered for the majority of our com
 #### Label
 
 The name or title for this component.
-![](/assets/img/general/label1.png) ![](/assets/img//general/label2.png)
+![](/assets/img//general/label2.png){ width=50% } ![](/assets/img/general/label1.png){ width=50% }
