@@ -10,4 +10,4 @@ Below is a list of general settings that are offered for the majority of our com
 #### Label
 
 The name or title for this component.
-![alt-text-1](/assets/img//general/textfield1.png) ![alt-text-2](/assets/img//general/textfield2.png)
+![](/assets/img/general/label1.png) ![](/assets/img//general/label2.png)
