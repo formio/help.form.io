@@ -3,7 +3,7 @@ title: Date/Time
 book: userguide
 chapter: form-components
 slug: datetime
-weight: 140
+weight: 110
 ---
 Date/Time form components can be used to input dates, times or both dates and times.
 
