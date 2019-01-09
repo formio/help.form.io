@@ -3,7 +3,7 @@ title: Select Boxes
 book: userguide
 chapter: form-components
 slug: selectboxes
-weight: 130
+weight: 35
 ---
 
 The Check Boxes form component works like the [Radio](#radio) component, but allows the user to check multiple values.
