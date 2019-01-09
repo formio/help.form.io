@@ -9,6 +9,8 @@ Below is a list of general settings that are offered for the majority of our com
 
 ![](/assets/img/general/general1.png){: .img-fluid .img-thumbnail }
 
+![](/assets/img/general/general2.png){: .img-fluid .img-thumbnail }
+
 #### Label
 
 The name or title for this component.
@@ -84,8 +86,6 @@ A custom CSS class to add to this component. You may add multiple class names se
 #### Tab Index
 
 Sets the `tabindex` attribute of this component to override the tab order of the form. See the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex\) on `tabindex` for more information on how it works.
-
-![](/assets/img/general/general2.png){: .img-fluid .img-thumbnail }
 
 #### Multiple Values
 
