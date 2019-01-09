@@ -3,7 +3,7 @@ title: HTML Element
 book: userguide
 chapter: form-components
 slug: html-element-component
-weight: 60
+weight: 48
 ---
 An HTML Element component may be added to a form to display a single HTML element. This is useful if you wish to quickly insert and configure some HTML in your form. All unsafe HTML is stripped before rendering to prevent cross-site scripting exploits. This includes tags like `<script>`, `<embed>`, and `<style>`, and attributes like `onmouseover` or `onload`.
 
