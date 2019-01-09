@@ -3,7 +3,7 @@ title: Radio
 book: userguide
 chapter: form-components
 slug: radio
-weight: 80
+weight: 45
 ---
 Radio form components should be used when presenting a list of options from which one should be chosen.
 
