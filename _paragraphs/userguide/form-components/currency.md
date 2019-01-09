@@ -3,7 +3,7 @@ title: Currency
 book: userguide
 chapter: form-components
 slug: currency
-weight: 155
+weight: 140
 ---
 The Currency component should be used when a field should display currency amounts on a form. This component holds a numeric input mask that allows two decimal values and automatically adds commas as a user inputs a currency amount.
 
