@@ -13,7 +13,7 @@ Number fields should be used whenever a field should be limited to a type of num
 
 #### Use Delimeter
 
-Check this setting if you would like to value in this component to separate thousands by local delimiter
+Check this setting if you would like the value in this component to separate thousands by local delimiter
 
 #### Decimal Places
 
