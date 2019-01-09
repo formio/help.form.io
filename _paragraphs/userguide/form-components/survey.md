@@ -3,7 +3,7 @@ title: Survey
 book: userguide
 chapter: form-components
 slug: survey
-weight: 182
+weight: 170
 ---
 The Survey component works similar to the radio. Instead of one question, users are able to select a value for multiple questions which are configured within the component settings. Survey is a great component to utilize when asking multiple questions with the same context of answers or values. 
 
