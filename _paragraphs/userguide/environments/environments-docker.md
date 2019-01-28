@@ -178,7 +178,7 @@ docker run -itd  \
   mongo;
   
 # Import the export into the mongodb container.
-docker run -i --rm --network formio --link formio-mongo -v /tmp/mongoexport:/tmp mongo bash -c 'mongorestore -v --host formio-mongo:27017 /tmp';
+docker run -i --rm --network formio --link formio-mongo -v /tmp/mongoexport:/tmp mongo bash -c 'mongorestore -v --noIndexRestore --host formio-mongo:27017 /tmp';
 ```
 
 ### Production Environments
