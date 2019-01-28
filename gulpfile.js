@@ -19,7 +19,7 @@ gulp.task('styles', () => gulp.src('assets/index.scss')
 
 gulp.task('scripts', () => webpackStream(require('./webpack.config'), webpack).pipe(gulp.dest('assets')));
 gulp.task('fonts', () => gulp.src('./node_modules/font-awesome/fonts/*').pipe(gulp.dest('assets/fonts')));
-gulp.task('build', ['styles', 'scripts', 'fonts']);
+gulp.task('build', gulp.series('styles', 'scripts', 'fonts'));
 
 gulp.task('deploy:howitworks', function () {
   var aws = require('./aws.json');
