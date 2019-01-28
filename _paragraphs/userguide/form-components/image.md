@@ -3,7 +3,7 @@ title: Image
 book: userguide
 chapter: form-components
 slug: image
-weight: 46
+weight: 182
 ---
 Images within Form.io are created on the Form using the **File** component, which is capable of uploading images.
 

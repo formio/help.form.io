@@ -1,11 +1,10 @@
 ---
 title: Hidden
 book: userguide
-chapter: form-components
+chapter: data-components
 slug: hidden
-weight: 50
+weight: 10
 ---
-
 A hidden field can be added to a form to create a resource property that can be custom set in the form. You can use javascript to set the value on the client side and when the form is submitted the value will be set on the resource. There is no front end widget for hidden fields.
 
 ![13 hidden](https://cloud.githubusercontent.com/assets/13321142/13097260/308a3622-d4e5-11e5-914d-446d4e567898.png){: .img-fluid .img-thumbnail }
@@ -33,4 +32,3 @@ If checked, the field will be stored in the database. If you want a field to not
 #### Table View
 
 If checked, this value will show up in the table view of the submissions list.
-

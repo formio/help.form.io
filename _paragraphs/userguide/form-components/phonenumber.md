@@ -3,7 +3,7 @@ title: Phone Number
 book: userguide
 chapter: form-components
 slug: phonenumber
-weight: 160
+weight: 80
 ---
 The phone number form component can be used to enter phone numbers in a form.
 

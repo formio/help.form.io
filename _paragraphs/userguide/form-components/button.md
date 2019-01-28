@@ -3,7 +3,7 @@ title: Button
 book: userguide
 chapter: form-components
 slug: button
-weight: 20
+weight: 60
 ---
 Buttons can be added to perform various actions within the form.
 

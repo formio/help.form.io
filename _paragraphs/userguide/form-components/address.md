@@ -3,7 +3,7 @@ title: Address
 book: userguide
 chapter: form-components
 slug: address
-weight: 110
+weight: 90
 ---
 <div class="alert alert-info"><strong>Important Notice</strong> With recent changes to the Google GeoCode API usage policy, you are now required to provide the Google GeoCode API key along with the configuration for the Address component. Please see the section below on how to setup and configure this within your Google account.</div>
 

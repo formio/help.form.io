@@ -1,10 +1,11 @@
 ---
 title: Edit Grid
 book: userguide
-chapter: layout-components
-slug: edit-grid
-weight: 50
+chapter: data-components
+slug: editgrid
+weight: 40
 ---
+
 **Edit Grids** allow users to replicate an table like structure when it comes to the capture and display of form data.
 Users can add multiple components inside of the **Edit Grid**. Additionally, any number of grids can be added
 within a form which is especially useful when needing the ability to add or duplicate multiple fields sets.
@@ -26,47 +27,25 @@ are dragged into the interface.
 &nbsp;
 
 Below is an in depth look at the specific data grid options that users can add or interface with as of the 5.0.0 release
-![Edit Grid Component](/assets/img/userguide/layout-components/Edit-Grid-3.png){: .img-fluid .img-thumbnail }
+![](/assets/img/editgridupdate.png){: .img-fluid .img-thumbnail }
 
-#### Label
+#### Templates
 
-* The name or title for this data grid.
+Edit Grid gives the user the flexibility to customize the grid to how they see fit using basic JavaScript. Within the Template 
+section of the component settings, the user can modify what type of components are displayed within the grid row along with 
+the Header/Footer. 
 
-#### Tooltip
+#### Row CSS Class
+CSS class to add to the edit row wrapper.
 
-* Adds a tooltip to the side of this field
+#### Add Another Text
+Set the text of the Add Another button.
 
-#### Clear Value When Hidden 
+#### Save Row Text
+Set the text of the Save Row button.
 
-* When a field is hidden, clear its value. 
-
-#### Protected 
-
-* If checked, the fields in the data grid are for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by viewing the form submissions.
-
-#### Persistent 
-
-* If checked, the fields in the data grid will be stored in the database. If you want a field to not save, uncheck this box. This is useful for fields like password validation that shouldn’t save.
-
-#### Encrypted (Enterprise Only) 
-
-* Encrypts the Data submitted in this form. 
-
-#### Hidden 
-
-* Make the object hidden, it still exists within the form, but cannot be viewed. 
-
-#### Hide Label 
-
-* Hide the label of this component. 
-
-#### Disabled 
-
-* Disables the form input. 
-
-#### Table View 
-
-* If checked, this fields in the data grid will show up in the table view of the submissions list.
+#### Remove Row Text
+Set the text of the remove/delete Row button.
 
 
 &nbsp;

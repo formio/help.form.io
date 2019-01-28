@@ -3,7 +3,7 @@ title: Custom
 book: userguide
 chapter: form-components
 slug: custom
-weight: 35
+weight: 200
 ---
 Custom components allow creating a form field with a custom JSON schema that can be rendered as anything within a frontend application. This is usefully for special or complex form fields that don't already exist in form.io. Using this type, any kind of field can be created.
  

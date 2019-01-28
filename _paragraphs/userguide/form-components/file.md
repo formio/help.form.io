@@ -3,7 +3,7 @@ title: File
 book: userguide
 chapter: form-components
 slug: file
-weight: 45
+weight: 180
 ---
 A file field allows users to upload and download files to a form. In order to use a file field, file storage must be set up. This can be done from the project settings. See [File Storage](/developer/integrations/filestorage/) for the types of providers supported.
 

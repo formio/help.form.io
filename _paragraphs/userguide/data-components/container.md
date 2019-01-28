@@ -1,11 +1,10 @@
 ---
 title: Container
 book: userguide
-chapter: layout-components
+chapter: data-components
 slug: container
-weight: 35
+weight: 20
 ---
-
 A container is a wrapper around a set of fields similar to a fieldset. The major way they are different is the way that the data is stored. For most layout components field values are stored directly in the ```data``` of the submission.
 
 For example, a fieldset with the following fields
@@ -61,4 +60,3 @@ If checked, the field will be stored in the database. If you want a field to not
 #### Table View
 
 If checked, this value will show up in the table view of the submissions list.
-
