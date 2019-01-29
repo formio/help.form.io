@@ -41,6 +41,9 @@ Below are all the variables that you can set within your On-Premise Environment.
 | MONGO | The MongoDB connection string to connect to your remote database. | mongodb://<username>:<password>@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true |
 | MONGO_HIGH_AVAILABILITY | If your database is high availability (like from Mongo Cloud or Compose), then this needs to be set. | 1 |
 | ADMIN_KEY | An optional key that gives full access to the server including listing all projects. Send in a header with x-admin-key | [ADMIN KEY] |
+| PRIMARY | Set whether this environment is a primary environment or not. | false |
+| ADMIN_EMAIL | The default email of the super admin account. Only on initial startup of Primary. | [email] |
+| ADMIN_PASS | The default password of the super admin account. Only on initial startup of Primary. | [password] |
 | PORTAL_SECRET | The secret used to connect the portal to your environment | [PORTAL SECRET] |
 | FORMIO_FILES_SERVER | This is the URL of the PDF server, which is set within the API server so that it can download Submission PDF's pointed to the PDF Server | https://pdf.yourserver.com |
 | DB_SECRET | The database encryption secret | [DB SECRET] |
