@@ -4,6 +4,6 @@ book: tutorials
 section: deployment
 chapter: aws
 slug: aws-prerequisites
-weight: 10
+weight: 1
 ---
-We assume in this that you already have a MongoDB instance available. We recommend services provided by [MongoDB Cloud](https://www.mongodb.com/cloud) or [Compose](https://compose.com/) which integrates into AWS cloud. A Redis server can be provided by AWS ElasticCache service or through **Compose**.
+We assume in this that you already have an account with [Amazon AWS](https://aws.amazon.com). Once you create an account, you will then be ready to create your Enterprise deployment.
