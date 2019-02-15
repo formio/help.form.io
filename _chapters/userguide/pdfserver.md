@@ -101,6 +101,7 @@ The settings for the deployed PDF Server are described as follows.
 | FORMIO_PROJECT_TOKEN | This is a provided PDF server token that must be provided to start the server. | OFU1XbBosvNMpses2LBTawcLrUX6K2 |
 | FORMIO_PDF_PROJECT | This is the URL of your project. If you imported the pdf template into your current project, then this is the URL of your project. | https://pdfexample.form.io |
 | FORMIO_PDF_APIKEY | This is the API key we generated in the previous step. | XFaM2dDQyg4yWPAI8sd2Zuol3Ef7Ti |
+| FORMIO_VIEWER | The URL of a custom viewer application. See [https://help.form.io/userguide/pdf/#custom-viewer](/userguide/pdf/#custom-viewer) for more information. | https://formio.github.io/formio-viewer/dist?theme=paper |
 | FORMIO_S3_SERVER | The URL of your S3 server. You can omit this if you are using Amazon S3 | localhost |
 | FORMIO_S3_PORT | The port of your S3 server. You can omit this if you are using Amazon S3 | 9000 |
 | FORMIO_S3_BUCKET | The name of your S3 bucket | pdf |
