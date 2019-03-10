@@ -27,6 +27,10 @@ Next for the **ACS URL Validator** we will just copy the string above, and just 
 
     https:\/\/YOURPROJECT.form.io\/saml\/acs
 
+You will now need to configure the **RelayState** for your project to point to the URL of your hosted application. This may look like the following.
+
+    https://app.yoursite.com
+
 The configuration will look like the following.
 
 ![](/assets/img/integrations/saml/onelogin-config.png){: .img-fluid .img-thumbnail }
@@ -52,6 +56,14 @@ For the name of the field, we will just call it **roles**
 Once you click **Save**, we will now want to ensure that the value of this field points to the user **User Roles** property. You will also want to make sure you click the **Include in SAML assertion** checkbox. Now press **Save**
 
 ![](/assets/img/integrations/saml/onelogin-userroles.png){: .img-fluid .img-thumbnail }
+
+Next, we will make sure the **id** field is provided.
+
+![](/assets/img/integrations/saml/onelogin-idfield.png){: .img-fluid .img-thumbnail }
+
+For OneLogin, we can just use the OneLogin ID as the value for this field.
+
+![](/assets/img/integrations/saml/onelogin-addid.png){: .img-fluid .img-thumbnail }
 
 Next we will want to make sure we save our application by clicking on **Save** button.
 
