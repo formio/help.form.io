@@ -20,3 +20,20 @@ Now that you have setup your main portal project with the SAML configuration, yo
 For now, the only supported type is "saml" which should be the value of this environment variable. Once you have set this variable, then logout, you will then notice that the portal authenticates with the SAML SSO authentication.
 
 The next item that can be configured for **SSO** is the Form Manager application.
+
+#### Team Management
+In addition to allowing users to create their own projects, you can also use the Portal SSO in conjunction with our **Team** support within the Developer Portal. This system creates a One-to-One connection between Roles within your SAML configuration, that will then map to Teams within the Form.io developer portal.
+
+To start, you will first need to create **Teams** within your developer portal that will be related to **Roles** within your SAML configuration.
+
+![](/assets/img/userguide/portalsso/role-developer.png){: .img-fluid .img-thumbnail }
+
+Make sure you check the checkbox called **SSO Team** which will tell the API platform that you wish to map this team with an SSO Role.
+
+You do not need to worry about assigning anyone to that Team since that will be handled automatically through the SSO process when they authenticate by associating SAML roles to that Team.
+
+Next, you will need to assign that Team to your projects you wish to allow SSO people to have access to within the Form.io developer portal interface. You can do this by clicking on the Project, and then clicking on the team, then select the role you wish that team to have wthin that Project.
+
+![](/assets/img/userguide/portalsso/project-teams.png){: .img-fluid .img-thumbnail }
+
+Once you have done this, anyone with a **Role** name that matches the name of the Team will be automatically assigned to that team and be granted access to a project.
