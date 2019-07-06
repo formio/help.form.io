@@ -46,6 +46,8 @@ The selected role will be added to all new resources created by the form with th
 
 In order to use the OAuth Action in a form, you must choose a [Button component](#button) with the action setting `OAuth` to start the OAuth sign in process. When a user clicks the provided button, the OAuth authentication process will begin by opening a popup of the OAuth provider login page.
 
+<p class="note"> Please note - When embedding the form into the renderer, append "?live=1" parameter at the end of the form embed url to allow for the OAuth action to trigger properly</p>
+
 #### Autofill Fields
 
 Depending on which OAuth provider you select, and if you select the *Register New Resource* action, a number of Autofill Field options may appear. These settings allow you to automatically retrieve data from the OAuth provider account that is used to authenticate and fill in fields in your form before the new resource is created. For example, a GitHub OAuth Registration form may use the Autofill Email Field to assign the email of the GitHub account that was used to authenticate into a field of the new Resource that is created.

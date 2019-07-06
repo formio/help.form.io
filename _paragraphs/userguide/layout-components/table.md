@@ -36,3 +36,5 @@ Whether or not to add a hover class on rows when the mouse hovers over them.
 #### Condensed
 
 Whether or not to condense the size of each sell by removing padding.
+
+<p class="note"> Please note - Tables may not repsond well when collapsing to a mobile interface. Please utilize the Column component for a mobile reponsive layout option</p>

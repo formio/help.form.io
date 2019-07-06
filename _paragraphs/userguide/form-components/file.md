@@ -50,3 +50,11 @@ If checked, the field will be stored in the database. If you want a field to not
 #### Table View
 
 If checked, this value will show up in the table view of the submissions list.
+
+#### Webcam Feature
+We have additional File component settings that are currently on our Beta site. This includes a Webcam feature which allows the user to utilize the webcam on their local machine to take a picture and upload to the component. 
+
+To apply this feature, navigate to https://beta.form.io/. Ensure you have correct file storage configuration within the stage settings. Set your file component to the correct storage type and click the 'Enable Web Cam' setting. 
+
+When using the form, you will see a 'Camera' button on the component. Clicking the camera button will activate your webcam enabled on your local machine with the ability to take and upload photos.
+

@@ -9,6 +9,8 @@ Edit the Actions for the User Login Form
 
 Add a new OAuth Action.
 
+<p class="note"> Please note - When embedding the form into the renderer, append "?live=1" parameter at the end of the form embed url to allow for the OAuth action to trigger properly</p>
+
 ### Remote Authentication
 
 If you are using remote authentication then select that in the action and select your OAuth provider that you configured in the project settings. Make sure to also select which OAuth button to associate with the action.
