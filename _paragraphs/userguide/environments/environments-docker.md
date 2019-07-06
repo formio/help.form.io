@@ -98,6 +98,29 @@ docker run -itd \
   formio/formio-enterprise;
 ```
 
+##### For Stand-alone API server with Deployed Portal interface
+This command will install the API server, but also include the Deployed portal interface along with an admin account which will let you log into the portal.
+
+```bash
+docker run -itd \
+  -e "ADMIN_ADMIN_EMAIL=admin@example.com" \
+  -e "ADMIN_PASS=CHANGEME" \
+  -e "PRIMARY=true" \
+  -e "LICENSE=YOURLICENSE" \
+  -e "PORTAL_SECRET=CHANGEME" \
+  -e "JWT_SECRET=CHANGEME" \
+  -e "DB_SECRET=CHANGEME" \
+  --restart unless-stopped \
+  --name formio-server \
+  --network formio \
+  --link formio-mongo:mongo \
+  --link formio-redis:redis \
+  --restart unless-stopped \
+  -p 3000:80 \
+  formio/formio-enterprise;
+```
+
+
 ##### For Stand-alone API Server with PDF Server
 If you are running a PDF server within the same server as your deployment, you will also want to connect this deployment to the running instance of the PDF server. This can be done using the following command.
 
