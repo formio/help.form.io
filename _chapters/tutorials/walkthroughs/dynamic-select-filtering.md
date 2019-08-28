@@ -66,7 +66,7 @@ Similarly, the second ```Select Component``` will populate it's value from the M
 ![Resources Portal View](/assets/resource/dynamic-select-11.png){: .img-fluid .img-thumbnail }
 
 If we take a look at the form in this state, both select dropdowns populate with their respective values. However,
-the ```Model``` field isn't filtering against the ```Make``` field at this point.
+the ```Model``` field isn't filtering against the ```Make``` field at this point. Ensure 'Refresh On' field carries the ```Make``` field so the ```Model``` field will reset when a new ```Make``` field is selected.
 
 ![Resources Portal View](/assets/resource/dynamic-select-12.png){: .img-fluid .img-thumbnail }
 
