@@ -41,7 +41,7 @@ If unchecked, only one file per field is allowed. If checked, multiple are allow
 
 #### Protected
 
-If checked, this field is for input only. When being queried by the API it will not appear in the properties. You can still see the value on form.io by going to the submissions for a form.
+If checked, this field is for input only. When being queried by the API it will not appear in the properties and also should not appear in exported data. You won't be able to see the value on form.io, but it will be stored in database under the hood.
 
 #### Persistent
 
