@@ -11,55 +11,35 @@ Microsoft Office 365 allows for external applications to integrate through the u
   - ### Step 1: [Create your Office 365 Business Account](https://products.office.com/en-us/business/compare-office-365-for-business-plans){:target="_blank"}
   - ### Step 2: [Associate your Office 365 account with Azure](https://msdn.microsoft.com/office/office365/HowTo/setup-development-environment#bk_CreateAzureSubscription){:target="_blank"}
   - ### Step 3: Register your application with Azure Active Directory
-    - Sign into the [Azure Management Portal](https://manage.windowsazure.com/){:target="_blank"} using your Office 365 Developer Site credentials.
+    - Sign into the [Azure Portal](https://portal.azure.com/){:target="_blank"} using your Office 365 Developer Site credentials.
 
-    - Click Active Directory on the left menu, then click on the directory for your Office 365 developer site.
+    - Click Azure Active Directory on the left menu, then click on the ***App registrations***, and then click on the ***New registration***.
 
-      ![](/assets/img/office365/active-directory-new.png){: .img-fluid .img-thumbnail }
-
-    - Create a new Active Directory "Directory".
-
-      ![](/assets/img/office365/active-directory-create.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/azure-new-app.png){: .img-fluid .img-thumbnail }
 
     - Fill out your application information.
 
-      ![](/assets/img/office365/active-directory-app.png){: .img-fluid .img-thumbnail }
-
-    - Click on "Applications", then click on "Add" to create a new application.
-
-      ![](/assets/img/office365/application-add-app.png){: .img-fluid .img-thumbnail }
-
-    - Click on the link that says "Add application my organization is developing".
-
-      ![](/assets/img/office365/application-app-type.png){: .img-fluid .img-thumbnail }
-
-    - Give your application a name.
-
-      ![](/assets/img/office365/application-app-name.png){: .img-fluid .img-thumbnail }
-
     - Provide an application URL. It can be **localhost** if you are just using it for **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** integration.
 
-      ![](/assets/img/office365/application-app-uri.png){: .img-fluid .img-thumbnail }
+    - Click on the ***Register*** button.
 
-    - Click on ***Configure*** within your application, and then click on the ***Add application*** button.
+      ![](/assets/img/office365/v2/azure-register-app.png){: .img-fluid .img-thumbnail }
 
-      ![](/assets/img/office365/application-add-app-perms.png){: .img-fluid .img-thumbnail }
+    - Create a new API permistion. Click on the ***Expose an API***, then click on the ***Add a scope*** and fill scope information, for example "Contacts.ReadWrite".
 
-    - Click on ***Office 365 Exchange Online*** and ***Office 365 unified API*** permissions and then click the ***Save*** icon.
+    - Click on the ***Add scope*** button.
 
-      ![](/assets/img/office365/application-permissions.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/azure-add-contacts-scope.png){: .img-fluid .img-thumbnail }
 
-    - Enable the appropriate application permissions, and then press ***Save***.
+    - Click on ***Api permissions***, then click on the ***Add a permission***, then click on the ***My APIs*** and choose our created persmission.
 
-      ![](/assets/img/office365/application-enable-perms.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/azure-add-api-permission.png){: .img-fluid .img-thumbnail }
 
-    - Make sure you press ***Save***.
+    - Check persmission to enable it.
 
-      ![](/assets/img/office365/application-perms-save.png){: .img-fluid .img-thumbnail }
+    - Click on the ***Add permissions*** button.
 
-    - Now download the manifest file.
-
-      ![](/assets/img/office365/application-download-manifest.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/azure-check-permission.png){: .img-fluid .img-thumbnail }
 
     - The next thing you need to do is generate the **keyCredentials** and place that in the manifest file. The easiest way to do this is to utilize a Node.js utility called **keycred**.
 
@@ -194,47 +174,29 @@ Microsoft Office 365 allows for external applications to integrate through the u
       ...
       ```
 
-    - Now, save the manifest file, and then upload it back into the Application using the manifest tool.
+    - Now, to save the manifest file, click on ***Manifest***, then insert copied ***keyCredentials***.
 
-      ![](/assets/img/office365/application-manifest-upload.png){: .img-fluid .img-thumbnail }
+    - Click on the ***Save*** button.
 
-    - Pick your manifest file and then press the OK button.
-
-      ![](/assets/img/office365/application-manifest-upload-select.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/azure-update-manifest.png){: .img-fluid .img-thumbnail }
 
     - You are now ready to configure **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** for **Office 365 Integration!**
 
   - ### Step 4: Configure Form.io for Office 365 Integration
 
-    - Once you create an account on **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**, and then create a Project, you will need to click on the **Settings** within your project.
-
-      ![](/assets/img/office365/formio-project-settings.png){: .img-fluid .img-thumbnail }
+    - Once you create an account on **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**, and then create a Project, you will need to click on the **Settings** within your project, then click on the ***Integrations***, then click on the ***Data Connections***.
 
     - Next, you will need to click on the **Office 365** settings.
 
-      ![](/assets/img/office365/formio-o365-settings.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/portal-open-settings.png){: .img-fluid .img-thumbnail }
 
-    - Next, you will need to specify your Tenant ID, which can be found by clicking on **View Endpoints** and then look at the ID provided in the urls.
+    - Next, you will need to specify your Tenant ID and Application ID, which can be found by clicking on ***Overview*** on the Azure Application page and then copy IDs.
 
-      ![](/assets/img/office365/formio-o365-view-endpoints.png){: .img-fluid .img-thumbnail }
-
-      ![](/assets/img/office365/formio-o365-tennant-id.png){: .img-fluid .img-thumbnail }
-
-    - Next, you will need to specify your Client ID, which can be found on your Azure project page as follows.
-
-      ![](/assets/img/office365/formio-o365-tennant-client.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/azure-app-properties.png){: .img-fluid .img-thumbnail }
 
     - Enter that information into your Office 365 settings, and also provide your Office 365 email address.
 
-      ![](/assets/img/office365/formio-o365-email-settings.png){: .img-fluid .img-thumbnail }
-
-    - Next, copy the **Private Key** which was output from the keycred application, and paste that into the section that asks for the Private Key.
-
-      ![](/assets/img/office365/formio-o365-private-key.png){: .img-fluid .img-thumbnail }
-
-    - Next, copy the **Certificate Fingerprint** found within the keycred output, and paste that into the application settings.
-
-      ![](/assets/img/office365/formio-o365-fingerprint.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/portal-apply-settings.png){: .img-fluid .img-thumbnail }
 
     - Congratulations, you are now ready for Office 365 integration within **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**!
 
@@ -242,34 +204,29 @@ Microsoft Office 365 allows for external applications to integrate through the u
 
     - To test out the integration, we can create a simple "Contact Form", which provides **First Name**, **Last Name**, and **Email** as follows.
 
-      ![](/assets/img/office365/formio-o365-test-form.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/portal-contact-form.png){: .img-fluid .img-thumbnail }
 
     - Next, click on the **Actions** tab and then select the **Office 365 Contacts** action and then click on the **Add Action** button.
 
-      ![](/assets/img/office365/formio-o365-add-action.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/portal-add-action.png){: .img-fluid .img-thumbnail }
 
     - On the next page, we simply need to map the **First Name**, **Last Name**, and **Email** **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** fields to the Office 365 **First Name Field**, **Last Name Field**, and **Email Address Field** select drop-downs respectively...
 
-      ![](/assets/img/office365/formio-o365-select-fields.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/portal-map-fields.png){: .img-fluid .img-thumbnail }
 
     - Next, press **Save** to create the Action for your Form.
-
-      ![](/assets/img/office365/formio-o365-contacts.png){: .img-fluid .img-thumbnail }
 
   - ## What did we just do?
     This just created a mapping to the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** forms to your Office 365 Contacts section. You should now be able to **Create**, **Update**, and **Delete** Office 365 Contacts from within the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** application interface.
 
-      ![](/assets/img/office365/formio-o365-outlook-contacts.png){: .img-fluid .img-thumbnail }
-
     Now, go to your **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** form, and then submit a new contact using the **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;** form.
 
-      ![](/assets/img/office365/formio-o365-submit-form.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/portal-launch.png){: .img-fluid .img-thumbnail }
 
     Once you press **Submit** on the form, you should now be able to see the data within **&lt;<span class="text-primary">form</span>.<span class="text-secondary">io</span>&gt;**
 
-      ![](/assets/img/office365/formio-o365-submission.png){: .img-fluid .img-thumbnail }
-      ![](/assets/img/office365/formio-o365-outlook-sync.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/portal-submission.png){: .img-fluid .img-thumbnail }
+      ![](/assets/img/office365/v2/outlook-submission.png){: .img-fluid .img-thumbnail }
 
   - ## More Information
     We will be adding more capabilites to the Office 365 integration in the future. We will update this list with more information as that documentation is written. Enjoy!
-
