@@ -42,19 +42,6 @@ $fa-font-path: '../node_modules/font-awesome/fonts';
 @import '~font-awesome/scss/font-awesome';
 ```
 
-We now need to ensure that the **global** keyword is set to the browser window. We can do this within the following file by adding the following line.
-
-***src/polyfills.ts***
-```ts
-...
-...
-
-/***************************************************************************************************
- * APPLICATION IMPORTS
- */
-(window as any).global = window;
-```
-
 We will now start our application by typing the following in the terminal.
 
 ```
