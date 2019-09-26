@@ -12,13 +12,13 @@ To do this, you should have an existing Bearer (or other) authorization token fr
 Then, instantiate the Formio library with your project url and call the currentUser endpoint with your authorization header.
 
 ```js
-var authorization = 'Bearer: ABC123XYZ789';
+var header = new Formio.Headers();
+header.set('Authorization', 'Bearer 2e762950-9498-4079-a699-6ec4b5f04c93');
 
 var formio = new Formio('https://myproject.form.io');
 formio.currentUser({
-  header: {
-    authorization: authorization
-  }
+  external: true,
+  header: header,
 });
 ```
 
