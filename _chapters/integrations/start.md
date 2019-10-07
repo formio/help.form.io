@@ -1,5 +1,5 @@
 ---
-title: Intrgrations
+title: Integrations
 subtitle: Getting Started
 book: integrations
 weight: 0
