@@ -13,13 +13,17 @@ Then, instantiate the Formio library with your project url and call the currentU
 
 ```js
 var authorization = 'Bearer: ABC123XYZ789';
-
+var header = new Headers();
+header.append("authorization", authorization);
 var formio = new Formio('https://myproject.form.io');
-formio.currentUser({
-  header: {
-    authorization: authorization
-  }
-});
+formio
+  .currentUser({
+    header: header,
+    external: true
+  })
+  .then(function(user) {
+    console.log(user);
+  });
 ```
 
 Form.io will use the authorization token to make a request to the OAuth endpoint, receive your user information and create a new form.io token that is passed back to the form.io library and used on subsequent requests.
