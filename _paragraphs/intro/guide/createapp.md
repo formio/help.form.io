@@ -16,7 +16,6 @@ ng new eventmanager --style=scss
 For the options, we will select the following
 
  - Would you like to add Angular routing? **Yes**
- - Which stylesheet format would you like to use? **SCSS**
 
 This will now create a new application within the folder **eventmananger**, we can navigate into that folder by typing the following in the terminal.
 
@@ -28,7 +27,7 @@ cd eventmanager
 We will now bring in all of our dependencies into the application by typing the following within the application folder.
 
 ```
-npm install --save bootstrap bootswatch font-awesome angular-formio
+npm install --save @angular/elements bootstrap bootswatch font-awesome angular-formio
 ```
 
 We can now setup the styles for our application by editing the following file.
@@ -77,8 +76,8 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'auth',
-    loadChildren: './auth/auth.module#AuthModule'
+    path: '',
+    component: HomeComponent
   }
 ];
 
