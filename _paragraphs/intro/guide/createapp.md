@@ -47,9 +47,7 @@ We will now start our application by typing the following in the terminal.
 ng serve
 ```
 
-You should see the following when you go to **http://localhost:4200** in your browser.
-
-![](/assets/img/userguide/ngserve.png){: .img-fluid .img-thumbnail }
+You should now be able to go to **http://localhost:4200** in your browser to see the default Angular page.
 
 We can now create a home page, by typing the following in the terminal.
 

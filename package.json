@@ -13,6 +13,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-s3": "^0.11.0",
     "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.0",
     "vinyl-transform": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
