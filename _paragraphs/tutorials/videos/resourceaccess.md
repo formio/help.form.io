@@ -1,5 +1,5 @@
 ---
-title: Submission Resource Access
+title: Field Based Resource Access
 book: tutorials
 section: videos
 chapter: advancedtutorial
