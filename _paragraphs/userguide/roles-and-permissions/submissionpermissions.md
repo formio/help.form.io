@@ -24,3 +24,5 @@ Field Based Resource Access can be configured on any Form with a resource select
     
 In the following example, the `users` resource select component is being assigned to the `Read` permission. On any following form submission, all of the selected `users` resources will be granted read access to that individual submission, regardless of the forms existing roles and permissions. The Field Based Resource Access settings are configured on a per form basis, but the individual access is contained within each form submission.
 ![](/assets/img/userguide/userguide-roles-resource.png){: .img-fluid .img-thumbnail }
+
+For more information about how to set up Group Permissions, read [Groups section](../groups).
