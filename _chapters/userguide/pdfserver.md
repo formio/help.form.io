@@ -119,27 +119,6 @@ You are now running a completely hosted **PDF Server**!
 ### Typical Form.io Server + PDF Server scalable environment.
 It is very common to setup the Form.io API Server within a scalable environment along with the PDF Server. Here are the Docker commands to configure a side-by-side API Server + PDF Server deployment.
 
-#### API Server + Redis
-Assuming that you have an external MongoDB setup, the only thing that you will need to configure in addition to a MongoDB server is a Redis instance. The PDF downloads uses a temp token feature of the API server which does require that **Redis** be installed. You can either setup Redis externally, or in some cases this can be managed on the actual API Server. Typically, for a production environment, you would want to have Redis running external, but it is also not considered bad practice to have Redis on the actual server since it is only used to store the temporary download tokens and the worst thing that will happen is that a token would expire if the servers reset. To accomplish this, you will execute the following commands within your terminal.
-
-First create a newtwork that will connect Form.io Server to the local Redis Instance
-
-```bash
-docker network create formio
-```
-
-Now spin up a local instance of Redis on this server.
-
-```bash
-docker run -itd \
-  --name formio-redis \
-  --network formio \
-  --restart unless-stopped \
-  redis;
-```
-
-Next, spin up your Form.io API server connecting it to the local Redis instance. 
-
 ```bash
 docker run -itd \
   -e "LICENSE=YOURLICENSE" \
@@ -148,36 +127,11 @@ docker run -itd \
   -e "DB_SECRET=CHANGEME" \
   -e "MONGO=mongodb://:@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true" \
   -e "FORMIO_FILES_SERVER=https://pdfserver.yourdomain.com" \
-  --network formio \
-  --link formio-redis:redis \
   --restart unless-stopped \
   --name formio-server \
   -p 80:80 \
   formio/formio-enterprise;
 ```
-
-Note that you would provide your own URL to the ```MONGO``` database and also provide your own domain where you are hosting the PDF server for the ```FORMIO_FILES_SERVER``` variable.
-
-#### API Server Standalone
-For some cases, you may wish to keep your Redis database external to your Form.io API server. This would allow for your API servers to become more ephemeral where they can autoscale. If this is the case, then you would provide the following configurations when spinning up your servers. For example, this would be what our Docker command would look like connecting to an ElasticCache instance in AWS.
-
-```bash
-docker run -itd \
-  -e "LICENSE=YOURLICENSE" \
-  -e "PORTAL_SECRET=CHANGEME" \
-  -e "JWT_SECRET=CHANGEME" \
-  -e "DB_SECRET=CHANGEME" \
-  -e "MONGO=mongodb://:@aws-us-east-1-portal.234.dblayer.com:23423/formio?ssl=true" \
-  -e "REDIS_ADDR=production-001.2iu8pr.0001.usw2.cache.amazonaws.com" \
-  -e "REDIS_PORT=6379" \
-  -e "FORMIO_FILES_SERVER=https://pdfserver.yourdomain.com" \
-  --restart unless-stopped \
-  --name formio-server \
-  -p 80:80 \
-  formio/formio-enterprise;
-```
-
-Notice that in this scenario, you do not need to create a ```formio``` newtork and connect your Docker container to the redis machine with the ```-link``` command.
 
 ### PDF (files) Server
 To run the PDF Server in a production environment, the first thing you need to do is create an external mechanism for storing files. If you are using AWS S3, then this can be pretty simple where you just connect the PDF Server to that instance of S3 using the ```FORMIO_S3_SERVER``` as follows
@@ -244,7 +198,7 @@ docker run -itd \
   formio/formio-files-core;
 ```
 
-### Local Deployment: API, PDF, Minio, Mongo, and Redis
+### Local Deployment: API, PDF, Minio, and Mongo
 
 The following commands can be used to spin up a single server environment that will host all of the necessary dependencies
 to run the Form.io API server + PDF server all on one server. The following command can be performed on a fresh Unix based system with Docker already installed.
@@ -258,11 +212,6 @@ docker run -itd  \
   --restart unless-stopped \
   mongo && \
 docker run -itd \
-  --name formio-redis \
-  --network formio \
-  --restart unless-stopped \
-  redis && \
-docker run -itd \
   -e "LICENSE=YOURLICENSE" \
   -e "FORMIO_FILES_SERVER=http://formio-files:4005" \
   -e "PORTAL_SECRET=CHANGEME" \
@@ -273,7 +222,6 @@ docker run -itd \
   --name formio-server \
   --link formio-files-core:formio-files \
   --link formio-mongo:mongo \
-  --link formio-redis:redis \
   -p 3000:80 \
   formio/formio-enterprise && \
 docker run -itd \

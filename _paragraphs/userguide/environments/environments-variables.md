@@ -50,11 +50,9 @@ Below are all the variables that you can set within your On-Premise Environment.
 | DB_SECRET_OLD | If you need to change the DB_SECRET, set the old value here and it will decrypt with the old and encrypt with the new the next time the server is started. Once changed, you can remove the DB_SECRET_OLD. | [OLD DB SECRET] |
 | JWT_SECRET | The secret password for JWT token encryption. | [TOKEN SECRET] |
 | JWT_EXPIRE_TIME | The expiration for the JWT Tokens | 240 |
-| REDIS_ADDR | The address of the redis server. This is used for analytics and caching for the Environment. | localhost |
-| REDIS_PORT | The port of the redis server | 6379 |
-| REDIS_PASS | (Optional) If you redis server has a password, set it with this. |  |
-| REDIS_USE_SSL | (Optional) If your redis server uses SSL transport protocols, then this can be used to enable that. This is required for Azure Redis deployments | |
 | EMAIL_OVERRIDE | Provides a way to point all Email traffic to a server. | {"transport":"smtp","settings":{"port":2525,"host":"smtp.mailtrap.io","auth":{"user":"23esdffd53ac","pass":"324csdfsdf989a"}}} |
+| DOCKER_SECRETS | Enable the use of Docker Secrets | 1 |
+| DOCKER_SECRETS_PATH | The path to the Docker Secrets folder | /run/secrets |
 
 #### Using environment variables with Docker
 
