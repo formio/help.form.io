@@ -1,6 +1,8 @@
 aws.json
 .DS_Store
 .idea
+.bundle
+vendor
 _site/
 .sass-cache/
 node_modules
