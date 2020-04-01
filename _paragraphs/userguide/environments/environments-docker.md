@@ -38,7 +38,7 @@ docker pull formio/formio-enterprise
 ```
 
 #### Create a docker network to contain all the docker instances.
-A typical Form.io installation includes a Redis, MongoDB, and a Node.js API Server. If your environment is fully dockerized, you can spin up the stack using the following example commands.
+A typical Form.io installation includes a MongoDB, and a Node.js API Server. If your environment is fully dockerized, you can spin up the stack using the following example commands.
 
 This will create an isolated network for just the formio services that are required to run the server. In addition, it will provide for an easy way to link the services together.
 
