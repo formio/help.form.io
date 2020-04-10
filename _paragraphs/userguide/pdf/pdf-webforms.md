@@ -21,4 +21,4 @@ Once you fill out the form and create a new submission, you will be redirected t
 
 ![](/assets/img/userguide/pdf/downloadpdf.png){: .img-fluid .img-thumbnail }
 
-Clicking this icond will then create a submission as a PDF for download or print.
+Clicking this icon will then create a submission as a PDF for download or print.
