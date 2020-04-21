@@ -89,7 +89,7 @@ This command will install the API server, but also include the Deployed portal i
 
 ```bash
 docker run -itd \
-  -e "ADMIN_ADMIN_EMAIL=admin@example.com" \
+  -e "ADMIN_EMAIL=admin@example.com" \
   -e "ADMIN_PASS=CHANGEME" \
   -e "PRIMARY=true" \
   -e "LICENSE=YOURLICENSE" \
