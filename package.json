@@ -43,7 +43,7 @@
     "bootswatch": "^4.4.1",
     "font-awesome": "^4.7.0",
     "formiojs": "^4.8.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "pygments-css": "^1.0.0"
   }
 }
