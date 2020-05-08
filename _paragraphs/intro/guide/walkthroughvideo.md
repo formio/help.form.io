@@ -1,5 +1,5 @@
 ---
-title: Walthrough Video
+title: Walkthrough Video
 book: intro
 weight: 1000
 chapter: guide
