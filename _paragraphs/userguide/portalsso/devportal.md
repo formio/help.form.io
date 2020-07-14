@@ -36,4 +36,4 @@ Next, you will need to assign that Team to your projects you wish to allow SSO p
 
 ![](/assets/img/userguide/portalsso/project-teams.png){: .img-fluid .img-thumbnail }
 
-Once you have done this, anyone with a **Role** name that matches the name of the Team will be automatically assigned to that team and be granted access to a project.
+Once you have done this, anyone with a **SAML Role** name that matches the name of the Team will be automatically assigned to that team and be granted access to a project.
