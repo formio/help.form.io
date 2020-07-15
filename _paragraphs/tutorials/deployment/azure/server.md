@@ -8,6 +8,7 @@ weight: 5
 ---
 You will now setup the **API Server** by using the Azure Container Instances setup.
 
+ - An On-Premise Enterprise license is required to complete this installation
  - In the left menu, click on the **Virtual Machines** menu item, and then press **+ Add** button.
  - In the search for images, type the word **Docker**, and then click on the **Docker on Ubuntu Server**
  - You will then see an info page with a **Create** button at the bottom. Click on this button.
