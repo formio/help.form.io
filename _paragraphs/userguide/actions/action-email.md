@@ -37,6 +37,18 @@ The subject of the email. You may use fields from the form using <code>&#123;&#1
 
 The message in the email. You may use fields from the form using <code>&#123;&#123; data.fieldname &#125;&#125;</code>
 
+#### Attach Submission Files
+
+Check this if you would like to attach uploaded files from the file component to the email.
+
+
+#### Attach PDF Files
+
+Check this if you would like to attach a PDF of the submission to the email. This will count toward your PDF Submission count for every email sent.
+
+<p class="note">If you are remotely deployed, please set the BASE_URL=https://yourdomain.com to match the API server’s domain protocol and domain name for the formio-enterprise server</p>
+
+
 ### Nunjucks Templating
 All of the email fields are sent through a templating engine called [Nunjucks](https://mozilla.github.io/nunjucks/). It is recommended that you read through the documentation of this templating language to understand how it can be utilized to produce very complex templates for your emails using form data. This documentation can be found @ [https://mozilla.github.io/nunjucks/templating.html](https://mozilla.github.io/nunjucks/templating.html). You can use the following variables which are provided to each template.
 
