@@ -2,7 +2,7 @@
 title: Developer Info
 subtitle: Offline Plugin
 book: developer
-weight: 30
+weight: 45
 chapter: offline
 layout: chapter
 ---

@@ -6,6 +6,8 @@ weight: 210
 chapter: pdfserver
 layout: chapter
 ---
+<span class="alert alert-danger">These instructions are for the 2.x formio-files-core release and before. If you are using pdf-server 3.x or later, please go to the [new documentation](/developer/onpremise/)</span>
+
 The PDF Server allows you to deploy the Form.io PDF solution into your own environment, where you can store all of the PDF
 files within your own storage provider. The PDF server supports any **S3 Compatible** storage provider, but also integrates
 with [Minio](https://minio.io/) to allow for local storage of PDF files. Here are the instructions to deploy your own
