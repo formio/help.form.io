@@ -31,8 +31,6 @@ An input mask helps the user with input by ensuring a predefined format. For a p
 
 Example telephone mask: (999) 999-9999
 
-See the [jquery.inputmask](https://github.com/RobinHerbots/jquery.inputmask) documentation for more information.
-
 #### Prefix
 
 The text to show before a field. An example is '$' for money
