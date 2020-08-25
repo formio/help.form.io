@@ -11,6 +11,7 @@ Here are some other libraries and applications that may be helpful when building
   - [Node.js Library](https://github.com/formio/formio-service) - A node.js JavaScript API library for working with Form.io API's.
   - [Form Viewer](https://github.com/formio/formio-viewer) - A simple application to view forms and submissions (This is the code behind https://formview.io).
   - [PHP Plugin](https://github.com/formio/formio-php) - A PHP API library for working with Form.io API's.
+  - [Laravel Client](https://github.com/spinen/laravel-formio) - A Laravel Client for working with Form.io API's.
 
 ### Example Applications
 
