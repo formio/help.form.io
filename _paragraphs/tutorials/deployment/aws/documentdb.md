@@ -22,13 +22,13 @@ To get this setup, please follow the following instructions.
 
     ![](/assets/img/integrations/aws/eb/createcluster.png){: .img-fluid .img-thumbnail }
 
- - Now that our DocumentDB cluster is created, we will now click on the cluster link, and then copy the connection string. It should look like the following.
+ - Now that our DocumentDB cluster is created, we will now click on the cluster link, and then copy the application connection string. It should look like the following.
 
     ```
     mongodb://formio:<insertYourPassword>@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/?ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0
     ```
 
- - Next, we will want to change this connection string to be a standard connection string. We do this by first adding our database name to the end of ```:27017/```. We can pick any name here, but for this example, lets use **formio**
+ - Next, we will want to change this connection string to be a standard connection string. We will do this by first removing everything after the ":27017/", and then adding our database name to the end of ```:27017/```. We can pick any name here, but for this example, lets use **formio**
 
     ```
     mongodb://formio:<insertYourPassword>@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio

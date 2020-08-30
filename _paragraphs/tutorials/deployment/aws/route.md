@@ -8,15 +8,15 @@ weight: 15
 ---
 Now that your Environment is up and running, the next task is to attach a Domain to the Elastic Beanstalk deployment. If you configured the Elastic Beanstalk deployment to use High Availability, then it will have created some Elastic Load Balancers in front of the deployment which you can link the DNS records against.
 
-  - To get started, we will click on **Route 53**
+  - To get started, navigate to the homepage and then search for **Route 53**
 
-    <img src="/assets/img/developer/deployments/aws/route53.png" />
+    ![](/assets/img/integrations/aws/eb/route53.jpg){: .img-fluid .img-thumbnail }
 
   - Next, you will need to created a **Hosted Zone**
 
-    <img src="/assets/img/developer/deployments/aws/hostzone.png" />
+    ![](/assets/img/integrations/aws/eb/hostedzone.jpg){: .img-fluid .img-thumbnail }
 
-  - You will now provide your domain name and then press **Create**
+  - You will now provide your domain name and then press **Create hosted zone**
   - Next, you will create a new **Record Set** and then provide the following record.
     - ```*```.yourdomain.com
     - Type - A Record

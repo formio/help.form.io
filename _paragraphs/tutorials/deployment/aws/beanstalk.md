@@ -6,25 +6,19 @@ chapter: aws
 slug: aws-beanstalk
 weight: 12
 ---
-Now that we have our database and redis configured, we will be using **Elastic Beanstalk** to manage our docker deployments.
+Now that we have our database and S3 configured, we will be using **Elastic Beanstalk** to manage our docker deployments.
 
  - Within the AWS Home page, type **Elastic Beanstalk** into the search and click on the link provided.
- - Once you are within the **Elastic Beanstalk** main page, you will want to click on the link that says **Create New Environment**
+ - Once you are within the **Elastic Beanstalk** main page, you will want to click on the link that says **Create Application**
 
-    ![](/assets/img/integrations/aws/eb/ebcreate.png){: .img-fluid .img-thumbnail }
+    ![](/assets/img/integrations/aws/eb/ebcreateapp.jpg){: .img-fluid .img-thumbnail }
 
- - In the next screen, select **Web server environment** and then click **Select**
-    ![](/assets/img/integrations/aws/eb/selectenv.jpg){: .img-fluid .img-thumbnail }
-
+ - NOTE: You may see a different page that has a link that says **Create New Environment**. If so, then click on that link, and then select the **Web server environment** on the next page and press **Select**.
  - In the next screen, provide an **Application Name**
 
     ![](/assets/img/integrations/aws/eb/appname.jpg){: .img-fluid .img-thumbnail }
 
- - Scroll down and then provide an **Environment Name**
-
-    ![](/assets/img/integrations/aws/eb/envname.jpg){: .img-fluid .img-thumbnail }
-
- - Scroll down some more and then select **Docker** as the environment. Just use the defaults provided for the other fields.
+ - Scroll down and then select **Docker** as the environment, and then select **Multi-container Docker**.
 
     ![](/assets/img/integrations/aws/eb/docker.jpg){: .img-fluid .img-thumbnail }
 
@@ -32,9 +26,9 @@ Now that we have our database and redis configured, we will be using **Elastic B
 
     ![](/assets/img/integrations/aws/eb/uploadcode.jpg){: .img-fluid .img-thumbnail }
 
- - **Application Code**: For this, we will want to upload a ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/latest.zip](https://github.com/formio/aws-formio-deployment/raw/master/latest.zip). After you click Upload button, we will select this file as follows.
+ - **Application Code**: For this, we will want to upload a ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/multicontainer.zip](https://github.com/formio/aws-formio-deployment/raw/master/multicontainer.zip). After you click Upload button, we will select this file as follows.
 
-    ![](/assets/img/integrations/aws/eb/uploadcode.png){: .img-fluid .img-thumbnail }
+    ![](/assets/img/integrations/aws/eb/uploadzip.jpg){: .img-fluid .img-thumbnail }
 
  - Next click on the button that says **Configure More Options**
 
@@ -50,13 +44,18 @@ Now that we have our database and redis configured, we will be using **Elastic B
    | Setting | Description | Example |
    |---------|-------------|---------|
    | MONGO | The MongoDB connection string to connect to your remote database. This is the value we copied before. | mongodb://formio:badpassword@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio?ssl=true |
-   | MONGO_SA | The URL to the MongoDB SA public certificate file. Copy this value as is. | https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem |
    | LICENSE_KEY | The license key for your deployment. You will get this when you upgrade a project to Enterprise. | <---YOUR LICENSE---> |
    | PORTAL_ENABLED | Used to enable the On-Premise portal | true |
    | ADMIN_EMAIL | An admin account you would like to use as the first Admin user | admin@example.com |
    | ADMIN_PASS | A password for the first Admin user. This can be changed after the deployment is finished. | CHANGEME |
    | DB_SECRET | A secure secret that you will pick that is used to encrypt the project settings. | CHANGEME |
    | JWT_SECRET | A secure secret that you will pick that is used to establish secure JWT tokens. | CHANGEME |
+   | FORMIO_S3_BUCKET | This is the name of the Bucket we created in the previous section | pdf-server |
+   | FORMIO_S3_REGION | This is the region which the S3 bucket was created | us-east-1 |
+   | FORMIO_S3_KEY | This is the Key we saved in the previous step. | ATHSLKJK234LSDLLKJS |
+   | FORMIO_S3_SECRET | This is the Secret Key that we saved in the previous step. | nsl23lkjsdf9009sllkjowoi8sous923sd |
+
+ - NOTE: If you wish to secure your Environment Variables from visibility, then we recommend looking into the Amazon Key Management Service @ [https://aws.amazon.com/kms](https://aws.amazon.com/kms).
 
  - These settings will look like the following.
 
@@ -71,8 +70,28 @@ Now that we have our database and redis configured, we will be using **Elastic B
 
     ![](/assets/img/integrations/aws/eb/ec2securitygroups.jpg){: .img-fluid .img-thumbnail }
 
- - Now press the **Save** Button to save your environment settings.
- - You can now press the **Create Environment** button at the bottom of the page to build your environment.
- - This will now create a new Environment within AWS for your deployment. You are now ready to attach your Domains to the deployment.
+ - Next we will configure the **Capacity** settings.
 
+    ![](/assets/img/integrations/aws/eb/capacity.jpg){: .img-fluid .img-thumbnail }
 
+ - Within this section, we will make sure we select a size of instance that is suitable for our Environment. Form.io recommends the following configurations for the following environments.
+
+    {: .table .table-bordered .table-striped}
+    | Environment Type | Instance Size |
+    |---------|-------------|
+    | Development Environments | at least **t3.medium** |
+    | Production Environments | at least **t3.large** |
+
+   For this example, we will just select **t3.medium**.
+
+    ![](/assets/img/integrations/aws/eb/instance-type.jpg){: .img-fluid .img-thumbnail }
+
+   Now press **Save** button at the bottom of the page.
+
+ - Now press the **Save** Button to save all of your environment settings.
+ - You can now press the **Create App** button at the bottom of the page to build your environment.
+ - This will now create a new Environment within AWS for your deployment. We can now click on the Application URL and you should now see your portal.
+
+    ![](/assets/img/integrations/aws/eb/gotoenv.jpg){: .img-fluid .img-thumbnail }
+
+   We are now ready to create a new Project!
