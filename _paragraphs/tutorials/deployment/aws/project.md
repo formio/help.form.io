@@ -22,7 +22,7 @@ weight: 13
 
     ![](/assets/img/integrations/aws/eb/pdfsettings.jpg){: .img-fluid .img-thumbnail }
 
- - Next, set the PDF Server URL to the Domain name of your API server + '/files' like so.
+ - Next, set the PDF Server URL to the Domain name with a "pdf" subdomain, like so.
 
     ![](/assets/img/integrations/aws/eb/pdfurl.jpg){: .img-fluid .img-thumbnail }
 
