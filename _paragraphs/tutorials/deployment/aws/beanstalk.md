@@ -54,7 +54,7 @@ Now that we have our database and S3 configured, we will be using **Elastic Bean
    | FORMIO_S3_REGION | This is the region which the S3 bucket was created | us-east-1 |
    | FORMIO_S3_KEY | This is the Key we saved in the previous step. | ATHSLKJK234LSDLLKJS |
    | FORMIO_S3_SECRET | This is the Secret Key that we saved in the previous step. | nsl23lkjsdf9009sllkjowoi8sous923sd |
-
+   | PDF_SERVER (optional) | Use this configuration if you would like to globally set the PDF_SERVER url to the deployment. See Project section for more information | http://pdf.formio-env.eba-pbxiw2wt.us-east-1.elasticbeanstalk.com |
  - NOTE: If you wish to secure your Environment Variables from visibility, then we recommend looking into the Amazon Key Management Service @ [https://aws.amazon.com/kms](https://aws.amazon.com/kms).
 
  - These settings will look like the following.

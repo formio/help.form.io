@@ -22,6 +22,8 @@ weight: 13
 
     ![](/assets/img/integrations/aws/eb/pdfsettings.jpg){: .img-fluid .img-thumbnail }
 
+ - NOTE: If you wish to globally set the PDF server for all projects, then you can provide this value as the **PDF_SERVER** environment variable within your Elastic Beanstalk deployment.
+
  - Next, set the PDF Server URL to the Domain name with a "pdf" subdomain, like so.
 
     ![](/assets/img/integrations/aws/eb/pdfurl.jpg){: .img-fluid .img-thumbnail }
