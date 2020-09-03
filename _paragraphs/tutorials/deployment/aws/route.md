@@ -28,3 +28,4 @@ Now that your Environment is up and running, the next task is to attach a Domain
     <img src="/assets/img/developer/deployments/aws/routesetup.png" />
 
   - Now, you set your domain Nameservers to point to the ones provided by Route 53. Once the domains evaluate, then you should be able to see the deployed API within that domain.
+  - Next, go back into your Portal, and then configure the **PDF Server URL** that we configured in a previous step with the new DNS name, which will be something like https://pdf.yourdomain.com.

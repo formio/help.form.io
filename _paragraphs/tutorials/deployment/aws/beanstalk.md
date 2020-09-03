@@ -27,6 +27,7 @@ Now that we have our database and S3 configured, we will be using **Elastic Bean
     ![](/assets/img/integrations/aws/eb/uploadcode.jpg){: .img-fluid .img-thumbnail }
 
  - **Application Code**: For this, we will want to upload a ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/multicontainer.zip](https://github.com/formio/aws-formio-deployment/raw/master/multicontainer.zip). After you click Upload button, we will select this file as follows.
+ - **NOTE**: If you are running this environment in the US Gov Cloud, then you will need to use the ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/multicontainer-gov.zip](https://github.com/formio/aws-formio-deployment/raw/master/multicontainer-gov.zip)
 
     ![](/assets/img/integrations/aws/eb/uploadzip.jpg){: .img-fluid .img-thumbnail }
 
