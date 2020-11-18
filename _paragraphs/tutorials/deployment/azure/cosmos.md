@@ -1,5 +1,3 @@
-
-
 ---
 title: CosmosDB
 book: tutorials
@@ -33,11 +31,11 @@ Form.io requires a **MongoDB** compatible database to run its platform. While yo
 
  - Make sure you save this modified connection string in a Text editor for later usage.
  - Now that we have a Database ready to go, we will now create a new **Redis** deployment, which is needed for **PDF Server** deployments and analytics.
- 
+
 **Please Note:** In Cosmos DB (set to Mongo DB) version 3.6: In order to do a sort on a property, there must be an index set. This is different from how MongoDB works as MongoDB allows sorting on any property regardless of an index being set. To resolve this, a wildcard index can be added to the following collections:
 
-```-db.submissions.createIndex( {"$**": 1 } );
--db.forms.createIndex( {"$**": 1 } );
--db.projects.createIndex( {"$**": 1 } );
--db.actions.createIndex( {"$**": 1 } );'
--db.roles.createIndex( {"$**": 1 } );```
+    db.submissions.createIndex( {"$**": 1 } );
+    db.forms.createIndex( {"$**": 1 } );
+    db.projects.createIndex( {"$**": 1 } );
+    db.actions.createIndex( {"$**": 1 } );'
+    db.roles.createIndex( {"$**": 1 } );

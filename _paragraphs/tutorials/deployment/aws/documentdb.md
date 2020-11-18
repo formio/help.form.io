@@ -18,32 +18,28 @@ To get this setup, please follow the following instructions.
 
     ![](/assets/img/integrations/aws/eb/newcluster.png){: .img-fluid .img-thumbnail }
 
+ - In the next section, select **3.6.0** for the **Engine Version**.  4.0.0 support is coming soon.
+
+    ![](/assets/img/integrations/aws/eb/dbversion.png){: .img-fluid .img-thumbnail }
+
  - In the next section, provide a **Master username** and a secure password, then press **Create Cluster**
 
     ![](/assets/img/integrations/aws/eb/createcluster.png){: .img-fluid .img-thumbnail }
 
  - Now that our DocumentDB cluster is created, we will now click on the cluster link, and then copy the application connection string. It should look like the following.
 
-    ```
-    mongodb://formio:<insertYourPassword>@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/?ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0
-    ```
+        mongodb://formio:<insertYourPassword>@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
 
- - Next, we will want to change this connection string to be a standard connection string. We will do this by first removing everything after the ":27017/", and then adding our database name to the end of ```:27017/```. We can pick any name here, but for this example, lets use **formio**
+ - Next, we will want to add our database name to the connection string. We can pick any name here, but for this example, lets use **formio**, and we will place it right before the "?".
 
-    ```
-    mongodb://formio:<insertYourPassword>@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio
-    ```
+        mongodb://formio:<insertYourPassword>@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
 
- - Now, we will want to replace ```<insertYourPassword>``` with the password you chose above when you created the cluster.
+ - Next, we will want to turn on ```retryWrites``` by setting this to ```true```
 
-    ```
-    mongodb://formio:badpassword@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio
-    ```
+        mongodb://formio:<insertYourPassword>@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=true
 
- - Finally, we will want to add ```ssl=true``` to the end of the url to indicate that we have a database connection over SSL.
+ - Finally, we will want to replace ```<insertYourPassword>``` with the password you chose above when you created the cluster.
 
-    ```
-    mongodb://formio:badpassword@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio?ssl=true
-    ```
+        mongodb://formio:badpassword@docdb-2019-02-05-03-07-17.cluster-otsyrtio9xoe.us-east-1.docdb.amazonaws.com:27017/formio?ssl=true&ssl_ca_certs=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false
 
  - Make sure to copy this connection string for use later.

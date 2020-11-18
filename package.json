@@ -37,12 +37,12 @@
   },
   "homepage": "https://github.com/formio/help.form.io#readme",
   "dependencies": {
-    "anchor-js": "^4.2.2",
-    "bootstrap": "^4.5.2",
+    "anchor-js": "^4.3.0",
+    "bootstrap": "^4.5.3",
     "bootstrap-sass": "^3.4.1",
-    "bootswatch": "^4.5.2",
+    "bootswatch": "^4.5.3",
     "font-awesome": "^4.7.0",
-    "formiojs": "^4.11.2",
+    "formiojs": "^4.12.1",
     "jquery": "^3.5.1",
     "pygments-css": "^1.0.0"
   }
