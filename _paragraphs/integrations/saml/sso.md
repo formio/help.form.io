@@ -10,33 +10,33 @@ To perform **Single Sign On** within your application, we will use the [Formio.j
 To get started, we will first need to make sure that we are including the Formio.js library within your application, but it can manually be added with the following script.
 
     <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
-    
+
 Once this library has been added, we can perform a SSO with the following code in our application.
 
     Formio.setProjectUrl('https://yourproject.form.io');
     Formio.ssoInit('saml');
-    
+
 You will typically want to place this code as the first thing within the application and it will perform the SSO automatically.
-    
+
 #### Login Button SSO
 If you wish to have authentication triggered by a login Button, this can be created by adding a simple **Button** component to your form, configure it with **Custom** action, and then within the **Button Custom Logic** place the following code.
 
     Formio.ssoInit('saml');
-    
+
 ![](/assets/img/integrations/saml/formio-button.png){: .img-fluid .img-thumbnail }
 
-Next, within your application, you will want to place the following code so that it will complete the authentication process after the redirect.
+Next, you will drag-and-drop a **Hidden** component onto the same form, and then add the following to the **Custom Default Value** code in the Data tab.
 
-    <script type="text/javascript">
     if (Formio.pageQuery().saml) {
         const sso = Formio.ssoInit('saml');
         if (sso) {
             sso.then((user) => {
-              console.log(user);
+              window.location.href = '/';
             });
         }
     }
-    </script>
+
+You will change the value of the **href** in the code above to be the place you would like to navigate the user after they login.
 
 What you get is the following.
 
@@ -44,7 +44,7 @@ You can try this out using the following login credentials.
 
  - user: **joe@example.com**
  - pass: **password123**
- 
+
 <br/>
 <h4>Result</h4>
 <div class="card card-body bg-light">
