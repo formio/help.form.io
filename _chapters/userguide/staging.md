@@ -10,8 +10,8 @@ Staging can provide enhanced versatility when it comes to managing form and proj
 By allowing for up to 10 different stages on a per project basis, users can now replicate a dev, stage, prod like workflow 
 from within the Form.io platform itself.
  
-Staging features are limited to projects with **Team Pro** and **Enterprise** level projects. 
-If you do not have any projects with Team Pro or Enterprise level projects, you can still experience the full breath of
+Staging features are limited to projects with **Enterprise** level projects. 
+If you do not have any projects with Enterprise level projects, you can still experience the full breath of
 Staging from within any **Trial** project. 
 
 
