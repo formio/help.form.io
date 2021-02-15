@@ -79,7 +79,6 @@ docker run -itd \
   --name formio-server \
   --network formio \
   --link formio-mongo:mongo \
-  --restart unless-stopped \
   -p 3000:80 \
   formio/formio-enterprise;
 ```
@@ -100,7 +99,6 @@ docker run -itd \
   --name formio-server \
   --network formio \
   --link formio-mongo:mongo \
-  --restart unless-stopped \
   -p 3000:80 \
   formio/formio-enterprise;
 ```
@@ -151,7 +149,6 @@ docker run -itd \
   --name formio-server \
   --network formio \
   --link formio-mongo:mongo \
-  --restart unless-stopped \
   -p 3000:80 \
   formio/formio-enterprise;
 ```
