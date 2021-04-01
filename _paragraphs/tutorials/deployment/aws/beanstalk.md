@@ -26,8 +26,8 @@ Now that we have our database and S3 configured, we will be using **Elastic Bean
 
     ![](/assets/img/integrations/aws/eb/uploadcode.jpg){: .img-fluid .img-thumbnail }
 
- - **Application Code**: For this, we will want to upload a ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/multicontainer.zip](https://github.com/formio/aws-formio-deployment/raw/master/multicontainer.zip). After you click Upload button, we will select this file as follows.
- - **NOTE**: If you are running this environment in the US Gov Cloud, then you will need to use the ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/multicontainer-gov.zip](https://github.com/formio/aws-formio-deployment/raw/master/multicontainer-gov.zip)
+ - **Application Code**: For this, we will want to upload a ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/deploy/multicontainer.zip](https://github.com/formio/aws-formio-deployment/raw/master/deploy/multicontainer.zip). After you click Upload button, we will select this file as follows.
+ - **NOTE**: If you are running this environment in the US Gov Cloud, then you will need to use the ZIP provided @ [https://github.com/formio/aws-formio-deployment/raw/master/deploy/multicontainer-gov.zip](https://github.com/formio/aws-formio-deployment/raw/master/deploy/multicontainer-gov.zip)
 
     ![](/assets/img/integrations/aws/eb/uploadzip.jpg){: .img-fluid .img-thumbnail }
 
@@ -88,6 +88,16 @@ Now that we have our database and S3 configured, we will be using **Elastic Bean
     ![](/assets/img/integrations/aws/eb/instance-type.jpg){: .img-fluid .img-thumbnail }
 
    Now press **Save** button at the bottom of the page.
+
+ - Next, we will configure the VPC Settings, to ensure this deployment is within the same VPC as our DocumentDB. We can do this in the **Network** settings.
+
+    ![](https://gblobscdn.gitbook.com/assets%2F-MPHoF2HwOA0s5HV_AIB%2F-MX8j_hE2flRYUXEEntM%2F-MX8jkmMSzQ2Aak5HbgA%2FElastic%20Beanstalk%20Management%20Console%202021-03-31%2014-24-36.png)
+
+ - We need to ensure that our instances are in the same VPC as our DocumentDB database as well as the same subnets.
+
+   ![](https://gblobscdn.gitbook.com/assets%2F-MPHoF2HwOA0s5HV_AIB%2F-MX8jqX8BBhMhoMdvyGQ%2F-MX8k8sYWBFjhX5A3vZS%2FElastic%20Beanstalk%20Management%20Console%202021-03-31%2014-25-42.png)
+
+ - Now press the Save button to save the Network settings.
 
  - Now press the **Save** Button to save all of your environment settings.
  - You can now press the **Create App** button at the bottom of the page to build your environment.
