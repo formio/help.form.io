@@ -6,7 +6,7 @@ slug: stage-versions
 weight: 30
 ---
 Form.io allows users to push different forms though the staging pipeline by using **Version Tags** in the staging menu. 
-Notice that that in this example, the **Dev** stage has a **New Form**
+Notice that in this example, the **Dev** stage has a **New Form**
 
 ![](/assets/img/userguide/userguide-stage-version-1.png){: .img-fluid .img-thumbnail }
 
