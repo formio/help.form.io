@@ -42,7 +42,7 @@
     "bootstrap-sass": "^3.4.1",
     "bootswatch": "^4.5.3",
     "font-awesome": "^4.7.0",
-    "formiojs": "^4.12.1",
+    "formiojs": "^4.14.11",
     "jquery": "^3.5.1",
     "pygments-css": "^1.0.0"
   }
